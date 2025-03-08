@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+        .cv-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.cv-button:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+}
+
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <nav>
+            <img src="WhatsApp Image 2025-02-28 at 12.11.33 AM.jpeg" alt="logo" class="logo">
+            <ul>
+                <li><a href="portfolio.html"> Home</a></li>
+                <li><a href="#about"> About</a></li>
+                <li><a href="#service"> Service</a></li>
+                <li><a href="#about"> Portfolio</a></li>
+                <li><a href="#contact"> Contact</a></li>
+
+                
+            </ul>
+        </nav>
+
+        <div class="header-text">
+            <p>I am a front-end Developer</p>
+            <h1>HI, I'm <span> Toluwanmi </span> <br> Babalola Olanrewaju</h1>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <div class="tilt-img"> 
+                        <img src="JJJJJ.png" alt="">
+                    </div>
+                    <a href="Toluwanimi Olanrewaju Babalola (1).pdf" download="Toluwanimi Olanrewaju Babalola (1).pdf" class="cv-button">Download CV</a>
+
+                    
+                </div>
+                <div class="about-col-2" >
+                    <h1 class="sub-title">About me</h1>
+<p>I am Babalola Toluwanimi, a student of Covenant University, studying Industrial Mathematics with Computer Science. My academic journey is driven by a passion for technology and problem-solving. I have hands-on experience in web development, UI/UX design, and basic cybersecurity concepts. I am continuously improving my skills through practical projects and professional training, including my studies at APTECH and an upcoming IT internship at Micronet Technologies in Lagos</p>                          <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Click Skills to show</p> 
+                            <p class="tab-links" onclick="opentab('experience')" >click Expirience</p> 
+                            <p class="tab-links" onclick="opentab('education')">Click Education</p> 
+
+                          </div>
+                          <div class="tab-contents " id="skills">
+                            <ul>
+                                <li><span> UI?UX </span><br>Designing Web/app interface</li>
+                                <li><span>Web development</span><br>Web app development</li>
+                                
+                              </ul>
+                          </div>
+                          <div class="tab-contents " id="experience">
+                            <ul>
+                                <li><span> 2023-current </span><br>Designing Web/app design in APTECH</li>
+                                <li><span>March 2025</span><br>IT in micronet technologies lagos, Nigeria</li>
+                                
+                              </ul>
+                          </div>
+                          <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2023 to 2027  </span><br>Studying Industrial Mathmatics (Compscience) at covenant University</li>
+                                <li><span>Web development</span> <br>In APTECH Abeokuta</li>
+                                
+                              </ul>
+                          </div>
+                          <div id=" Service">
+                            <div class="container"><h1 class="sub-title"></h1></div>
+                          </div>
+                          
+                          
+                </div>
+            </div>
+        </div>
+    </div>
+     
+     <div class="dropdown">
+        <button>Contact Info</button>
+        <div class="dropdown-content">
+            <p>Phone: +234 9078828095</p>
+            <p>Email: toluwanimibabalola2707@gmail.com</p>
+        </div>
+    </div>
+</nav>
+</div>
+
+
+<!-- Service Section -->
+<div id="service">
+    <h1>My Services</h1>
+    <div class="service-container">
+        <div class="service-box">Front Web Development</div>
+        <div class="service-box">UI/UX Design</div>
+        <div class="service-box">Basic knowledge in cybersecurity</div>
+    </div>
+</div>
+
+<!-- Contact Form Section -->
+<div class="contact-form">
+<h2>Contact Me</h2>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<button type="submit" onclick="message()">Submit</button>
+</div>
+
+
+
+<div id="contact">
+    <h2>Contact Information</h2>
+    <p style="font-size: 30px;font-weight: bolder; "><span class="contact-icon">📞</span>Phone: +234 9078828095</p>
+    <p style="font-size: 30px;font-weight: bolder; padding-top: 20px;"><span class="contact-icon">📧</span>Email: <a href="mailto:toluwanimibabalola2707@gmail.com">toluwanimibabalola2707@gmail.com</a></p>
+    <p style="font-size: 30px;font-weight: bolder; padding-top: 20px;"><span class="contact-icon">📸</span>Instagram: <a href="https://www.instagram.com/?__coig_challenged=1" target="_blank">instagram profile</a></p>
+    <p style="font-size: 30px;font-weight: bolder; padding-top: 20px;"><span class="contact-icon">🔗</span>LinkedIn: <a href="https://ng.linkedin.com/in/toluwanimi-babalola-41605129b" target="_blank">Linkdin profile</a></p>
+
+</div>
+
+
+ <footer>
+    &copy; 2025 Toluwanimi. All rights reserved.
+</footer>
+<script>
+    alert('welcome')
+</script>
+<script>
+function opentab(tabname) {
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    
+    for (let tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (let tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+    
+}
+
+</script>
+
+<script>
+    function message(){
+        alert('Thanks for reaching me ')
+    }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let texts = ["Front-end Developer", "UI/UX Designer", "Cybersecurity Enthusiast"];
+        let index = 0;
+        let typingElement = document.querySelector(".header-text p");
+    
+        function typeEffect(text, i = 0) {
+            if (i < text.length) {
+                typingElement.innerHTML = text.substring(0, i + 1) + "|";
+                setTimeout(() => typeEffect(text, i + 1), 100);
+            } else {
+                setTimeout(() => deleteEffect(text), 1000);
+            }
+        }
+    
+        function deleteEffect(text, i = text.length) {
+            if (i > 0) {
+                typingElement.innerHTML = text.substring(0, i - 1) + "|";
+                setTimeout(() => deleteEffect(text, i - 1), 100);
+            } else {
+                index = (index + 1) % texts.length;
+                setTimeout(() => typeEffect(texts[index]), 500);
+            }
+        }
+    
+        typeEffect(texts[index]);
+    });
+    </script>
+ 
+ 
+
+ 
+ </body>
+
+</html>
