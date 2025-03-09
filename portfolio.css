@@ -399,3 +399,22 @@ p:hover {
     border: none;
     border-top: 1px solid #ddd;
 }
+.disclaimer {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    animation: moveText 30s linear infinite alternate;
+}
+
+@keyframes moveText {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
