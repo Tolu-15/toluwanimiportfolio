@@ -21,6 +21,53 @@
 .cv-button:hover {
     background: linear-gradient(45deg, #ff4b2b, #ff416c);
 }
+        .chatbox {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+        }
+        .chat-header {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            font-weight: bold;
+        }
+        .chat-body {
+            padding: 10px;
+            height: 250px;
+            overflow-y: auto;
+        }
+        .chat-footer {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+        .chat-footer input {
+            flex: 1;
+            padding: 5px;
+        }
+        .chat-footer button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .message {
+            background: black;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            text-align: left;
+        }
+
 
     </style>
 </head>
@@ -140,6 +187,7 @@
  <footer>
     &copy; 2025 Toluwanimi. All rights reserved.
 </footer>
+    <p class="disclaimer">DISCLAIMER: The chatbox responds to simple webdevelopment questions might not be acurate and tells you more about toluwanimi e.g Who is Toluwanimi</p>
 <script>
     alert('welcome')
 </script>
@@ -197,6 +245,107 @@ function opentab(tabname) {
         typeEffect(texts[index]);
     });
     </script>
+    <body>
+    <!-- Chat Button -->
+    <button class="chat-btn" onclick="toggleChat()">💬</button>
+
+    <!-- Chatbox -->
+    <div class="chatbox" id="chatbox">
+        <div class="chat-header">Chat Support</div>
+        <div class="chat-body" id="chat-body">
+            <div class="message">Hello! How can I help you?</div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script>
+        
+    </script>
+
+<script>
+    function toggleChat() {
+        let chatbox = document.getElementById("chatbox");
+        chatbox.style.display = chatbox.style.display === "none" ? "flex" : "none";
+    }
+
+    function sendMessage() {
+        let input = document.getElementById("user-input");
+        let chatBody = document.getElementById("chat-body");
+        let userText = input.value.trim().toLowerCase();
+
+        if (userText !== "") {
+            // User Message
+            let userMessage = document.createElement("div");
+            userMessage.classList.add("message");
+            userMessage.style.textAlign = "right";
+            userMessage.style.background = "#007bff";
+            userMessage.style.color = "white";
+            userMessage.textContent = input.value;
+            chatBody.appendChild(userMessage);
+
+            // Generate bot reply
+            setTimeout(() => {
+                let botReply = document.createElement("div");
+                botReply.classList.add("message");
+                botReply.textContent = getBotResponse(userText);
+                chatBody.appendChild(botReply);
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }, 1000);
+
+            // Clear input field
+            input.value = "";
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+    }
+
+    function getBotResponse(input) {
+    // Convert input to lowercase to handle case-insensitive matching
+    input = input.toLowerCase();
+
+    // Define chatbot responses
+    const responses = [
+        { keywords: ["hello", "hi"], response: "Hi there! How can I assist you today?" },
+        { keywords: ["how are you"], response: "I'm just a chatbot, but I'm doing great! How about you?" },
+        { keywords: ["what is your name"], response: "I'm your friendly chatbot!" },
+        { keywords: ["who created you"], response: "I was created by Toluwanimi! 😊" },
+        { keywords: ["bye", "goodbye"], response: "Goodbye! Have a great day! 😊" },
+        { keywords: ["what is a landing page"], response: "A landing page is a single webpage designed to convert visitors into leads or customers." },
+        { keywords: ["how do i create a website"], response: "You can create a website using HTML, CSS, and JavaScript. Need help with code?" },
+        { keywords: ["what is fiverr"], response: "Fiverr is an online marketplace where you can sell services like web design, writing, and more." },
+        { keywords: ["who are you"], response: "I am your chatbot assistant! Nimi Jr 😀." },
+        { keywords: ["what do you do", "what is your purpose"], response: "I answer questions related to web development, specifically front-end, and tell you about my creator." },
+        { keywords: ["services", "offer", "help with"], response: "I can help with web design, front-end development, and cybersecurity basics according to my creator." },
+        { keywords: ["html", "what is html"], response: "HTML (HyperText Markup Language) is used to structure web pages." },
+        { keywords: ["css", "what is css"], response: "CSS (Cascading Style Sheets) is used to style web pages." },
+        { keywords: ["javascript", "js", "what is javascript"], response: "JavaScript is a programming language that adds interactivity to web pages." },
+        { keywords: ["web development", "how to build websites"], response: "Start with HTML, then move to CSS, and finally JavaScript. Practice by building projects!" },
+        { keywords: ["cybersecurity", "hacking"], response: "Cybersecurity involves protecting systems and data from cyber threats like hacking and malware." },
+        { keywords: ["front-end", "what is front-end"], response: "Front-end development focuses on designing the user interface and experience of websites." },
+        { keywords: ["back-end", "what is back-end"], response: "Back-end development involves managing the server, database, and logic behind a website." },
+        { keywords: ["how to host a website", "publish website"], response: "You can host your website using GitHub Pages, Netlify, or Vercel for free." },
+        { keywords: ["github", "how to upload website"], response: "Upload your project to a GitHub repository and enable GitHub Pages in the settings." },
+        { keywords: ["student portal", "create a student portal"], response: "You need HTML for structure, CSS for styling, JavaScript for interactivity, and a backend for authentication." },
+        { keywords: ["tell me about your creator", "who is Toluwanimi"], response: "Toluwanimi is a passionate web developer skilled in HTML, CSS, JavaScript, and front-end design. He specializes in creating user-friendly and interactive websites while exploring cybersecurity and full-stack development. Beyond coding, he enjoys gaming (COD Mobile 🔥) and gospel music." },
+        { keywords: ["thank you", "thanks"], response: "You're welcome! Let me know if you need anything else." }
+    ];
+
+    
+    for (let item of responses) {
+        if (item.keywords.some(keyword => input.includes(keyword))) {
+            return item.response;
+        }
+    }
+
+
+    return "Sorry, I don't understand that. Can you ask something else?";
+}
+
+</script>
+
+ </body>
+
  
  
 
