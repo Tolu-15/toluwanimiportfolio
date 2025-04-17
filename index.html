@@ -221,9 +221,9 @@ button {
 </div>
 
 <!-- Contact Form Section -->
-<div class="contact-form">
+<div id="contact-form" class="contact-form">
 <h2>Contact Me</h2>
-<input type="text" placeholder="Your Name">
+<input type="name" placeholder="Your Name">
 <input type="email" placeholder="Your Email">
 <button type="submit" onclick="message()">Submit</button>
 </div>
@@ -269,9 +269,14 @@ function opentab(tabname) {
 </script>
 
 <script>
-    function message(){
-        alert('Thanks for reaching me ')
-    }
+    document.getElementById("contact-Form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+
+      // Alert the user's name with custom message
+      alert(name + ", thanks for reaching me!");
+
 </script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
