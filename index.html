@@ -267,17 +267,21 @@ function opentab(tabname) {
 }
 
 </script>
-
 <script>
-    document.getElementById("contact-Form").addEventListener("submit", function(e) {
-      e.preventDefault();
 
+ function message() {
+      // Get the value of the name input field
       const name = document.getElementById("name").value;
+      
+      // Check if name is entered
+      if (name) {
+        // Alert the user with their name and thanks message
+        alert(name + ", thanks for reaching me!");
+      } else {
+        alert("Please enter your name.");
+      }
+     </script>
 
-      // Alert the user's name with custom message
-      alert(name + ", thanks for reaching me!");
-
-</script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         let texts = ["Front-end Developer", "UI/UX Designer", "Building Landing Page"];
