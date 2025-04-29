@@ -789,10 +789,45 @@
         <div id="home" class="header-text">
             <p style="font-size: 40px; color:#ff416c;">I am a front-end Developer</p>
             <h1>HI, I'm <span> Toluwanmi </span> <br> Babalola Olanrewaju</h1>
-            <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-                type="module"></script>
-            <dotlottie-player src="https://lottie.host/25ab8ee9-0876-440b-8ea7-ff671c66c781/bhICJMSUxq.lottie"
-                background="transparent" speed="1" style="width: 100%; height: auto" loop autoplay></dotlottie-player>
+           <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+<style>
+  .lottie-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  dotlottie-player {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media (min-width: 768px) {
+    dotlottie-player {
+      width: 500px;
+      height: 500px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    dotlottie-player {
+      width: 600px;
+      height: 600px;
+    }
+  }
+</style>
+
+<div class="lottie-container">
+  <dotlottie-player 
+    src="https://lottie.host/539726a5-e260-4bd2-913b-eee0b1ca0a76/c9JOMjwBnD.lottie"
+    background="transparent" 
+    speed="1" 
+    loop 
+    autoplay>
+  </dotlottie-player>
+</div>
+
             <li><a href="https://afthoniafooods.netlify.app/">One of my Work</a></li>
 
 
@@ -1518,6 +1553,7 @@ Front-End Developer | UI/UX Beginner
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
                     <a href="#contact">Contact</a>
+                     <li><a href="https://afthoniafooods.netlify.app/">One of my Work</a></li>
                 </div>
             </div>
         </div>
