@@ -1212,17 +1212,16 @@ Front-End Developer | UI/UX Beginner
                         chatBody.scrollTop = chatBody.scrollHeight;
                     }, 1000);
 
-                    // Clear input field
+                  
                     input.value = "";
                     chatBody.scrollTop = chatBody.scrollHeight;
                 }
             }
 
             function getBotResponse(input) {
-                // Convert input to lowercase to handle case-insensitive matching
                 input = input.toLowerCase();
 
-                // Define chatbot responses
+           
                 const responses = [
                     { keywords: ["hello", "hi"], response: "Hi there! How can I assist you today?" },
                     { keywords: ["how are you"], response: "I'm just a chatbot, but I'm doing great! How about you?" },
@@ -1279,7 +1278,7 @@ Front-End Developer | UI/UX Beginner
                 const statusMessage = document.getElementById('form-status');
                 const submitBtn = form.querySelector('.submit-btn');
 
-                // Toggle project details field
+             
                 const projectRadios = document.querySelectorAll('input[name="hasProject"]');
                 const projectDetails = document.querySelector('.project-details');
 
@@ -1295,7 +1294,6 @@ Front-End Developer | UI/UX Beginner
                     });
                 });
 
-                // Toggle role selection field
                 const workRadios = document.querySelectorAll('input[name="workTogether"]');
                 const roleSelection = document.querySelector('.role-selection');
 
@@ -1311,24 +1309,23 @@ Front-End Developer | UI/UX Beginner
                     });
                 });
 
-                // Form submission
+             
                 form.addEventListener('submit', function (e) {
-                    // Show loading state
+                   
                     submitBtn.classList.add('loading');
 
-                    // Show temporary success message (FormSubmit will handle the actual submission)
+                    
                     showStatusMessage('Sending your message...', 'success');
 
-                    // Let the form submit naturally to FormSubmit
-                    // The target="_blank" will open response in new tab
+                   
                 });
 
-                // Helper function to show status messages
+                
                 function showStatusMessage(message, type) {
                     statusMessage.textContent = message;
                     statusMessage.className = `status-message show-message ${type}`;
 
-                    // Hide message after 5 seconds
+                    
                     setTimeout(() => {
                         statusMessage.classList.remove('show-message');
                     }, 5000);
