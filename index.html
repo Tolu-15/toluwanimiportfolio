@@ -796,6 +796,145 @@
                 type="module"></script>
             <dotlottie-player src="https://lottie.host/25ab8ee9-0876-440b-8ea7-ff671c66c781/bhICJMSUxq.lottie"
                 background="transparent" speed="1" style="width: 100%; height: auto" loop autoplay></dotlottie-player>
+             <div class="container">
+                <h2 class="section-title">Skills Matrix</h2>
+
+                <div class="skills-matrix">
+                    <!-- Skills Distribution Pie Chart -->
+                    <div class="skills-card">
+                        <div class="card-header">
+                            <i class="fas fa-chart-pie"></i>
+                            <h3>Skills Distribution</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="skillsPieChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Skill Levels -->
+                    <div class="skills-card">
+                        <div class="card-header">
+                            <i class="fas fa-star"></i>
+                            <h3>Skill Proficiency</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-level">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">React</span>
+                                <div class="skill-level">
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+
+                                </div>
+                                <p>PENDING...</p>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Node.js</span>
+                                <div class="skill-level">
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <p>PENDING...</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">UI/UX Design</span>
+                                <div class="skill-level">
+                                    <span class="star">★</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Java</span>
+                                <div class="skill-level">
+                                    <span class="star">★</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-level">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Skills Pie Chart
+                    const ctx = document.getElementById('skillsPieChart').getContext('2d');
+                    new Chart(ctx, {
+                        type: 'pie',
+                        data: {
+                            labels: ['Html', 'Css', 'Javascript', 'Ui/Ux'],
+                            datasets: [{
+                                data: [48, 30, 20, 2],
+                                backgroundColor: [
+                                    'rgba(59, 130, 246, 0.8)',
+                                    'rgba(16, 185, 129, 0.8)',
+                                    'rgba(245, 158, 11, 0.8)',
+                                    'rgba(139, 92, 246, 0.8)',
+                                    'rgba(236, 72, 153, 0.8)'
+                                ],
+                                borderWidth: 0,
+                                hoverOffset: 10
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    position: 'right',
+                                    labels: {
+                                        padding: 20,
+                                        usePointStyle: true,
+                                        pointStyle: 'circle',
+                                        font: {
+                                            size: 12
+                                        }
+                                    }
+                                },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function (context) {
+                                            return `${context.label}: ${context.raw}%`;
+                                        }
+                                    }
+                                }
+                            },
+                            cutout: '70%'
+                        }
+                    });
+                });
+            </script>
           
 
         </div>
