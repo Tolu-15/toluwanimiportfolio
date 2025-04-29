@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Babalola Toluwanimi  Portfolio - Frontend Developer, Industrial Mathematics & Computer Science Student. Showcasing projects and skills.">
+    <meta name="keywords"
+        content="Toluwanimi Babalola, Frontend Developer, Web Developer, Portfolio, Covenant University, Afthonia Foods, Grace Mark Academy Quiz App">
+    <meta name="author" content="Babalola Toluwanimi">
+
+    <title>Babalola Toluwanimi</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/jpeg" href="Screenshot_20250319-204407~2.jpg">
+    <meta name="google-site-verification" content="8dHZ7u7jerwojNw-nlgIvKZ9VIh3-icoKls3aPm8rDg" />
+
+
+    <style>
+        .cv-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .cv-button:hover {
+            background: linear-gradient(45deg, #ff4b2b, #ff416c);
+        }
+
+        .typewriter {
+            display: inline-block;
+            overflow: hidden;
+            border-right: 2px solid black;
+            /* blinking cursor */
+            white-space: nowrap;
+            animation: typing 3s steps(20, end) infinite alternate,
+                blink-caret 0.75s step-end infinite;
+        }
+
+        /* Typing Animation */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 75%;
+            }
+        }
+
+        /* Blinking Cursor Animation */
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            40% {
+                border-color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="container">
+
+        <nav>
+
+            <ul>
+                <li><a href="#home"> Home</a></li>
+                <li><a href="#about"> About</a></li>
+                <li><a href="#service"> Service</a></li>
+                <li><a href="#about"> Portfolio</a></li>
+                <li><a href="#contact"> Contact</a></li>
+                <li><a href="https://afthoniafooods.netlify.app/">My Work</a></li>
+
+
+
+            </ul>
+        </nav>
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <!DOCTYPE html>
+            <html lang="en">
+
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>T_dev | Elite Developer Portfolio</title>
+                <style>
+                    /* Header Container - Only affects the top section */
+                    .portfolio-header {
+                        position: relative;
+                        width: 100%;
+                        height: 100vh;
+                        overflow: hidden;
+                        background: linear-gradient(to right, #141e30, #243b55);
+                        font-family: 'Rajdhani', 'Orbitron', sans-serif;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        perspective: 1000px;
+                        cursor: none;
+                        isolation: isolate;
+                    }
+
+                    :root {
+                        --primary: #00f5d4;
+                        /* Cyber teal */
+                        --secondary: #00bbf9;
+                        /* Electric blue */
+                        --accent: #fee440;
+                        /* Neon yellow */
+                        --dark: #161a1d;
+                        /* Space black */
+                        --text: #f8f9fa;
+                        /* Pure white */
+                        --glow: 0 0 15px;
+                        --code-blue: #5e9eff;
+                        --code-purple: #b388ff;
+                        --code-green: #69f0ae;
+                        --code-orange: #ffab40;
+                    }
+
+                    .header-cursor {
+                        position: fixed;
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        background: var(--accent);
+                        mix-blend-mode: screen;
+                        pointer-events: none;
+                        z-index: 9999;
+                        filter: drop-shadow(0 0 8px var(--accent));
+                        transform: translate(-50%, -50%) scale(1);
+                        transition: transform 0.2s ease, background 0.3s ease;
+                    }
+
+                    .header-cursor.active {
+                        transform: translate(-50%, -50%) scale(1.5);
+                        background: var(--primary);
+                    }
+
+                    .logo-container {
+                        position: relative;
+                        width: 400px;
+                        height: 400px;
+                        z-index: 10;
+                    }
+
+                    .tdev-logo {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        transform-style: preserve-3d;
+                        transition: transform 0.05s linear;
+                        animation: floatLogo 8s ease-in-out infinite;
+                    }
+
+                    .logo-svg {
+                        width: 100%;
+                        height: 100%;
+                        filter: drop-shadow(var(--glow) var(--primary));
+                    }
+
+                    .t-bar,
+                    .t-stem {
+                        fill: none;
+                        stroke: url(#logo-gradient);
+                        stroke-width: 4;
+                        stroke-linecap: round;
+                        stroke-dasharray: 1000;
+                        stroke-dashoffset: 1000;
+                    }
+
+                    .t-bar {
+                        transform-origin: center;
+                        animation:
+                            infiniteDrawBar 4s cubic-bezier(0.65, 0, 0.35, 1) infinite,
+                            pulseBar 3s ease-in-out infinite,
+                            colorShiftBar 7s linear infinite,
+                            moveBar 5s ease-in-out infinite;
+                    }
+
+                    .t-stem {
+                        transform-origin: center;
+                        animation:
+                            infiniteDrawStem 4s cubic-bezier(0.65, 0, 0.35, 1) infinite 0.5s,
+                            pulseStem 3.5s ease-in-out infinite,
+                            colorShiftStem 9s linear infinite,
+                            moveStem 6s ease-in-out infinite;
+                    }
+
+                    .dev-text {
+                        fill: var(--text);
+                        font-family: 'Orbitron';
+                        font-weight: 700;
+                        font-size: 32px;
+                        opacity: 0;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        animation:
+                            fadeIn 0.8s ease-out 1.2s forwards,
+                            textGlow 2.5s ease-in-out infinite alternate 2s;
+                    }
+
+                    @keyframes infiniteDrawBar {
+                        0% {
+                            stroke-dashoffset: 1000;
+                        }
+
+                        40% {
+                            stroke-dashoffset: 0;
+                        }
+
+                        60% {
+                            stroke-dashoffset: 0;
+                        }
+
+                        100% {
+                            stroke-dashoffset: 1000;
+                        }
+                    }
+
+                    @keyframes infiniteDrawStem {
+                        0% {
+                            stroke-dashoffset: 1000;
+                        }
+
+                        40% {
+                            stroke-dashoffset: 0;
+                        }
+
+                        60% {
+                            stroke-dashoffset: 0;
+                        }
+
+                        100% {
+                            stroke-dashoffset: 1000;
+                        }
+                    }
+
+                    @keyframes pulseBar {
+
+                        0%,
+                        100% {
+                            stroke-width: 4;
+                        }
+
+                        50% {
+                            stroke-width: 6;
+                        }
+                    }
+
+                    @keyframes pulseStem {
+
+                        0%,
+                        100% {
+                            stroke-width: 4;
+                        }
+
+                        50% {
+                            stroke-width: 5.5;
+                        }
+                    }
+
+                    @keyframes colorShiftBar {
+
+                        0%,
+                        100% {
+                            stroke: url(#logo-gradient);
+                        }
+
+                        33% {
+                            stroke: var(--primary);
+                        }
+
+                        66% {
+                            stroke: var(--accent);
+                        }
+                    }
+
+                    @keyframes colorShiftStem {
+
+                        0%,
+                        100% {
+                            stroke: url(#logo-gradient);
+                        }
+
+                        33% {
+                            stroke: var(--secondary);
+                        }
+
+                        66% {
+                            stroke: var(--primary);
+                        }
+                    }
+
+                    @keyframes moveBar {
+
+                        0%,
+                        100% {
+                            transform: translateY(0) rotate(0deg);
+                        }
+
+                        25% {
+                            transform: translateY(-3px) rotate(0.5deg);
+                        }
+
+                        50% {
+                            transform: translateY(0) rotate(0deg);
+                        }
+
+                        75% {
+                            transform: translateY(2px) rotate(-0.5deg);
+                        }
+                    }
+
+                    @keyframes moveStem {
+
+                        0%,
+                        100% {
+                            transform: translateX(0) rotate(0deg);
+                        }
+
+                        25% {
+                            transform: translateX(-2px) rotate(0.3deg);
+                        }
+
+                        50% {
+                            transform: translateX(0) rotate(0deg);
+                        }
+
+                        75% {
+                            transform: translateX(2px) rotate(-0.3deg);
+                        }
+                    }
+
+                    @keyframes floatLogo {
+
+                        0%,
+                        100% {
+                            transform: translateY(0) rotateY(0deg);
+                        }
+
+                        50% {
+                            transform: translateY(-20px) rotateY(5deg);
+                        }
+                    }
+
+                    @keyframes fadeIn {
+                        to {
+                            opacity: 1;
+                        }
+                    }
+
+                    @keyframes textGlow {
+                        0% {
+                            filter: drop-shadow(0 0 5px var(--primary));
+                        }
+
+                        100% {
+                            filter: drop-shadow(0 0 20px var(--accent));
+                        }
+                    }
+
+                    /* Code rain background */
+                    .code-rain {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        z-index: 0;
+                        opacity: 0.2;
+                    }
+
+                    .code-snippet {
+                        position: absolute;
+                        font-family: 'Courier New', monospace;
+                        font-weight: 700;
+                        font-size: 14px;
+                        white-space: nowrap;
+                        animation: fall linear infinite;
+                        user-select: none;
+                    }
+
+                    .html-tag {
+                        color: var(--code-blue);
+                    }
+
+                    .css-prop {
+                        color: var(--code-green);
+                    }
+
+                    .js-keyword {
+                        color: var(--code-purple);
+                    }
+
+                    .bracket {
+                        color: var(--code-orange);
+                    }
+
+                    .string {
+                        color: var(--accent);
+                    }
+
+                    .comment {
+                        color: #757575;
+                    }
+
+                    @keyframes fall {
+                        to {
+                            transform: translateY(100vh);
+                        }
+                    }
+
+                    /* Floating particles */
+                    .particles {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                    }
+
+                    .particle {
+                        position: absolute;
+                        background: var(--primary);
+                        border-radius: 50%;
+                        filter: blur(1px);
+                        animation: float linear infinite;
+                        opacity: 0.7;
+                    }
+
+                    @keyframes float {
+
+                        0%,
+                        100% {
+                            transform: translateY(0) translateX(0);
+                        }
+
+                        50% {
+                            transform: translateY(-20px) translateX(10px);
+                        }
+                    }
+
+                    /* Header content */
+                    .header-content {
+                        position: absolute;
+                        bottom: 10%;
+                        left: 0;
+                        width: 100%;
+                        text-align: center;
+                        z-index: 10;
+                        color: var(--text);
+                    }
+
+                    .header-title {
+                        font-family: 'Orbitron', sans-serif;
+                        font-size: 2.5rem;
+                        margin-bottom: 1rem;
+                        text-transform: uppercase;
+                        letter-spacing: 3px;
+                        opacity: 0;
+                        animation: fadeInUp 1s ease-out 1.5s forwards;
+                    }
+
+                    .header-subtitle {
+                        font-family: 'Rajdhani', sans-serif;
+                        font-size: 1.2rem;
+                        opacity: 0;
+                        animation: fadeInUp 1s ease-out 1.8s forwards;
+                        color: var(--secondary);
+                    }
+
+                    .scroll-indicator {
+                        position: absolute;
+                        bottom: 30px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 30px;
+                        height: 50px;
+                        border: 2px solid var(--primary);
+                        border-radius: 15px;
+                        opacity: 0;
+                        animation: fadeIn 1s ease-out 2s forwards, bounce 2s infinite 2.5s;
+                    }
+
+                    .scroll-indicator::before {
+                        content: '';
+                        position: absolute;
+                        top: 8px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 6px;
+                        height: 6px;
+                        background: var(--accent);
+                        border-radius: 50%;
+                        animation: scroll 2s infinite 2.5s;
+                    }
+
+                    @keyframes fadeInUp {
+                        from {
+                            opacity: 0;
+                            transform: translateY(20px);
+                        }
+
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+
+                    @keyframes bounce {
+
+                        0%,
+                        20%,
+                        50%,
+                        80%,
+                        100% {
+                            transform: translateY(0) translateX(-50%);
+                        }
+
+                        40% {
+                            transform: translateY(-20px) translateX(-50%);
+                        }
+
+                        60% {
+                            transform: translateY(-10px) translateX(-50%);
+                        }
+                    }
+
+                    @keyframes scroll {
+                        0% {
+                            opacity: 1;
+                            top: 8px;
+                        }
+
+                        100% {
+                            opacity: 0;
+                            top: 30px;
+                        }
+                    }
+                </style>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@500&display=swap"
+                    rel="stylesheet">
+            </head>
+
+        <body>
+            <!-- Only this section will be affected by the styling -->
+            <section class="portfolio-header">
+                <div class="header-cursor"></div>
+                <div class="code-rain" id="codeRain"></div>
+                <div class="particles" id="particles"></div>
+
+                <div class="logo-container">
+                    <div class="holographic-overlay"></div>
+                    <div class="tdev-logo">
+                        <svg class="logo-svg" viewBox="0 0 200 200">
+                            <defs>
+                                <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="var(--primary)" />
+                                    <stop offset="50%" stop-color="var(--secondary)" />
+                                    <stop offset="100%" stop-color="var(--accent)" />
+                                </linearGradient>
+                            </defs>
+
+                            <!-- T Letter -->
+                            <rect class="t-bar" x="50" y="40" width="100" height="18" rx="4" />
+                            <rect class="t-stem" x="90" y="58" width="20" height="70" rx="4" />
+
+                            <!-- _dev Text -->
+                            <text class="dev-text" x="100" y="160" text-anchor="middle">_DEV</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="header-content">
+                    <h1 class="header-title">T_DEV</h1>
+                    <p class="header-subtitle">Front-End Developer/ Beginer Ui/Ux</p>
+                </div>
+
+                <div class="scroll-indicator"></div>
+            </section>
+
+            <!-- Rest of your website content goes here -->
+            <main>
+                <!-- Your existing content -->
+            </main>
+
+            <script>
+                // Custom cursor - only for header
+                const headerCursor = document.querySelector('.header-cursor');
+                const headerSection = document.querySelector('.portfolio-header');
+
+                headerSection.addEventListener('mousemove', (e) => {
+                    headerCursor.style.left = e.clientX + 'px';
+                    headerCursor.style.top = e.clientY + 'px';
+
+                    // 3D tilt effect
+                    const logo = document.querySelector('.tdev-logo');
+                    const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+                    const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+                    logo.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+
+                    // Dynamic particle movement
+                    const particles = document.querySelectorAll('.particle');
+                    particles.forEach(particle => {
+                        const distanceX = (e.clientX - window.innerWidth / 2) / window.innerWidth;
+                        const distanceY = (e.clientY - window.innerHeight / 2) / window.innerHeight;
+                        particle.style.transform = `translateX(${distanceX * 20}px) translateY(${distanceY * 20}px)`;
+                    });
+                });
+
+                // Cursor hover effect
+                headerSection.addEventListener('mouseenter', () => {
+                    document.body.style.cursor = 'none';
+                });
+
+                headerSection.addEventListener('mouseleave', () => {
+                    document.body.style.cursor = 'auto';
+                });
+
+                // Interactive elements
+                const interactiveElements = document.querySelectorAll('.logo-container, .header-title, .header-subtitle');
+                interactiveElements.forEach(el => {
+                    el.addEventListener('mouseenter', () => {
+                        headerCursor.classList.add('active');
+                        playHoverSound();
+                    });
+                    el.addEventListener('mouseleave', () => {
+                        headerCursor.classList.remove('active');
+                    });
+                });
+
+                // Code snippets for the rain
+                const codeSnippets = [
+                    '<span class="html-tag">&lt;div</span> <span class="css-prop">class</span>=<span class="string">"container"</span><span class="html-tag">&gt;</span>',
+                    '<span class="css-prop">background</span>: <span class="string">linear-gradient</span>(<span class="js-keyword">to right</span>, #00f5d4, #00bbf9);',
+                    '<span class="js-keyword">function</span> <span class="css-prop">animate</span>() { <span class="comment">// Infinite animation</span> }',
+                    '<span class="html-tag">&lt;script</span> <span class="css-prop">src</span>=<span class="string">"app.js"</span><span class="html-tag">&gt;&lt;/script&gt;</span>',
+                    '<span class="css-prop">transform</span>: <span class="string">rotate</span>(<span class="js-keyword">45deg</span>);',
+                    '<span class="js-keyword">const</span> <span class="css-prop">developer</span> = <span class="string">"T_DEV"</span>;',
+                    '<span class="html-tag">&lt;style&gt;</span> <span class="css-prop">body</span> { <span class="css-prop">margin</span>: <span class="js-keyword">0</span>; } <span class="html-tag">&lt;/style&gt;</span>',
+                    '<span class="js-keyword">document</span>.<span class="css-prop">addEventListener</span>(<span class="string">"click"</span>, handler);',
+                    '<span class="html-tag">&lt;nav</span> <span class="css-prop">class</span>=<span class="string">"main-nav"</span><span class="html-tag">&gt;&lt;/nav&gt;</span>',
+                    '<span class="css-prop">@keyframes</span> <span class="js-keyword">float</span> { <span class="css-prop">50%</span> { <span class="css-prop">transform</span>: <span class="string">translateY</span>(-20px); } }',
+                    '<span class="js-keyword">class</span> <span class="css-prop">Developer</span> { <span class="css-prop">constructor</span>() {} }',
+                    '<span class="html-tag">&lt;!--</span> <span class="comment">This code rocks!</span> <span class="html-tag">--&gt;</span>'
+                ];
+
+                // Code rain effect
+                const codeRain = document.getElementById('codeRain');
+
+                function createCodeRain() {
+                    const snippet = document.createElement('div');
+                    snippet.className = 'code-snippet';
+                    snippet.innerHTML = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+
+                    snippet.style.left = Math.random() * 100 + 'vw';
+                    snippet.style.fontSize = (12 + Math.random() * 6) + 'px';
+                    snippet.style.animationDuration = (8 + Math.random() * 12) + 's';
+                    snippet.style.animationDelay = Math.random() * 5 + 's';
+                    snippet.style.opacity = 0.5 + Math.random() * 0.5;
+
+                    codeRain.appendChild(snippet);
+
+                    // Remove snippet after animation completes
+                    setTimeout(() => {
+                        snippet.remove();
+                    }, parseFloat(snippet.style.animationDuration) * 1000);
+                }
+
+                // Create initial code rain
+                for (let i = 0; i < 50; i++) {
+                    setTimeout(createCodeRain, i * 300);
+                }
+
+                // Continuous creation
+                setInterval(createCodeRain, 300);
+
+                // Floating particles
+                const particlesContainer = document.getElementById('particles');
+                const particleCount = 30;
+
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+
+                    // Random properties
+                    const size = Math.random() * 5 + 1;
+                    const posX = Math.random() * 100;
+                    const posY = Math.random() * 100;
+                    const duration = Math.random() * 20 + 10;
+                    const delay = Math.random() * 5;
+
+                    particle.style.width = `${size}px`;
+                    particle.style.height = `${size}px`;
+                    particle.style.left = `${posX}%`;
+                    particle.style.top = `${posY}%`;
+                    particle.style.animationDuration = `${duration}s`;
+                    particle.style.animationDelay = `${delay}s`;
+
+                    // Random color variation
+                    if (Math.random() > 0.7) {
+                        particle.style.background = `var(--secondary)`;
+                    } else if (Math.random() > 0.9) {
+                        particle.style.background = `var(--accent)`;
+                    }
+
+                    particlesContainer.appendChild(particle);
+                }
+
+                // Audio feedback
+                function playHoverSound() {
+                    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                    const oscillator = audioCtx.createOscillator();
+                    const gainNode = audioCtx.createGain();
+
+                    oscillator.type = 'sine';
+                    oscillator.frequency.value = 880 + Math.random() * 440;
+                    gainNode.gain.value = 0.1;
+
+                    oscillator.connect(gainNode);
+                    gainNode.connect(audioCtx.destination);
+
+                    oscillator.start();
+                    gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
+                    oscillator.stop(audioCtx.currentTime + 0.3);
+                }
+
+                // Scroll indicator click
+                document.querySelector('.scroll-indicator').addEventListener('click', () => {
+                    window.scrollTo({
+                        top: window.innerHeight,
+                        behavior: 'smooth'
+                    });
+                });
+
+                // Infinite T drawing effect
+                function enhanceTAnimation() {
+                    const tBar = document.querySelector('.t-bar');
+                    const tStem = document.querySelector('.t-stem');
+
+                    // Random durations between 3-5 seconds
+                    const barDuration = 3 + Math.random() * 2;
+                    const stemDuration = 3 + Math.random() * 2;
+
+                    tBar.style.animation = `
+                infiniteDrawBar ${barDuration}s cubic-bezier(0.65, 0, 0.35, 1) infinite,
+                pulseBar ${barDuration}s ease-in-out infinite,
+                colorShiftBar ${barDuration * 2}s linear infinite,
+                moveBar ${barDuration * 1.5}s ease-in-out infinite
+            `;
+
+                    tStem.style.animation = `
+                infiniteDrawStem ${stemDuration}s cubic-bezier(0.65, 0, 0.35, 1) infinite 0.5s,
+                pulseStem ${stemDuration}s ease-in-out infinite,
+                colorShiftStem ${stemDuration * 2}s linear infinite,
+                moveStem ${stemDuration * 1.5}s ease-in-out infinite
+            `;
+                }
+
+                // Initialize with animation
+                enhanceTAnimation();
+
+                // Randomize animation parameters every 10-15 seconds
+                setInterval(enhanceTAnimation, 10000 + Math.random() * 5000);
+            </script>
+        </body>
+
+        </html>
+        <div id="home" class="header-text">
+            <p style="font-size: 40px; color:#ff416c;">I am a front-end Developer</p>
+            <h1>HI, I'm <span> Toluwanmi </span> <br> Babalola Olanrewaju</h1>
+            <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                type="module"></script>
+            <dotlottie-player src="https://lottie.host/25ab8ee9-0876-440b-8ea7-ff671c66c781/bhICJMSUxq.lottie"
+                background="transparent" speed="1" style="width: 100%; height: auto" loop autoplay></dotlottie-player>
+            <li><a href="https://afthoniafooods.netlify.app/">One of my Work</a></li>
+
+
+        </div>
+        <div class="quote-master-container">
+            <div class="quote-theatre">
+                <div class="quote-stage">
+                    <div class="quote-actor">
+                        <div class="quote-text cosmic-in"></div>
+                        <div class="quote-author cosmic-in"></div>
+                    </div>
+                </div>
+                <div class="quote-control-panel">
+                    <button class="quote-nav prev" aria-label="Previous quote">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+                        </svg>
+                    </button>
+                    <div class="quote-progress-container">
+                        <div class="quote-progress-bar"></div>
+                    </div>
+                    <button class="quote-nav next" aria-label="Next quote">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap');
+
+            :root {
+                --primary-accent: #6366f1;
+                --secondary-accent: #8b5cf6;
+                --dark-text: #1e293b;
+                --light-text: #64748b;
+                --bg-gradient: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+                --card-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+                --transition-duration: 0.8s;
+                --border-radius: 24px;
+            }
+
+            .quote-master-container {
+                max-width: 900px;
+                margin: 4rem auto;
+                padding: 0 2rem;
+            }
+
+            .quote-theatre {
+                background: white;
+                border-radius: var(--border-radius);
+                padding: 4rem 3rem;
+                box-shadow: var(--card-shadow);
+                position: relative;
+                overflow: hidden;
+                isolation: isolate;
+                border: 1px solid rgba(0, 0, 0, 0.03);
+            }
+
+            .quote-theatre::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: var(--bg-gradient);
+                z-index: -2;
+            }
+
+            .quote-theatre::after {
+                content: "";
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+                z-index: -1;
+                animation: pulse 15s infinite alternate;
+            }
+
+            .quote-stage {
+                min-height: 250px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+
+            .quote-actor {
+                width: 100%;
+                text-align: center;
+            }
+
+            .quote-text {
+                font-size: 2.2rem;
+                line-height: 1.5;
+                color: var(--dark-text);
+                font-weight: 500;
+                margin: 0 auto 2rem;
+                max-width: 800px;
+                opacity: 0;
+                transform: translateY(30px) rotateX(90deg);
+                filter: blur(5px);
+                transition: all var(--transition-duration) cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                font-family: 'Playfair Display', serif;
+                font-style: italic;
+                position: relative;
+            }
+
+            .quote-text::before,
+            .quote-text::after {
+                content: '"';
+                font-size: 3rem;
+                color: rgba(99, 102, 241, 0.2);
+                position: absolute;
+                font-family: serif;
+            }
+
+            .quote-text::before {
+                top: -1.5rem;
+                left: -2rem;
+            }
+
+            .quote-text::after {
+                bottom: -2.5rem;
+                right: -2rem;
+            }
+
+            .quote-author {
+                font-size: 1.1rem;
+                color: var(--light-text);
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                margin: 2rem 0 0;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: all calc(var(--transition-duration) * 1.2) cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
+                font-family: 'Montserrat', sans-serif;
+                position: relative;
+                display: inline-block;
+                padding: 0 1rem;
+            }
+
+            .quote-author::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 30px;
+                height: 1px;
+                background: rgba(100, 116, 139, 0.3);
+            }
+
+            .quote-control-panel {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 3rem;
+                gap: 1.5rem;
+            }
+
+            .quote-progress-container {
+                width: 200px;
+                height: 4px;
+                background: rgba(100, 116, 139, 0.1);
+                border-radius: 2px;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .quote-progress-bar {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent));
+                transform: scaleX(0);
+                transform-origin: left center;
+            }
+
+            .quote-nav {
+                background: none;
+                border: none;
+                width: 48px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                cursor: pointer;
+                color: var(--primary-accent);
+                transition: all 0.3s ease;
+                background: rgba(99, 102, 241, 0.05);
+                border: 1px solid rgba(99, 102, 241, 0.1);
+            }
+
+            .quote-nav:hover {
+                background: rgba(99, 102, 241, 0.1);
+                transform: scale(1.1);
+                box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+            }
+
+            .quote-nav:active {
+                transform: scale(0.95);
+            }
+
+            .quote-nav svg {
+                fill: currentColor;
+            }
+
+            /* Animation Classes */
+            .cosmic-in.show {
+                opacity: 1;
+                transform: translateY(0) rotateX(0);
+                filter: blur(0);
+            }
+
+            /* Keyframe Animations */
+            @keyframes pulse {
+                0% {
+                    transform: rotate(0deg);
+                    opacity: 0.3;
+                }
+
+                100% {
+                    transform: rotate(180deg);
+                    opacity: 0.1;
+                }
+            }
+
+            @keyframes progress {
+                0% {
+                    transform: scaleX(0);
+                }
+
+                100% {
+                    transform: scaleX(1);
+                }
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .quote-theatre {
+                    padding: 3rem 2rem;
+                }
+
+                .quote-text {
+                    font-size: 1.7rem;
+                    margin-bottom: 1.5rem;
+                }
+
+                .quote-text::before,
+                .quote-text::after {
+                    font-size: 2.5rem;
+                }
+
+                .quote-text::before {
+                    left: -1.5rem;
+                }
+
+                .quote-text::after {
+                    right: -1.5rem;
+                }
+
+                .quote-author {
+                    font-size: 0.95rem;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .quote-theatre {
+                    padding: 2.5rem 1.5rem;
+                }
+
+                .quote-text {
+                    font-size: 1.5rem;
+                }
+
+                .quote-control-panel {
+                    margin-top: 2rem;
+                }
+            }
+        </style>
+
+        <script>
+            const quotes = [
+                {
+                    text: "Strength isn't about never falling—it's about how many times you rise. Because in the end, the struggle is where courage takes root.",
+                    author: "Toluwanimi"
+                },
+                {
+                    text: "Progress isn't about speed—it's about direction. Because in the end, small steps with purpose outpace aimless sprints.",
+                    author: "Toluwanimi"
+                },
+                {
+                    text: "Surviving is winning, whatever it takes to survive.",
+                    author: "Franklin"
+                },
+                {
+                    text: "The only way to do great work is to love what you do.",
+                    author: "Steve Jobs"
+                },
+                {
+                    text: "Believe you can and you're halfway there.",
+                    author: "Theodore Roosevelt"
+                },
+                {
+                    text: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+                    author: "Winston Churchill"
+                },
+                {
+                    text: "Don't watch the clock; do what it does. Keep going.",
+                    author: "Sam Levenson"
+                },
+                {
+                    text: "The future belongs to those who believe in the beauty of their dreams.",
+                    author: "Eleanor Roosevelt"
+                },
+                {
+                    text: "You are never too old to set another goal or to dream a new dream.",
+                    author: "C.S. Lewis"
+                },
+                {
+                    text: "Your limitation—it's only your imagination.",
+                    author: "Unknown"
+                },
+                {
+                    text: "Push yourself, because no one else is going to do it for you.",
+                    author: "Unknown"
+                }
+            ];
+
+            const quoteTextElement = document.querySelector('.quote-text');
+            const quoteAuthorElement = document.querySelector('.quote-author');
+            const progressBar = document.querySelector('.quote-progress-bar');
+            const nextButton = document.querySelector('.next');
+            const prevButton = document.querySelector('.prev');
+
+            let currentQuoteIndex = 0;
+            let animationInterval;
+            let progressInterval;
+            let isAnimating = false;
+            let isAutoRotating = true;
+            const rotationInterval = 8000; // 8 seconds
+
+            // Initialize with first quote
+            document.addEventListener('DOMContentLoaded', () => {
+                showQuote(currentQuoteIndex);
+                startQuoteRotation();
+            });
+
+            function animateProgressBar(duration) {
+                progressBar.style.animation = 'none';
+                void progressBar.offsetWidth; // Trigger reflow
+                progressBar.style.animation = `progress ${duration}ms linear forwards`;
+            }
+
+            function showQuote(index) {
+                if (isAnimating) return;
+                isAnimating = true;
+
+                // Calculate new index with wrapping
+                currentQuoteIndex = (index + quotes.length) % quotes.length;
+
+                // Start progress bar animation
+                animateProgressBar(rotationInterval);
+
+                // First fade out current quote
+                quoteTextElement.classList.remove('show');
+                quoteAuthorElement.classList.remove('show');
+
+                // After fade out completes, change text and animate in
+                setTimeout(() => {
+                    quoteTextElement.textContent = quotes[currentQuoteIndex].text;
+                    quoteAuthorElement.textContent = quotes[currentQuoteIndex].author;
+
+                    quoteTextElement.classList.add('show');
+                    quoteAuthorElement.classList.add('show');
+
+                    isAnimating = false;
+                }, 800); // Match with CSS transition duration
+            }
+
+            function startQuoteRotation() {
+                if (!isAutoRotating) return;
+
+                clearInterval(animationInterval);
+                animationInterval = setInterval(() => {
+                    showQuote(currentQuoteIndex + 1);
+                }, rotationInterval);
+            }
+
+            function stopQuoteRotation() {
+                clearInterval(animationInterval);
+                progressBar.style.animationPlayState = 'paused';
+            }
+
+            // Navigation controls
+            nextButton.addEventListener('click', () => {
+                showQuote(currentQuoteIndex + 1);
+                startQuoteRotation();
+            });
+
+            prevButton.addEventListener('click', () => {
+                showQuote(currentQuoteIndex - 1);
+                startQuoteRotation();
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    showQuote(currentQuoteIndex + 1);
+                    startQuoteRotation();
+                } else if (e.key === 'ArrowLeft') {
+                    showQuote(currentQuoteIndex - 1);
+                    startQuoteRotation();
+                }
+            });
+
+            // Pause on hover
+            const theatre = document.querySelector('.quote-theatre');
+            theatre.addEventListener('mouseenter', () => {
+                stopQuoteRotation();
+            });
+
+            theatre.addEventListener('mouseleave', () => {
+                startQuoteRotation();
+                progressBar.style.animationPlayState = 'running';
+            });
+
+            // Touch events for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            theatre.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+                stopQuoteRotation();
+            }, { passive: true });
+
+            theatre.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+                startQuoteRotation();
+            }, { passive: true });
+
+            function handleSwipe() {
+                const threshold = 50;
+                if (touchEndX < touchStartX - threshold) {
+                    // Swipe left - next quote
+                    showQuote(currentQuoteIndex + 1);
+                } else if (touchEndX > touchStartX + threshold) {
+                    // Swipe right - previous quote
+                    showQuote(currentQuoteIndex - 1);
+                }
+            }
+        </script>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <div class="tilt-img">
+                        <img src="JJJJJ.png" alt="">
+                    </div>
+                    <a href="Toluwanimi Olanrewaju Babalola (1).pdf" download="Toluwanimi Olanrewaju Babalola (1).pdf"
+                        class="cv-button">Download CV</a>
+
+
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>I am Babalola Toluwanimi, Curently a 200lvl student of Covenant University, studying Industrial
+                        Mathematics with Computer Science. My academic journey is driven by a passion for technology and
+                        problem-solving. I have hands-on experience in web development Using (Html 5 , CSS and basic
+                        knowledge in Java script), UI/UX design, . I am continuously improving my skills through
+                        practical projects and professional training, including my studies at APTECH and Did Pre-IT
+                        internship at Micronet Technologies in Lagos, Nigeria</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Click Skills to show</p>
+                        <p class="tab-links" onclick="opentab('experience')">click Expirience</p>
+                        <p class="tab-links" onclick="opentab('education')">Click Education</p>
+
+                    </div>
+                    <div class="tab-contents " id="skills">
+                        <ul>
+                            <li><span> UI?UX </span><br>Designing Web interface and Landing Page</li>
+                            <li><span>Web development</span><br>Web development</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents " id="experience">
+                        <ul>
+                            <li><span> 2023-current </span><br>Learning Web design in APTECH Abeokuta</li>
+                            <li><span>March 2025</span><br>IT in micronet technologies lagos, Nigeria</li>
+
+                            <li><a href="https://afthoniafooods.netlify.app/">One of my Work</a></li>
+
+
+
+
+
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 to 2027 </span><br>Studying Industrial Mathmatics (Compscience) at covenant
+                                University</li>
+                            <li><span>Web development</span> <br>In APTECH Abeokuta</li>
+
+                        </ul>
+                    </div>
+                    <div id=" Service">
+                        <div class="container">
+                            <h1 class="sub-title"></h1>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button>Contact Info</button>
+        <div class="dropdown-content">
+            <p>Phone: +234 9078828095</p>
+            <p>Email: toluwanimibabalola2707@gmail.com</p>
+        </div>
+    </div>
+    </nav>
+    </div>
+
+
+    <!-- Service Section -->
+    <div id="service">
+        <h1>My Services</h1>
+        <div class="service-container">
+            <div class="service-box">Front Web Development</div>
+            <div class="service-box">UI/UX Design</div>
+            <div class="service-box">Building Landing Page</div>
+        </div>
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+            type="module"></script>
+        <dotlottie-player src="https://lottie.host/539726a5-e260-4bd2-913b-eee0b1ca0a76/c9JOMjwBnD.lottie"
+            background="transparent" speed="1" style="width: 600px; height: 600px; margin-left: 30%;" loop
+            autoplay></dotlottie-player>
+    </div>
+
+    <section class="contact-form-section">
+        <div class="container">
+            <h2 style="color: #000; margin-bottom: 50px;" class="section-heading">
+                <span " class=" greeting">Hi, I'm a</span> <br>
+                <span " class=" title typewriter">Front End Developer</span>
+            </h2>
+
+            <form id="nexoraForm" class="animated-form" action="https://formsubmit.co/toluwanimibabalola2707@gmail.com"
+                method="POST" target="_blank">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_autoresponse" value="Hey !
+
+Thank you so much for reaching out. I truly appreciate your interest — whether you're looking to bring a project idea to life or you're hoping to work together on something exciting.
+
+As a passionate Front-End Developer and UI/UX design enthusiast, I love building clean, modern, and user-focused digital experiences that create real value. Your message means a lot, and I’m genuinely looking forward to understanding more about what you have in mind.
+
+I’ll go through the details you shared and get back to you as soon as possible — usually within 24 hours. If it’s urgent or you’d like a faster response, feel free to send me a quick message directly on Telegram using this number:
+
+📱 09078828095
+
+Let’s build something meaningful together.
+
+Warm regards,
+Toluwanimi Babalola
+Front-End Developer | UI/UX Beginner
+✉️ toluwanimibabalola2707@gmail.com
+💼 Let’s create, solve, and grow!
+
+">
+                <input type="hidden" name="_next"
+                    value="https://toluwanimibabalolasportfolio.netlify.app/thank-you.html">
+
+                <input type="hidden" name="_template" value="table">
+
+                <div class="status-message hidden" id="form-status"></div>
+
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Your Name</label>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email Address</label>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone">
+                    <label for="phone">Phone Number (optional)</label>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="radio-group">
+                    <p style="color: #000;"> Do you have a project in mind?</p>
+                    <div class="radio-options">
+                        <label class="radio-button">
+                            <input type="radio" name="hasProject" value="yes" required>
+                            <span class="radio-custom"></span>
+                            <span style="color: black;" class="radio-label">Yes</span>
+                        </label>
+                        <label class="radio-button">
+                            <input type="radio" name="hasProject" value="no">
+                            <span class="radio-custom"></span>
+                            <span style="color: black;" class="radio-label">No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group project-details hidden">
+                    <textarea id="projectDetails" name="projectDetails" rows="4"></textarea>
+                    <label for="projectDetails">Describe your project</label>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="radio-group">
+                    <p style="color: #000;"> Would you like to work with me?</p>
+                    <div class="radio-options">
+                        <label class="radio-button">
+                            <input type="radio" name="workTogether" value="yes" required>
+                            <span class="radio-custom"></span>
+                            <span style="color: black;" class="radio-label">Yes</span>
+                        </label>
+                        <label class="radio-button">
+                            <input type="radio" name="workTogether" value="no">
+                            <span class="radio-custom"></span>
+                            <span style="color: black;" class="radio-label">No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group role-selection hidden">
+                    <select id="role" name="role">
+                        <option value="" disabled selected>Select a role</option>
+                        <option value="ui-ux">UI/UX Designer</option>
+                        <option value="frontend">Front End Developer</option>
+                        <option value="backend">Back End Developer</option>
+                        <option value="fullstack">Full Stack Developer</option>
+                    </select>
+                    <div class="select-arrow"></div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span>Send Message</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </section>
+
+
+
+    <!-- <div id="contact">
+        <h2>Contact Information</h2>
+        <p style="font-size: 30px;font-weight: bolder; "><span class="contact-icon">📞</span>Phone: +234 9078828095</p>
+        <p style="font-size: 30px;font-weight: bolder; padding-top: 20px;"><span class="contact-icon">📧</span>Email: <a
+                href="mailto:toluwanimibabalola2707@gmail.com">toluwanimibabalola2707@gmail.com</a></p>
+        <p style="font-size: 30px;font-weight: bolder; padding-top: 20px;"><span
+                class="contact-icon">📸</span>Instagram: <a href="https://www.instagram.com/tolu.nimi17/"
+                target="_blank">instagram profile</a></p>
+        <p style="font-size: 30px;font-weight: bolder; padding-top: 20px;"><span class="contact-icon">🔗</span>LinkedIn:
+            <a href="https://ng.linkedin.com/in/toluwanimi-babalola-41605129b" target="_blank">Linkdin profile</a>
+        </p>
+
+    </div> -->
+
+    <footer class="professional-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Toluwanimi Babalola</h3>
+                    <p>Front-end Developer | UI/UX Beginner</p>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Connect With Me</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/toluwanimi-babalola-41605129b" target="_blank"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/tolu.nimi17/" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/tolu-15" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:toluwanimibabalola2707@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+2349078828095" aria-label="Phone">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Toluwanimi Babalola. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--<p class="disclaimer">To use chat-box use web as desktop-site. DISCLAIMER: The chatbox responds to simple webdevelopment questions might not be acurate and tells you more about toluwanimi e.g Who is Toluwanimi</p>-->
+    <script>
+
+    </script>
+    <script>
+        function opentab(tabname) {
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+
+    </script>
+    <script>
+        function message() {
+            const name = document.getElementById("name").value;
+
+            if (name) {
+                alert(name + ", Thanks for reaching me! This feature is not available Sorry for the incoviniency reach me through my email bellow or whatsapp number. Thank you");
+            } else {
+                alert("Please enter your name.");
+            }
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let texts = ["Front-end Developer", "UI/UX Designer", "Building Landing Page"];
+            let index = 0;
+            let typingElement = document.querySelector(".header-text p");
+
+            function typeEffect(text, i = 0) {
+                if (i < text.length) {
+                    typingElement.innerHTML = text.substring(0, i + 1) + "|";
+                    setTimeout(() => typeEffect(text, i + 1), 100);
+                } else {
+                    setTimeout(() => deleteEffect(text), 1000);
+                }
+            }
+
+            function deleteEffect(text, i = text.length) {
+                if (i > 0) {
+                    typingElement.innerHTML = text.substring(0, i - 1) + "|";
+                    setTimeout(() => deleteEffect(text, i - 1), 100);
+                } else {
+                    index = (index + 1) % texts.length;
+                    setTimeout(() => typeEffect(texts[index]), 500);
+                }
+            }
+
+            typeEffect(texts[index]);
+        });
+    </script>
+
+    <body>
+        <!-- Chat Button
+        <button class="chat-btn" onclick="toggleChat()">💬</button> -->
+
+        <!-- Chatbox -->
+        <!--<div class="chatbox" id="chatbox">
+        <div class="chat-header">Chat Support</div>
+        <div class="chat-body" id="chat-body">
+            <div class="message">Hello! How can I help you?</div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>-->
+        </div>
+        </div>
+        <script>
+
+        </script>
+
+        <script>
+            function toggleChat() {
+                let chatbox = document.getElementById("chatbox");
+                chatbox.style.display = chatbox.style.display === "none" ? "flex" : "none";
+            }
+
+            function sendMessage() {
+                let input = document.getElementById("user-input");
+                let chatBody = document.getElementById("chat-body");
+                let userText = input.value.trim().toLowerCase();
+
+                if (userText !== "") {
+                    // User Message
+                    let userMessage = document.createElement("div");
+                    userMessage.classList.add("message");
+                    userMessage.style.textAlign = "right";
+                    userMessage.style.background = "#007bff";
+                    userMessage.style.color = "white";
+                    userMessage.textContent = input.value;
+                    chatBody.appendChild(userMessage);
+
+                    // Generate bot reply
+                    setTimeout(() => {
+                        let botReply = document.createElement("div");
+                        botReply.classList.add("message");
+                        botReply.textContent = getBotResponse(userText);
+                        chatBody.appendChild(botReply);
+                        chatBody.scrollTop = chatBody.scrollHeight;
+                    }, 1000);
+
+                    // Clear input field
+                    input.value = "";
+                    chatBody.scrollTop = chatBody.scrollHeight;
+                }
+            }
+
+            function getBotResponse(input) {
+                // Convert input to lowercase to handle case-insensitive matching
+                input = input.toLowerCase();
+
+                // Define chatbot responses
+                const responses = [
+                    { keywords: ["hello", "hi"], response: "Hi there! How can I assist you today?" },
+                    { keywords: ["how are you"], response: "I'm just a chatbot, but I'm doing great! How about you?" },
+                    { keywords: ["what is your name"], response: "I'm your friendly chatbot!" },
+                    { keywords: ["who created you"], response: "I was created by Toluwanimi! 😊" },
+                    { keywords: ["bye", "goodbye"], response: "Goodbye! Have a great day! 😊" },
+                    { keywords: ["what is a landing page"], response: "A landing page is a single webpage designed to convert visitors into leads or customers." },
+                    { keywords: ["how do i create a website"], response: "You can create a website using HTML, CSS, and JavaScript. Need help with code?" },
+                    { keywords: ["what is fiverr"], response: "Fiverr is an online marketplace where you can sell services like web design, writing, and more." },
+                    { keywords: ["who are you"], response: "I am your chatbot assistant! Nimi Jr 😀." },
+                    { keywords: ["what do you do", "what is your purpose"], response: "I answer questions related to web development, specifically front-end, and tell you about my creator." },
+                    { keywords: ["services", "offer", "help with"], response: "I can help with web design, front-end development, and cybersecurity basics according to my creator." },
+                    { keywords: ["html", "what is html"], response: "HTML (HyperText Markup Language) is used to structure web pages." },
+                    { keywords: ["css", "what is css"], response: "CSS (Cascading Style Sheets) is used to style web pages." },
+                    { keywords: ["javascript", "js", "what is javascript"], response: "JavaScript is a programming language that adds interactivity to web pages." },
+                    { keywords: ["web development", "how to build websites"], response: "Start with HTML, then move to CSS, and finally JavaScript. Practice by building projects!" },
+                    { keywords: ["cybersecurity", "hacking"], response: "Cybersecurity involves protecting systems and data from cyber threats like hacking and malware." },
+                    { keywords: ["front-end", "what is front-end"], response: "Front-end development focuses on designing the user interface and experience of websites." },
+                    { keywords: ["back-end", "what is back-end"], response: "Back-end development involves managing the server, database, and logic behind a website." },
+                    { keywords: ["how to host a website", "publish website"], response: "You can host your website using GitHub Pages, Netlify, or Vercel for free." },
+                    { keywords: ["github", "how to upload website"], response: "Upload your project to a GitHub repository and enable GitHub Pages in the settings." },
+                    { keywords: ["student portal", "create a student portal"], response: "You need HTML for structure, CSS for styling, JavaScript for interactivity, and a backend for authentication." },
+                    { keywords: ["who is toluwanimi", "tell me about your creator"], response: "Toluwanimi is a passionate web developer skilled in HTML, CSS, JavaScript, and front-end design. He specializes in creating user-friendly and interactive websites while exploring cybersecurity and full-stack development. Beyond coding, he enjoys gaming (COD Mobile 🔥) and gospel music." },
+                    { keywords: ["thank you", "thanks"], response: "You're welcome! Let me know if you need anything else." }
+                ];
+
+
+                for (let item of responses) {
+                    if (item.keywords.some(keyword => input.includes(keyword))) {
+                        return item.response;
+                    }
+                }
+
+
+                return "Sorry, I don't understand that. Can you ask something else?";
+            }
+
+        </script>
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Babalola Toluwanimi Lanre",
+  "jobTitle": "Frontend Developer",
+  "url": "https://toluwanimibabalola.netlify.app/",
+  "sameAs": [
+    "https://toluwanimibabalola.netlify.app/"
+  ]
+}
+</script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const form = document.getElementById('nexoraForm');
+                const statusMessage = document.getElementById('form-status');
+                const submitBtn = form.querySelector('.submit-btn');
+
+                // Toggle project details field
+                const projectRadios = document.querySelectorAll('input[name="hasProject"]');
+                const projectDetails = document.querySelector('.project-details');
+
+                projectRadios.forEach(radio => {
+                    radio.addEventListener('change', function () {
+                        if (this.value === 'yes') {
+                            projectDetails.classList.add('show');
+                            projectDetails.classList.remove('hidden');
+                        } else {
+                            projectDetails.classList.add('hidden');
+                            projectDetails.classList.remove('show');
+                        }
+                    });
+                });
+
+                // Toggle role selection field
+                const workRadios = document.querySelectorAll('input[name="workTogether"]');
+                const roleSelection = document.querySelector('.role-selection');
+
+                workRadios.forEach(radio => {
+                    radio.addEventListener('change', function () {
+                        if (this.value === 'yes') {
+                            roleSelection.classList.add('show');
+                            roleSelection.classList.remove('hidden');
+                        } else {
+                            roleSelection.classList.add('hidden');
+                            roleSelection.classList.remove('show');
+                        }
+                    });
+                });
+
+                // Form submission
+                form.addEventListener('submit', function (e) {
+                    // Show loading state
+                    submitBtn.classList.add('loading');
+
+                    // Show temporary success message (FormSubmit will handle the actual submission)
+                    showStatusMessage('Sending your message...', 'success');
+
+                    // Let the form submit naturally to FormSubmit
+                    // The target="_blank" will open response in new tab
+                });
+
+                // Helper function to show status messages
+                function showStatusMessage(message, type) {
+                    statusMessage.textContent = message;
+                    statusMessage.className = `status-message show-message ${type}`;
+
+                    // Hide message after 5 seconds
+                    setTimeout(() => {
+                        statusMessage.classList.remove('show-message');
+                    }, 5000);
+                }
+            });
+        </script>
+
+
+    </body>
+
+
+
+
+
+</body>
+
+</html>
