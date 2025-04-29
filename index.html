@@ -796,192 +796,381 @@
                 type="module"></script>
             <dotlottie-player src="https://lottie.host/25ab8ee9-0876-440b-8ea7-ff671c66c781/bhICJMSUxq.lottie"
             background="transparent" speed="1" style="width: 100%; height: auto" loop autoplay></dotlottie-player>
-           <style> :root {
-                    --primary: #3b82f6;
-                    --primary-dark: #2563eb;
-                    --dark: #1e293b;
-                    --light: #f8fafc;
-                    --gray: #64748b;
-                    --gray-light: #e2e8f0;
-                }
+         
+            <style>
+            :root {
+                --primary: #4361ee;
+                --primary-light: #4895ef;
+                --primary-dark: #3a0ca3;
+                --secondary: #f72585;
+                --dark: #14213d;
+                --light: #f8f9fa;
+                --gray: #6c757d;
+                --gray-light: #e9ecef;
+                --success: #4cc9f0;
+                --warning: #f8961e;
+                --danger: #ef233c;
+                --white: #ffffff;
+                --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+                --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+                --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+                --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            }
 
-                body {
-                    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-                    margin: 0;
-                    padding: 0;
-                    background-color: #f1f5f9;
-                    color: var(--dark);
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+                line-height: 1.6;
+                color: var(--dark);
+                background-color: var(--light);
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 4rem 2rem;
+            }
+
+            .section-header {
+                text-align: center;
+                margin-bottom: 4rem;
+                position: relative;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: var(--dark);
+                margin-bottom: 1rem;
+                position: relative;
+                display: inline-block;
+            }
+
+            .section-title:after {
+                content: '';
+                position: absolute;
+                bottom: -12px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80px;
+                height: 4px;
+                background: var(--primary);
+                border-radius: 2px;
+            }
+
+            .section-subtitle {
+                color: var(--gray);
+                max-width: 600px;
+                margin: 0 auto;
+                font-size: 1.1rem;
+                font-weight: 400;
+            }
+
+            .skills-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                gap: 2.5rem;
+                margin-top: 2rem;
+            }
+
+            .skill-card {
+                background: var(--white);
+                border-radius: 12px;
+                padding: 2rem;
+                box-shadow: var(--shadow-md);
+                transition: var(--transition);
+                position: relative;
+                overflow: hidden;
+                border: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            .skill-card:hover {
+                transform: translateY(-5px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .skill-card:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 4px;
+                height: 100%;
+                background: var(--primary);
+            }
+
+            .card-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 2rem;
+            }
+
+            .card-icon {
+                width: 48px;
+                height: 48px;
+                background: linear-gradient(135deg, var(--primary), var(--primary-light));
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--white);
+                font-size: 1.25rem;
+                margin-right: 1.25rem;
+                box-shadow: 0 4px 6px rgba(67, 97, 238, 0.3);
+            }
+
+            .card-title {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: var(--dark);
+            }
+
+            .chart-container {
+                position: relative;
+                height: 280px;
+                width: 100%;
+                margin: 0 auto 2rem;
+            }
+
+            .skills-list {
+                margin-top: 1.5rem;
+            }
+
+            .skill-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 0;
+                border-bottom: 1px solid var(--gray-light);
+            }
+
+            .skill-item:last-child {
+                border-bottom: none;
+            }
+
+            .skill-name {
+                font-weight: 500;
+                color: var(--dark);
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+            }
+
+            .skill-name i {
+                margin-right: 0.75rem;
+                color: var(--primary);
+                font-size: 1.1rem;
+            }
+
+            .skill-level {
+                display: flex;
+                gap: 0.3rem;
+            }
+
+            .star {
+                color: var(--warning);
+                font-size: 1.1rem;
+                position: relative;
+            }
+
+            .empty-star {
+                color: var(--gray-light);
+            }
+
+            .progress-container {
+                width: 100%;
+                height: 8px;
+                background: var(--gray-light);
+                border-radius: 4px;
+                margin-top: 0.5rem;
+                overflow: hidden;
+            }
+
+            .progress-bar {
+                height: 100%;
+                background: linear-gradient(90deg, var(--primary), var(--primary-light));
+                border-radius: 4px;
+                transition: width 1s ease-in-out;
+            }
+
+            .skill-meta {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 0.25rem;
+            }
+
+            .skill-percent {
+                font-size: 0.8rem;
+                color: var(--gray);
+                font-weight: 500;
+            }
+
+            .skill-status {
+                font-size: 0.75rem;
+                font-weight: 600;
+                padding: 0.25rem 0.75rem;
+                border-radius: 50px;
+                background: var(--gray-light);
+                color: var(--gray);
+            }
+
+            .status-learning {
+                background: rgba(76, 201, 240, 0.1);
+                color: var(--success);
+            }
+
+            .status-pending {
+                background: rgba(248, 150, 30, 0.1);
+                color: var(--warning);
+            }
+
+            @media (max-width: 992px) {
+                .skills-grid {
+                    grid-template-columns: 1fr;
                 }
 
                 .container {
-                    max-width: 1000px;
-                    margin: 0 auto;
                     padding: 3rem 1.5rem;
                 }
+            }
 
+            @media (max-width: 576px) {
                 .section-title {
-                    text-align: center;
-                    font-size: 2.2rem;
-                    margin-bottom: 3rem;
-                    position: relative;
-                }
-
-                .section-title:after {
-                    content: '';
-                    position: absolute;
-                    bottom: -10px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 80px;
-                    height: 4px;
-                    background: var(--primary);
-                    border-radius: 2px;
-                }
-
-                .skills-matrix {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-                    gap: 2rem;
-                    margin-top: 2rem;
-                }
-
-                .skills-card {
-                    background: white;
-                    border-radius: 12px;
-                    padding: 1.75rem;
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-                    transition: transform 0.3s ease, box-shadow 0.3s ease;
-                }
-
-                .skills-card:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+                    font-size: 2rem;
                 }
 
                 .card-header {
-                    display: flex;
-                    align-items: center;
-                    gap: 0.75rem;
-                    margin-bottom: 1.75rem;
+                    flex-direction: column;
+                    align-items: flex-start;
                 }
 
-                .card-header i {
-                    font-size: 1.5rem;
-                    color: var(--primary);
+                .card-icon {
+                    margin-bottom: 1rem;
+                    margin-right: 0;
                 }
-
-                .chart-container {
-                    position: relative;
-                    height: 250px;
-                    width: 100%;
-                    margin: 0 auto;
-                }
-
-                .skills-list {
-                    margin-top: 1.5rem;
-                }
-
-                .skill-item {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    padding: 0.75rem 0;
-                    border-bottom: 1px solid var(--gray-light);
-                }
-
-                .skill-item:last-child {
-                    border-bottom: none;
-                }
-
-                .skill-name {
-                    font-weight: 500;
-                    color: var(--dark);
-                }
-
-                .skill-level {
-                    display: flex;
-                    gap: 0.25rem;
-                }
-
-                .star {
-                    color: #fbbf24;
-                    font-size: 1.1rem;
-                }
-
-                .empty-star {
-                    color: var(--gray-light);
-                }
-
-                @media (max-width: 768px) {
-                    .skills-matrix {
-                        grid-template-columns: 1fr;
-                    }
-
-                    .chart-container {
-                        height: 220px;
-                    }
-                }
-            </style>
-        
+            }
+        </style>
+        </head>
 
         <body>
             <div class="container">
-                <h2 class="section-title">Skills Matrix</h2>
+                <div class="section-header">
+                    <h2 class="section-title">Skills Matrix</h2>
+                    <p class="section-subtitle">A visual representation of my technical competencies and proficiency
+                        levels</p>
+                </div>
 
-                <div class="skills-matrix">
-                    <!-- Skills Distribution Pie Chart -->
-                    <div class="skills-card">
+                <div class="skills-grid">
+                    <!-- Skills Distribution Card -->
+                    <div class="skill-card">
                         <div class="card-header">
-                            <i class="fas fa-chart-pie"></i>
-                            <h3>Skills Distribution</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <h3 class="card-title">Skills Distribution</h3>
                         </div>
                         <div class="chart-container">
                             <canvas id="skillsPieChart"></canvas>
                         </div>
+                        <div class="skill-meta">
+                            <span class="skill-percent">Percentage based on project experience</span>
+                        </div>
                     </div>
 
-                    <!-- Skill Levels -->
-                    <div class="skills-card">
+                    <!-- Skill Proficiency Card -->
+                    <div class="skill-card">
                         <div class="card-header">
-                            <i class="fas fa-star"></i>
-                            <h3>Skill Proficiency</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3 class="card-title">Skill Proficiency</h3>
                         </div>
                         <div class="skills-list">
+                            <!-- JavaScript -->
                             <div class="skill-item">
-                                <span class="skill-name">JavaScript</span>
+                                <div>
+                                    <span class="skill-name">
+                                        <i class="fab fa-js"></i> JavaScript
+                                    </span>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" style="width: 40%"></div>
+                                    </div>
+                                </div>
                                 <div class="skill-level">
                                     <span class="star">★</span>
                                     <span class="star">★</span>
-                                    <span class="star">★</span>
+                                    <span class="empty-star">☆</span>
                                     <span class="empty-star">☆</span>
                                     <span class="empty-star">☆</span>
                                 </div>
                             </div>
-                            <div class="skill-item">
-                                <span class="skill-name">React</span>
-                                <div class="skill-level">
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
 
-                                </div>
-                                <p>PENDING...</p>
-                            </div>
+                            <!-- React -->
                             <div class="skill-item">
-                                <span class="skill-name">Node.js</span>
+                                <div>
+                                    <span class="skill-name">
+                                        <i class="fab fa-react"></i> React
+                                    </span>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" style="width: 10%"></div>
+                                    </div>
+                                    <div class="skill-meta">
+                                        <span class="skill-percent">Basic understanding</span>
+                                        <span class="skill-status status-pending">Pending</span>
+                                    </div>
+                                </div>
                                 <div class="skill-level">
                                     <span class="empty-star">☆</span>
                                     <span class="empty-star">☆</span>
                                     <span class="empty-star">☆</span>
                                     <span class="empty-star">☆</span>
                                     <span class="empty-star">☆</span>
-                                    <p>PENDING...</p>
                                 </div>
                             </div>
+
+                            <!-- Node.js -->
                             <div class="skill-item">
-                                <span class="skill-name">UI/UX Design</span>
+                                <div>
+                                    <span class="skill-name">
+                                        <i class="fab fa-node-js"></i> Node.js
+                                    </span>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" style="width: 10%"></div>
+                                    </div>
+                                    <div class="skill-meta">
+                                        <span class="skill-percent">Fundamentals</span>
+                                        <span class="skill-status status-pending">Pending</span>
+                                    </div>
+                                </div>
+                                <div class="skill-level">
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                </div>
+                            </div>
+
+                            <!-- UI/UX -->
+                            <div class="skill-item">
+                                <div>
+                                    <span class="skill-name">
+                                        <i class="fas fa-paint-brush"></i> UI/UX Design
+                                    </span>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" style="width: 5%"></div>
+                                    </div>
+                                    <div class="skill-meta">
+                                        <span class="skill-percent">Fundamentals</span>
+                                        <span class="skill-status status-pending">Pending</span>
+                                    </div>
+                                </div>
                                 <div class="skill-level">
                                     <span class="star">★</span>
                                     <span class="empty-star">☆</span>
@@ -990,21 +1179,39 @@
                                     <span class="empty-star">☆</span>
                                 </div>
                             </div>
+
+                            <!-- Python -->
                             <div class="skill-item">
-                                <span class="skill-name">Java</span>
+                                <div>
+                                    <span class="skill-name">
+                                        <i class="fab fa-python"></i> Python
+                                    </span>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" style="width: 20%"></div>
+                                    </div>
+                                </div>
                                 <div class="skill-level">
                                     <span class="star">★</span>
-                                    <span class="empty-star">☆</span>
+                                    <span class="star">★</span>
                                     <span class="empty-star">☆</span>
                                     <span class="empty-star">☆</span>
                                     <span class="empty-star">☆</span>
                                 </div>
                             </div>
+
+                            <!-- Java -->
                             <div class="skill-item">
-                                <span class="skill-name">Python</span>
+                                <div>
+                                    <span class="skill-name">
+                                        <i class="fab fa-java"></i> Java
+                                    </span>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" style="width: 10%"></div>
+                                    </div>
+                                </div>
                                 <div class="skill-level">
                                     <span class="star">★</span>
-                                    <span class="star">★</span>
+                                    <span class="empty-star">☆</span>
                                     <span class="empty-star">☆</span>
                                     <span class="empty-star">☆</span>
                                     <span class="empty-star">☆</span>
@@ -1020,25 +1227,27 @@
                     // Skills Pie Chart
                     const ctx = document.getElementById('skillsPieChart').getContext('2d');
                     new Chart(ctx, {
-                        type: 'pie',
+                        type: 'doughnut',
                         data: {
-                            labels: ['Html', 'Css', 'Javascript', 'Ui/Ux'],
+                            labels: ['JavaScript', 'Python', 'Java', 'HTML/CSS', 'UI/UX'],
                             datasets: [{
-                                data: [48, 30, 20, 2],
+                                data: [30, 15, 5, 47, 3,],
                                 backgroundColor: [
-                                    'rgba(59, 130, 246, 0.8)',
-                                    'rgba(16, 185, 129, 0.8)',
-                                    'rgba(245, 158, 11, 0.8)',
-                                    'rgba(139, 92, 246, 0.8)',
-                                    'rgba(236, 72, 153, 0.8)'
+                                    'rgba(67, 97, 238, 0.9)',
+                                    'rgba(76, 201, 240, 0.9)',
+                                    'rgba(248, 150, 30, 0.9)',
+                                    'rgba(239, 35, 60, 0.9)',
+                                    'rgba(163, 40, 214, 0.9)',
+                                    'rgba(20, 33, 61, 0.9)'
                                 ],
                                 borderWidth: 0,
-                                hoverOffset: 10
+                                hoverOffset: 15
                             }]
                         },
                         options: {
                             responsive: true,
                             maintainAspectRatio: false,
+                            cutout: '70%',
                             plugins: {
                                 legend: {
                                     position: 'right',
@@ -1047,20 +1256,39 @@
                                         usePointStyle: true,
                                         pointStyle: 'circle',
                                         font: {
-                                            size: 12
-                                        }
+                                            size: 12,
+                                            weight: 500
+                                        },
+                                        color: 'rgba(20, 33, 61, 0.8)'
                                     }
                                 },
                                 tooltip: {
                                     callbacks: {
                                         label: function (context) {
-                                            return `${context.label}: ${context.raw}%`;
+                                            return ` ${context.label}: ${context.raw}%`;
                                         }
-                                    }
+                                    },
+                                    bodyFont: {
+                                        weight: '500'
+                                    },
+                                    padding: 12,
+                                    displayColors: false
                                 }
                             },
-                            cutout: '70%'
+                            animation: {
+                                animateScale: true,
+                                animateRotate: true
+                            }
                         }
+                    });
+
+                    // Animate progress bars
+                    document.querySelectorAll('.progress-bar').forEach(bar => {
+                        const targetWidth = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.width = targetWidth;
+                        }, 100);
                     });
                 });
             </script>
