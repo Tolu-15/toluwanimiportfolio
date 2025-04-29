@@ -885,11 +885,44 @@
             <div class="service-box">UI/UX Design</div>
             <div class="service-box">Building Landing Page</div>
         </div>
-        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-            type="module"></script>
-        <dotlottie-player src="https://lottie.host/539726a5-e260-4bd2-913b-eee0b1ca0a76/c9JOMjwBnD.lottie"
-            background="transparent" speed="1" style="width: 600px; height: 600px; margin-left: 30%;" loop
-            autoplay></dotlottie-player>
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+<style>
+  .lottie-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  dotlottie-player {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media (min-width: 768px) {
+    dotlottie-player {
+      width: 500px;
+      height: 500px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    dotlottie-player {
+      width: 600px;
+      height: 600px;
+    }
+  }
+</style>
+
+<div class="lottie-container">
+  <dotlottie-player 
+    src="https://lottie.host/539726a5-e260-4bd2-913b-eee0b1ca0a76/c9JOMjwBnD.lottie"
+    background="transparent" 
+    speed="1" 
+    loop 
+    autoplay>
+  </dotlottie-player>
+</div>
     </div>
 
     <section class="contact-form-section">
