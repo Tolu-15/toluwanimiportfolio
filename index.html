@@ -73,21 +73,719 @@
 <body>
     <div id="header"></div>
     <div class="container">
+
         <nav>
-            <img src="Screenshot_20250319-204407~2.jpg" alt="logo" class="logo">
+
             <ul>
                 <li><a href="#home"> Home</a></li>
                 <li><a href="#about"> About</a></li>
                 <li><a href="#service"> Service</a></li>
                 <li><a href="#about"> Portfolio</a></li>
                 <li><a href="#contact"> Contact</a></li>
-                <li><a href="https://afthoniafooods.netlify.app/">One of my Work</a></li>
+                <li><a href="https://afthoniafooods.netlify.app/">My Work</a></li>
 
 
 
             </ul>
         </nav>
+        <!DOCTYPE html>
+        <html lang="en">
 
+        <head>
+            <!DOCTYPE html>
+            <html lang="en">
+
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>T_dev | Elite Developer Portfolio</title>
+                <style>
+                    /* Header Container - Only affects the top section */
+                    .portfolio-header {
+                        position: relative;
+                        width: 100%;
+                        height: 100vh;
+                        overflow: hidden;
+                        background: linear-gradient(to right, #141e30, #243b55);
+                        font-family: 'Rajdhani', 'Orbitron', sans-serif;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        perspective: 1000px;
+                        cursor: none;
+                        isolation: isolate;
+                    }
+
+                    :root {
+                        --primary: #00f5d4;
+                        /* Cyber teal */
+                        --secondary: #00bbf9;
+                        /* Electric blue */
+                        --accent: #fee440;
+                        /* Neon yellow */
+                        --dark: #161a1d;
+                        /* Space black */
+                        --text: #f8f9fa;
+                        /* Pure white */
+                        --glow: 0 0 15px;
+                        --code-blue: #5e9eff;
+                        --code-purple: #b388ff;
+                        --code-green: #69f0ae;
+                        --code-orange: #ffab40;
+                    }
+
+                    .header-cursor {
+                        position: fixed;
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        background: var(--accent);
+                        mix-blend-mode: screen;
+                        pointer-events: none;
+                        z-index: 9999;
+                        filter: drop-shadow(0 0 8px var(--accent));
+                        transform: translate(-50%, -50%) scale(1);
+                        transition: transform 0.2s ease, background 0.3s ease;
+                    }
+
+                    .header-cursor.active {
+                        transform: translate(-50%, -50%) scale(1.5);
+                        background: var(--primary);
+                    }
+
+                    .logo-container {
+                        position: relative;
+                        width: 400px;
+                        height: 400px;
+                        z-index: 10;
+                    }
+
+                    .tdev-logo {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        transform-style: preserve-3d;
+                        transition: transform 0.05s linear;
+                        animation: floatLogo 8s ease-in-out infinite;
+                    }
+
+                    .logo-svg {
+                        width: 100%;
+                        height: 100%;
+                        filter: drop-shadow(var(--glow) var(--primary));
+                    }
+
+                    .t-bar,
+                    .t-stem {
+                        fill: none;
+                        stroke: url(#logo-gradient);
+                        stroke-width: 4;
+                        stroke-linecap: round;
+                        stroke-dasharray: 1000;
+                        stroke-dashoffset: 1000;
+                    }
+
+                    .t-bar {
+                        transform-origin: center;
+                        animation:
+                            infiniteDrawBar 4s cubic-bezier(0.65, 0, 0.35, 1) infinite,
+                            pulseBar 3s ease-in-out infinite,
+                            colorShiftBar 7s linear infinite,
+                            moveBar 5s ease-in-out infinite;
+                    }
+
+                    .t-stem {
+                        transform-origin: center;
+                        animation:
+                            infiniteDrawStem 4s cubic-bezier(0.65, 0, 0.35, 1) infinite 0.5s,
+                            pulseStem 3.5s ease-in-out infinite,
+                            colorShiftStem 9s linear infinite,
+                            moveStem 6s ease-in-out infinite;
+                    }
+
+                    .dev-text {
+                        fill: var(--text);
+                        font-family: 'Orbitron';
+                        font-weight: 700;
+                        font-size: 32px;
+                        opacity: 0;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        animation:
+                            fadeIn 0.8s ease-out 1.2s forwards,
+                            textGlow 2.5s ease-in-out infinite alternate 2s;
+                    }
+
+                    @keyframes infiniteDrawBar {
+                        0% {
+                            stroke-dashoffset: 1000;
+                        }
+
+                        40% {
+                            stroke-dashoffset: 0;
+                        }
+
+                        60% {
+                            stroke-dashoffset: 0;
+                        }
+
+                        100% {
+                            stroke-dashoffset: 1000;
+                        }
+                    }
+
+                    @keyframes infiniteDrawStem {
+                        0% {
+                            stroke-dashoffset: 1000;
+                        }
+
+                        40% {
+                            stroke-dashoffset: 0;
+                        }
+
+                        60% {
+                            stroke-dashoffset: 0;
+                        }
+
+                        100% {
+                            stroke-dashoffset: 1000;
+                        }
+                    }
+
+                    @keyframes pulseBar {
+
+                        0%,
+                        100% {
+                            stroke-width: 4;
+                        }
+
+                        50% {
+                            stroke-width: 6;
+                        }
+                    }
+
+                    @keyframes pulseStem {
+
+                        0%,
+                        100% {
+                            stroke-width: 4;
+                        }
+
+                        50% {
+                            stroke-width: 5.5;
+                        }
+                    }
+
+                    @keyframes colorShiftBar {
+
+                        0%,
+                        100% {
+                            stroke: url(#logo-gradient);
+                        }
+
+                        33% {
+                            stroke: var(--primary);
+                        }
+
+                        66% {
+                            stroke: var(--accent);
+                        }
+                    }
+
+                    @keyframes colorShiftStem {
+
+                        0%,
+                        100% {
+                            stroke: url(#logo-gradient);
+                        }
+
+                        33% {
+                            stroke: var(--secondary);
+                        }
+
+                        66% {
+                            stroke: var(--primary);
+                        }
+                    }
+
+                    @keyframes moveBar {
+
+                        0%,
+                        100% {
+                            transform: translateY(0) rotate(0deg);
+                        }
+
+                        25% {
+                            transform: translateY(-3px) rotate(0.5deg);
+                        }
+
+                        50% {
+                            transform: translateY(0) rotate(0deg);
+                        }
+
+                        75% {
+                            transform: translateY(2px) rotate(-0.5deg);
+                        }
+                    }
+
+                    @keyframes moveStem {
+
+                        0%,
+                        100% {
+                            transform: translateX(0) rotate(0deg);
+                        }
+
+                        25% {
+                            transform: translateX(-2px) rotate(0.3deg);
+                        }
+
+                        50% {
+                            transform: translateX(0) rotate(0deg);
+                        }
+
+                        75% {
+                            transform: translateX(2px) rotate(-0.3deg);
+                        }
+                    }
+
+                    @keyframes floatLogo {
+
+                        0%,
+                        100% {
+                            transform: translateY(0) rotateY(0deg);
+                        }
+
+                        50% {
+                            transform: translateY(-20px) rotateY(5deg);
+                        }
+                    }
+
+                    @keyframes fadeIn {
+                        to {
+                            opacity: 1;
+                        }
+                    }
+
+                    @keyframes textGlow {
+                        0% {
+                            filter: drop-shadow(0 0 5px var(--primary));
+                        }
+
+                        100% {
+                            filter: drop-shadow(0 0 20px var(--accent));
+                        }
+                    }
+
+                    /* Code rain background */
+                    .code-rain {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        z-index: 0;
+                        opacity: 0.2;
+                    }
+
+                    .code-snippet {
+                        position: absolute;
+                        font-family: 'Courier New', monospace;
+                        font-weight: 700;
+                        font-size: 14px;
+                        white-space: nowrap;
+                        animation: fall linear infinite;
+                        user-select: none;
+                    }
+
+                    .html-tag {
+                        color: var(--code-blue);
+                    }
+
+                    .css-prop {
+                        color: var(--code-green);
+                    }
+
+                    .js-keyword {
+                        color: var(--code-purple);
+                    }
+
+                    .bracket {
+                        color: var(--code-orange);
+                    }
+
+                    .string {
+                        color: var(--accent);
+                    }
+
+                    .comment {
+                        color: #757575;
+                    }
+
+                    @keyframes fall {
+                        to {
+                            transform: translateY(100vh);
+                        }
+                    }
+
+                    /* Floating particles */
+                    .particles {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                    }
+
+                    .particle {
+                        position: absolute;
+                        background: var(--primary);
+                        border-radius: 50%;
+                        filter: blur(1px);
+                        animation: float linear infinite;
+                        opacity: 0.7;
+                    }
+
+                    @keyframes float {
+
+                        0%,
+                        100% {
+                            transform: translateY(0) translateX(0);
+                        }
+
+                        50% {
+                            transform: translateY(-20px) translateX(10px);
+                        }
+                    }
+
+                    /* Header content */
+                    .header-content {
+                        position: absolute;
+                        bottom: 10%;
+                        left: 0;
+                        width: 100%;
+                        text-align: center;
+                        z-index: 10;
+                        color: var(--text);
+                    }
+
+                    .header-title {
+                        font-family: 'Orbitron', sans-serif;
+                        font-size: 2.5rem;
+                        margin-bottom: 1rem;
+                        text-transform: uppercase;
+                        letter-spacing: 3px;
+                        opacity: 0;
+                        animation: fadeInUp 1s ease-out 1.5s forwards;
+                    }
+
+                    .header-subtitle {
+                        font-family: 'Rajdhani', sans-serif;
+                        font-size: 1.2rem;
+                        opacity: 0;
+                        animation: fadeInUp 1s ease-out 1.8s forwards;
+                        color: var(--secondary);
+                    }
+
+                    .scroll-indicator {
+                        position: absolute;
+                        bottom: 30px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 30px;
+                        height: 50px;
+                        border: 2px solid var(--primary);
+                        border-radius: 15px;
+                        opacity: 0;
+                        animation: fadeIn 1s ease-out 2s forwards, bounce 2s infinite 2.5s;
+                    }
+
+                    .scroll-indicator::before {
+                        content: '';
+                        position: absolute;
+                        top: 8px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 6px;
+                        height: 6px;
+                        background: var(--accent);
+                        border-radius: 50%;
+                        animation: scroll 2s infinite 2.5s;
+                    }
+
+                    @keyframes fadeInUp {
+                        from {
+                            opacity: 0;
+                            transform: translateY(20px);
+                        }
+
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+
+                    @keyframes bounce {
+
+                        0%,
+                        20%,
+                        50%,
+                        80%,
+                        100% {
+                            transform: translateY(0) translateX(-50%);
+                        }
+
+                        40% {
+                            transform: translateY(-20px) translateX(-50%);
+                        }
+
+                        60% {
+                            transform: translateY(-10px) translateX(-50%);
+                        }
+                    }
+
+                    @keyframes scroll {
+                        0% {
+                            opacity: 1;
+                            top: 8px;
+                        }
+
+                        100% {
+                            opacity: 0;
+                            top: 30px;
+                        }
+                    }
+                </style>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@500&display=swap"
+                    rel="stylesheet">
+            </head>
+
+        <body>
+            <!-- Only this section will be affected by the styling -->
+            <section class="portfolio-header">
+                <div class="header-cursor"></div>
+                <div class="code-rain" id="codeRain"></div>
+                <div class="particles" id="particles"></div>
+
+                <div class="logo-container">
+                    <div class="holographic-overlay"></div>
+                    <div class="tdev-logo">
+                        <svg class="logo-svg" viewBox="0 0 200 200">
+                            <defs>
+                                <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="var(--primary)" />
+                                    <stop offset="50%" stop-color="var(--secondary)" />
+                                    <stop offset="100%" stop-color="var(--accent)" />
+                                </linearGradient>
+                            </defs>
+
+                            <!-- T Letter -->
+                            <rect class="t-bar" x="50" y="40" width="100" height="18" rx="4" />
+                            <rect class="t-stem" x="90" y="58" width="20" height="70" rx="4" />
+
+                            <!-- _dev Text -->
+                            <text class="dev-text" x="100" y="160" text-anchor="middle">_DEV</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="header-content">
+                    <h1 class="header-title">T_DEV</h1>
+                    <p class="header-subtitle">Front-End Developer/ Beginer Ui/Ux</p>
+                </div>
+
+                <div class="scroll-indicator"></div>
+            </section>
+
+            <!-- Rest of your website content goes here -->
+            <main>
+                <!-- Your existing content -->
+            </main>
+
+            <script>
+                // Custom cursor - only for header
+                const headerCursor = document.querySelector('.header-cursor');
+                const headerSection = document.querySelector('.portfolio-header');
+
+                headerSection.addEventListener('mousemove', (e) => {
+                    headerCursor.style.left = e.clientX + 'px';
+                    headerCursor.style.top = e.clientY + 'px';
+
+                    // 3D tilt effect
+                    const logo = document.querySelector('.tdev-logo');
+                    const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+                    const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+                    logo.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+
+                    // Dynamic particle movement
+                    const particles = document.querySelectorAll('.particle');
+                    particles.forEach(particle => {
+                        const distanceX = (e.clientX - window.innerWidth / 2) / window.innerWidth;
+                        const distanceY = (e.clientY - window.innerHeight / 2) / window.innerHeight;
+                        particle.style.transform = `translateX(${distanceX * 20}px) translateY(${distanceY * 20}px)`;
+                    });
+                });
+
+                // Cursor hover effect
+                headerSection.addEventListener('mouseenter', () => {
+                    document.body.style.cursor = 'none';
+                });
+
+                headerSection.addEventListener('mouseleave', () => {
+                    document.body.style.cursor = 'auto';
+                });
+
+                // Interactive elements
+                const interactiveElements = document.querySelectorAll('.logo-container, .header-title, .header-subtitle');
+                interactiveElements.forEach(el => {
+                    el.addEventListener('mouseenter', () => {
+                        headerCursor.classList.add('active');
+                        playHoverSound();
+                    });
+                    el.addEventListener('mouseleave', () => {
+                        headerCursor.classList.remove('active');
+                    });
+                });
+
+                // Code snippets for the rain
+                const codeSnippets = [
+                    '<span class="html-tag">&lt;div</span> <span class="css-prop">class</span>=<span class="string">"container"</span><span class="html-tag">&gt;</span>',
+                    '<span class="css-prop">background</span>: <span class="string">linear-gradient</span>(<span class="js-keyword">to right</span>, #00f5d4, #00bbf9);',
+                    '<span class="js-keyword">function</span> <span class="css-prop">animate</span>() { <span class="comment">// Infinite animation</span> }',
+                    '<span class="html-tag">&lt;script</span> <span class="css-prop">src</span>=<span class="string">"app.js"</span><span class="html-tag">&gt;&lt;/script&gt;</span>',
+                    '<span class="css-prop">transform</span>: <span class="string">rotate</span>(<span class="js-keyword">45deg</span>);',
+                    '<span class="js-keyword">const</span> <span class="css-prop">developer</span> = <span class="string">"T_DEV"</span>;',
+                    '<span class="html-tag">&lt;style&gt;</span> <span class="css-prop">body</span> { <span class="css-prop">margin</span>: <span class="js-keyword">0</span>; } <span class="html-tag">&lt;/style&gt;</span>',
+                    '<span class="js-keyword">document</span>.<span class="css-prop">addEventListener</span>(<span class="string">"click"</span>, handler);',
+                    '<span class="html-tag">&lt;nav</span> <span class="css-prop">class</span>=<span class="string">"main-nav"</span><span class="html-tag">&gt;&lt;/nav&gt;</span>',
+                    '<span class="css-prop">@keyframes</span> <span class="js-keyword">float</span> { <span class="css-prop">50%</span> { <span class="css-prop">transform</span>: <span class="string">translateY</span>(-20px); } }',
+                    '<span class="js-keyword">class</span> <span class="css-prop">Developer</span> { <span class="css-prop">constructor</span>() {} }',
+                    '<span class="html-tag">&lt;!--</span> <span class="comment">This code rocks!</span> <span class="html-tag">--&gt;</span>'
+                ];
+
+                // Code rain effect
+                const codeRain = document.getElementById('codeRain');
+
+                function createCodeRain() {
+                    const snippet = document.createElement('div');
+                    snippet.className = 'code-snippet';
+                    snippet.innerHTML = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+
+                    snippet.style.left = Math.random() * 100 + 'vw';
+                    snippet.style.fontSize = (12 + Math.random() * 6) + 'px';
+                    snippet.style.animationDuration = (8 + Math.random() * 12) + 's';
+                    snippet.style.animationDelay = Math.random() * 5 + 's';
+                    snippet.style.opacity = 0.5 + Math.random() * 0.5;
+
+                    codeRain.appendChild(snippet);
+
+                    // Remove snippet after animation completes
+                    setTimeout(() => {
+                        snippet.remove();
+                    }, parseFloat(snippet.style.animationDuration) * 1000);
+                }
+
+                // Create initial code rain
+                for (let i = 0; i < 50; i++) {
+                    setTimeout(createCodeRain, i * 300);
+                }
+
+                // Continuous creation
+                setInterval(createCodeRain, 300);
+
+                // Floating particles
+                const particlesContainer = document.getElementById('particles');
+                const particleCount = 30;
+
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+
+                    // Random properties
+                    const size = Math.random() * 5 + 1;
+                    const posX = Math.random() * 100;
+                    const posY = Math.random() * 100;
+                    const duration = Math.random() * 20 + 10;
+                    const delay = Math.random() * 5;
+
+                    particle.style.width = `${size}px`;
+                    particle.style.height = `${size}px`;
+                    particle.style.left = `${posX}%`;
+                    particle.style.top = `${posY}%`;
+                    particle.style.animationDuration = `${duration}s`;
+                    particle.style.animationDelay = `${delay}s`;
+
+                    // Random color variation
+                    if (Math.random() > 0.7) {
+                        particle.style.background = `var(--secondary)`;
+                    } else if (Math.random() > 0.9) {
+                        particle.style.background = `var(--accent)`;
+                    }
+
+                    particlesContainer.appendChild(particle);
+                }
+
+                // Audio feedback
+                function playHoverSound() {
+                    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                    const oscillator = audioCtx.createOscillator();
+                    const gainNode = audioCtx.createGain();
+
+                    oscillator.type = 'sine';
+                    oscillator.frequency.value = 880 + Math.random() * 440;
+                    gainNode.gain.value = 0.1;
+
+                    oscillator.connect(gainNode);
+                    gainNode.connect(audioCtx.destination);
+
+                    oscillator.start();
+                    gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
+                    oscillator.stop(audioCtx.currentTime + 0.3);
+                }
+
+                // Scroll indicator click
+                document.querySelector('.scroll-indicator').addEventListener('click', () => {
+                    window.scrollTo({
+                        top: window.innerHeight,
+                        behavior: 'smooth'
+                    });
+                });
+
+                // Infinite T drawing effect
+                function enhanceTAnimation() {
+                    const tBar = document.querySelector('.t-bar');
+                    const tStem = document.querySelector('.t-stem');
+
+                    // Random durations between 3-5 seconds
+                    const barDuration = 3 + Math.random() * 2;
+                    const stemDuration = 3 + Math.random() * 2;
+
+                    tBar.style.animation = `
+                infiniteDrawBar ${barDuration}s cubic-bezier(0.65, 0, 0.35, 1) infinite,
+                pulseBar ${barDuration}s ease-in-out infinite,
+                colorShiftBar ${barDuration * 2}s linear infinite,
+                moveBar ${barDuration * 1.5}s ease-in-out infinite
+            `;
+
+                    tStem.style.animation = `
+                infiniteDrawStem ${stemDuration}s cubic-bezier(0.65, 0, 0.35, 1) infinite 0.5s,
+                pulseStem ${stemDuration}s ease-in-out infinite,
+                colorShiftStem ${stemDuration * 2}s linear infinite,
+                moveStem ${stemDuration * 1.5}s ease-in-out infinite
+            `;
+                }
+
+                // Initialize with animation
+                enhanceTAnimation();
+
+                // Randomize animation parameters every 10-15 seconds
+                setInterval(enhanceTAnimation, 10000 + Math.random() * 5000);
+            </script>
+        </body>
+
+        </html>
         <div id="home" class="header-text">
             <p style="font-size: 40px; color:#ff416c;">I am a front-end Developer</p>
             <h1>HI, I'm <span> Toluwanmi </span> <br> Babalola Olanrewaju</h1>
@@ -190,7 +888,7 @@
         <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
             type="module"></script>
         <dotlottie-player src="https://lottie.host/539726a5-e260-4bd2-913b-eee0b1ca0a76/c9JOMjwBnD.lottie"
-            background="transparent" speed="1" style="width: 600px; height: 600px; margin-left: %;" loop
+            background="transparent" speed="1" style="width: 600px; height: 600px; margin-left: 30%;" loop
             autoplay></dotlottie-player>
     </div>
 
@@ -204,7 +902,27 @@
             <form id="nexoraForm" class="animated-form" action="https://formsubmit.co/toluwanimibabalola2707@gmail.com"
                 method="POST" target="_blank">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://toluwanimibabalolasportfolio.netlify.app/thank-you.html">
+                <input type="hidden" name="_autoresponse" value="Hey !
+
+Thank you so much for reaching out. I truly appreciate your interest — whether you're looking to bring a project idea to life or you're hoping to work together on something exciting.
+
+As a passionate Front-End Developer and UI/UX design enthusiast, I love building clean, modern, and user-focused digital experiences that create real value. Your message means a lot, and I’m genuinely looking forward to understanding more about what you have in mind.
+
+I’ll go through the details you shared and get back to you as soon as possible — usually within 24 hours. If it’s urgent or you’d like a faster response, feel free to send me a quick message directly on Telegram using this number:
+
+📱 09078828095
+
+Let’s build something meaningful together.
+
+Warm regards,
+Toluwanimi Babalola
+Front-End Developer | UI/UX Beginner
+✉️ toluwanimibabalola2707@gmail.com
+💼 Let’s create, solve, and grow!
+
+">
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+
                 <input type="hidden" name="_template" value="table">
 
                 <div class="status-message hidden" id="form-status"></div>
@@ -228,7 +946,7 @@
                 </div>
 
                 <div class="radio-group">
-                    <p>Do you have a project in mind?</p>
+                    <p style="color: #000;"> Do you have a project in mind?</p>
                     <div class="radio-options">
                         <label class="radio-button">
                             <input type="radio" name="hasProject" value="yes" required>
@@ -250,7 +968,7 @@
                 </div>
 
                 <div class="radio-group">
-                    <p>Would you like to work with me?</p>
+                    <p style="color: #000;"> Would you like to work with me?</p>
                     <div class="radio-options">
                         <label class="radio-button">
                             <input type="radio" name="workTogether" value="yes" required>
@@ -349,7 +1067,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!--<p class="disclaimer">To use chat-box use web as desktop-site. DISCLAIMER: The chatbox responds to simple webdevelopment questions might not be acurate and tells you more about toluwanimi e.g Who is Toluwanimi</p>-->
     <script>
-        alert('welcome')
+
     </script>
     <script>
         function opentab(tabname) {
