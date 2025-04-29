@@ -795,8 +795,137 @@
                        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
                 type="module"></script>
             <dotlottie-player src="https://lottie.host/25ab8ee9-0876-440b-8ea7-ff671c66c781/bhICJMSUxq.lottie"
-                background="transparent" speed="1" style="width: 100%; height: auto" loop autoplay></dotlottie-player>
-             <div class="container">
+            background="transparent" speed="1" style="width: 100%; height: auto" loop autoplay></dotlottie-player>
+            <style>:root {
+                    --primary: #3b82f6;
+                    --primary-dark: #2563eb;
+                    --dark: #1e293b;
+                    --light: #f8fafc;
+                    --gray: #64748b;
+                    --gray-light: #e2e8f0;
+                }
+
+                body {
+                    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f1f5f9;
+                    color: var(--dark);
+                }
+
+                .container {
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    padding: 3rem 1.5rem;
+                }
+
+                .section-title {
+                    text-align: center;
+                    font-size: 2.2rem;
+                    margin-bottom: 3rem;
+                    position: relative;
+                }
+
+                .section-title:after {
+                    content: '';
+                    position: absolute;
+                    bottom: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 80px;
+                    height: 4px;
+                    background: var(--primary);
+                    border-radius: 2px;
+                }
+
+                .skills-matrix {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                    gap: 2rem;
+                    margin-top: 2rem;
+                }
+
+                .skills-card {
+                    background: white;
+                    border-radius: 12px;
+                    padding: 1.75rem;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+
+                .skills-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+                }
+
+                .card-header {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    margin-bottom: 1.75rem;
+                }
+
+                .card-header i {
+                    font-size: 1.5rem;
+                    color: var(--primary);
+                }
+
+                .chart-container {
+                    position: relative;
+                    height: 250px;
+                    width: 100%;
+                    margin: 0 auto;
+                }
+
+                .skills-list {
+                    margin-top: 1.5rem;
+                }
+
+                .skill-item {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0.75rem 0;
+                    border-bottom: 1px solid var(--gray-light);
+                }
+
+                .skill-item:last-child {
+                    border-bottom: none;
+                }
+
+                .skill-name {
+                    font-weight: 500;
+                    color: var(--dark);
+                }
+
+                .skill-level {
+                    display: flex;
+                    gap: 0.25rem;
+                }
+
+                .star {
+                    color: #fbbf24;
+                    font-size: 1.1rem;
+                }
+
+                .empty-star {
+                    color: var(--gray-light);
+                }
+
+                @media (max-width: 768px) {
+                    .skills-matrix {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .chart-container {
+                        height: 220px;
+                    }
+                }
+            </style>
+        </head>
+
+        <body>
+            <div class="container">
                 <h2 class="section-title">Skills Matrix</h2>
 
                 <div class="skills-matrix">
@@ -935,8 +1064,7 @@
                     });
                 });
             </script>
-          
-
+        </body>
         </div>
         <div class="quote-master-container">
             <div class="quote-theatre">
