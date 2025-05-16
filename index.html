@@ -1777,9 +1777,8 @@ Industrial Mathematics & Computer Science | Covenant University
 
 Passionate problem-solver with strong analytical skills and technical aptitude. Currently pursuing my degree while developing expertise in web technologies (HTML5, CSS, Basic knowledge in JavaScript and UI/UX design) . Enhanced my practical skills through professional training at APTECH and hands-on experience during my Pre-IT internship at Micronet Technologies, Lagos. Committed to continuous learning and applying my knowledge to create effective digital solutions.
 </p>
-                    <!DOCTYPE html>
+                  <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1815,11 +1814,12 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
             gap: 20px;
             max-width: 1000px;
             margin: 80px auto 20px;
-            align-items: center;
+            align-items: stretch;
             justify-content: center;
+            flex-wrap: nowrap;
         }
 
-        .lottie-container {
+        .ai-lottie-wrapper {
             width: 300px;
             height: 300px;
             background-color: var(--white);
@@ -1833,7 +1833,7 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
         }
 
         .chat-container {
-            width: 80%;
+            flex: 1;
             max-width: 600px;
             height: 80vh;
             background-color: var(--white);
@@ -1861,8 +1861,8 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
         }
 
         .avatar {
-            width:80px;
-            height: 100px;
+            width: 40px;
+            height: 40px;
             border-radius: var(--radius-full);
             overflow: hidden;
             flex-shrink: 0;
@@ -2145,9 +2145,10 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
             .chat-section {
                 flex-direction: column;
                 align-items: center;
+                flex-wrap: wrap;
             }
 
-            .lottie-container {
+            .ai-lottie-wrapper {
                 width: 200px;
                 height: 200px;
                 margin-bottom: 20px;
@@ -2171,7 +2172,7 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
                 border-radius: 0;
             }
 
-            .lottie-container {
+            .ai-lottie-wrapper {
                 width: 150px;
                 height: 150px;
             }
@@ -2190,7 +2191,7 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
 <body>
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     <div class="chat-section">
-        <div class="lottie-container">
+        <div class="ai-lottie-wrapper">
             <dotlottie-player 
                 src="https://lottie.host/531b3e9c-8393-4003-a857-6c4e410d07b5/OQFaSMB2si.lottie" 
                 background="transparent" 
@@ -2693,7 +2694,6 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
         });
     </script>
 </body>
-
 </html>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Click Skills to show</p>
