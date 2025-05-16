@@ -1777,6 +1777,882 @@ Industrial Mathematics & Computer Science | Covenant University
 
 Passionate problem-solver with strong analytical skills and technical aptitude. Currently pursuing my degree while developing expertise in web technologies (HTML5, CSS, Basic knowledge in JavaScript and UI/UX design) . Enhanced my practical skills through professional training at APTECH and hands-on experience during my Pre-IT internship at Micronet Technologies, Lagos. Committed to continuous learning and applying my knowledge to create effective digital solutions.
 </p>
+                    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toluwanimi's AI Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-light: #eef2ff;
+            --secondary: #3f37c9;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --white: #ffffff;
+
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-full: 9999px;
+
+            --transition: all 0.2s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--dark);
+            line-height: 1.5;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 480px;
+            height: 80vh;
+            max-height: 800px;
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            padding: 16px 20px;
+            background-color: var(--primary);
+            color: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-full);
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 2px solid var(--white);
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header-text h2 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .header-text p {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .header-actions .icon-button {
+            background: none;
+            border: none;
+            color: var(--white);
+            width: 32px;
+            height: 32px;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .header-actions .icon-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: var(--light);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .message {
+            max-width: 85%;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            animation: messageIn 0.3s ease-out forwards;
+            opacity: 0;
+        }
+
+        .bot-message {
+            align-self: flex-start;
+        }
+
+        .user-message {
+            align-self: flex-end;
+        }
+
+        .message-content {
+            padding: 12px 16px;
+            border-radius: var(--radius-md);
+            position: relative;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .bot-message .message-content {
+            background-color: var(--white);
+            color: var(--dark);
+            border-top-left-radius: var(--radius-sm);
+        }
+
+        .user-message .message-content {
+            background-color: var(--primary);
+            color: var(--white);
+            border-top-right-radius: var(--radius-sm);
+        }
+
+        .welcome-message .message-content {
+            background-color: var(--primary-light);
+            color: var(--dark);
+        }
+
+        .message-time {
+            font-size: 11px;
+            color: var(--gray);
+            padding: 0 8px;
+            opacity: 0.8;
+        }
+
+        .user-message .message-time {
+            text-align: right;
+        }
+
+        .chat-input-container {
+            padding: 12px 16px;
+            background-color: var(--white);
+            border-top: 1px solid var(--light-gray);
+            position: relative;
+        }
+
+        .chat-input {
+            display: flex;
+            gap: 8px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid var(--light-gray);
+            border-radius: var(--radius-full);
+            outline: none;
+            font-size: 15px;
+            transition: var(--transition);
+            background-color: var(--light);
+        }
+
+        .chat-input input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+        }
+
+        .chat-input button {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-full);
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .chat-input button:hover {
+            background-color: var(--secondary);
+        }
+
+        .quick-replies {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .quick-reply {
+            padding: 8px 14px;
+            background-color: var(--white);
+            border: 1px solid var(--light-gray);
+            border-radius: var(--radius-full);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--dark);
+        }
+
+        .quick-reply:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        .options-list {
+            margin: 8px 0 12px;
+            padding-left: 16px;
+        }
+
+        .options-list li {
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        .option-tag {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 2px 8px;
+            border-radius: var(--radius-full);
+            font-size: 12px;
+            font-weight: 500;
+            margin-right: 8px;
+        }
+
+        .welcome-message .option-tag {
+            background-color: var(--secondary);
+        }
+
+        /* Typing indicator */
+        .typing-indicator {
+            display: none;
+            align-items: center;
+            gap: 4px;
+            padding: 8px 16px;
+            position: absolute;
+            top: -40px;
+            left: 16px;
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            font-size: 12px;
+            color: var(--gray);
+        }
+
+        .typing-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--gray);
+            border-radius: var(--radius-full);
+            opacity: 0.4;
+            animation: typingAnimation 1.4s infinite ease-in-out;
+        }
+
+        .typing-dot:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typingAnimation {
+
+            0%,
+            60%,
+            100% {
+                transform: translateY(0);
+                opacity: 0.4;
+            }
+
+            30% {
+                transform: translateY(-4px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes messageIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Scrollbar styling */
+        .chat-messages::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .chat-messages::-webkit-scrollbar-track {
+            background: var(--light-gray);
+        }
+
+        .chat-messages::-webkit-scrollbar-thumb {
+            background: var(--gray);
+            border-radius: 3px;
+        }
+
+        .chat-messages::-webkit-scrollbar-thumb:hover {
+            background: var(--dark);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            .chat-container {
+                height: 100vh;
+                max-height: none;
+                border-radius: 0;
+            }
+
+            .message {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-content">
+                <div class="avatar">
+                    <img src="https://avatars.githubusercontent.com/u/12345678" alt="Toluwanimi">
+                </div>
+                <div class="header-text">
+                    <h2>Toluwanimi AI</h2>
+                    <p>Ask me about skills, projects, or hobbies</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="icon-button"><i class="fas fa-ellipsis-v"></i></button>
+            </div>
+        </div>
+
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message welcome-message">
+                <div class="message-content">
+                    <p>👋 Hello! I'm Toluwanimi's AI assistant. I can tell you about his:</p>
+                    <ul class="options-list">
+                        <li><span class="option-tag">Skills</span> & technologies he works with</li>
+                        <li><span class="option-tag">Projects</span> he's built</li>
+                        <li><span class="option-tag">Education</span> background</li>
+                        <li><span class="option-tag">Hobbies</span> & interests</li>
+                    </ul>
+                    <p>What would you like to know?</p>
+                </div>
+                <div class="message-time">Just now</div>
+            </div>
+
+            <div class="quick-replies">
+                <button class="quick-reply" data-reply="Tell me about your skills">Skills</button>
+                <button class="quick-reply" data-reply="What projects have you worked on?">Projects</button>
+                <button class="quick-reply" data-reply="What are your hobbies?">Hobbies</button>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <div class="typing-indicator" id="typing-indicator">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+                <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // DOM Elements
+            const chatMessages = document.getElementById('chat-messages');
+            const userInput = document.getElementById('user-input');
+            const sendButton = document.getElementById('send-button');
+            const typingIndicator = document.getElementById('typing-indicator');
+
+            // Verify DOM elements exist
+            if (!chatMessages || !userInput || !sendButton || !typingIndicator) {
+                console.error('One or more DOM elements are missing.');
+                return;
+            }
+
+            // Simple markdown parser
+            function simpleMarkdown(text) {
+                text = text.replace(/^### (.*$)/gm, '<h3>$1</h3>');
+                text = text.replace(/^## (.*$)/gm, '<h2>$1</h2>');
+                text = text.replace(/^# (.*$)/gm, '<h1>$1</h1>');
+                text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                text = text.replace(/^- (.*$)/gm, '<li>$1</li>');
+                text = text.replace(/<li>.*<\/li>/g, function (match) {
+                    return '<ul>' + match + '</ul>';
+                });
+                text = text.replace(/\n/g, '<br>');
+                return text;
+            }
+
+            // Conversation state
+            let conversationState = {
+                currentTopic: null,
+                followUpQuestions: []
+            };
+
+            // Enhanced knowledge base with follow-up responses and new topics
+            const knowledgeBase = {
+                greetings: {
+                    triggers: ["hi", "hello", "hey", "greetings"],
+                    response: "👋 Hey there! I'm Toluwanimi's AI assistant, here to share insights about his skills, projects, education, and passions. What's sparking your interest today?",
+                    followUps: [
+                        "Tell me about your skills",
+                        "What projects have you worked on?",
+                        "What are your hobbies?"
+                    ]
+                },
+                skills: {
+                    triggers: ["skills", "what can you do", "technologies", "tech stack"],
+                    response: "💻 **Technical Skills**<br><br>" +
+                        "**Frontend Development**<br>" +
+                        "- HTML5, CSS3, JavaScript (ES6+)<br>" +
+                        "- Responsive design with Tailwind CSS & Bootstrap<br>" +
+                        "- UI libraries: Aceternity UI, Shadcn<br><br>" +
+                        "**Programming Languages**<br>" +
+                        "- C++ (Intermediate)<br>" +
+                        "- C (Intermediate)<br>" +
+                        "- Python (Basic)<br><br>" +
+                        "**UI/UX Design**<br>" +
+                        "- Figma for wireframes & prototypes<br>" +
+                        "- User flow & design systems<br><br>" +
+                        "**Other Tools**<br>" +
+                        "- Firebase (Auth, Firestore, Storage)<br>" +
+                        "- Git/GitHub, Netlify, Vercel<br>" +
+                        "- Basic cybersecurity<br><br>" +
+                        "Curious about a specific skill?",
+                    followUps: [
+                        "Tell me about your frontend projects",
+                        "What UI/UX tools do you use?",
+                        "How about your backend skills?"
+                    ],
+                    followUpResponses: {
+                        "Tell me about your frontend projects": "🌟 **Frontend Projects**<br><br>" +
+                            "I’ve built dynamic, responsive interfaces with a focus on user experience. For example, the **Nexora Tel Website** uses Aceternity UI components and Lottie animations for a sleek, modern look. Another project, **TimetablePro**, features a React.js frontend with smooth transitions and real-time updates via Firebase. Want to dive deeper into one of these?",
+                        "What UI/UX tools do you use?": "🎨 **UI/UX Toolkit**<br><br>" +
+                            "I primarily use **Figma** for creating wireframes, prototypes, and design systems. It’s great for collaboration and iterating on user flows. I also dabble in Adobe XD for specific animation designs and leverage tools like Coolors for color schemes. Any tool you’re curious about?",
+                        "How about your backend skills?": "🛠️ **Backend Skills**<br><br>" +
+                            "While my strength lies in frontend and UI/UX, I’ve worked with **Firebase** for authentication, Firestore for databases, and basic Node.js for server-side logic. For instance, TimetablePro uses Firebase for real-time data syncing. Interested in a specific backend topic?"
+                    }
+                },
+                projects: {
+                    triggers: ["projects", "portfolio", "work", "applications"],
+                    response: "🚀 **Notable Projects**<br><br>" +
+                        "**1. Nexora Tel Website**<br>" +
+                        "- Recruitment & project portal<br>" +
+                        "- Features: Lottie animations, Aceternity UI<br>" +
+                        "- Tech: HTML, CSS, JavaScript, Netlify<br><br>" +
+                        "**2. TimetablePro**<br>" +
+                        "- Smart timetable generator<br>" +
+                        "- Firebase backend, React.js frontend<br>" +
+                        "- Real-time study notifications<br><br>" +
+                        "**3. Motivation Clock App**<br>" +
+                        "- Flip clock with quotes & weather<br>" +
+                        "- Social sharing features<br><br>" +
+                        "Which project catches your eye?",
+                    followUps: [
+                        "Tell me more about Nexora Tel",
+                        "How does TimetablePro work?",
+                        "What tech stack did you use?"
+                    ],
+                    followUpResponses: {
+                        "Tell me more about Nexora Tel": "📌 **Nexora Tel Website**<br><br>" +
+                            "This portal streamlines recruitment and project management. It features **Lottie animations** for engaging visuals, a **sticky navigation** for easy access, and **responsive design** for all devices. Built with HTML, CSS, JavaScript, and hosted on Netlify, it’s a showcase of modern web design. Want to know about its challenges or see the code?",
+                        "How does TimetablePro work?": "⏰ **TimetablePro Mechanics**<br><br>" +
+                            "TimetablePro generates personalized schedules for students. Users input subjects and preferences, and the app creates an optimized timetable using a custom algorithm. It syncs data via **Firebase Firestore** and sends **push notifications** for study reminders. Curious about the algorithm or user feedback?",
+                        "What tech stack did you use?": "🛠️ **Project Tech Stacks**<br><br>" +
+                            "- **Nexora Tel**: HTML, CSS, JavaScript, Aceternity UI, Netlify<br>" +
+                            "- **TimetablePro**: React.js, Firebase (Auth, Firestore), Tailwind CSS<br>" +
+                            "- **Motivation Clock**: JavaScript, APIs (weather, quotes), Vercel<br><br>" +
+                            "Each project leverages tools suited to its goals. Want details on a specific stack?"
+                    }
+                },
+                education: {
+                    triggers: ["education", "school", "university", "covenant", "study"],
+                    response: "🎓 **Education Background**<br><br>" +
+                        "**Covenant University**<br>" +
+                        "- B.Sc in Industrial Mathematics (Computer Science)<br>" +
+                        "- Expected Graduation: 2026<br>" +
+                        "- Key Courses:<br>" +
+                        "  - Data Structures & Algorithms<br>" +
+                        "  - Numerical Analysis<br>" +
+                        "  - Database Systems<br>" +
+                        "  - Web Development<br><br>" +
+                        "Want to explore my coursework or achievements?",
+                    followUps: [
+                        "Tell me about your coursework",
+                        "Any academic achievements?"
+                    ],
+                    followUpResponses: {
+                        "Tell me about your coursework": "📚 **Coursework Details**<br><br>" +
+                            "My coursework at Covenant University dives into practical and theoretical CS. **Data Structures & Algorithms** taught me efficient coding with C++ (e.g., binary trees, sorting). **Web Development** covered modern frameworks like React. **Database Systems** explored SQL and NoSQL with Firebase. Any course you want to dig into?",
+                        "Any academic achievements?": "🏆 **Academic Achievements**<br><br>" +
+                            "I’ve earned Dean’s List honors for two semesters and led a team to win a university hackathon with a prototype for a smart campus app. I also presented a paper on numerical methods at a student conference. Interested in hearing about the hackathon or another achievement?"
+                    }
+                },
+                hobbies: {
+                    triggers: ["hobbies", "interests", "what do you like", "free time"],
+                    response: "😊 **Personal Interests**<br><br>" +
+                        "**Creative**<br>" +
+                        "- UI/UX design<br>" +
+                        "- Digital art & illustration<br>" +
+                        "- Anime/manga enthusiast<br><br>" +
+                        "**Sports & Fitness**<br>" +
+                        "- Basketball (player & fan)<br><br>" +
+                        "**Entertainment**<br>" +
+                        "- Gaming (Call of Duty)<br>" +
+                        "- Music (lo-fi, hip-hop)<br><br>" +
+                        "What’s a hobby you’d like to explore with me?",
+                    followUps: [
+                        "What anime do you watch?",
+                        "Tell me about your gaming setup",
+                        "Favorite basketball team?"
+                    ],
+                    followUpResponses: {
+                        "What anime do you watch?": "🎌 **Anime Favorites**<br><br>" +
+                            "I’m hooked on **Attack on Titan** for its epic storytelling, **Demon Slayer** for stunning visuals, and **Jujutsu Kaisen** for its action-packed vibe. I also enjoy classics like **Naruto** for inspiration. Got a favorite anime or need a recommendation?",
+                        "Tell me about your gaming setup": "🎮 **Gaming Setup**<br><br>" +
+                            "I game on a custom PC with a Ryzen 5, GTX 1660, and dual monitors for immersive play. **Call of Duty** is my go-to for fast-paced action. I use a mechanical keyboard for precision. Want tips on gaming setups or my favorite maps?",
+                        "Favorite basketball team?": "🏀 **Basketball Passion**<br><br>" +
+                            "I’m a huge **Lakers** fan—LeBron’s leadership is inspiring! I also play pickup games, focusing on defense and three-pointers. Want to talk NBA or my on-court moves?"
+                    }
+                },
+                anime: {
+                    triggers: ["anime", "naruto", "attack on titan", "demon slayer", "jujutsu kaisen"],
+                    response: "🎌 **Anime Enthusiast**<br><br>" +
+                        "**Top Picks**<br>" +
+                        "- Attack on Titan: Epic plot twists<br>" +
+                        "- Demon Slayer: Breathtaking animation<br>" +
+                        "- Jujutsu Kaisen: Intense battles<br><br>" +
+                        "**Why Anime?**<br>" +
+                        "- Love the storytelling and art<br>" +
+                        "- Inspired by UI/UX in anime interfaces<br>" +
+                        "- Active in fan communities<br><br>" +
+                        "Want to discuss a show or get a recommendation?",
+                    followUps: [
+                        "Recommend an anime",
+                        "Favorite character?",
+                        "Do you attend conventions?"
+                    ],
+                    followUpResponses: {
+                        "Recommend an anime": "📺 **Anime Recommendation**<br><br>" +
+                            "If you love action and deep stories, try **Hunter x Hunter**—it’s got a perfect mix of strategy, emotion, and epic fights. For something newer, **My Teen Romantic Comedy SNAFU** offers great character development. What genres do you like?",
+                        "Favorite character?": "🌟 **Favorite Anime Character**<br><br>" +
+                            "I’d pick **Levi Ackerman** from Attack on Titan—his calm precision and loyalty are iconic. His fight scenes inspire my UI animation designs! Who’s your favorite character?",
+                        "Do you attend conventions?": "🎉 **Anime Conventions**<br><br>" +
+                            "I’ve attended a few local cons, like AnimeFest, where I geek out over cosplay and panels. I’m planning to hit up bigger events like Anime Expo soon. Ever been to a con or want tips for attending one?"
+                    }
+                },
+                contact: {
+                    triggers: ["contact", "email", "reach", "social media", "connect"],
+                    response: "📬 **Contact Information**<br><br>" +
+                        "**Professional**<br>" +
+                        "- Email: toluwanimi@example.com<br>" +
+                        "- LinkedIn: linkedin.com/in/toluwanimi<br>" +
+                        "- GitHub: github.com/toluwanimi<br><br>" +
+                        "What’s the best way to connect with you?",
+                    followUps: [
+                        "What's your GitHub?",
+                        "Can I see your resume?",
+                        "Best way to reach you?"
+                    ],
+                    followUpResponses: {
+                        "What's your GitHub?": "📂 **GitHub Profile**<br><br>" +
+                            "Check out my repos at **github.com/toluwanimi**. You’ll find projects like Nexora Tel and TimetablePro, showcasing my code. Want me to walk you through a specific repository?",
+                        "Can I see your resume?": "📄 **Resume Request**<br><br>" +
+                            "My resume highlights my skills, projects, and education. Please reach out via email (toluwanimi@example.com) for a copy, and I’ll share it promptly! Anything specific you want to know about my experience?",
+                        "Best way to reach you?": "📞 **Best Contact Method**<br><br>" +
+                            "Email (toluwanimi@example.com) is the fastest way to reach me for professional inquiries. For quick chats, LinkedIn works great too. What’s your preferred method?"
+                    }
+                },
+                career: {
+                    triggers: ["career", "goals", "future", "ambitions", "plans"],
+                    response: "🌟 **Career Goals**<br><br>" +
+                        "I’m passionate about creating impactful tech solutions. My goal is to lead UI/UX and frontend development for innovative platforms, blending design and code. I aim to work on AI-driven interfaces or smart systems in the next 5 years. Curious about my next steps?",
+                    followUps: [
+                        "What inspires your career?",
+                        "Any dream companies?",
+                        "How do you stay updated?"
+                    ],
+                    followUpResponses: {
+                        "What inspires your career?": "💡 **Career Inspiration**<br><br>" +
+                            "I’m driven by the intersection of tech and creativity—think anime-inspired UI designs or intuitive apps like Notion. Solving real-world problems through clean code and beautiful interfaces keeps me motivated. What inspires you?",
+                        "Any dream companies?": "🏢 **Dream Companies**<br><br>" +
+                            "I’d love to work with innovative teams at places like **Vercel**, **xAI**, or **Figma**, where design and tech converge. Their focus on user-centric solutions aligns with my vision. Got a favorite company?",
+                        "How do you stay updated?": "📚 **Staying Updated**<br><br>" +
+                            "I follow tech blogs like Smashing Magazine, watch WWDC for UI trends, and experiment with new tools on GitHub. I also take Udemy courses to sharpen my skills. Want tips on staying current in tech?"
+                    }
+                },
+                tools: {
+                    triggers: ["tools", "software", "favorite tool", "what do you use"],
+                    response: "🛠️ **Favorite Tools**<br><br>" +
+                        "I rely on a mix of tools to bring ideas to life:<br>" +
+                        "- **Figma**: For UI/UX prototyping<br>" +
+                        "- **VS Code**: My go-to code editor<br>" +
+                        "- **Tailwind CSS**: For rapid styling<br>" +
+                        "- **Firebase**: For backend and auth<br>" +
+                        "- **GitHub**: For version control<br><br>" +
+                        "Each tool helps me streamline my workflow. Want to know more about one?",
+                    followUps: [
+                        "Why do you like Figma?",
+                        "How do you use VS Code?",
+                        "Any other tools?"
+                    ],
+                    followUpResponses: {
+                        "Why do you like Figma?": "🎨 **Why Figma?**<br><br>" +
+                            "Figma’s real-time collaboration and robust design system features make it a game-changer for UI/UX. I use it to craft pixel-perfect prototypes and user flows. Its plugins, like for Lottie animations, are a bonus. Curious about my Figma workflow?",
+                        "How do you use VS Code?": "💻 **VS Code Usage**<br><br>" +
+                            "VS Code is my coding hub, with extensions like Prettier, ESLint, and Tailwind Intellisense for efficiency. I customize themes to keep coding fun and use its Git integration for seamless commits. Want to know my favorite extensions?",
+                        "Any other tools?": "🧰 **Other Tools**<br><br>" +
+                            "Beyond Figma and VS Code, I use **Vercel** for deployment, **Postman** for API testing, and **Notion** for project planning. Each adds a layer of polish to my work. Got a tool you’re curious about?"
+                    }
+                },
+                default: {
+                    triggers: [],
+                    response: "🤔 Hmm, I’m not sure I caught that. I can tell you about:<br>" +
+                        "- Technical skills<br>" +
+                        "- Cool projects<br>" +
+                        "- Education journey<br>" +
+                        "- Hobbies & passions<br>" +
+                        "- Career goals<br>" +
+                        "- Favorite tools<br><br>" +
+                        "What’s on your mind?",
+                    followUps: [
+                        "Tell me about your skills",
+                        "What projects have you done?",
+                        "What are your hobbies?"
+                    ]
+                }
+            };
+
+            // Initialize chat
+            initChat();
+
+            // Add event listeners
+            sendButton.addEventListener('click', handleSendMessage);
+            userInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    handleSendMessage();
+                }
+            });
+
+            // Handle quick reply clicks (event delegation)
+            chatMessages.addEventListener('click', function (e) {
+                if (e.target.classList.contains('quick-reply')) {
+                    const reply = e.target.getAttribute('data-reply');
+                    if (reply) {
+                        userInput.value = reply;
+                        handleSendMessage();
+                    }
+                }
+            });
+
+            // Initialize chat
+            function initChat() {
+                addBotMessage(knowledgeBase.greetings.response);
+                showQuickReplies(knowledgeBase.greetings.followUps);
+            }
+
+            // Handle send message
+            async function handleSendMessage() {
+                try {
+                    const message = userInput.value.trim();
+                    if (!message) return;
+
+                    console.log('Sending message:', message); // Debug log
+
+                    // Add user message
+                    addUserMessage(message);
+                    userInput.value = '';
+
+                    // Show typing indicator
+                    showTypingIndicator();
+
+                    // Simulate processing delay
+                    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 1000));
+
+                    // Process input and respond
+                    const responseData = processInput(message);
+                    addBotMessage(responseData.response);
+                    showQuickReplies(responseData.followUps);
+
+                    // Hide typing indicator
+                    hideTypingIndicator();
+                } catch (error) {
+                    console.error('Error in handleSendMessage:', error);
+                    addBotMessage('Oops, something went wrong. Let’s try that again!');
+                    hideTypingIndicator();
+                }
+            }
+
+            // Add message to chat
+            function addMessage(content, isUser = false) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+
+                const messageContent = document.createElement('div');
+                messageContent.className = 'message-content';
+                messageContent.innerHTML = simpleMarkdown(content);
+
+                const messageTime = document.createElement('div');
+                messageTime.className = 'message-time';
+                messageTime.textContent = getCurrentTime();
+
+                messageDiv.appendChild(messageContent);
+                messageDiv.appendChild(messageTime);
+
+                chatMessages.appendChild(messageDiv);
+                scrollToBottom();
+            }
+
+            // Shortcut for bot messages
+            function addBotMessage(content) {
+                addMessage(content, false);
+            }
+
+            // Shortcut for user messages
+            function addUserMessage(content) {
+                addMessage(content, true);
+            }
+
+            // Get current time in HH:MM format
+            function getCurrentTime() {
+                const now = new Date();
+                return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            }
+
+            // Process user input and generate response
+            function processInput(input) {
+                const lowerInput = input.toLowerCase();
+                let responseData = knowledgeBase.default;
+
+                // Check for follow-up responses first
+                if (conversationState.currentTopic && knowledgeBase[conversationState.currentTopic]?.followUpResponses?.[input]) {
+                    responseData = {
+                        response: knowledgeBase[conversationState.currentTopic].followUpResponses[input],
+                        followUps: knowledgeBase[conversationState.currentTopic].followUps
+                    };
+                } else {
+                    // Check which topic matches
+                    for (const [topic, data] of Object.entries(knowledgeBase)) {
+                        if (topic === 'default') continue;
+
+                        if (data.triggers.some(trigger => lowerInput.includes(trigger))) {
+                            responseData = data;
+                            conversationState.currentTopic = topic;
+                            break;
+                        }
+                    }
+
+                    // Special cases for projects
+                    if (conversationState.currentTopic === 'projects') {
+                        if (lowerInput.includes('nexora')) {
+                            responseData = knowledgeBase.projects.followUpResponses["Tell me more about Nexora Tel"];
+                        } else if (lowerInput.includes('timetablepro')) {
+                            responseData = knowledgeBase.projects.followUpResponses["How does TimetablePro work?"];
+                        }
+                    }
+                }
+
+                return responseData;
+            }
+
+            // Show quick reply buttons
+            function showQuickReplies(replies) {
+                // Remove existing quick replies
+                const existingReplies = document.querySelector('.quick-replies');
+                if (existingReplies) existingReplies.remove();
+
+                if (!replies || replies.length === 0) return;
+
+                const quickRepliesDiv = document.createElement('div');
+                quickRepliesDiv.className = 'quick-replies';
+
+                replies.forEach(reply => {
+                    const button = document.createElement('button');
+                    button.className = 'quick-reply';
+                    button.textContent = reply;
+                    button.setAttribute('data-reply', reply);
+                    quickRepliesDiv.appendChild(button);
+                });
+
+                chatMessages.appendChild(quickRepliesDiv);
+                scrollToBottom();
+            }
+
+            // Scroll to bottom of chat
+            function scrollToBottom() {
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            // Show typing indicator
+            function showTypingIndicator() {
+                typingIndicator.style.display = 'flex';
+                scrollToBottom();
+            }
+
+            // Hide typing indicator
+            function hideTypingIndicator() {
+                typingIndicator.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Click Skills to show</p>
                         <p class="tab-links" onclick="opentab('experience')">click Expirience</p>
