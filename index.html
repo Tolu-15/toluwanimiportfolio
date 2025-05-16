@@ -1810,21 +1810,38 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
             --transition: all 0.2s ease;
         }
 
-        
+        .chat-section {
+            display: flex;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 80px auto 20px;
+            align-items: center;
+            justify-content: center;
+        }
 
-          .chat-container {
+        .lottie-container {
+            width: 300px;
+            height: 300px;
+            background-color: var(--white);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chat-container {
             width: 80%;
-            ;
-            height: 100vh;
-           
+            max-width: 600px;
+            height: 80vh;
             background-color: var(--white);
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-lg);
             display: flex;
             flex-direction: column;
             overflow: hidden;
-            margin-top: 80px;
-            margin-left: 10%;
         }
 
         .chat-header {
@@ -1844,8 +1861,8 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
         }
 
         .avatar {
-            width: 40px;
-            height: 40px;
+            width:80px;
+            height: 100px;
             border-radius: var(--radius-full);
             overflow: hidden;
             flex-shrink: 0;
@@ -2084,14 +2101,10 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
         }
 
         @keyframes typingAnimation {
-
-            0%,
-            60%,
-            100% {
+            0%, 60%, 100% {
                 transform: translateY(0);
                 opacity: 0.4;
             }
-
             30% {
                 transform: translateY(-4px);
                 opacity: 1;
@@ -2103,7 +2116,6 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
                 opacity: 0;
                 transform: translateY(8px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -2129,68 +2141,113 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
         }
 
         /* Responsive adjustments */
-        @media (max-width: 480px) {
+        @media (max-width: 768px) {
+            .chat-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .lottie-container {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 20px;
+            }
+
             .chat-container {
-                height: 100vh;
-                max-height: none;
-                border-radius: 0;
+                width: 100%;
+                max-width: 100%;
+                height: 70vh;
+                border-radius: var(--radius-md);
             }
 
             .message {
                 max-width: 90%;
             }
         }
+
+        @media (max-width: 480px) {
+            .chat-container {
+                height: 100vh;
+                border-radius: 0;
+            }
+
+            .lottie-container {
+                width: 150px;
+                height: 150px;
+            }
+
+            .chat-input input {
+                font-size: 14px;
+            }
+
+            .chat-input button {
+                width: 40px;
+                height: 40px;
+            }
+        }
     </style>
 </head>
-
 <body>
-    <div class="chat-container">
-        <div class="chat-header">
-            <div class="header-content">
-                <div class="avatar">
-                    <img src="https://avatars.githubusercontent.com/u/12345678" alt="Toluwanimi">
-                </div>
-                <div class="header-text">
-                    <h2>Toluwanimi AI</h2>
-                    <p>Ask me about skills, projects, or hobbies</p>
-                </div>
-            </div>
-            <div class="header-actions">
-                <button class="icon-button"><i class="fas fa-ellipsis-v"></i></button>
-            </div>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <div class="chat-section">
+        <div class="lottie-container">
+            <dotlottie-player 
+                src="https://lottie.host/531b3e9c-8393-4003-a857-6c4e410d07b5/OQFaSMB2si.lottie" 
+                background="transparent" 
+                speed="1" 
+                style="width: 100%; height: 100%" 
+                loop 
+                autoplay
+            ></dotlottie-player>
         </div>
-
-        <div class="chat-messages" id="chat-messages">
-            <div class="message bot-message welcome-message">
-                <div class="message-content">
-                    <p>👋 Hello! I'm Toluwanimi's AI assistant. I can tell you about his:</p>
-                    <ul class="options-list">
-                        <li><span class="option-tag">Skills</span> & technologies he works with</li>
-                        <li><span class="option-tag">Projects</span> he's built</li>
-                        <li><span class="option-tag">Education</span> background</li>
-                        <li><span class="option-tag">Hobbies</span> & interests</li>
-                    </ul>
-                    <p>What would you like to know?</p>
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="header-content">
+                    <div class="avatar">
+                        <img src="https://thefusioneer.com/wp-content/uploads/2023/11/5-AI-Advancements-to-Expect-in-the-Next-10-Years-scaled.jpeg" alt="Toluwanimi">
+                    </div>
+                    <div class="header-text">
+                        <h2>Toluwanimi AI</h2>
+                        <p>Ask me about skills, projects, or hobbies</p>
+                    </div>
                 </div>
-                <div class="message-time">Just now</div>
+                <div class="header-actions">
+                    <button class="icon-button"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
             </div>
 
-            <div class="quick-replies">
-                <button class="quick-reply" data-reply="Tell me about your skills">Skills</button>
-                <button class="quick-reply" data-reply="What projects have you worked on?">Projects</button>
-                <button class="quick-reply" data-reply="What are your hobbies?">Hobbies</button>
-            </div>
-        </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message welcome-message">
+                    <div class="message-content">
+                        <p>👋 Hello! I'm Toluwanimi's AI assistant. I can tell you about his:</p>
+                        <ul class="options-list">
+                            <li><span class="option-tag">Skills</span> & technologies he works with</li>
+                            <li><span class="option-tag">Projects</span> he's built</li>
+                            <li><span class="option-tag">Education</span> background</li>
+                            <li><span class="option-tag">Hobbies</span> & interests</li>
+                        </ul>
+                        <p>What would you like to know?</p>
+                    </div>
+                    <div class="message-time">Just now</div>
+                </div>
 
-        <div class="chat-input-container">
-            <div class="typing-indicator" id="typing-indicator">
-                <div class="typing-dot"></div>
-                <div class="typing-dot"></div>
-                <div class="typing-dot"></div>
+                <div class="quick-replies">
+                    <button class="quick-reply" data-reply="Tell me about your skills">Skills</button>
+                    <button class="quick-reply" data-reply="What projects have you worked on?">Projects</button>
+                    <button class="quick-reply" data-reply="What are your hobbies?">Hobbies</button>
+                </div>
             </div>
-            <div class="chat-input">
-                <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
-                <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+
+            <div class="chat-input-container">
+                <div class="typing-indicator" id="typing-indicator">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+                    <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+                </div>
             </div>
         </div>
     </div>
@@ -2245,7 +2302,6 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
                     response: "💻 **Technical Skills**<br><br>" +
                         "**Frontend Development**<br>" +
                         "- HTML5, CSS3, JavaScript (ES6+)<br>" +
-                      
                         "- UI libraries: Aceternity UI, Shadcn<br><br>" +
                         "**Programming Languages**<br>" +
                         "- C++ (Intermediate)<br>" +
@@ -2294,7 +2350,7 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
                         "What tech stack did you use?"
                     ],
                     followUpResponses: {
-                        "Tell me more about Nexora Tel": "📌 **Nexora Tel Website**<br><br>   <a href="nexoratel.netlify.app/">Nexoral tel</a>" +
+                        "Tell me more about Nexora Tel": "📌 **Nexora Tel Website**<br><br>   <a href='nexoratel.netlify.app/'>Nexora Tel</a>" +
                             "This portal streamlines recruitment and project management. It features **Lottie animations** for engaging visuals, a **sticky navigation** for easy access, and **responsive design** for all devices. Built with HTML, CSS, JavaScript, and hosted on Netlify, it’s a showcase of modern web design. Want to know about its challenges or see the code?",
                         "How does TimetablePro work?": "⏰ **TimetablePro Mechanics**<br><br>" +
                             "TimetablePro generates personalized schedules for students. Users input subjects and preferences, and the app creates an optimized timetable using a custom algorithm. It syncs data via **Firebase Firestore** and sends **push notifications** for study reminders. Curious about the algorithm or user feedback? Project still Ongoing will be released on the 27th of July this year",
@@ -2348,12 +2404,11 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
                     ],
                     followUpResponses: {
                         "What anime do you watch?": "🎌 **Anime Favorites**<br><br>" +
-                            "I’m hooked on **Attack on Titan** for its epic storytelling, **Solo leveling** for stunning visuals, peak plotting and **Arcane** for its action-packed vibe.  Got a favorite anime or need a recommendation?",
-                       "Tell me about your gaming setup": "🎮 **Gaming Setup**<br><br>" +
-"I game on my **Samsung Galaxy A9**, and **Call of Duty: Mobile** is my go-to for intense, fast-paced action. I use wired earphones for better sound clarity and faster reaction. My setup is all about mobile convenience and skill. Want tips on mobile gaming or my favorite loadouts?"
-
+                            "I’m hooked on **Attack on Titan** for its epic storytelling, **Solo Leveling** for stunning visuals, peak plotting and **Arcane** for its action-packed vibe. Got a favorite anime or need a recommendation?",
+                        "Tell me about your gaming setup": "🎮 **Gaming Setup**<br><br>" +
+                            "I game on my **Samsung Galaxy A9**, and **Call of Duty: Mobile** is my go-to for intense, fast-paced action. I use wired earphones for better sound clarity and faster reaction. My setup is all about mobile convenience and skill. Want tips on mobile gaming or my favorite loadouts?",
                         "Favorite basketball team?": "🏀 **Basketball Passion**<br><br>" +
-                            "I’m a huge **Golden state warriors ** Steves Curry leadership is inspiring! I also play pickup games, focusing on defense and three-pointers. Want to talk NBA or my on-court moves?"
+                            "I’m a huge **Golden State Warriors** fan—Steph Curry’s leadership is inspiring! I also play pickup games, focusing on defense and three-pointers. Want to talk NBA or my on-court moves?"
                     }
                 },
                 anime: {
@@ -2362,7 +2417,7 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
                         "**Top Picks**<br>" +
                         "- Attack on Titan: Epic plot twists<br>" +
                         "- Arcane: Breathtaking animation<br>" +
-                        "- Sololeveling: Intense battles<br><br>" +
+                        "- Solo Leveling: Intense battles<br><br>" +
                         "**Why Anime?**<br>" +
                         "- Love the storytelling and art<br>" +
                         "- Inspired by UI/UX in anime interfaces<br>" +
