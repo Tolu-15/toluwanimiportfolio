@@ -1782,8 +1782,9 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Toluwanimi's AI Assistant - Learn about skills, projects, and hobbies">
     <title>Toluwanimi's AI Assistant</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -1795,33 +1796,35 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
             --gray: #6c757d;
             --light-gray: #e9ecef;
             --white: #ffffff;
-
             --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
             --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-            --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.05);
-
             --radius-sm: 4px;
             --radius-md: 8px;
             --radius-lg: 12px;
             --radius-full: 9999px;
-
             --transition: all 0.2s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
         }
 
         .chat-section {
             display: flex;
-            gap: 20px;
-            max-width: 1000px;
-            margin: 80px auto 20px;
+            gap: 1.25rem;
+            max-width: 62.5rem;
+            margin: 5rem auto 1.25rem;
             align-items: stretch;
             justify-content: center;
-            flex-wrap: nowrap;
         }
 
         .ai-lottie-wrapper {
-            width: 300px;
-            height: 300px;
+            width: 18.75rem;
+            height: 18.75rem;
             background-color: var(--white);
             border-radius: var(--radius-full);
             overflow: hidden;
@@ -1834,7 +1837,7 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
 
         .chat-container {
             flex: 1;
-            max-width: 600px;
+            max-width: 37.5rem;
             height: 80vh;
             background-color: var(--white);
             border-radius: var(--radius-lg);
@@ -1845,7 +1848,7 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
         }
 
         .chat-header {
-            padding: 16px 20px;
+            padding: 1rem 1.25rem;
             background-color: var(--primary);
             color: var(--white);
             display: flex;
@@ -1857,12 +1860,12 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
         .header-contents {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 0.75rem;
         }
 
         .avatar {
-            width: 40px;
-            height: 40px;
+            width: 2.5rem;
+            height: 2.5rem;
             border-radius: var(--radius-full);
             overflow: hidden;
             flex-shrink: 0;
@@ -1876,13 +1879,13 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
         }
 
         .header-texts h2 {
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 600;
-            margin-bottom: 2px;
+            margin-bottom: 0.125rem;
         }
 
         .header-texts p {
-            font-size: 12px;
+            font-size: 0.75rem;
             opacity: 0.9;
         }
 
@@ -1890,8 +1893,8 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
             background: none;
             border: none;
             color: var(--white);
-            width: 32px;
-            height: 32px;
+            width: 2rem;
+            height: 2rem;
             border-radius: var(--radius-full);
             display: flex;
             align-items: center;
@@ -1900,25 +1903,26 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
             transition: var(--transition);
         }
 
-        .header-actions .icon-button:hover {
+        .header-actions .icon-button:hover,
+        .header-actions .icon-button:focus {
             background-color: rgba(255, 255, 255, 0.1);
         }
 
         .chat-messages {
             flex: 1;
-            padding: 20px;
+            padding: 1.25rem;
             overflow-y: auto;
             background-color: var(--light);
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 1rem;
         }
 
         .message {
             max-width: 85%;
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 0.375rem;
             animation: messageIn 0.3s ease-out forwards;
             opacity: 0;
         }
@@ -1932,10 +1936,10 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
         }
 
         .message-content {
-            padding: 12px 16px;
+            padding: 0.75rem 1rem;
             border-radius: var(--radius-md);
-            position: relative;
             box-shadow: var(--shadow-sm);
+            line-height: 1.5;
         }
 
         .bot-message .message-content {
@@ -1956,9 +1960,9 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
         }
 
         .message-time {
-            font-size: 11px;
+            font-size: 0.6875rem;
             color: var(--gray);
-            padding: 0 8px;
+            padding: 0 0.5rem;
             opacity: 0.8;
         }
 
@@ -1967,7 +1971,7 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
         }
 
         .chat-input-container {
-            padding: 12px 16px;
+            padding: 0.75rem 1rem;
             background-color: var(--white);
             border-top: 1px solid var(--light-gray);
             position: relative;
@@ -1975,16 +1979,16 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
 
         .chat-input {
             display: flex;
-            gap: 8px;
+            gap: 0.5rem;
         }
 
         .chat-input input {
             flex: 1;
-            padding: 12px 16px;
+            padding: 0.75rem 1rem;
             border: 1px solid var(--light-gray);
             border-radius: var(--radius-full);
             outline: none;
-            font-size: 15px;
+            font-size: 0.9375rem;
             transition: var(--transition);
             background-color: var(--light);
         }
@@ -1995,8 +1999,8 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
         }
 
         .chat-input button {
-            width: 44px;
-            height: 44px;
+            width: 2.75rem;
+            height: 2.75rem;
             border-radius: var(--radius-full);
             background-color: var(--primary);
             color: var(--white);
@@ -2006,86 +2010,86 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
             justify-content: center;
             align-items: center;
             transition: var(--transition);
-            flex-shrink: 0;
         }
 
-        .chat-input button:hover {
+        .chat-input button:hover,
+        .chat-input button:focus {
             background-color: var(--secondary);
         }
 
         .quick-replies {
             display: flex;
-            gap: 8px;
+            gap: 0.5rem;
             flex-wrap: wrap;
-            margin-top: 8px;
+            margin-top: 0.5rem;
         }
 
         .quick-reply {
-            padding: 8px 14px;
+            padding: 0.5rem 0.875rem;
             background-color: var(--white);
             border: 1px solid var(--light-gray);
             border-radius: var(--radius-full);
-            font-size: 13px;
+            font-size: 0.8125rem;
             font-weight: 500;
             cursor: pointer;
             transition: var(--transition);
             color: var(--dark);
         }
 
-        .quick-reply:hover {
+        .quick-reply:hover,
+        .quick-reply:focus {
             background-color: var(--primary);
             color: var(--white);
             border-color: var(--primary);
         }
 
         .options-list {
-            margin: 8px 0 12px;
-            padding-left: 16px;
+            margin: 0.5rem 0 0.75rem;
+            padding-left: 1rem;
         }
 
         .options-list li {
-            margin-bottom: 6px;
-            font-size: 14px;
+            margin-bottom: 0.375rem;
+            font-size: 0.875rem;
         }
 
         .option-tag {
             display: inline-block;
             background-color: var(--primary);
             color: var(--white);
-            padding: 2px 8px;
+            padding: 0.125rem 0.5rem;
             border-radius: var(--radius-full);
-            font-size: 12px;
+            font-size: 0.75rem;
             font-weight: 500;
-            margin-right: 8px;
+            margin-right: 0.5rem;
         }
 
         .welcome-message .option-tag {
             background-color: var(--secondary);
         }
 
-        /* Typing indicator */
         .typing-indicator {
             display: none;
             align-items: center;
-            gap: 4px;
-            padding: 8px 16px;
+            gap: 0.25rem;
+            padding: 0.5rem 1rem;
             position: absolute;
-            top: -40px;
-            left: 16px;
+            top: -2.5rem;
+            left: 1rem;
             background-color: var(--white);
             border-radius: var(--radius-md);
             box-shadow: var(--shadow-sm);
-            font-size: 12px;
+            font-size: 0.75rem;
             color: var(--gray);
         }
 
         .typing-dot {
-            width: 6px;
-            height: 6px;
+            width: 0.375rem;
+            height: 0.375rem;
             background-color: var(--gray);
             border-radius: var(--radius-full);
             opacity: 0.4;
-            animation: typingAnimation 3s infinite ease-in-out;
+            animation: typingAnimation 1.5s infinite ease-in-out;
         }
 
         .typing-dot:nth-child(1) {
@@ -2106,7 +2110,7 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
                 opacity: 0.4;
             }
             30% {
-                transform: translateY(-4px);
+                transform: translateY(-0.25rem);
                 opacity: 1;
             }
         }
@@ -2114,7 +2118,7 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
         @keyframes messageIn {
             from {
                 opacity: 0;
-                transform: translateY(8px);
+                transform: translateY(0.5rem);
             }
             to {
                 opacity: 1;
@@ -2122,9 +2126,8 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
             }
         }
 
-        /* Scrollbar styling */
         .chat-messages::-webkit-scrollbar {
-            width: 6px;
+            width: 0.375rem;
         }
 
         .chat-messages::-webkit-scrollbar-track {
@@ -2133,25 +2136,23 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
 
         .chat-messages::-webkit-scrollbar-thumb {
             background: var(--gray);
-            border-radius: 3px;
+            border-radius: 0.1875rem;
         }
 
         .chat-messages::-webkit-scrollbar-thumb:hover {
             background: var(--dark);
         }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             .chat-section {
                 flex-direction: column;
                 align-items: center;
-                flex-wrap: wrap;
             }
 
             .ai-lottie-wrapper {
-                width: 200px;
-                height: 200px;
-                margin-bottom: 20px;
+                width: 12.5rem;
+                height: 12.5rem;
+                margin-bottom: 1.25rem;
             }
 
             .chat-container {
@@ -2173,39 +2174,39 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
             }
 
             .ai-lottie-wrapper {
-                width: 150px;
-                height: 150px;
+                width: 9.375rem;
+                height: 9.375rem;
             }
 
             .chat-input input {
-                font-size: 14px;
+                font-size: 0.875rem;
             }
 
             .chat-input button {
-                width: 40px;
-                height: 40px;
+                width: 2.5rem;
+                height: 2.5rem;
             }
         }
     </style>
 </head>
 <body>
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-    <div class="chat-section">
-        <div class="ai-lottie-wrapper">
-            <dotlottie-player 
-                src="https://lottie.host/531b3e9c-8393-4003-a857-6c4e410d07b5/OQFaSMB2si.lottie" 
-                background="transparent" 
-                speed="1" 
-                style="width: 100%; height: 100%" 
-                loop 
+    <main class="chat-section" role="main">
+        <div class="ai-lottie-wrapper" aria-hidden="true">
+            <dotlottie-player
+                src="https://lottie.host/531b3e9c-8393-4003-a857-6c4e410d07b5/OQFaSMB2si.lottie"
+                background="transparent"
+                speed="1"
+                style="width: 100%; height: 100%"
+                loop
                 autoplay
             ></dotlottie-player>
         </div>
-        <div class="chat-container">
-            <div class="chat-header">
+        <section class="chat-container" aria-label="Chat interface">
+            <header class="chat-header">
                 <div class="header-contents">
                     <div class="avatar">
-                        <img src="https://thefusioneer.com/wp-content/uploads/2023/11/5-AI-Advancements-to-Expect-in-the-Next-10-Years-scaled.jpeg" alt="Toluwanimi">
+                        <img src="https://thefusioneer.com/wp-content/uploads/2023/11/5-AI-Advancements-to-Expect-in-the-Next-10-Years-scaled.jpeg" alt="Toluwanimi's AI avatar">
                     </div>
                     <div class="header-texts">
                         <h2>Toluwanimi AI</h2>
@@ -2213,11 +2214,12 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
                     </div>
                 </div>
                 <div class="header-actions">
-                    <button class="icon-button"><i class="fas fa-ellipsis-v"></i></button>
+                    <button class="icon-button" aria-label="More options">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
                 </div>
-            </div>
-
-            <div class="chat-messages" id="chat-messages">
+            </header>
+            <div class="chat-messages" id="chat-messages" role="log" aria-live="polite">
                 <div class="message bot-message welcome-message">
                     <div class="message-content">
                         <p>👋 Hello! I'm Toluwanimi's AI assistant. I can tell you about his:</p>
@@ -2231,462 +2233,508 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
                     </div>
                     <div class="message-time">Just now</div>
                 </div>
-
-                <div class="quick-replies">
-                    <button class="quick-reply" data-reply="Tell me about your skills">Skills</button>
-                    <button class="quick-reply" data-reply="What projects have you worked on?">Projects</button>
-                    <button class="quick-reply" data-reply="What are your hobbies?">Hobbies</button>
+                <div class="quick-replies" role="list">
+                    <button class="quick-reply" data-reply="Tell me about your skills" role="listitem">Skills</button>
+                    <button class="quick-reply" data-reply="What projects have you worked on?" role="listitem">Projects</button>
+                    <button class="quick-reply" data-reply="What are your hobbies?" role="listitem">Hobbies</button>
                 </div>
             </div>
-
             <div class="chat-input-container">
-                <div class="typing-indicator" id="typing-indicator">
+                <div class="typing-indicator" id="typing-indicator" aria-hidden="true">
                     <div class="typing-dot"></div>
                     <div class="typing-dot"></div>
                     <div class="typing-dot"></div>
                 </div>
                 <div class="chat-input">
-                    <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
-                    <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+                    <input
+                        type="text"
+                        id="user-input"
+                        placeholder="Type your message..."
+                        autocomplete="off"
+                        aria-label="Type your message"
+                    >
+                    <button id="send-button" aria-label="Send message">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
                 </div>
             </div>
-        </div>
-    </div>
-
+        </section>
+    </main>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // DOM Elements
-            const chatMessages = document.getElementById('chat-messages');
-            const userInput = document.getElementById('user-input');
-            const sendButton = document.getElementById('send-button');
-            const typingIndicator = document.getElementById('typing-indicator');
+        // DOM Elements
+        const elements = {
+            chatMessages: document.getElementById('chat-messages'),
+            userInput: document.getElementById('user-input'),
+            sendButton: document.getElementById('send-button'),
+            typingIndicator: document.getElementById('typing-indicator')
+        };
 
-            // Verify DOM elements exist
-            if (!chatMessages || !userInput || !sendButton || !typingIndicator) {
-                console.error('One or more DOM elements are missing.');
-                return;
+        // Verify DOM elements
+        if (Object.values(elements).some(el => !el)) {
+            console.error('One or more DOM elements are missing.');
+            throw new Error('Initialization failed: Missing DOM elements');
+        }
+
+        // Sanitization function to prevent XSS
+        const sanitizeHTML = (str) => {
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        };
+
+        // Simple markdown parser with sanitization
+        const simpleMarkdown = (text) => {
+            try {
+                let formatted = sanitizeHTML(text)
+                    .replace(/^### (.*)$/gm, '<h3 class="text-lg font-semibold">$1</h3>')
+                    .replace(/^## (.*)$/gm, '<h2 class="text-xl font-bold">$1</h2>')
+                    .replace(/^# (.*)$/gm, '<h1 class="text-2xl font-bold">$1</h1>')
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                    .replace(/^- (.*)$/gm, '<li>$1</li>')
+                    .replace(/<li>.*<\/li>/g, match => `<ul class="list-disc pl-5">${match}</ul>`)
+                    .replace(/\n/g, '<br>');
+                return formatted;
+            } catch (error) {
+                console.error('Markdown parsing error:', error);
+                return sanitizeHTML(text);
             }
+        };
 
-            // Simple markdown parser
-            function simpleMarkdown(text) {
-                text = text.replace(/^### (.*$)/gm, '<h3>$1</h3>');
-                text = text.replace(/^## (.*$)/gm, '<h2>$1</h2>');
-                text = text.replace(/^# (.*$)/gm, '<h1>$1</h1>');
-                text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-                text = text.replace(/^- (.*$)/gm, '<li>$1</li>');
-                text = text.replace(/<li>.*<\/li>/g, function (match) {
-                    return '<ul>' + match + '</ul>';
-                });
-                text = text.replace(/\n/g, '<br>');
-                return text;
-            }
+        // Knowledge base
+        const knowledgeBase = {
+            greetings: {
+                triggers: ["hi", "hello", "hey", "greetings"],
+                response: "👋 Hey there! I'm Toluwanimi's AI assistant, here to share insights about his skills, projects, education, and passions. What's sparking your interest today?",
+                followUps: [
+                    "Tell me about your skills",
+                    "What projects have you worked on?",
+                    "What are your hobbies?"
+                ]
+            },
+            skills: {
+                triggers: ["skills", "what can you do", "technologies", "tech stack"],
+                response: `💻 **Technical Skills**
 
-            // Conversation state
-            let conversationState = {
-                currentTopic: null,
-                followUpQuestions: []
-            };
+**Frontend Development**
+- HTML5, CSS3, JavaScript (ES6+)
+- UI libraries: Aceternity UI, Shadcn
 
-            // Enhanced knowledge base with follow-up responses and new topics
-            const knowledgeBase = {
-                greetings: {
-                    triggers: ["hi", "hello", "hey", "greetings"],
-                    response: "👋 Hey there! I'm Toluwanimi's AI assistant, here to share insights about his skills, projects, education, and passions. What's sparking your interest today?",
-                    followUps: [
-                        "Tell me about your skills",
-                        "What projects have you worked on?",
-                        "What are your hobbies?"
-                    ]
-                },
-                skills: {
-                    triggers: ["skills", "what can you do", "technologies", "tech stack"],
-                    response: "💻 **Technical Skills**<br><br>" +
-                        "**Frontend Development**<br>" +
-                        "- HTML5, CSS3, JavaScript (ES6+)<br>" +
-                        "- UI libraries: Aceternity UI, Shadcn<br><br>" +
-                        "**Programming Languages**<br>" +
-                        "- C++ (Intermediate)<br>" +
-                        "- C (Intermediate)<br>" +
-                        "- Python (Basic)<br><br>" +
-                        "**UI/UX Design**<br>" +
-                        "- Figma for wireframes & prototypes<br>" +
-                        "- User flow & design systems<br><br>" +
-                        "**Other Tools**<br>" +
-                        "- Firebase <br>" +
-                        "- Git/GitHub, Netlify, Vercel<br>" +
-                        "- Basic cybersecurity<br><br>" +
-                        "Curious about a specific skill?",
-                    followUps: [
-                        "Tell me about your frontend projects",
-                        "What UI/UX tools do you use?",
-                        "How about your backend skills?"
-                    ],
-                    followUpResponses: {
-                        "Tell me about your frontend projects": "🌟 **Frontend Projects**<br><br>" +
-                            "I’ve built dynamic, responsive interfaces with a focus on user experience. For example, the **Nexora Tel Website** uses Aceternity UI components and Lottie animations for a sleek, modern look. Another project, **TimetablePro**, features a React.js frontend with smooth transitions and real-time updates via Firebase. Want to dive deeper into one of these?",
-                        "What UI/UX tools do you use?": "🎨 **UI/UX Toolkit**<br><br>" +
-                            "I primarily use **Figma** for creating wireframes, prototypes, and design systems. It’s great for collaboration and iterating on user flows. I also dabble in Adobe XD for specific animation designs and leverage tools like Coolors for color schemes. Any tool you’re curious about?",
-                        "How about your backend skills?": "🛠️ **Backend Skills**<br><br>" +
-                            "While my strength lies in frontend and UI/UX, I have not gone into backend if you want to work with me has backend developer scroll down to fill form "
-                    }
-                },
-                projects: {
-                    triggers: ["projects", "portfolio", "work", "applications"],
-                    response: "🚀 **Notable Projects**<br><br>" +
-                        "**1. Nexora Tel Website**<br>" +
-                        "- Recruitment & project portal<br>" +
-                        "- Features: Lottie animations, Aceternity UI<br>" +
-                        "- Tech: HTML, CSS, JavaScript, Netlify<br><br>" +
-                        "**2. TimetablePro**<br>" +
-                        "- Smart timetable generator<br>" +
-                        "- Firebase backend, React.js frontend<br>" +
-                        "- Real-time study notifications<br><br>" +
-                        "**3. Motivation Clock App**<br>" +
-                        "- Flip clock with quotes & weather<br>" +
-                        "- Social sharing features<br><br>" +
-                        "Which project catches your eye?",
-                    followUps: [
-                        "Tell me more about Nexora Tel",
-                        "How does TimetablePro work?",
-                        "What tech stack did you use?"
-                    ],
-                    followUpResponses: {
-                        "Tell me more about Nexora Tel": "📌 **Nexora Tel Website**<br><br>   <a target="_blank" href='nexoratel.netlify.app/'>Nexora Tel</a>" +
-                            "This portal streamlines recruitment and project management. It features **Lottie animations** for engaging visuals, a **sticky navigation** for easy access, and **responsive design** for all devices. Built with HTML, CSS, JavaScript, and hosted on Netlify, it’s a showcase of modern web design. Want to know about its challenges or see the code?",
-                        "How does TimetablePro work?": "⏰ **TimetablePro Mechanics**<br><br>" +
-                            "TimetablePro generates personalized schedules for students. Users input subjects and preferences, and the app creates an optimized timetable using a custom algorithm. It syncs data via **Firebase Firestore** and sends **push notifications** for study reminders. Curious about the algorithm or user feedback? Project still Ongoing will be released on the 27th of July this year",
-                        "What tech stack did you use?": "🛠️ **Project Tech Stacks**<br><br>" +
-                            "- **Nexora Tel**: HTML, CSS, JavaScript, Aceternity UI, Netlify<br>" +
-                            "- **TimetablePro**: HTML, CSS, JavaScript, Netlify <br>" +
-                            "- **Motivation Clock**: JavaScript, APIs (weather, quotes), not deployed<br><br>" +
-                            "Each project leverages tools suited to its goals. Want details on a specific stack?"
-                    }
-                },
-                education: {
-                    triggers: ["education", "school", "university", "covenant", "study"],
-                    response: "🎓 **Education Background**<br><br>" +
-                        "**Covenant University**<br>" +
-                        "- B.Sc in Industrial Mathematics (Computer Science)<br>" +
-                        "- Expected Graduation: 2027<br>" +
-                        
-                        "Want to explore my coursework or achievements?",
-                    followUps: [
-                        "Tell me about your coursework",
-                        "Any academic achievements?"
-                    ],
-                    followUpResponses: {
-                        "Tell me about your coursework": "📚 **Coursework Details**<br><br>" +
-                            "Not available",
-                        "Any academic achievements?": "🏆 **Academic Achievements**<br><br>" +
-                            "Not yet"
-                    }
-                },
-                hobbies: {
-                    triggers: ["hobbies", "interests", "what do you like", "free time"],
-                    response: "😊 **Personal Interests**<br><br>" +
-                        "**Creative**<br>" +
-                        "- UI/UX design<br>" +
-                        "- Digital art & illustration<br>" +
-                        "- Anime/manga enthusiast<br><br>" +
-                        "**Sports & Fitness**<br>" +
-                        "- Basketball (player & fan)<br><br>" +
-                        "**Entertainment**<br>" +
-                        "- Gaming (Call of Duty)<br>" +
-                        "- Music (Gospel)<br><br>" +
-                        "What’s a hobby you’d like to explore with me?",
-                    followUps: [
-                        "What anime do you watch?",
-                        "Tell me about your gaming setup",
-                        "Favorite basketball team?"
-                    ],
-                    followUpResponses: {
-                        "What anime do you watch?": "🎌 **Anime Favorites**<br><br>" +
-                            "I’m hooked on **Attack on Titan** for its epic storytelling, **Solo Leveling** for stunning visuals, peak plotting and **Arcane** for its action-packed vibe. Got a favorite anime or need a recommendation?",
-                        "Tell me about your gaming setup": "🎮 **Gaming Setup**<br><br>" +
-                            "I game on my **Samsung Galaxy A9**, and **Call of Duty: Mobile** is my go-to for intense, fast-paced action. I use wired earphones for better sound clarity and faster reaction. My setup is all about mobile convenience and skill. Want tips on mobile gaming or my favorite loadouts?",
-                        "Favorite basketball team?": "🏀 **Basketball Passion**<br><br>" +
-                            "I’m a huge **Golden State Warriors** fan—Steph Curry’s leadership is inspiring! I also play pickup games, focusing on defense and three-pointers. Want to talk NBA or my on-court moves?"
-                    }
-                },
-                anime: {
-                    triggers: ["anime", "naruto", "attack on titan", "demon slayer", "jujutsu kaisen"],
-                    response: "🎌 **Anime Enthusiast**<br><br>" +
-                        "**Top Picks**<br>" +
-                        "- Attack on Titan: Epic plot twists<br>" +
-                        "- Arcane: Breathtaking animation<br>" +
-                        "- Solo Leveling: Intense battles<br><br>" +
-                        "**Why Anime?**<br>" +
-                        "- Love the storytelling and art<br>" +
-                        "- Inspired by UI/UX in anime interfaces<br>" +
-                        "- Active in fan communities<br><br>" +
-                        "Want to discuss a show or get a recommendation?",
-                    followUps: [
-                        "Recommend an anime",
-                        "Favorite character?",
-                        "Do you attend conventions?"
-                    ],
-                    followUpResponses: {
-                        "Recommend an anime": "📺 **Anime Recommendation**<br><br>" +
-                            "If you love action and deep stories, try **Hunter x Hunter**—it’s got a perfect mix of strategy, emotion, and epic fights. For something newer, **My Teen Romantic Comedy SNAFU** offers great character development. What genres do you like?",
-                        "Favorite character?": "🌟 **Favorite Anime Character**<br><br>" +
-                            "I'd pick **Eren Yeager** Eren Yeager is a complex character whose journey prompts discussions about morality, sacrifice, and the consequences of one's choices."
-                            "I’d pick **Levi Ackerman** from Attack on Titan—his calm precision and loyalty are iconic. His fight scenes inspire my UI animation designs! Who’s your favorite character?",
-                        "Do you attend conventions?": "🎉 **Anime Conventions**<br><br>" +
-                            "NONE"
-                    }
-                },
-                contact: {
-                    triggers: ["contact", "email", "reach", "social media", "connect"],
-                    response: "📬 **Contact Information**<br><br>" +
-                        "**Professional**<br>" +
-                        "- Email: toluwanimibabalola2707@gmail.com <br>" +
-                        "- LinkedIn: https://www.linkedin.com/in/toluwanimi-babalola-41605129b<br>" +
-                        "- GitHub: github.com/tolu-15<br><br>" +
-                        "What’s the best way to connect with you?",
-                    followUps: [
-                        "What's your GitHub?",
-                        "Can I see your resume?",
-                        "Best way to reach you?"
-                    ],
-                    followUpResponses: {
-                        "What's your GitHub?": "📂 **GitHub Profile**<br><br>" +
-                            "Check out my repos at **github.com/tolu-15**. You’ll find projects like Nexora Tel and TimetablePro, showcasing my code. Want me to walk you through a specific repository?",
-                        "Can I see your resume?": "📄 **Resume Request**<br><br>" +
-                            "My resume highlights my skills, projects, and education. Please reach out via email (toluwanimibabalola2707@gmail.com) for a copy, and I’ll share it promptly! Anything specific you want to know about my experience?",
-                        "Best way to reach you?": "📞 **Best Contact Method**<br><br>" +
-                            "Email (toluwanimibabalola2707@gmail.com) is the fastest way to reach me for professional inquiries. For quick chats, LinkedIn works great too. What’s your preferred method?"
-                    }
-                },
-                career: {
-                    triggers: ["career", "goals", "future", "ambitions", "plans"],
-                    response: "🌟 **Career Goals**<br><br>" +
-                        "I’m passionate about creating impactful tech solutions. My goal is to lead UI/UX and frontend development for innovative platforms, blending design and code. I aim to work on AI-driven interfaces or smart systems in the next 5 years. Curious about my next steps?",
-                    followUps: [
-                        "What inspires your career?",
-                        "Any dream companies?",
-                        "How do you stay updated?"
-                    ],
-                    followUpResponses: {
-                        "What inspires your career?": "💡 **Career Inspiration**<br><br>" +
-                            "I’m driven by the intersection of tech and creativity—think anime-inspired UI designs or intuitive apps like Notion. Solving real-world problems through clean code and beautiful interfaces keeps me motivated. What inspires you?",
-                        "Any dream companies?": "🏢 **Dream Companies**<br><br>" +
-                            "I’d love to work with innovative teams at places like **Vercel**, **xAI**, or **Figma**, where design and tech converge. Their focus on user-centric solutions aligns with my vision. Got a favorite company?",
-                        "How do you stay updated?": "📚 **Staying Updated**<br><br>" +
-                            "I follow tech blogs like Smashing Magazine, watch WWDC for UI trends, and experiment with new tools on GitHub. I also take Udemy courses to sharpen my skills. Want tips on staying current in tech?"
-                    }
-                },
-                tools: {
-                    triggers: ["tools", "software", "favorite tool", "what do you use"],
-                    response: "🛠️ **Favorite Tools**<br><br>" +
-                        "I rely on a mix of tools to bring ideas to life:<br>" +
-                        "- **Figma**: For UI/UX prototyping<br>" +
-                        "- **VS Code**: My go-to code editor<br>" +
-                        "- **Tailwind CSS**: For rapid styling<br>" +
-                        "- **Firebase**: For backend and auth<br>" +
-                        "- **GitHub**: For version control<br><br>" +
-                        "Each tool helps me streamline my workflow. Want to know more about one?",
-                    followUps: [
-                        "Why do you like Figma?",
-                        "How do you use VS Code?",
-                        "Any other tools?"
-                    ],
-                    followUpResponses: {
-                        "Why do you like Figma?": "🎨 **Why Figma?**<br><br>" +
-                            "Figma’s real-time collaboration and robust design system features make it a game-changer for UI/UX. I use it to craft pixel-perfect prototypes and user flows. Its plugins, like for Lottie animations, are a bonus. Curious about my Figma workflow?",
-                        "How do you use VS Code?": "💻 **VS Code Usage**<br><br>" +
-                            "VS Code is my coding hub, with extensions like Prettier, ESLint, and Tailwind Intellisense for efficiency. I customize themes to keep coding fun and use its Git integration for seamless commits. Want to know my favorite extensions?",
-                        "Any other tools?": "🧰 **Other Tools**<br><br>" +
-                            "Beyond Figma and VS Code, I use **Vercel** for deployment, **Postman** for API testing, and **Notion** for project planning. Each adds a layer of polish to my work. Got a tool you’re curious about?"
-                    }
-                },
-                default: {
-                    triggers: [],
-                    response: "🤔 Hmm, I’m not sure I caught that. I can tell you about:<br>" +
-                        "- Technical skills<br>" +
-                        "- Cool projects<br>" +
-                        "- Education journey<br>" +
-                        "- Hobbies & passions<br>" +
-                        "- Career goals<br>" +
-                        "- Favorite tools<br><br>" +
-                        "What’s on your mind?",
-                    followUps: [
-                        "Tell me about your skills",
-                        "What projects have you done?",
-                        "What are your hobbies?"
-                    ]
+**Programming Languages**
+- C++ (Intermediate)
+- C (Intermediate)
+- Python (Basic)
+
+**UI/UX Design**
+- Figma for wireframes & prototypes
+- User flow & design systems
+
+**Other Tools**
+- Firebase
+- Git/GitHub, Netlify, Vercel
+- Basic cybersecurity
+
+Curious about a specific skill?`,
+                followUps: [
+                    "Tell me about your frontend projects",
+                    "What UI/UX tools do you use?",
+                    "How about your backend skills?"
+                ],
+                followUpResponses: {
+                    "Tell me about your frontend projects": `🌟 **Frontend Projects**
+
+I’ve built dynamic, responsive interfaces with a focus on user experience. For example, the **Nexora Tel Website** uses Aceternity UI components and Lottie animations for a sleek, modern look. Another project, **TimetablePro**, features a React.js frontend with smooth transitions and real-time updates via Firebase. Want to dive deeper into one of these?`,
+                    "What UI/UX tools do you use?": `🎨 **UI/UX Toolkit**
+
+I primarily use **Figma** for creating wireframes, prototypes, and design systems. It’s great for collaboration and iterating on user flows. I also dabble in Adobe XD for specific animation designs and leverage tools like Coolors for color schemes. Any tool you’re curious about?`,
+                    "How about your backend skills?": `🛠️ **Backend Skills**
+
+While my strength lies in frontend and UI/UX, I have not gone into backend. If you want to work with me as a backend developer, please contact me via email.`
                 }
-            };
+            },
+            projects: {
+                triggers: ["projects", "portfolio", "work", "applications"],
+                response: `🚀 **Notable Projects**
 
-            // Initialize chat
-            initChat();
+**1. Nexora Tel Website**
+- Recruitment & project portal
+- Features: Lottie animations, Aceternity UI
+- Tech: HTML, CSS, JavaScript, Netlify
 
-            // Add event listeners
-            sendButton.addEventListener('click', handleSendMessage);
-            userInput.addEventListener('keypress', function (e) {
+**2. TimetablePro**
+- Smart timetable generator
+- Firebase backend, React.js frontend
+- Real-time study notifications
+
+**3. Motivation Clock App**
+- Flip clock with quotes & weather
+- Social sharing features
+
+Which project catches your eye?`,
+                followUps: [
+                    "Tell me more about Nexora Tel",
+                    "How does TimetablePro work?",
+                    "What tech stack did you use?"
+                ],
+                followUpResponses: {
+                    "Tell me more about Nexora Tel": `📌 **Nexora Tel Website**
+
+<a target="_blank" href="https://nexoratel.netlify.app/">Nexora Tel</a>
+This portal streamlines recruitment and project management. It features **Lottie animations** for engaging visuals, a **sticky navigation** for easy access, and **responsive design** for all devices. Built with HTML, CSS, JavaScript, and hosted on Netlify, it’s a showcase of modern web design. Want to know about its challenges or see the code?`,
+                    "How does TimetablePro work?": `⏰ **TimetablePro Mechanics**
+
+TimetablePro generates personalized schedules for students. Users input subjects and preferences, and the app creates an optimized timetable using a custom algorithm. It syncs data via **Firebase Firestore** and sends **push notifications** for study reminders. Curious about the algorithm or user feedback? Project still ongoing, will be released on July 27, 2025.`,
+                    "What tech stack did you use?": `🛠️ **Project Tech Stacks**
+
+- **Nexora Tel**: HTML, CSS, JavaScript, Aceternity UI, Netlify
+- **TimetablePro**: HTML, CSS, JavaScript, Netlify
+- **Motivation Clock**: JavaScript, APIs (weather, quotes), not deployed
+
+Each project leverages tools suited to its goals. Want details on a specific stack?`
+                }
+            },
+            education: {
+                triggers: ["education", "school", "university", "covenant", "study"],
+                response: `🎓 **Education Background**
+
+**Covenant University**
+- B.Sc in Industrial Mathematics (Computer Science)
+- Expected Graduation: 2027
+
+Want to explore my coursework or achievements?`,
+                followUps: [
+                    "Tell me about your coursework",
+                    "Any academic achievements?"
+                ],
+                followUpResponses: {
+                    "Tell me about your coursework": `📚 **Coursework Details**
+
+Details about my coursework are not available at this time.`,
+                    "Any academic achievements?": `🏆 **Academic Achievements**
+
+No notable academic achievements yet, but I'm working hard toward my degree!`
+                }
+            },
+            hobbies: {
+                triggers: ["hobbies", "interests", "what do you like", "free time"],
+                response: `😊 **Personal Interests**
+
+**Creative**
+- UI/UX design
+- Digital art & illustration
+- Anime/manga enthusiast
+
+**Sports & Fitness**
+- Basketball (player & fan)
+
+**Entertainment**
+- Gaming (Call of Duty)
+- Music (Gospel)
+
+What’s a hobby you’d like to explore with me?`,
+                followUps: [
+                    "What anime do you watch?",
+                    "Tell me about your gaming setup",
+                    "Favorite basketball team?"
+                ],
+                followUpResponses: {
+                    "What anime do you watch?": `🎌 **Anime Favorites**
+
+I’m hooked on **Attack on Titan** for its epic storytelling, **Solo Leveling** for stunning visuals and peak plotting, and **Arcane** for its action-packed vibe. Got a favorite anime or need a recommendation?`,
+                    "Tell me about your gaming setup": `🎮 **Gaming Setup**
+
+I game on my **Samsung Galaxy A9**, and **Call of Duty: Mobile** is my go-to for intense, fast-paced action. I use wired earphones for better sound clarity and faster reaction. My setup is all about mobile convenience and skill. Want tips on mobile gaming or my favorite loadouts?`,
+                    "Favorite basketball team?": `🏀 **Basketball Passion**
+
+I’m a huge **Golden State Warriors** fan—Steph Curry’s leadership is inspiring! I also play pickup games, focusing on defense and three-pointers. Want to talk NBA or my on-court moves?`
+                }
+            },
+            anime: {
+                triggers: ["anime", "naruto", "attack on titan", "demon slayer", "jujutsu kaisen"],
+                response: `🎌 **Anime Enthusiast**
+
+**Top Picks**
+- Attack on Titan: Epic plot twists
+- Arcane: Breathtaking animation
+- Solo Leveling: Intense battles
+
+**Why Anime?**
+- Love the storytelling and art
+- Inspired by UI/UX in anime interfaces
+- Active in fan communities
+
+Want to discuss a show or get a recommendation?`,
+                followUps: [
+                    "Recommend an anime",
+                    "Favorite character?",
+                    "Do you attend conventions?"
+                ],
+                followUpResponses: {
+                    "Recommend an anime": `📺 **Anime Recommendation**
+
+If you love action and deep stories, try **Hunter x Hunter**—it’s got a perfect mix of strategy, emotion, and epic fights. For something newer, **My Teen Romantic Comedy SNAFU** offers great character development. What genres do you like?`,
+                    "Favorite character?": `🌟 **Favorite Anime Character**
+
+I’d pick **Levi Ackerman** from Attack on Titan—his calm precision and loyalty are iconic. His fight scenes inspire my UI animation designs! Who’s your favorite character?`,
+                    "Do you attend conventions?": `🎉 **Anime Conventions**
+
+I haven’t attended any conventions yet, but I’m active in online anime communities.`
+                }
+            },
+            contact: {
+                triggers: ["contact", "email", "reach", "social media", "connect"],
+                response: `📬 **Contact Information**
+
+**Professional**
+- Email: toluwanimibabalola2707@gmail.com
+- LinkedIn: <a href="https://www.linkedin.com/in/toluwanimi-babalola-41605129b" target="_blank">LinkedIn Profile</a>
+- GitHub: <a href="https://github.com/tolu-15" target="_blank">github.com/tolu-15</a>
+
+What’s the best way to connect with you?`,
+                followUps: [
+                    "What's your GitHub?",
+                    "Can I see your resume?",
+                    "Best way to reach you?"
+                ],
+                followUpResponses: {
+                    "What's your GitHub?": `📂 **GitHub Profile**
+
+Check out my repos at <a href="https://github.com/tolu-15" target="_blank">github.com/tolu-15</a>. You’ll find projects like Nexora Tel and TimetablePro, showcasing my code. Want me to walk you through a specific repository?`,
+                    "Can I see your resume?": `📄 **Resume Request**
+
+My resume highlights my skills, projects, and education. Please reach out via email (toluwanimibabalola2707@gmail.com) for a copy, and I’ll share it promptly! Anything specific you want to know about my experience?`,
+                    "Best way to reach you?": `📞 **Best Contact Method**
+
+Email (toluwanimibabalola2707@gmail.com) is the fastest way to reach me for professional inquiries. For quick chats, LinkedIn works great too. What’s your preferred method?`
+                }
+            },
+            career: {
+                triggers: ["career", "goals", "future", "ambitions", "plans"],
+                response: `🌟 **Career Goals**
+
+I’m passionate about creating impactful tech solutions. My goal is to lead UI/UX and frontend development for innovative platforms, blending design and code. I aim to work on AI-driven interfaces or smart systems in the next 5 years. Curious about my next steps?`,
+                followUps: [
+                    "What inspires your career?",
+                    "Any dream companies?",
+                    "How do you stay updated?"
+                ],
+                followUpResponses: {
+                    "What inspires your career?": `💡 **Career Inspiration**
+
+I’m driven by the intersection of tech and creativity—think anime-inspired UI designs or intuitive apps like Notion. Solving real-world problems through clean code and beautiful interfaces keeps me motivated. What inspires you?`,
+                    "Any dream companies?": `🏢 **Dream Companies**
+
+I’d love to work with innovative teams at places like **Vercel**, **xAI**, or **Figma**, where design and tech converge. Their focus on user-centric solutions aligns with my vision. Got a favorite company?`,
+                    "How do you stay updated?": `📚 **Staying Updated**
+
+I follow tech blogs like Smashing Magazine, watch WWDC for UI trends, and experiment with new tools on GitHub. I also take Udemy courses to sharpen my skills. Want tips on staying current in tech?`
+                }
+            },
+            tools: {
+                triggers: ["tools", "software", "favorite tool", "what do you use"],
+                response: `🛠️ **Favorite Tools**
+
+I rely on a mix of tools to bring ideas to life:
+- **Figma**: For UI/UX prototyping
+- **VS Code**: My go-to code editor
+- **Tailwind CSS**: For rapid styling
+- **Firebase**: For backend and auth
+- **GitHub**: For version control
+
+Each tool helps me streamline my workflow. Want to know more about one?`,
+                followUps: [
+                    "Why do you like Figma?",
+                    "How do you use VS Code?",
+                    "Any other tools?"
+                ],
+                followUpResponses: {
+                    "Why do you like Figma?": `🎨 **Why Figma?**
+
+Figma’s real-time collaboration and robust design system features make it a game-changer for UI/UX. I use it to craft pixel-perfect prototypes and user flows. Its plugins, like for Lottie animations, are a bonus. Curious about my Figma workflow?`,
+                    "How do you use VS Code?": `💻 **VS Code Usage**
+
+VS Code is my coding hub, with extensions like Prettier, ESLint, and Tailwind Intellisense for efficiency. I customize themes to keep coding fun and use its Git integration for seamless commits. Want to know my favorite extensions?`,
+                    "Any other tools?": `🧰 **Other Tools**
+
+Beyond Figma and VS Code, I use **Vercel** for deployment, **Postman** for API testing, and **Notion** for project planning. Each adds a layer of polish to my work. Got a tool you’re curious about?`
+                }
+            },
+            default: {
+                triggers: [],
+                response: `🤔 Hmm, I’m not sure I caught that. I can tell you about:
+- Technical skills
+- Cool projects
+- Education journey
+- Hobbies & passions
+- Career goals
+- Favorite tools
+
+What’s on your mind?`,
+                followUps: [
+                    "Tell me about your skills",
+                    "What projects have you done?",
+                    "What are your hobbies?"
+                ]
+            }
+        };
+
+        // Conversation state
+        let conversationState = {
+            currentTopic: null,
+            followUpQuestions: []
+        };
+
+        // Utility functions
+        const getCurrentTime = () => {
+            return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        };
+
+        const scrollToBottom = () => {
+            elements.chatMessages.scrollTop = elements.chatMessages.scrollHeight;
+        };
+
+        const showTypingIndicator = () => {
+            elements.typingIndicator.style.display = 'flex';
+            scrollToBottom();
+        };
+
+        const hideTypingIndicator = () => {
+            elements.typingIndicator.style.display = 'none';
+        };
+
+        const addMessage = (content, isUser = false) => {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+            messageDiv.setAttribute('role', 'article');
+
+            const messageContent = document.createElement('div');
+            messageContent.className = 'message-content';
+            messageContent.innerHTML = simpleMarkdown(content);
+
+            const messageTime = document.createElement('div');
+            messageTime.className = 'message-time';
+            messageTime.textContent = getCurrentTime();
+
+            messageDiv.appendChild(messageContent);
+            messageDiv.appendChild(messageTime);
+
+            elements.chatMessages.appendChild(messageDiv);
+            scrollToBottom();
+        };
+
+        const addBotMessage = (content) => addMessage(content, false);
+        const addUserMessage = (content) => addMessage(content, true);
+
+        const showQuickReplies = (replies) => {
+            const existingReplies = document.querySelector('.quick-replies');
+            if (existingReplies) existingReplies.remove();
+
+            if (!replies || replies.length === 0) return;
+
+            const quickRepliesDiv = document.createElement('div');
+            quickRepliesDiv.className = 'quick-replies';
+            quickRepliesDiv.setAttribute('role', 'list');
+
+            replies.forEach(reply => {
+                const button = document.createElement('button');
+                button.className = 'quick-reply';
+                button.textContent = reply;
+                button.setAttribute('data-reply', reply);
+                button.setAttribute('role', 'listitem');
+                quickRepliesDiv.appendChild(button);
+            });
+
+            elements.chatMessages.appendChild(quickRepliesDiv);
+            scrollToBottom();
+        };
+
+        const processInput = (input) => {
+            const lowerInput = input.toLowerCase();
+            let responseData = knowledgeBase.default;
+
+            if (conversationState.currentTopic && knowledgeBase[conversationState.currentTopic]?.followUpResponses?.[input]) {
+                responseData = {
+                    response: knowledgeBase[conversationState.currentTopic].followUpResponses[input],
+                    followUps: knowledgeBase[conversationState.currentTopic].followUps
+                };
+            } else {
+                for (const [topic, data] of Object.entries(knowledgeBase)) {
+                    if (topic === 'default') continue;
+                    if (data.triggers.some(trigger => lowerInput.includes(trigger))) {
+                        responseData = data;
+                        conversationState.currentTopic = topic;
+                        break;
+                    }
+                }
+
+                if (conversationState.currentTopic === 'projects') {
+                    if (lowerInput.includes('nexora')) {
+                        responseData = knowledgeBase.projects.followUpResponses["Tell me more about Nexora Tel"];
+                    } else if (lowerInput.includes('timetablepro')) {
+                        responseData = knowledgeBase.projects.followUpResponses["How does TimetablePro work?"];
+                    }
+                }
+            }
+
+            return responseData;
+        };
+
+        const handleSendMessage = async () => {
+            try {
+                const message = elements.userInput.value.trim();
+                if (!message) return;
+
+                addUserMessage(message);
+                elements.userInput.value = '';
+                showTypingIndicator();
+
+                await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 1000));
+
+                const responseData = processInput(message);
+                addBotMessage(responseData.response);
+                showQuickReplies(responseData.followUps);
+
+                hideTypingIndicator();
+            } catch (error) {
+                console.error('Error in handleSendMessage:', error);
+                addBotMessage('Oops, something went wrong. Let’s try that again!');
+                hideTypingIndicator();
+            }
+        };
+
+        // Initialize chat
+        const initChat = () => {
+            addBotMessage(knowledgeBase.greetings.response);
+            showQuickReplies(knowledgeBase.greetings.followUps);
+        };
+
+        // Event listeners
+        const setupEventListeners = () => {
+            elements.sendButton.addEventListener('click', handleSendMessage);
+            elements.userInput.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter' && !e.shiftKey) {
                     e.preventDefault();
                     handleSendMessage();
                 }
             });
-
-            // Handle quick reply clicks (event delegation)
-            chatMessages.addEventListener('click', function (e) {
+            elements.chatMessages.addEventListener('click', (e) => {
                 if (e.target.classList.contains('quick-reply')) {
                     const reply = e.target.getAttribute('data-reply');
                     if (reply) {
-                        userInput.value = reply;
+                        elements.userInput.value = reply;
                         handleSendMessage();
                     }
                 }
             });
+        };
 
-            // Initialize chat
-            function initChat() {
-                addBotMessage(knowledgeBase.greetings.response);
-                showQuickReplies(knowledgeBase.greetings.followUps);
-            }
-
-            // Handle send message
-            async function handleSendMessage() {
-                try {
-                    const message = userInput.value.trim();
-                    if (!message) return;
-
-                    console.log('Sending message:', message); // Debug log
-
-                    // Add user message
-                    addUserMessage(message);
-                    userInput.value = '';
-
-                    // Show typing indicator
-                    showTypingIndicator();
-
-                    // Simulate processing delay
-                    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 1000));
-
-                    // Process input and respond
-                    const responseData = processInput(message);
-                    addBotMessage(responseData.response);
-                    showQuickReplies(responseData.followUps);
-
-                    // Hide typing indicator
-                    hideTypingIndicator();
-                } catch (error) {
-                    console.error('Error in handleSendMessage:', error);
-                    addBotMessage('Oops, something went wrong. Let’s try that again!');
-                    hideTypingIndicator();
-                }
-            }
-
-            // Add message to chat
-            function addMessage(content, isUser = false) {
-                const messageDiv = document.createElement('div');
-                messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
-
-                const messageContent = document.createElement('div');
-                messageContent.className = 'message-content';
-                messageContent.innerHTML = simpleMarkdown(content);
-
-                const messageTime = document.createElement('div');
-                messageTime.className = 'message-time';
-                messageTime.textContent = getCurrentTime();
-
-                messageDiv.appendChild(messageContent);
-                messageDiv.appendChild(messageTime);
-
-                chatMessages.appendChild(messageDiv);
-                scrollToBottom();
-            }
-
-            // Shortcut for bot messages
-            function addBotMessage(content) {
-                addMessage(content, false);
-            }
-
-            // Shortcut for user messages
-            function addUserMessage(content) {
-                addMessage(content, true);
-            }
-
-            // Get current time in HH:MM format
-            function getCurrentTime() {
-                const now = new Date();
-                return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-            }
-
-            // Process user input and generate response
-            function processInput(input) {
-                const lowerInput = input.toLowerCase();
-                let responseData = knowledgeBase.default;
-
-                // Check for follow-up responses first
-                if (conversationState.currentTopic && knowledgeBase[conversationState.currentTopic]?.followUpResponses?.[input]) {
-                    responseData = {
-                        response: knowledgeBase[conversationState.currentTopic].followUpResponses[input],
-                        followUps: knowledgeBase[conversationState.currentTopic].followUps
-                    };
-                } else {
-                    // Check which topic matches
-                    for (const [topic, data] of Object.entries(knowledgeBase)) {
-                        if (topic === 'default') continue;
-
-                        if (data.triggers.some(trigger => lowerInput.includes(trigger))) {
-                            responseData = data;
-                            conversationState.currentTopic = topic;
-                            break;
-                        }
-                    }
-
-                    // Special cases for projects
-                    if (conversationState.currentTopic === 'projects') {
-                        if (lowerInput.includes('nexora')) {
-                            responseData = knowledgeBase.projects.followUpResponses["Tell me more about Nexora Tel"];
-                        } else if (lowerInput.includes('timetablepro')) {
-                            responseData = knowledgeBase.projects.followUpResponses["How does TimetablePro work?"];
-                        }
-                    }
-                }
-
-                return responseData;
-            }
-
-            // Show quick reply buttons
-            function showQuickReplies(replies) {
-                // Remove existing quick replies
-                const existingReplies = document.querySelector('.quick-replies');
-                if (existingReplies) existingReplies.remove();
-
-                if (!replies || replies.length === 0) return;
-
-                const quickRepliesDiv = document.createElement('div');
-                quickRepliesDiv.className = 'quick-replies';
-
-                replies.forEach(reply => {
-                    const button = document.createElement('button');
-                    button.className = 'quick-reply';
-                    button.textContent = reply;
-                    button.setAttribute('data-reply', reply);
-                    quickRepliesDiv.appendChild(button);
-                });
-
-                chatMessages.appendChild(quickRepliesDiv);
-                scrollToBottom();
-            }
-
-            // Scroll to bottom of chat
-            function scrollToBottom() {
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }
-
-            // Show typing indicator
-            function showTypingIndicator() {
-                typingIndicator.style.display = 'flex';
-                scrollToBottom();
-            }
-
-            // Hide typing indicator
-            function hideTypingIndicator() {
-                typingIndicator.style.display = 'none';
+        // Initialize on DOM load
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                initChat();
+                setupEventListeners();
+            } catch (error) {
+                console.error('Initialization failed:', error);
+                addBotMessage('Failed to initialize chat. Please refresh the page.');
             }
         });
     </script>
