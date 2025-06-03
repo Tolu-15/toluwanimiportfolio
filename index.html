@@ -2794,7 +2794,31 @@ What’s on your mind?`,
     </div>
     </nav>
     </div>
-            <!-- Animated background elements -->
+  <div class="telegram-bot-card">
+    <div class="bot-header">
+        <div class="bot-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                <path
+                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.534.26l.2-3.004 5.56-5.02c.24-.213-.054-.334-.373-.12l-6.87 4.33-2.96-.92c-.64-.203-.658-.64.135-.954l11.57-4.46c.538-.196 1.006.128.832.94z" />
+            </svg>
+        </div>
+        <div class="header-text">
+            <h3>Telegram Integration</h3>
+            <p class="bot-subtitle">AI-Powered Business Assistant</p>
+        </div>
+    </div>
+    <p class="bot-description">Streamline your operations with our seamless Telegram integration. Automate orders, customer support, and business processes through our intelligent bot solution.</p>
+    <div class="button-container">
+        <a href="https://t.me/t_dev25_bot" class="invite-button" target="_blank">
+            Connect Now
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+        </a>
+        <div class="button-hover-effect"></div>
+    </div>
+    
+    <!-- Animated background elements -->
     <div class="card-background">
         <div class="grid-pattern"></div>
         <div class="gradient-overlay"></div>
@@ -2803,55 +2827,31 @@ What’s on your mind?`,
 
 <style>
     @keyframes subtleFloat {
-
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(-5px);
-        }
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
     }
-
+    
     @keyframes gradientShift {
-        0% {
-            background-position: 0% 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
-        }
-
-        100% {
-            background-position: 0% 50%;
-        }
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
     }
-
+    
     @keyframes buttonHover {
-        0% {
-            transform: scaleX(0);
-            opacity: 0;
-        }
-
-        100% {
-            transform: scaleX(1);
-            opacity: 1;
-        }
+        0% { transform: scaleX(0); opacity: 0; }
+        100% { transform: scaleX(1); opacity: 1; }
     }
-
+    
     .telegram-bot-card {
         position: relative;
         background: #14213d;
         border-radius: 16px;
         padding: 32px;
-        max-width: 800px;
-        height: 500px;
+        max-width: 380px;
         color: white;
         box-shadow: 0 12px 30px rgba(20, 33, 61, 0.3);
         font-family: 'Inter', 'Helvetica Neue', sans-serif;
-        margin-left: 25%;
-
+        overflow: hidden;
         z-index: 1;
         border: 1px solid rgba(255, 255, 255, 0.08);
         transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
@@ -2861,7 +2861,7 @@ What’s on your mind?`,
         transform: translateY(-5px);
         box-shadow: 0 20px 40px rgba(20, 33, 61, 0.4);
     }
-
+    
     .card-background {
         position: absolute;
         top: 0;
@@ -2871,18 +2871,18 @@ What’s on your mind?`,
         z-index: -1;
         overflow: hidden;
     }
-
+    
     .grid-pattern {
         position: absolute;
         width: 100%;
         height: 100%;
-        background-image:
+        background-image: 
             linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
         background-size: 20px 20px;
         opacity: 0.5;
     }
-
+    
     .gradient-overlay {
         position: absolute;
         width: 100%;
@@ -2898,7 +2898,7 @@ What’s on your mind?`,
         gap: 16px;
         margin-bottom: 24px;
     }
-
+    
     .header-text {
         flex: 1;
     }
@@ -2916,7 +2916,7 @@ What’s on your mind?`,
         transition: all 0.4s ease;
         animation: subtleFloat 6s infinite ease-in-out;
     }
-
+    
     .telegram-bot-card:hover .bot-icon {
         transform: rotate(5deg);
     }
@@ -2932,7 +2932,7 @@ What’s on your mind?`,
         font-weight: 600;
         letter-spacing: 0.25px;
     }
-
+    
     .bot-subtitle {
         margin: 0;
         font-size: 14px;
@@ -2948,12 +2948,12 @@ What’s on your mind?`,
         color: rgba(255, 255, 255, 0.8);
         font-weight: 400;
     }
-
+    
     .button-container {
         position: relative;
         display: inline-block;
     }
-
+    
     .invite-button {
         display: inline-flex;
         align-items: center;
@@ -2974,7 +2974,7 @@ What’s on your mind?`,
         box-shadow: 0 4px 15px rgba(42, 171, 238, 0.3);
         overflow: hidden;
     }
-
+    
     .button-hover-effect {
         position: absolute;
         top: 0;
@@ -2987,14 +2987,14 @@ What’s on your mind?`,
         opacity: 0;
         transition: opacity 0.3s ease;
     }
-
+    
     .invite-button:hover {
         transform: translateY(-2px);
         box-shadow: 0 8px 25px rgba(42, 171, 238, 0.4);
     }
-
-    .invite-button:hover+.button-hover-effect,
-    .invite-button:focus+.button-hover-effect {
+    
+    .invite-button:hover + .button-hover-effect,
+    .invite-button:focus + .button-hover-effect {
         animation: buttonHover 0.6s forwards;
     }
 
@@ -3005,23 +3005,23 @@ What’s on your mind?`,
     .invite-button:hover svg {
         transform: translateX(4px);
     }
-
+    
     /* Responsive adjustments */
     @media (max-width: 480px) {
         .telegram-bot-card {
             padding: 24px;
             max-width: 100%;
         }
-
+        
         .bot-icon {
             width: 48px;
             height: 48px;
         }
-
+        
         .bot-header h3 {
             font-size: 18px;
         }
-
+        
         .bot-description {
             font-size: 14px;
         }
