@@ -1,176 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You</title>
-    <style>
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            text-align: center;
-            padding: 100px;
-            background: linear-gradient(45deg, #E5F0FF, #F0FFF0, #FFF5F5);
-            background-size: 400% 400%;
-            color: #002244;
-            overflow: hidden;
-            position: relative;
-            animation: bgAnimation 10s ease infinite;
-        }
-
-        @keyframes bgAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        h1 {
-            font-size: 50px;
-            color: #FF6347;
-            animation: bounce 1s ease-in-out infinite, glow 1.5s ease-in-out infinite alternate, popIn 1s ease forwards;
-        }
-
-        h2 {
-            font-size: 30px;
-            color: #32CD32;
-            margin-top: 20px;
-            animation: fadeIn 2s ease-in-out, pulse 2s infinite;
-        }
-
-        p {
-            font-size: 25px;
-            color: #333;
-            animation: slideUp 2s ease-in-out, pulse 3s infinite;
-        }
-
-        @keyframes bounce {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes glow {
-
-            0%,
-            100% {
-                text-shadow: 0 0 10px #FF6347, 0 0 20px #FF6347;
-            }
-
-            50% {
-                text-shadow: 0 0 10px #32CD32, 0 0 20px #32CD32;
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideUp {
-            from {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        @keyframes popIn {
-            0% {
-                transform: scale(0);
-                opacity: 0;
-            }
-
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .emoji-float {
-            position: absolute;
-            font-size: 30px;
-            animation: floatEmoji 10s linear infinite;
-            pointer-events: none;
-        }
-
-        @keyframes floatEmoji {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateY(-100vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        .star {
-            position: absolute;
-            font-size: 20px;
-            color: #FFD700;
-            animation: twinkle 3s infinite ease-in-out;
-            pointer-events: none;
-        }
-
-        @keyframes twinkle {
-
-            0%,
-            100% {
-                opacity: 0.2;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 1;
-                transform: scale(1.5);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="thank-you.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <h1>🎉 Thank you for reaching me ! 🎉</h1>
-    <h2>🚀 We're thrilled to have you on board! 💡</h2>
-    <p>We will be in touch with you shortly. Stay tuned for more amazing opportunities! 💼✨</p>
+    <main class="thank-you">
+        <div class="thank-you-card">
+            <h1>Thank you for reaching me!</h1>
+            <h2>We’re thrilled to have you on board.</h2>
+            <p>I’ll be in touch shortly. Stay tuned for more amazing opportunities.</p>
+        </div>
+    </main>
 
     <div class="emoji-float" style="left: 10%; animation-delay: 0s;">🎈</div>
     <div class="emoji-float" style="left: 25%; animation-delay: 2s;">🥳</div>
@@ -178,12 +24,10 @@
     <div class="emoji-float" style="left: 60%; animation-delay: 1s;">🔥</div>
     <div class="emoji-float" style="left: 80%; animation-delay: 3s;">🌟</div>
 
-
     <div class="star" style="top: 10%; left: 20%; animation-delay: 1s;">✨</div>
     <div class="star" style="top: 30%; left: 60%; animation-delay: 2s;">✨</div>
     <div class="star" style="top: 50%; left: 40%; animation-delay: 3s;">✨</div>
     <div class="star" style="top: 70%; left: 80%; animation-delay: 4s;">✨</div>
     <div class="star" style="top: 85%; left: 15%; animation-delay: 5s;">✨</div>
 </body>
-
 </html>

@@ -4,1074 +4,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description"
-        content="Babalola Toluwanimi  Portfolio - Frontend Developer, Industrial Mathematics & Computer Science Student. Showcasing projects and skills.">
+        content="Babalola Toluwanimi Portfolio - Frontend Developer, Industrial Mathematics & Computer Science Student. Showcasing projects and skills.">
     <meta name="keywords"
         content="Toluwanimi Babalola, Frontend Developer, Web Developer, Portfolio, Covenant University, Afthonia Foods, Grace Mark Academy Quiz App">
     <meta name="author" content="Babalola Toluwanimi">
+    <meta name="google-site-verification" content="8dHZ7u7jerwojNw-nlgIvKZ9VIh3-icoKls3aPm8rDg">
 
     <title>Toluwanimi Babalola | Frontend Developer | Crafting Clean & Modern Websites</title>
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/jpeg" href="Screenshot_20250319-204407~2.jpg">
-    <meta name="google-site-verification" content="8dHZ7u7jerwojNw-nlgIvKZ9VIh3-icoKls3aPm8rDg" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <style>
-        .cv-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background: linear-gradient(45deg, #ff416c, #ff4b2b);
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: 0.3s;
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(11, 15, 20, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        .cv-button:hover {
-            background: linear-gradient(45deg, #ff4b2b, #ff416c);
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
         }
 
-        .typewriter {
-            display: inline-block;
+        .logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 18px;
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .hero2 {
+            position: relative;
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
             overflow: hidden;
-            border-right: 2px solid black;
-            /* blinking cursor */
-            white-space: nowrap;
-            animation: typing 3s steps(20, end) infinite alternate,
-                blink-caret 0.75s step-end infinite;
         }
 
-        /* Typing Animation */
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 75%;
-            }
+        .hero-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        /* Blinking Cursor Animation */
-        @keyframes blink-caret {
+        .hero2::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
 
-            from,
-            to {
-                border-color: transparent;
-            }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 80px 0;
+            text-align: center;
+        }
 
-            40% {
-                border-color: black;
-            }
+        .role {
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        .hero-title {
+            font-size: clamp(2.2rem, 4vw, 3.4rem);
+            margin: 0 0 16px;
+        }
+
+        .hero-text {
+            max-width: 650px;
+            margin: 0 auto 28px;
+            color: #e5e7eb;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: 1px solid transparent;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            border-color: rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+
+        .alert {
+            color: aqua;
         }
     </style>
 </head>
 
 <body>
-    <div id="header"></div>
-    <div class="container">
-
-        <nav>
-
-            <ul>
-                <li><a href="#home"> Home</a></li>
-                <li><a href="#about"> About</a></li>
-                <li><a href="#service"> Service</a></li>
-                <li><a href="#about"> Portfolio</a></li>
-                <li><a href="#contact"> Contact</a></li>
-               
-
-
-
-            </ul>
-        </nav>
-        <!DOCTYPE html>
-        <html lang="en">
-
-        <head>
-            <!DOCTYPE html>
-            <html lang="en">
-
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>T_dev | Elite Developer Portfolio</title>
-                <style>
-                    /* Header Container - Only affects the top section */
-                    .portfolio-header {
-                        position: relative;
-                        width: 100%;
-                        height: 100vh;
-                        overflow: hidden;
-                        background: linear-gradient(to right, #141e30, #243b55);
-                        font-family: 'Rajdhani', 'Orbitron', sans-serif;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        perspective: 1000px;
-                        cursor: none;
-                        isolation: isolate;
-                    }
-
-                    :root {
-                        --primary: #00f5d4;
-                        /* Cyber teal */
-                        --secondary: #00bbf9;
-                        /* Electric blue */
-                        --accent: #fee440;
-                        /* Neon yellow */
-                        --dark: #161a1d;
-                        /* Space black */
-                        --text: #f8f9fa;
-                        /* Pure white */
-                        --glow: 0 0 15px;
-                        --code-blue: #5e9eff;
-                        --code-purple: #b388ff;
-                        --code-green: #69f0ae;
-                        --code-orange: #ffab40;
-                    }
-
-                    .header-cursor {
-                        position: fixed;
-                        width: 24px;
-                        height: 24px;
-                        border-radius: 50%;
-                        background: var(--accent);
-                        mix-blend-mode: screen;
-                        pointer-events: none;
-                        z-index: 9999;
-                        filter: drop-shadow(0 0 8px var(--accent));
-                        transform: translate(-50%, -50%) scale(1);
-                        transition: transform 0.2s ease, background 0.3s ease;
-                    }
-
-                    .header-cursor.active {
-                        transform: translate(-50%, -50%) scale(1.5);
-                        background: var(--primary);
-                    }
-
-                    .logo-container {
-                        position: relative;
-                        width: 400px;
-                        height: 400px;
-                        z-index: 10;
-                    }
-
-                    .tdev-logo {
-                        width: 100%;
-                        height: 100%;
-                        position: relative;
-                        transform-style: preserve-3d;
-                        transition: transform 0.05s linear;
-                        animation: floatLogo 8s ease-in-out infinite;
-                    }
-
-                    .logo-svg {
-                        width: 100%;
-                        height: 100%;
-                        filter: drop-shadow(var(--glow) var(--primary));
-                    }
-
-                    .t-bar,
-                    .t-stem {
-                        fill: none;
-                        stroke: url(#logo-gradient);
-                        stroke-width: 4;
-                        stroke-linecap: round;
-                        stroke-dasharray: 1000;
-                        stroke-dashoffset: 1000;
-                    }
-
-                    .t-bar {
-                        transform-origin: center;
-                        animation:
-                            infiniteDrawBar 4s cubic-bezier(0.65, 0, 0.35, 1) infinite,
-                            pulseBar 3s ease-in-out infinite,
-                            colorShiftBar 7s linear infinite,
-                            moveBar 5s ease-in-out infinite;
-                    }
-
-                    .t-stem {
-                        transform-origin: center;
-                        animation:
-                            infiniteDrawStem 4s cubic-bezier(0.65, 0, 0.35, 1) infinite 0.5s,
-                            pulseStem 3.5s ease-in-out infinite,
-                            colorShiftStem 9s linear infinite,
-                            moveStem 6s ease-in-out infinite;
-                    }
-
-                    .dev-text {
-                        fill: var(--text);
-                        font-family: 'Orbitron';
-                        font-weight: 700;
-                        font-size: 32px;
-                        opacity: 0;
-                        text-transform: uppercase;
-                        letter-spacing: 2px;
-                        animation:
-                            fadeIn 0.8s ease-out 1.2s forwards,
-                            textGlow 2.5s ease-in-out infinite alternate 2s;
-                    }
-
-                    @keyframes infiniteDrawBar {
-                        0% {
-                            stroke-dashoffset: 1000;
-                        }
-
-                        40% {
-                            stroke-dashoffset: 0;
-                        }
-
-                        60% {
-                            stroke-dashoffset: 0;
-                        }
-
-                        100% {
-                            stroke-dashoffset: 1000;
-                        }
-                    }
-
-                    @keyframes infiniteDrawStem {
-                        0% {
-                            stroke-dashoffset: 1000;
-                        }
-
-                        40% {
-                            stroke-dashoffset: 0;
-                        }
-
-                        60% {
-                            stroke-dashoffset: 0;
-                        }
-
-                        100% {
-                            stroke-dashoffset: 1000;
-                        }
-                    }
-
-                    @keyframes pulseBar {
-
-                        0%,
-                        100% {
-                            stroke-width: 4;
-                        }
-
-                        50% {
-                            stroke-width: 6;
-                        }
-                    }
-
-                    @keyframes pulseStem {
-
-                        0%,
-                        100% {
-                            stroke-width: 4;
-                        }
-
-                        50% {
-                            stroke-width: 5.5;
-                        }
-                    }
-
-                    @keyframes colorShiftBar {
-
-                        0%,
-                        100% {
-                            stroke: url(#logo-gradient);
-                        }
-
-                        33% {
-                            stroke: var(--primary);
-                        }
-
-                        66% {
-                            stroke: var(--accent);
-                        }
-                    }
-
-                    @keyframes colorShiftStem {
-
-                        0%,
-                        100% {
-                            stroke: url(#logo-gradient);
-                        }
-
-                        33% {
-                            stroke: var(--secondary);
-                        }
-
-                        66% {
-                            stroke: var(--primary);
-                        }
-                    }
-
-                    @keyframes moveBar {
-
-                        0%,
-                        100% {
-                            transform: translateY(0) rotate(0deg);
-                        }
-
-                        25% {
-                            transform: translateY(-3px) rotate(0.5deg);
-                        }
-
-                        50% {
-                            transform: translateY(0) rotate(0deg);
-                        }
-
-                        75% {
-                            transform: translateY(2px) rotate(-0.5deg);
-                        }
-                    }
-
-                    @keyframes moveStem {
-
-                        0%,
-                        100% {
-                            transform: translateX(0) rotate(0deg);
-                        }
-
-                        25% {
-                            transform: translateX(-2px) rotate(0.3deg);
-                        }
-
-                        50% {
-                            transform: translateX(0) rotate(0deg);
-                        }
-
-                        75% {
-                            transform: translateX(2px) rotate(-0.3deg);
-                        }
-                    }
-
-                    @keyframes floatLogo {
-
-                        0%,
-                        100% {
-                            transform: translateY(0) rotateY(0deg);
-                        }
-
-                        50% {
-                            transform: translateY(-20px) rotateY(5deg);
-                        }
-                    }
-
-                    @keyframes fadeIn {
-                        to {
-                            opacity: 1;
-                        }
-                    }
-
-                    @keyframes textGlow {
-                        0% {
-                            filter: drop-shadow(0 0 5px var(--primary));
-                        }
-
-                        100% {
-                            filter: drop-shadow(0 0 20px var(--accent));
-                        }
-                    }
-
-                    /* Code rain background */
-                    .code-rain {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        overflow: hidden;
-                        z-index: 0;
-                        opacity: 0.2;
-                    }
-
-                    .code-snippet {
-                        position: absolute;
-                        font-family: 'Courier New', monospace;
-                        font-weight: 700;
-                        font-size: 14px;
-                        white-space: nowrap;
-                        animation: fall linear infinite;
-                        user-select: none;
-                    }
-
-                    .html-tag {
-                        color: var(--code-blue);
-                    }
-
-                    .css-prop {
-                        color: var(--code-green);
-                    }
-
-                    .js-keyword {
-                        color: var(--code-purple);
-                    }
-
-                    .bracket {
-                        color: var(--code-orange);
-                    }
-
-                    .string {
-                        color: var(--accent);
-                    }
-
-                    .comment {
-                        color: #757575;
-                    }
-
-                    @keyframes fall {
-                        to {
-                            transform: translateY(100vh);
-                        }
-                    }
-
-                    /* Floating particles */
-                    .particles {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        z-index: 1;
-                    }
-
-                    .particle {
-                        position: absolute;
-                        background: var(--primary);
-                        border-radius: 50%;
-                        filter: blur(1px);
-                        animation: float linear infinite;
-                        opacity: 0.7;
-                    }
-
-                    @keyframes float {
-
-                        0%,
-                        100% {
-                            transform: translateY(0) translateX(0);
-                        }
-
-                        50% {
-                            transform: translateY(-20px) translateX(10px);
-                        }
-                    }
-
-                    /* Header content */
-                    .header-content {
-                        position: absolute;
-                        bottom: 10%;
-                        left: 0;
-                        width: 100%;
-                        text-align: center;
-                        z-index: 10;
-                        color: var(--text);
-                    }
-
-                    .header-title {
-                        font-family: 'Orbitron', sans-serif;
-                        font-size: 2.5rem;
-                        margin-bottom: 1rem;
-                        text-transform: uppercase;
-                        letter-spacing: 3px;
-                        opacity: 0;
-                        animation: fadeInUp 1s ease-out 1.5s forwards;
-                    }
-
-                    .header-subtitle {
-                        font-family: 'Rajdhani', sans-serif;
-                        font-size: 1.2rem;
-                        opacity: 0;
-                        animation: fadeInUp 1s ease-out 1.8s forwards;
-                        color: var(--secondary);
-                    }
-
-                    .scroll-indicator {
-                        position: absolute;
-                        bottom: 30px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        width: 30px;
-                        height: 50px;
-                        border: 2px solid var(--primary);
-                        border-radius: 15px;
-                        opacity: 0;
-                        animation: fadeIn 1s ease-out 2s forwards, bounce 2s infinite 2.5s;
-                    }
-
-                    .scroll-indicator::before {
-                        content: '';
-                        position: absolute;
-                        top: 8px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        width: 6px;
-                        height: 6px;
-                        background: var(--accent);
-                        border-radius: 50%;
-                        animation: scroll 2s infinite 2.5s;
-                    }
-
-                    @keyframes fadeInUp {
-                        from {
-                            opacity: 0;
-                            transform: translateY(20px);
-                        }
-
-                        to {
-                            opacity: 1;
-                            transform: translateY(0);
-                        }
-                    }
-
-                    @keyframes bounce {
-
-                        0%,
-                        20%,
-                        50%,
-                        80%,
-                        100% {
-                            transform: translateY(0) translateX(-50%);
-                        }
-
-                        40% {
-                            transform: translateY(-20px) translateX(-50%);
-                        }
-
-                        60% {
-                            transform: translateY(-10px) translateX(-50%);
-                        }
-                    }
-
-                    @keyframes scroll {
-                        0% {
-                            opacity: 1;
-                            top: 8px;
-                        }
-
-                        100% {
-                            opacity: 0;
-                            top: 30px;
-                        }
-                    }
-                </style>
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@500&display=swap"
-                    rel="stylesheet">
-            </head>
-
-        <body>
-            <!-- Only this section will be affected by the styling -->
-            <section class="portfolio-header">
-                <div class="header-cursor"></div>
-                <div class="code-rain" id="codeRain"></div>
-                <div class="particles" id="particles"></div>
-
-                <div class="logo-container">
-                    <div class="holographic-overlay"></div>
-                    <div class="tdev-logo">
-                        <svg class="logo-svg" viewBox="0 0 200 200">
-                            <defs>
-                                <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="var(--primary)" />
-                                    <stop offset="50%" stop-color="var(--secondary)" />
-                                    <stop offset="100%" stop-color="var(--accent)" />
-                                </linearGradient>
-                            </defs>
-
-                            <!-- T Letter -->
-                            <rect class="t-bar" x="50" y="40" width="100" height="18" rx="4" />
-                            <rect class="t-stem" x="90" y="58" width="20" height="70" rx="4" />
-
-                            <!-- _dev Text -->
-                            <text class="dev-text" x="100" y="160" text-anchor="middle">_DEV</text>
-                        </svg>
+    <header>
+        <div class="container nav">
+            <div class="logo">T_dev</div>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero2">
+        <video autoplay muted loop playsinline src="Advertisement_Video_Generated_For_T_dev.mp4" class="hero-video">
+        </video>
+        <div class="container hero-content">
+            <p class="role">Front-End Developer</p>
+            <h1 class="hero-title">Hi, I'm Toluwanimi Babalola Olanrewaju</h1>
+            <p class="hero-text">
+                I build fast, responsive, and accessible web interfaces. I focus on clean UI systems,
+                scalable components, and smooth user experiences.
+            </p>
+            <div class="hero-cta">
+                <a class="btn btn-primary" href="#projects">View Projects</a>
+                <a class="btn btn-outline" href="#contact">Let's Talk</a>
+            </div>
+        </div>
+    </section>
+    <header class="site-header" id="home">
+        <div class="container">
+            <!-- <nav class="site-nav">
+                <div class="brand">Toluwanimi</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav> -->
+
+            <div class="hero">
+                <div class="hero-content">
+                    <p class="hero-kicker typewriter">I am a front-end Developer</p>
+                    <h1 class="hero-title">Welcome <span>To My</span><br>Website</h1>
+                    <p class="hero-subtitle">Frontend Developer focused on sleek, modern, and user-first interfaces.</p>
+                    <div class="hero-actions">
+                        <a class="cv-button" href="#contact">Let's Work Together</a>
                     </div>
                 </div>
-
-                <div class="header-content">
-                    <h1 class="header-title">T_DEV</h1>
-                    <p class="header-subtitle">Front-End Developer/ Beginer Ui/Ux</p>
+                <div class="hero-media">
+                    <dotlottie-player src="https://lottie.host/25ab8ee9-0876-440b-8ea7-ff671c66c781/bhICJMSUxq.lottie"
+                        background="transparent" speed="1" loop autoplay></dotlottie-player>
                 </div>
-
-                <div class="scroll-indicator"></div>
-            </section>
-
-            <!-- Rest of your website content goes here -->
-            <main>
-                <!-- Your existing content -->
-            </main>
-
-            <script>
-                // Custom cursor - only for header
-                const headerCursor = document.querySelector('.header-cursor');
-                const headerSection = document.querySelector('.portfolio-header');
-
-                headerSection.addEventListener('mousemove', (e) => {
-                    headerCursor.style.left = e.clientX + 'px';
-                    headerCursor.style.top = e.clientY + 'px';
-
-                    // 3D tilt effect
-                    const logo = document.querySelector('.tdev-logo');
-                    const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-                    const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-                    logo.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-
-                    // Dynamic particle movement
-                    const particles = document.querySelectorAll('.particle');
-                    particles.forEach(particle => {
-                        const distanceX = (e.clientX - window.innerWidth / 2) / window.innerWidth;
-                        const distanceY = (e.clientY - window.innerHeight / 2) / window.innerHeight;
-                        particle.style.transform = `translateX(${distanceX * 20}px) translateY(${distanceY * 20}px)`;
-                    });
-                });
-
-                // Cursor hover effect
-                headerSection.addEventListener('mouseenter', () => {
-                    document.body.style.cursor = 'none';
-                });
-
-                headerSection.addEventListener('mouseleave', () => {
-                    document.body.style.cursor = 'auto';
-                });
-
-                // Interactive elements
-                const interactiveElements = document.querySelectorAll('.logo-container, .header-title, .header-subtitle');
-                interactiveElements.forEach(el => {
-                    el.addEventListener('mouseenter', () => {
-                        headerCursor.classList.add('active');
-                        playHoverSound();
-                    });
-                    el.addEventListener('mouseleave', () => {
-                        headerCursor.classList.remove('active');
-                    });
-                });
-
-                // Code snippets for the rain
-                const codeSnippets = [
-                    '<span class="html-tag">&lt;div</span> <span class="css-prop">class</span>=<span class="string">"container"</span><span class="html-tag">&gt;</span>',
-                    '<span class="css-prop">background</span>: <span class="string">linear-gradient</span>(<span class="js-keyword">to right</span>, #00f5d4, #00bbf9);',
-                    '<span class="js-keyword">function</span> <span class="css-prop">animate</span>() { <span class="comment">// Infinite animation</span> }',
-                    '<span class="html-tag">&lt;script</span> <span class="css-prop">src</span>=<span class="string">"app.js"</span><span class="html-tag">&gt;&lt;/script&gt;</span>',
-                    '<span class="css-prop">transform</span>: <span class="string">rotate</span>(<span class="js-keyword">45deg</span>);',
-                    '<span class="js-keyword">const</span> <span class="css-prop">developer</span> = <span class="string">"T_DEV"</span>;',
-                    '<span class="html-tag">&lt;style&gt;</span> <span class="css-prop">body</span> { <span class="css-prop">margin</span>: <span class="js-keyword">0</span>; } <span class="html-tag">&lt;/style&gt;</span>',
-                    '<span class="js-keyword">document</span>.<span class="css-prop">addEventListener</span>(<span class="string">"click"</span>, handler);',
-                    '<span class="html-tag">&lt;nav</span> <span class="css-prop">class</span>=<span class="string">"main-nav"</span><span class="html-tag">&gt;&lt;/nav&gt;</span>',
-                    '<span class="css-prop">@keyframes</span> <span class="js-keyword">float</span> { <span class="css-prop">50%</span> { <span class="css-prop">transform</span>: <span class="string">translateY</span>(-20px); } }',
-                    '<span class="js-keyword">class</span> <span class="css-prop">Developer</span> { <span class="css-prop">constructor</span>() {} }',
-                    '<span class="html-tag">&lt;!--</span> <span class="comment">This code rocks!</span> <span class="html-tag">--&gt;</span>'
-                ];
-
-                // Code rain effect
-                const codeRain = document.getElementById('codeRain');
-
-                function createCodeRain() {
-                    const snippet = document.createElement('div');
-                    snippet.className = 'code-snippet';
-                    snippet.innerHTML = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
-
-                    snippet.style.left = Math.random() * 100 + 'vw';
-                    snippet.style.fontSize = (12 + Math.random() * 6) + 'px';
-                    snippet.style.animationDuration = (8 + Math.random() * 12) + 's';
-                    snippet.style.animationDelay = Math.random() * 5 + 's';
-                    snippet.style.opacity = 0.5 + Math.random() * 0.5;
-
-                    codeRain.appendChild(snippet);
-
-                    // Remove snippet after animation completes
-                    setTimeout(() => {
-                        snippet.remove();
-                    }, parseFloat(snippet.style.animationDuration) * 1000);
-                }
-
-                // Create initial code rain
-                for (let i = 0; i < 50; i++) {
-                    setTimeout(createCodeRain, i * 300);
-                }
-
-                // Continuous creation
-                setInterval(createCodeRain, 300);
-
-                // Floating particles
-                const particlesContainer = document.getElementById('particles');
-                const particleCount = 30;
-
-                for (let i = 0; i < particleCount; i++) {
-                    const particle = document.createElement('div');
-                    particle.className = 'particle';
-
-                    // Random properties
-                    const size = Math.random() * 5 + 1;
-                    const posX = Math.random() * 100;
-                    const posY = Math.random() * 100;
-                    const duration = Math.random() * 20 + 10;
-                    const delay = Math.random() * 5;
-
-                    particle.style.width = `${size}px`;
-                    particle.style.height = `${size}px`;
-                    particle.style.left = `${posX}%`;
-                    particle.style.top = `${posY}%`;
-                    particle.style.animationDuration = `${duration}s`;
-                    particle.style.animationDelay = `${delay}s`;
-
-                    // Random color variation
-                    if (Math.random() > 0.7) {
-                        particle.style.background = `var(--secondary)`;
-                    } else if (Math.random() > 0.9) {
-                        particle.style.background = `var(--accent)`;
-                    }
-
-                    particlesContainer.appendChild(particle);
-                }
-
-                // Audio feedback
-                function playHoverSound() {
-                    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                    const oscillator = audioCtx.createOscillator();
-                    const gainNode = audioCtx.createGain();
-
-                    oscillator.type = 'sine';
-                    oscillator.frequency.value = 880 + Math.random() * 440;
-                    gainNode.gain.value = 0.1;
-
-                    oscillator.connect(gainNode);
-                    gainNode.connect(audioCtx.destination);
-
-                    oscillator.start();
-                    gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
-                    oscillator.stop(audioCtx.currentTime + 0.3);
-                }
-
-                // Scroll indicator click
-                document.querySelector('.scroll-indicator').addEventListener('click', () => {
-                    window.scrollTo({
-                        top: window.innerHeight,
-                        behavior: 'smooth'
-                    });
-                });
-
-                // Infinite T drawing effect
-                function enhanceTAnimation() {
-                    const tBar = document.querySelector('.t-bar');
-                    const tStem = document.querySelector('.t-stem');
-
-                    // Random durations between 3-5 seconds
-                    const barDuration = 3 + Math.random() * 2;
-                    const stemDuration = 3 + Math.random() * 2;
-
-                    tBar.style.animation = `
-                infiniteDrawBar ${barDuration}s cubic-bezier(0.65, 0, 0.35, 1) infinite,
-                pulseBar ${barDuration}s ease-in-out infinite,
-                colorShiftBar ${barDuration * 2}s linear infinite,
-                moveBar ${barDuration * 1.5}s ease-in-out infinite
-            `;
-
-                    tStem.style.animation = `
-                infiniteDrawStem ${stemDuration}s cubic-bezier(0.65, 0, 0.35, 1) infinite 0.5s,
-                pulseStem ${stemDuration}s ease-in-out infinite,
-                colorShiftStem ${stemDuration * 2}s linear infinite,
-                moveStem ${stemDuration * 1.5}s ease-in-out infinite
-            `;
-                }
-
-                // Initialize with animation
-                enhanceTAnimation();
-
-                // Randomize animation parameters every 10-15 seconds
-                setInterval(enhanceTAnimation, 10000 + Math.random() * 5000);
-            </script>
-        </body>
-
-        </html>
-        <div id="home" class="header-text">
-            <p style="font-size: 40px; color:#ff416c;">I am a front-end Developer</p>
-            <h1>HI, I'm <span> Toluwanmi </span> <br> Babalola Olanrewaju</h1>
-           <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-
-
-                       <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-                type="module"></script>
-            <dotlottie-player src="https://lottie.host/25ab8ee9-0876-440b-8ea7-ff671c66c781/bhICJMSUxq.lottie"
-            background="transparent" speed="1" style="width: 100%; height: auto" loop autoplay></dotlottie-player>
-             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet">
-         
-            <style>
-            :root {
-                --primary: #4361ee;
-                --primary-light: #4895ef;
-                --primary-dark: #3a0ca3;
-                --secondary: #f72585;
-                --dark: #14213d;
-                --light: #f8f9fa;
-                --gray: #6c757d;
-                --gray-light: #e9ecef;
-                --success: #4cc9f0;
-                --warning: #f8961e;
-                --danger: #ef233c;
-                --white: #ffffff;
-                --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
-                --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-                --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-                --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            }
-
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-
-            body {
-                font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-                line-height: 1.6;
-                color: var(--dark);
-                background-color: var(--light);
-                -webkit-font-smoothing: antialiased;
-            }
-
-            .container {
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 4rem 2rem;
-            }
-
-            .section-header {
-                text-align: center;
-                margin-bottom: 4rem;
-                position: relative;
-            }
-
-            .section-title {
-                font-size: 2.5rem;
-                font-weight: 700;
-                color: var(--dark);
-                margin-bottom: 1rem;
-                position: relative;
-                display: inline-block;
-            }
-
-            .section-title:after {
-                content: '';
-                position: absolute;
-                bottom: -12px;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 80px;
-                height: 4px;
-                background: var(--primary);
-                border-radius: 2px;
-            }
-
-            .section-subtitle {
-                color: var(--gray);
-                max-width: 600px;
-                margin: 0 auto;
-                font-size: 1.1rem;
-                font-weight: 400;
-            }
-
-            .skills-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-                gap: 2.5rem;
-                margin-top: 2rem;
-            }
-
-            .skill-card {
-                background: var(--white);
-                border-radius: 12px;
-                padding: 2rem;
-                box-shadow: var(--shadow-md);
-                transition: var(--transition);
-                position: relative;
-                overflow: hidden;
-                border: 1px solid rgba(0, 0, 0, 0.05);
-            }
-
-            .skill-card:hover {
-                transform: translateY(-5px);
-                box-shadow: var(--shadow-lg);
-            }
-
-            .skill-card:before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 4px;
-                height: 100%;
-                background: var(--primary);
-            }
-
-            .card-header {
-                display: flex;
-                align-items: center;
-                margin-bottom: 2rem;
-            }
-
-            .card-icon {
-                width: 48px;
-                height: 48px;
-                background: linear-gradient(135deg, var(--primary), var(--primary-light));
-                border-radius: 10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: var(--white);
-                font-size: 1.25rem;
-                margin-right: 1.25rem;
-                box-shadow: 0 4px 6px rgba(67, 97, 238, 0.3);
-            }
-
-            .card-title {
-                font-size: 1.5rem;
-                font-weight: 600;
-                color: var(--dark);
-            }
-
-            .chart-container {
-                position: relative;
-                height: 280px;
-                width: 100%;
-                margin: 0 auto 2rem;
-            }
-
-            .skills-list {
-                margin-top: 1.5rem;
-            }
-
-            .skill-item {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 1rem 0;
-                border-bottom: 1px solid var(--gray-light);
-            }
-
-            .skill-item:last-child {
-                border-bottom: none;
-            }
-
-            .skill-name {
-                font-weight: 500;
-                color: var(--dark);
-                font-size: 1rem;
-                display: flex;
-                align-items: center;
-            }
-
-            .skill-name i {
-                margin-right: 0.75rem;
-                color: var(--primary);
-                font-size: 1.1rem;
-            }
-
-            .skill-level {
-                display: flex;
-                gap: 0.3rem;
-            }
-
-            .star {
-                color: var(--warning);
-                font-size: 1.1rem;
-                position: relative;
-            }
-
-            .empty-star {
-                color: var(--gray-light);
-            }
-
-            .progress-container {
-                width: 100%;
-                height: 8px;
-                background: var(--gray-light);
-                border-radius: 4px;
-                margin-top: 0.5rem;
-                overflow: hidden;
-            }
-
-            .progress-bar {
-                height: 100%;
-                background: linear-gradient(90deg, var(--primary), var(--primary-light));
-                border-radius: 4px;
-                transition: width 1s ease-in-out;
-            }
-
-            .skill-meta {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 0.25rem;
-            }
-
-            .skill-percent {
-                font-size: 0.8rem;
-                color: var(--gray);
-                font-weight: 500;
-            }
-
-            .skill-status {
-                font-size: 0.75rem;
-                font-weight: 600;
-                padding: 0.25rem 0.75rem;
-                border-radius: 50px;
-                background: var(--gray-light);
-                color: var(--gray);
-            }
-
-            .status-learning {
-                background: rgba(76, 201, 240, 0.1);
-                color: var(--success);
-            }
-
-            .status-pending {
-                background: rgba(248, 150, 30, 0.1);
-                color: var(--warning);
-            }
-
-            @media (max-width: 992px) {
-                .skills-grid {
-                    grid-template-columns: 1fr;
-                }
-
-                .container {
-                    padding: 3rem 1.5rem;
-                }
-            }
-
-            @media (max-width: 576px) {
-                .section-title {
-                    font-size: 2rem;
-                }
-
-                .card-header {
-                    flex-direction: column;
-                    align-items: flex-start;
-                }
-
-                .card-icon {
-                    margin-bottom: 1rem;
-                    margin-right: 0;
-                }
-            }
-        </style>
-        </head>
-
-        <body>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="skills" class="section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Skills Matrix</h2>
                     <p class="section-subtitle">A visual representation of my technical competencies and proficiency
-                        levels</p>
+                        levels.</p>
                 </div>
 
                 <div class="skills-grid">
-                    <!-- Skills Distribution Card -->
                     <div class="skill-card">
                         <div class="card-header">
                             <div class="card-icon">
@@ -1087,7 +232,6 @@
                         </div>
                     </div>
 
-                    <!-- Skill Proficiency Card -->
                     <div class="skill-card">
                         <div class="card-header">
                             <div class="card-icon">
@@ -1096,14 +240,13 @@
                             <h3 class="card-title">Skill Proficiency</h3>
                         </div>
                         <div class="skills-list">
-                            <!-- JavaScript -->
                             <div class="skill-item">
                                 <div>
                                     <span class="skill-name">
                                         <i class="fab fa-js"></i> JavaScript
                                     </span>
                                     <div class="progress-container">
-                                        <div class="progress-bar" style="width: 40%"></div>
+                                        <div class="progress-bar" data-progress="40"></div>
                                     </div>
                                 </div>
                                 <div class="skill-level">
@@ -1115,14 +258,13 @@
                                 </div>
                             </div>
 
-                            <!-- React -->
                             <div class="skill-item">
                                 <div>
                                     <span class="skill-name">
                                         <i class="fab fa-react"></i> React
                                     </span>
                                     <div class="progress-container">
-                                        <div class="progress-bar" style="width: 10%"></div>
+                                        <div class="progress-bar" data-progress="10"></div>
                                     </div>
                                     <div class="skill-meta">
                                         <span class="skill-percent">Basic understanding</span>
@@ -1138,14 +280,13 @@
                                 </div>
                             </div>
 
-                            <!-- Node.js -->
                             <div class="skill-item">
                                 <div>
                                     <span class="skill-name">
                                         <i class="fab fa-node-js"></i> Node.js
                                     </span>
                                     <div class="progress-container">
-                                        <div class="progress-bar" style="width: 10%"></div>
+                                        <div class="progress-bar" data-progress="10"></div>
                                     </div>
                                     <div class="skill-meta">
                                         <span class="skill-percent">Fundamentals</span>
@@ -1161,14 +302,13 @@
                                 </div>
                             </div>
 
-                            <!-- UI/UX -->
                             <div class="skill-item">
                                 <div>
                                     <span class="skill-name">
                                         <i class="fas fa-paint-brush"></i> UI/UX Design
                                     </span>
                                     <div class="progress-container">
-                                        <div class="progress-bar" style="width: 5%"></div>
+                                        <div class="progress-bar" data-progress="5"></div>
                                     </div>
                                     <div class="skill-meta">
                                         <span class="skill-percent">Fundamentals</span>
@@ -1184,14 +324,13 @@
                                 </div>
                             </div>
 
-                            <!-- Python -->
                             <div class="skill-item">
                                 <div>
                                     <span class="skill-name">
                                         <i class="fab fa-python"></i> Python
                                     </span>
                                     <div class="progress-container">
-                                        <div class="progress-bar" style="width: 20%"></div>
+                                        <div class="progress-bar" data-progress="20"></div>
                                     </div>
                                 </div>
                                 <div class="skill-level">
@@ -1203,14 +342,13 @@
                                 </div>
                             </div>
 
-                            <!-- Java -->
                             <div class="skill-item">
                                 <div>
                                     <span class="skill-name">
                                         <i class="fab fa-java"></i> Java
                                     </span>
                                     <div class="progress-container">
-                                        <div class="progress-bar" style="width: 10%"></div>
+                                        <div class="progress-bar" data-progress="10"></div>
                                     </div>
                                 </div>
                                 <div class="skill-level">
@@ -1225,367 +363,451 @@
                     </div>
                 </div>
             </div>
+        </section>
 
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    // Skills Pie Chart
-                    const ctx = document.getElementById('skillsPieChart').getContext('2d');
-                    new Chart(ctx, {
-                        type: 'doughnut',
-                        data: {
-                            labels: ['JavaScript', 'Python', 'Java', 'HTML/CSS', 'UI/UX'],
-                            datasets: [{
-                                data: [30, 15, 5, 47, 3,],
-                                backgroundColor: [
-                                    'rgba(67, 97, 238, 0.9)',
-                                    'rgba(76, 201, 240, 0.9)',
-                                    'rgba(248, 150, 30, 0.9)',
-                                    'rgba(239, 35, 60, 0.9)',
-                                    'rgba(163, 40, 214, 0.9)',
-                                    'rgba(20, 33, 61, 0.9)'
-                                ],
-                                borderWidth: 0,
-                                hoverOffset: 15
-                            }]
-                        },
-                        options: {
-                            responsive: true,
-                            maintainAspectRatio: false,
-                            cutout: '70%',
-                            plugins: {
-                                legend: {
-                                    position: 'right',
-                                    labels: {
-                                        padding: 20,
-                                        usePointStyle: true,
-                                        pointStyle: 'circle',
-                                        font: {
-                                            size: 12,
-                                            weight: 500
-                                        },
-                                        color: 'rgba(20, 33, 61, 0.8)'
-                                    }
-                                },
-                                tooltip: {
-                                    callbacks: {
-                                        label: function (context) {
-                                            return ` ${context.label}: ${context.raw}%`;
-                                        }
-                                    },
-                                    bodyFont: {
-                                        weight: '500'
-                                    },
-                                    padding: 12,
-                                    displayColors: false
-                                }
-                            },
-                            animation: {
-                                animateScale: true,
-                                animateRotate: true
-                            }
-                        }
-                    });
-
-                    // Animate progress bars
-                    document.querySelectorAll('.progress-bar').forEach(bar => {
-                        const targetWidth = bar.style.width;
-                        bar.style.width = '0%';
-                        setTimeout(() => {
-                            bar.style.width = targetWidth;
-                        }, 100);
-                    });
-                });
-            </script>
-        
-        </div>
-        <div class="quote-master-container">
-            <div class="quote-theatre">
-                <div class="quote-stage">
-                    <div class="quote-actor">
-                        <div class="quote-text cosmic-in"></div>
-                        <div class="quote-author cosmic-in"></div>
+        <section id="quotes" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Daily Motivation</h2>
+                    <p class="section-subtitle">A rotating collection of mindset, resilience, and growth reminders.</p>
+                </div>
+                <div class="quote-master-container">
+                    <div class="quote-theatre">
+                        <div class="quote-stage">
+                            <div class="quote-actor">
+                                <div class="quote-text cosmic-in"></div>
+                                <div class="quote-author cosmic-in"></div>
+                            </div>
+                        </div>
+                        <div class="quote-control-panel">
+                            <button class="quote-nav prev" aria-label="Previous quote">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+                                </svg>
+                            </button>
+                            <div class="quote-progress-container">
+                                <div class="quote-progress-bar"></div>
+                            </div>
+                            <button class="quote-nav next" aria-label="Next quote">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div class="quote-control-panel">
-                    <button class="quote-nav prev" aria-label="Previous quote">
-                        <svg viewBox="0 0 24 24" width="24" height="24">
-                            <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
-                        </svg>
-                    </button>
-                    <div class="quote-progress-container">
-                        <div class="quote-progress-bar"></div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="row about-grid">
+                    <div class="about-col-1">
+                        <div class="tilt-img">
+                            <img src="JJJJJ.png" alt="Portrait of Toluwanimi">
+                        </div>
                     </div>
-                    <button class="quote-nav next" aria-label="Next quote">
-                        <svg viewBox="0 0 24 24" width="24" height="24">
-                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+                    <div class="about-col-2">
+                        <h2 class="section-title section-title-left">About Me</h2>
+                        <p class="about-text">
+                            Babalola Toluwanimi — Industrial Mathematics & Computer Science student at Covenant
+                            University. I'm a passionate problem-solver with strong analytical skills and a growing
+                            frontend toolkit (HTML5, CSS, JavaScript, UI/UX). I gained hands-on experience during my
+                            Pre-IT internship at Micronet Technologies, Lagos, and I'm committed to continuous learning
+                            and building clean digital solutions.
+                        </p>
+
+                        <div class="tab-titles">
+                            <button class="tab-links active-link" onclick="opentab('skills', this)">Skills</button>
+                            <button class="tab-links" onclick="opentab('experience', this)">Experience</button>
+                            <button class="tab-links" onclick="opentab('education', this)">Education</button>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing web interfaces and landing pages</li>
+                                <li><span>Web Development</span><br>Responsive, performance-focused web builds</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2023 - Current</span><br>Learning Web Design at APTECH Abeokuta</li>
+                                <li><span>March 2025</span><br>IT at Micronet Technologies, Lagos, Nigeria</li>
+                                <li><a href="https://afthoniafooods.netlify.app/">One of my Work</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2023 - 2027</span><br>Industrial Mathematics (Computer Science), Covenant
+                                    University</li>
+                                <li><span>Web Development</span><br>APTECH Abeokuta</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="assistant" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Toluwanimi AI</h2>
+                    <p class="section-subtitle">Ask about skills, projects, education, or hobbies.</p>
+                </div>
+                <main class="chat-section" role="main">
+                    <div class="ai-lottie-wrapper" aria-hidden="true">
+                        <dotlottie-player
+                            src="https://lottie.host/531b3e9c-8393-4003-a857-6c4e410d07b5/OQFaSMB2si.lottie"
+                            background="transparent" speed="1" loop autoplay></dotlottie-player>
+                    </div>
+                    <section class="chat-container" aria-label="Chat interface">
+                        <header class="chat-header">
+                            <div class="header-contents">
+                                <div class="avatar">
+                                    <img src="https://thefusioneer.com/wp-content/uploads/2023/11/5-AI-Advancements-to-Expect-in-the-Next-10-Years-scaled.jpeg"
+                                        alt="Toluwanimi's AI avatar">
+                                </div>
+                                <div class="header-texts">
+                                    <h3>Toluwanimi AI</h3>
+                                    <p>Ask me about skills, projects, or hobbies</p>
+                                </div>
+                            </div>
+                            <div class="header-actions">
+                                <button class="icon-button" aria-label="More options">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </header>
+                        <div class="chat-messages" id="chat-messages" role="log" aria-live="polite">
+                            <div class="message bot-message welcome-message">
+                                <div class="message-content">
+                                    <p>👋 Hello! I'm Toluwanimi's AI assistant. I can tell you about his:</p>
+                                    <ul class="options-list">
+                                        <li><span class="option-tag">Skills</span> & technologies he works with</li>
+                                        <li><span class="option-tag">Projects</span> he's built</li>
+                                        <li><span class="option-tag">Education</span> background</li>
+                                        <li><span class="option-tag">Hobbies</span> & interests</li>
+                                    </ul>
+                                    <p>What would you like to know?</p>
+                                </div>
+                                <div class="message-time">Just now</div>
+                            </div>
+                            <div class="quick-replies" role="list">
+                                <button class="quick-reply" data-reply="Tell me about your skills"
+                                    role="listitem">Skills</button>
+                                <button class="quick-reply" data-reply="What projects have you worked on?"
+                                    role="listitem">Projects</button>
+                                <button class="quick-reply" data-reply="What are your hobbies?"
+                                    role="listitem">Hobbies</button>
+                            </div>
+                        </div>
+                        <div class="chat-input-container">
+                            <div class="typing-indicator" id="typing-indicator" aria-hidden="true">
+                                <div class="typing-dot"></div>
+                                <div class="typing-dot"></div>
+                                <div class="typing-dot"></div>
+                            </div>
+                            <div class="chat-input">
+                                <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off"
+                                    aria-label="Type your message">
+                                <button id="send-button" aria-label="Send message">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </section>
+
+        <section id="integration" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Telegram Integration <span class="alert"> COMING SOON</span></h2>
+                    <p class="section-subtitle">AI-powered assistant for streamlined business operations.</p>
+                </div>
+                <div class="telegram-bot-card">
+                    <div class="bot-header">
+                        <div class="bot-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                                <path
+                                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.534.26l.2-3.004 5.56-5.02c.24-.213-.054-.334-.373-.12l-6.87 4.33-2.96-.92c-.64-.203-.658-.64.135-.954l11.57-4.46c.538-.196 1.006.128.832.94z" />
+                            </svg>
+                        </div>
+                        <div class="header-text">
+                            <h3>Telegram Integration</h3>
+                            <p class="bot-subtitle">AI-Powered Business Assistant</p>
+                        </div>
+                    </div>
+                    <p class="bot-description">Streamline your operations with seamless Telegram integration. Automate
+                        orders, customer support, and business processes through an intelligent bot solution.</p>
+                    <div class="button-container">
+                        <a href="https://t.me/t_dev25_bot" class="invite-button" target="_blank" rel="noreferrer">
+                            Connect Now
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18"
+                                height="18">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                        <div class="button-hover-effect"></div>
+                    </div>
+
+                    <div class="card-background">
+                        <div class="grid-pattern"></div>
+                        <div class="gradient-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="service" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My Services</h2>
+                    <p class="section-subtitle">Reliable delivery for clean, modern, and scalable interfaces.</p>
+                </div>
+                <div class="service-container">
+                    <div class="service-box">Front-End Development</div>
+                    <div class="service-box">UI/UX Design</div>
+                    <div class="service-box">Landing Page Builds</div>
+                </div>
+                <div class="lottie-container">
+                    <dotlottie-player style="width: 50%;"
+                        src="https://lottie.host/539726a5-e260-4bd2-913b-eee0b1ca0a76/c9JOMjwBnD.lottie"
+                        background="transparent" speed="1" loop autoplay></dotlottie-player>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-form-section">
+            <div class="container">
+                <h2 class="section-heading">
+                    <span class="greeting">Hi, I'm a</span><br>
+                    <span class="title typewriter">Front End Developer</span>
+                </h2>
+
+                <form id="nexoraForm" class="animated-form"
+                    action="https://formsubmit.co/toluwanimibabalola2707@gmail.com" method="POST" target="_blank">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_autoresponse" value="Hey !
+
+Thank you so much for reaching out. I truly appreciate your interest — whether you're looking to bring a project idea to life or you're hoping to work together on something exciting.
+
+As a passionate Front-End Developer and UI/UX design enthusiast, I love building clean, modern, and user-focused digital experiences that create real value. Your message means a lot, and I’m genuinely looking forward to understanding more about what you have in mind.
+
+I’ll go through the details you shared and get back to you as soon as possible — usually within 24 hours. If it’s urgent or you’d like a faster response, feel free to send me a quick message directly on Telegram using this number:
+
+📱 09078828095
+
+Let’s build something meaningful together.
+
+Warm regards,
+Toluwanimi Babalola
+Front-End Developer | UI/UX Beginner
+✉️ toluwanimibabalola2707@gmail.com
+💼 Let’s create, solve, and grow!
+
+">
+                    <input type="hidden" name="_next"
+                        value="https://toluwanimibabalolasportfolio.netlify.app/thank-you.html">
+                    <input type="hidden" name="_template" value="table">
+
+                    <div class="status-message hidden" id="form-status"></div>
+
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                        <div class="underline"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email Address</label>
+                        <div class="underline"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone">
+                        <label for="phone">Phone Number (optional)</label>
+                        <div class="underline"></div>
+                    </div>
+
+                    <div class="radio-group">
+                        <p class="radio-question">Do you have a project in mind?</p>
+                        <div class="radio-options">
+                            <label class="radio-button">
+                                <input type="radio" name="hasProject" value="yes" required>
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">Yes</span>
+                            </label>
+                            <label class="radio-button">
+                                <input type="radio" name="hasProject" value="no">
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">No</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group project-details hidden">
+                        <textarea id="projectDetails" name="projectDetails" rows="4"></textarea>
+                        <label for="projectDetails">Describe your project</label>
+                        <div class="underline"></div>
+                    </div>
+
+                    <div class="radio-group">
+                        <p class="radio-question">Would you like to work with me?</p>
+                        <div class="radio-options">
+                            <label class="radio-button">
+                                <input type="radio" name="workTogether" value="yes" required>
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">Yes</span>
+                            </label>
+                            <label class="radio-button">
+                                <input type="radio" name="workTogether" value="no">
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">No</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group role-selection hidden">
+                        <select id="role" name="role">
+                            <option value="" disabled selected>Select a role</option>
+                            <option value="ui-ux">UI/UX Designer</option>
+                            <option value="frontend">Front End Developer</option>
+                            <option value="backend">Back End Developer</option>
+                            <option value="fullstack">Full Stack Developer</option>
+                        </select>
+                        <div class="select-arrow"></div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="professional-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Toluwanimi Babalola - @t_dev</h3>
+                    <p>Front-end Developer | UI/UX Beginner</p>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Connect With Me</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/toluwanimi-babalola-41605129b" target="_blank"
+                            rel="noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/tolu.nimi17/" target="_blank" rel="noreferrer"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/tolu-15" target="_blank" rel="noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:toluwanimibabalola2707@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+2349078828095" aria-label="Phone">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Toluwanimi Babalola. All rights reserved @t_dev.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#contact">Contact</a>
+                    <a href="https://afthoniafooods.netlify.app/">One of my Work</a>
                 </div>
             </div>
         </div>
+    </footer>
 
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap');
-
-            :root {
-                --primary-accent: #6366f1;
-                --secondary-accent: #8b5cf6;
-                --dark-text: #1e293b;
-                --light-text: #64748b;
-                --bg-gradient: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-                --card-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
-                --transition-duration: 0.8s;
-                --border-radius: 24px;
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('skillsPieChart');
+            if (ctx && window.Chart) {
+                new Chart(ctx.getContext('2d'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['JavaScript', 'Python', 'Java', 'HTML/CSS', 'UI/UX'],
+                        datasets: [{
+                            data: [30, 15, 5, 47, 3],
+                            backgroundColor: [
+                                'rgba(124, 58, 237, 0.9)',
+                                'rgba(34, 211, 238, 0.9)',
+                                'rgba(248, 150, 30, 0.9)',
+                                'rgba(239, 68, 68, 0.9)',
+                                'rgba(167, 139, 250, 0.9)'
+                            ],
+                            borderWidth: 0,
+                            hoverOffset: 10
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '70%',
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                                labels: {
+                                    padding: 20,
+                                    usePointStyle: true,
+                                    pointStyle: 'circle',
+                                    font: {
+                                        size: 12,
+                                        weight: 500
+                                    },
+                                    color: 'rgba(226, 232, 240, 0.85)'
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function (context) {
+                                        return ` ${context.label}: ${context.raw}%`;
+                                    }
+                                },
+                                bodyFont: {
+                                    weight: '500'
+                                },
+                                padding: 12,
+                                displayColors: false
+                            }
+                        },
+                        animation: {
+                            animateScale: true,
+                            animateRotate: true
+                        }
+                    }
+                });
             }
 
-            .quote-master-container {
-                max-width: 900px;
-                margin: 4rem auto;
-                padding: 0 2rem;
-            }
+            document.querySelectorAll('.progress-bar').forEach(bar => {
+                const target = bar.dataset.progress || '0';
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = `${target}%`;
+                }, 120);
+            });
+        });
+    </script>
 
-            .quote-theatre {
-                background: white;
-                border-radius: var(--border-radius);
-                padding: 4rem 3rem;
-                box-shadow: var(--card-shadow);
-                position: relative;
-                overflow: hidden;
-                isolation: isolate;
-                border: 1px solid rgba(0, 0, 0, 0.03);
-            }
-
-            .quote-theatre::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: var(--bg-gradient);
-                z-index: -2;
-            }
-
-            .quote-theatre::after {
-                content: "";
-                position: absolute;
-                top: -50%;
-                left: -50%;
-                width: 200%;
-                height: 200%;
-                background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
-                z-index: -1;
-                animation: pulse 15s infinite alternate;
-            }
-
-            .quote-stage {
-                min-height: 250px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-            }
-
-            .quote-actor {
-                width: 100%;
-                text-align: center;
-            }
-
-            .quote-text {
-                font-size: 2.2rem;
-                line-height: 1.5;
-                color: var(--dark-text);
-                font-weight: 500;
-                margin: 0 auto 2rem;
-                max-width: 800px;
-                opacity: 0;
-                transform: translateY(30px) rotateX(90deg);
-                filter: blur(5px);
-                transition: all var(--transition-duration) cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                font-family: 'Playfair Display', serif;
-                font-style: italic;
-                position: relative;
-            }
-
-            .quote-text::before,
-            .quote-text::after {
-                content: '"';
-                font-size: 3rem;
-                color: rgba(99, 102, 241, 0.2);
-                position: absolute;
-                font-family: serif;
-            }
-
-            .quote-text::before {
-                top: -1.5rem;
-                left: -2rem;
-            }
-
-            .quote-text::after {
-                bottom: -2.5rem;
-                right: -2rem;
-            }
-
-            .quote-author {
-                font-size: 1.1rem;
-                color: var(--light-text);
-                font-weight: 600;
-                letter-spacing: 0.5px;
-                text-transform: uppercase;
-                margin: 2rem 0 0;
-                opacity: 0;
-                transform: translateY(20px);
-                transition: all calc(var(--transition-duration) * 1.2) cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
-                font-family: 'Montserrat', sans-serif;
-                position: relative;
-                display: inline-block;
-                padding: 0 1rem;
-            }
-
-            .quote-author::before {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 0;
-                width: 30px;
-                height: 1px;
-                background: rgba(100, 116, 139, 0.3);
-            }
-
-            .quote-control-panel {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-top: 3rem;
-                gap: 1.5rem;
-            }
-
-            .quote-progress-container {
-                width: 200px;
-                height: 4px;
-                background: rgba(100, 116, 139, 0.1);
-                border-radius: 2px;
-                overflow: hidden;
-                position: relative;
-            }
-
-            .quote-progress-bar {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent));
-                transform: scaleX(0);
-                transform-origin: left center;
-            }
-
-            .quote-nav {
-                background: none;
-                border: none;
-                width: 48px;
-                height: 48px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 50%;
-                cursor: pointer;
-                color: var(--primary-accent);
-                transition: all 0.3s ease;
-                background: rgba(99, 102, 241, 0.05);
-                border: 1px solid rgba(99, 102, 241, 0.1);
-            }
-
-            .quote-nav:hover {
-                background: rgba(99, 102, 241, 0.1);
-                transform: scale(1.1);
-                box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
-            }
-
-            .quote-nav:active {
-                transform: scale(0.95);
-            }
-
-            .quote-nav svg {
-                fill: currentColor;
-            }
-
-            /* Animation Classes */
-            .cosmic-in.show {
-                opacity: 1;
-                transform: translateY(0) rotateX(0);
-                filter: blur(0);
-            }
-
-            /* Keyframe Animations */
-            @keyframes pulse {
-                0% {
-                    transform: rotate(0deg);
-                    opacity: 0.3;
-                }
-
-                100% {
-                    transform: rotate(180deg);
-                    opacity: 0.1;
-                }
-            }
-
-            @keyframes progress {
-                0% {
-                    transform: scaleX(0);
-                }
-
-                100% {
-                    transform: scaleX(1);
-                }
-            }
-
-            /* Responsive Design */
-            @media (max-width: 768px) {
-                .quote-theatre {
-                    padding: 3rem 2rem;
-                }
-
-                .quote-text {
-                    font-size: 1.7rem;
-                    margin-bottom: 1.5rem;
-                }
-
-                .quote-text::before,
-                .quote-text::after {
-                    font-size: 2.5rem;
-                }
-
-                .quote-text::before {
-                    left: -1.5rem;
-                }
-
-                .quote-text::after {
-                    right: -1.5rem;
-                }
-
-                .quote-author {
-                    font-size: 0.95rem;
-                }
-            }
-
-            @media (max-width: 480px) {
-                .quote-theatre {
-                    padding: 2.5rem 1.5rem;
-                }
-
-                .quote-text {
-                    font-size: 1.5rem;
-                }
-
-                .quote-control-panel {
-                    margin-top: 2rem;
-                }
-            }
-        </style>
-
-        <script>
+    <script>
+        (function () {
             const quotes = [
                 {
                     text: "Strength isn't about never falling—it's about how many times you rise. Because in the end, the struggle is where courage takes root.",
@@ -1641,52 +863,41 @@
 
             let currentQuoteIndex = 0;
             let animationInterval;
-            let progressInterval;
             let isAnimating = false;
             let isAutoRotating = true;
-            const rotationInterval = 8000; // 8 seconds
+            const rotationInterval = 8000;
 
-            // Initialize with first quote
             document.addEventListener('DOMContentLoaded', () => {
                 showQuote(currentQuoteIndex);
                 startQuoteRotation();
             });
 
             function animateProgressBar(duration) {
+                if (!progressBar) return;
                 progressBar.style.animation = 'none';
-                void progressBar.offsetWidth; // Trigger reflow
+                void progressBar.offsetWidth;
                 progressBar.style.animation = `progress ${duration}ms linear forwards`;
             }
 
             function showQuote(index) {
-                if (isAnimating) return;
+                if (!quoteTextElement || !quoteAuthorElement || isAnimating) return;
                 isAnimating = true;
-
-                // Calculate new index with wrapping
                 currentQuoteIndex = (index + quotes.length) % quotes.length;
-
-                // Start progress bar animation
                 animateProgressBar(rotationInterval);
-
-                // First fade out current quote
                 quoteTextElement.classList.remove('show');
                 quoteAuthorElement.classList.remove('show');
 
-                // After fade out completes, change text and animate in
                 setTimeout(() => {
                     quoteTextElement.textContent = quotes[currentQuoteIndex].text;
                     quoteAuthorElement.textContent = quotes[currentQuoteIndex].author;
-
                     quoteTextElement.classList.add('show');
                     quoteAuthorElement.classList.add('show');
-
                     isAnimating = false;
-                }, 800); // Match with CSS transition duration
+                }, 800);
             }
 
             function startQuoteRotation() {
                 if (!isAutoRotating) return;
-
                 clearInterval(animationInterval);
                 animationInterval = setInterval(() => {
                     showQuote(currentQuoteIndex + 1);
@@ -1695,21 +906,23 @@
 
             function stopQuoteRotation() {
                 clearInterval(animationInterval);
-                progressBar.style.animationPlayState = 'paused';
+                if (progressBar) {
+                    progressBar.style.animationPlayState = 'paused';
+                }
             }
 
-            // Navigation controls
-            nextButton.addEventListener('click', () => {
-                showQuote(currentQuoteIndex + 1);
-                startQuoteRotation();
-            });
+            if (nextButton && prevButton) {
+                nextButton.addEventListener('click', () => {
+                    showQuote(currentQuoteIndex + 1);
+                    startQuoteRotation();
+                });
 
-            prevButton.addEventListener('click', () => {
-                showQuote(currentQuoteIndex - 1);
-                startQuoteRotation();
-            });
+                prevButton.addEventListener('click', () => {
+                    showQuote(currentQuoteIndex - 1);
+                    startQuoteRotation();
+                });
+            }
 
-            // Keyboard navigation
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'ArrowRight') {
                     showQuote(currentQuoteIndex + 1);
@@ -1720,600 +933,146 @@
                 }
             });
 
-            // Pause on hover
             const theatre = document.querySelector('.quote-theatre');
-            theatre.addEventListener('mouseenter', () => {
-                stopQuoteRotation();
-            });
+            if (theatre) {
+                theatre.addEventListener('mouseenter', () => {
+                    stopQuoteRotation();
+                });
 
-            theatre.addEventListener('mouseleave', () => {
-                startQuoteRotation();
-                progressBar.style.animationPlayState = 'running';
-            });
+                theatre.addEventListener('mouseleave', () => {
+                    startQuoteRotation();
+                    if (progressBar) {
+                        progressBar.style.animationPlayState = 'running';
+                    }
+                });
 
-            // Touch events for mobile
-            let touchStartX = 0;
-            let touchEndX = 0;
+                let touchStartX = 0;
+                let touchEndX = 0;
 
-            theatre.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-                stopQuoteRotation();
-            }, { passive: true });
+                theatre.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                    stopQuoteRotation();
+                }, { passive: true });
 
-            theatre.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-                startQuoteRotation();
-            }, { passive: true });
+                theatre.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                    startQuoteRotation();
+                }, { passive: true });
 
-            function handleSwipe() {
-                const threshold = 50;
-                if (touchEndX < touchStartX - threshold) {
-                    // Swipe left - next quote
-                    showQuote(currentQuoteIndex + 1);
-                } else if (touchEndX > touchStartX + threshold) {
-                    // Swipe right - previous quote
-                    showQuote(currentQuoteIndex - 1);
+                function handleSwipe() {
+                    const threshold = 50;
+                    if (touchEndX < touchStartX - threshold) {
+                        showQuote(currentQuoteIndex + 1);
+                    } else if (touchEndX > touchStartX + threshold) {
+                        showQuote(currentQuoteIndex - 1);
+                    }
                 }
             }
-        </script>
-    </div>
+        })();
+    </script>
 
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <div class="tilt-img">
-                        <img src="JJJJJ.png" alt="">
-                    </div>
-                  
-
-
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About me</h1>
-                    <p style="font-size: 15px;">Babalola Toluwanimi
-Industrial Mathematics & Computer Science | Covenant University
-
-Passionate problem-solver with strong analytical skills and technical aptitude. Currently pursuing my degree while developing expertise in web technologies (HTML5, CSS, Basic knowledge in JavaScript and UI/UX design) . Enhanced my practical skills through professional training at APTECH and hands-on experience during my Pre-IT internship at Micronet Technologies, Lagos. Committed to continuous learning and applying my knowledge to create effective digital solutions.
-</p>
-                  <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Toluwanimi's AI Assistant - Learn about skills, projects, and hobbies">
-    <title>Toluwanimi's AI Assistant</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #4361ee;
-            --primary-light: #eef2ff;
-            --secondary: #3f37c9;
-            --dark: #1a1a2e;
-            --light: #f8f9fa;
-            --gray: #6c757d;
-            --light-gray: #e9ecef;
-            --white: #ffffff;
-            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
-            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-            --radius-sm: 4px;
-            --radius-md: 8px;
-            --radius-lg: 12px;
-            --radius-full: 9999px;
-            --transition: all 0.2s ease;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .chat-section {
-            display: flex;
-            gap: 1.25rem;
-            max-width: 62.5rem;
-            margin: 5rem auto 1.25rem;
-            align-items: stretch;
-            justify-content: center;
-        }
-
-        .ai-lottie-wrapper {
-            width: 18.75rem;
-            height: 18.75rem;
-            background-color: var(--white);
-            border-radius: var(--radius-full);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            flex-shrink: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .chat-container {
-            flex: 1;
-            max-width: 37.5rem;
-            height: 80vh;
-            background-color: var(--white);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-lg);
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-
-        .chat-header {
-            padding: 1rem 1.25rem;
-            background-color: var(--primary);
-            color: var(--white);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .header-contents {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .avatar {
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: var(--radius-full);
-            overflow: hidden;
-            flex-shrink: 0;
-            border: 2px solid var(--white);
-        }
-
-        .avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .header-texts h2 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 0.125rem;
-        }
-
-        .header-texts p {
-            font-size: 0.75rem;
-            opacity: 0.9;
-        }
-
-        .header-actions .icon-button {
-            background: none;
-            border: none;
-            color: var(--white);
-            width: 2rem;
-            height: 2rem;
-            border-radius: var(--radius-full);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .header-actions .icon-button:hover,
-        .header-actions .icon-button:focus {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .chat-messages {
-            flex: 1;
-            padding: 1.25rem;
-            overflow-y: auto;
-            background-color: var(--light);
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .message {
-            max-width: 85%;
-            display: flex;
-            flex-direction: column;
-            gap: 0.375rem;
-            animation: messageIn 0.3s ease-out forwards;
-            opacity: 0;
-        }
-
-        .bot-message {
-            align-self: flex-start;
-        }
-
-        .user-message {
-            align-self: flex-end;
-        }
-
-        .message-content {
-            padding: 0.75rem 1rem;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
-            line-height: 1.5;
-        }
-
-        .bot-message .message-content {
-            background-color: var(--white);
-            color: var(--dark);
-            border-top-left-radius: var(--radius-sm);
-        }
-
-        .user-message .message-content {
-            background-color: var(--primary);
-            color: var(--white);
-            border-top-right-radius: var(--radius-sm);
-        }
-
-        .welcome-message .message-content {
-            background-color: var(--primary-light);
-            color: var(--dark);
-        }
-
-        .message-time {
-            font-size: 0.6875rem;
-            color: var(--gray);
-            padding: 0 0.5rem;
-            opacity: 0.8;
-        }
-
-        .user-message .message-time {
-            text-align: right;
-        }
-
-        .chat-input-container {
-            padding: 0.75rem 1rem;
-            background-color: var(--white);
-            border-top: 1px solid var(--light-gray);
-            position: relative;
-        }
-
-        .chat-input {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .chat-input input {
-            flex: 1;
-            padding: 0.75rem 1rem;
-            border: 1px solid var(--light-gray);
-            border-radius: var(--radius-full);
-            outline: none;
-            font-size: 0.9375rem;
-            transition: var(--transition);
-            background-color: var(--light);
-        }
-
-        .chat-input input:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
-        }
-
-        .chat-input button {
-            width: 2.75rem;
-            height: 2.75rem;
-            border-radius: var(--radius-full);
-            background-color: var(--primary);
-            color: var(--white);
-            border: none;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: var(--transition);
-        }
-
-        .chat-input button:hover,
-        .chat-input button:focus {
-            background-color: var(--secondary);
-        }
-
-        .quick-replies {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-top: 0.5rem;
-        }
-
-        .quick-reply {
-            padding: 0.5rem 0.875rem;
-            background-color: var(--white);
-            border: 1px solid var(--light-gray);
-            border-radius: var(--radius-full);
-            font-size: 0.8125rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition);
-            color: var(--dark);
-        }
-
-        .quick-reply:hover,
-        .quick-reply:focus {
-            background-color: var(--primary);
-            color: var(--white);
-            border-color: var(--primary);
-        }
-
-        .options-list {
-            margin: 0.5rem 0 0.75rem;
-            padding-left: 1rem;
-        }
-
-        .options-list li {
-            margin-bottom: 0.375rem;
-            font-size: 0.875rem;
-        }
-
-        .option-tag {
-            display: inline-block;
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 0.125rem 0.5rem;
-            border-radius: var(--radius-full);
-            font-size: 0.75rem;
-            font-weight: 500;
-            margin-right: 0.5rem;
-        }
-
-        .welcome-message .option-tag {
-            background-color: var(--secondary);
-        }
-
-        .typing-indicator {
-            display: none;
-            align-items: center;
-            gap: 0.25rem;
-            padding: 0.5rem 1rem;
-            position: absolute;
-            top: -2.5rem;
-            left: 1rem;
-            background-color: var(--white);
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
-            font-size: 0.75rem;
-            color: var(--gray);
-        }
-
-        .typing-dot {
-            width: 0.375rem;
-            height: 0.375rem;
-            background-color: var(--gray);
-            border-radius: var(--radius-full);
-            opacity: 0.4;
-            animation: typingAnimation 1.5s infinite ease-in-out;
-        }
-
-        .typing-dot:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-        .typing-dot:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .typing-dot:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-
-        @keyframes typingAnimation {
-            0%, 60%, 100% {
-                transform: translateY(0);
-                opacity: 0.4;
-            }
-            30% {
-                transform: translateY(-0.25rem);
-                opacity: 1;
-            }
-        }
-
-        @keyframes messageIn {
-            from {
-                opacity: 0;
-                transform: translateY(0.5rem);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .chat-messages::-webkit-scrollbar {
-            width: 0.375rem;
-        }
-
-        .chat-messages::-webkit-scrollbar-track {
-            background: var(--light-gray);
-        }
-
-        .chat-messages::-webkit-scrollbar-thumb {
-            background: var(--gray);
-            border-radius: 0.1875rem;
-        }
-
-        .chat-messages::-webkit-scrollbar-thumb:hover {
-            background: var(--dark);
-        }
-
-        @media (max-width: 768px) {
-            .chat-section {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .ai-lottie-wrapper {
-                width: 12.5rem;
-                height: 12.5rem;
-                margin-bottom: 1.25rem;
-            }
-
-            .chat-container {
-                width: 100%;
-                max-width: 100%;
-                height: 70vh;
-                border-radius: var(--radius-md);
-            }
-
-            .message {
-                max-width: 90%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .chat-container {
-                height: 100vh;
-                border-radius: 0;
-            }
-
-            .ai-lottie-wrapper {
-                width: 9.375rem;
-                height: 9.375rem;
-            }
-
-            .chat-input input {
-                font-size: 0.875rem;
-            }
-
-            .chat-input button {
-                width: 2.5rem;
-                height: 2.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-    <main class="chat-section" role="main">
-        <div class="ai-lottie-wrapper" aria-hidden="true">
-            <dotlottie-player
-                src="https://lottie.host/531b3e9c-8393-4003-a857-6c4e410d07b5/OQFaSMB2si.lottie"
-                background="transparent"
-                speed="1"
-                style="width: 100%; height: 100%"
-                loop
-                autoplay
-            ></dotlottie-player>
-        </div>
-        <section class="chat-container" aria-label="Chat interface">
-            <header class="chat-header">
-                <div class="header-contents">
-                    <div class="avatar">
-                        <img src="https://thefusioneer.com/wp-content/uploads/2023/11/5-AI-Advancements-to-Expect-in-the-Next-10-Years-scaled.jpeg" alt="Toluwanimi's AI avatar">
-                    </div>
-                    <div class="header-texts">
-                        <h2>Toluwanimi AI</h2>
-                        <p>Ask me about skills, projects, or hobbies</p>
-                    </div>
-                </div>
-                <div class="header-actions">
-                    <button class="icon-button" aria-label="More options">
-                        <i class="fas fa-ellipsis-v"></i>
-                    </button>
-                </div>
-            </header>
-            <div class="chat-messages" id="chat-messages" role="log" aria-live="polite">
-                <div class="message bot-message welcome-message">
-                    <div class="message-content">
-                        <p>👋 Hello! I'm Toluwanimi's AI assistant. I can tell you about his:</p>
-                        <ul class="options-list">
-                            <li><span class="option-tag">Skills</span> & technologies he works with</li>
-                            <li><span class="option-tag">Projects</span> he's built</li>
-                            <li><span class="option-tag">Education</span> background</li>
-                            <li><span class="option-tag">Hobbies</span> & interests</li>
-                        </ul>
-                        <p>What would you like to know?</p>
-                    </div>
-                    <div class="message-time">Just now</div>
-                </div>
-                <div class="quick-replies" role="list">
-                    <button class="quick-reply" data-reply="Tell me about your skills" role="listitem">Skills</button>
-                    <button class="quick-reply" data-reply="What projects have you worked on?" role="listitem">Projects</button>
-                    <button class="quick-reply" data-reply="What are your hobbies?" role="listitem">Hobbies</button>
-                </div>
-            </div>
-            <div class="chat-input-container">
-                <div class="typing-indicator" id="typing-indicator" aria-hidden="true">
-                    <div class="typing-dot"></div>
-                    <div class="typing-dot"></div>
-                    <div class="typing-dot"></div>
-                </div>
-                <div class="chat-input">
-                    <input
-                        type="text"
-                        id="user-input"
-                        placeholder="Type your message..."
-                        autocomplete="off"
-                        aria-label="Type your message"
-                    >
-                    <button id="send-button" aria-label="Send message">
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </div>
-            </div>
-        </section>
-    </main>
     <script>
-        // DOM Elements
-        const elements = {
-            chatMessages: document.getElementById('chat-messages'),
-            userInput: document.getElementById('user-input'),
-            sendButton: document.getElementById('send-button'),
-            typingIndicator: document.getElementById('typing-indicator')
-        };
+        function opentab(tabname, element) {
+            const tablinks = document.getElementsByClassName("tab-links");
+            const tabcontents = document.getElementsByClassName("tab-contents");
 
-        // Verify DOM elements
-        if (Object.values(elements).some(el => !el)) {
-            console.error('One or more DOM elements are missing.');
-            throw new Error('Initialization failed: Missing DOM elements');
-        }
-
-        // Sanitization function to prevent XSS
-        const sanitizeHTML = (str) => {
-            const div = document.createElement('div');
-            div.textContent = str;
-            return div.innerHTML;
-        };
-
-        // Simple markdown parser with sanitization
-        const simpleMarkdown = (text) => {
-            try {
-                let formatted = sanitizeHTML(text)
-                    .replace(/^### (.*)$/gm, '<h3 class="text-lg font-semibold">$1</h3>')
-                    .replace(/^## (.*)$/gm, '<h2 class="text-xl font-bold">$1</h2>')
-                    .replace(/^# (.*)$/gm, '<h1 class="text-2xl font-bold">$1</h1>')
-                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                    .replace(/^- (.*)$/gm, '<li>$1</li>')
-                    .replace(/<li>.*<\/li>/g, match => `<ul class="list-disc pl-5">${match}</ul>`)
-                    .replace(/\n/g, '<br>');
-                return formatted;
-            } catch (error) {
-                console.error('Markdown parsing error:', error);
-                return sanitizeHTML(text);
+            for (const tablink of tablinks) {
+                tablink.classList.remove("active-link");
             }
-        };
+            for (const tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
 
-        // Knowledge base
-        const knowledgeBase = {
-            greetings: {
-                triggers: ["hi", "hello", "hey", "greetings"],
-                response: "👋 Hey there! I'm Toluwanimi's AI assistant, here to share insights about his skills, projects, education, and passions. What's sparking your interest today?",
-                followUps: [
-                    "Tell me about your skills",
-                    "What projects have you worked on?",
-                    "What are your hobbies?"
-                ]
-            },
-            skills: {
-                triggers: ["skills", "what can you do", "technologies", "tech stack"],
-                response: `💻 **Technical Skills**
+            if (element) {
+                element.classList.add("active-link");
+            }
+            const target = document.getElementById(tabname);
+            if (target) {
+                target.classList.add("active-tab");
+            }
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const texts = ["Front-end Developer", "UI/UX Designer", "Building Landing Pages"];
+            let index = 0;
+            const typingElement = document.querySelector(".hero-kicker");
+
+            if (!typingElement) return;
+
+            function typeEffect(text, i = 0) {
+                if (i < text.length) {
+                    typingElement.innerHTML = text.substring(0, i + 1) + "|";
+                    setTimeout(() => typeEffect(text, i + 1), 90);
+                } else {
+                    setTimeout(() => deleteEffect(text), 800);
+                }
+            }
+
+            function deleteEffect(text, i = text.length) {
+                if (i > 0) {
+                    typingElement.innerHTML = text.substring(0, i - 1) + "|";
+                    setTimeout(() => deleteEffect(text, i - 1), 60);
+                } else {
+                    index = (index + 1) % texts.length;
+                    setTimeout(() => typeEffect(texts[index]), 400);
+                }
+            }
+
+            typeEffect(texts[index]);
+        });
+    </script>
+
+    <script>
+        (function () {
+            const elements = {
+                chatMessages: document.getElementById('chat-messages'),
+                userInput: document.getElementById('user-input'),
+                sendButton: document.getElementById('send-button'),
+                typingIndicator: document.getElementById('typing-indicator')
+            };
+
+            if (Object.values(elements).some(el => !el)) {
+                return;
+            }
+
+            const sanitizeHTML = (str) => {
+                const div = document.createElement('div');
+                div.textContent = str;
+                return div.innerHTML;
+            };
+
+            const simpleMarkdown = (text) => {
+                try {
+                    return sanitizeHTML(text)
+                        .replace(/^### (.*)$/gm, '<h3 class="text-lg font-semibold">$1</h3>')
+                        .replace(/^## (.*)$/gm, '<h2 class="text-xl font-bold">$1</h2>')
+                        .replace(/^# (.*)$/gm, '<h1 class="text-2xl font-bold">$1</h1>')
+                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                        .replace(/^- (.*)$/gm, '<li>$1</li>')
+                        .replace(/<li>.*<\/li>/g, match => `<ul class="list-disc pl-5">${match}</ul>`)
+                        .replace(/\n/g, '<br>');
+                } catch (error) {
+                    console.error('Markdown parsing error:', error);
+                    return sanitizeHTML(text);
+                }
+            };
+
+            const knowledgeBase = {
+                greetings: {
+                    triggers: ["hi", "hello", "hey", "greetings"],
+                    response: "👋 Hey there! I'm Toluwanimi's AI assistant, here to share insights about his skills, projects, education, and passions. What's sparking your interest today?",
+                    followUps: [
+                        "Tell me about your skills",
+                        "What projects have you worked on?",
+                        "What are your hobbies?"
+                    ]
+                },
+                skills: {
+                    triggers: ["skills", "what can you do", "technologies", "tech stack"],
+                    response: `💻 **Technical Skills**
 
 **Frontend Development**
 - HTML5, CSS3, JavaScript (ES6+)
@@ -2334,26 +1093,26 @@ Passionate problem-solver with strong analytical skills and technical aptitude. 
 - Basic cybersecurity
 
 Curious about a specific skill?`,
-                followUps: [
-                    "Tell me about your frontend projects",
-                    "What UI/UX tools do you use?",
-                    "How about your backend skills?"
-                ],
-                followUpResponses: {
-                    "Tell me about your frontend projects": `🌟 **Frontend Projects**
+                    followUps: [
+                        "Tell me about your frontend projects",
+                        "What UI/UX tools do you use?",
+                        "How about your backend skills?"
+                    ],
+                    followUpResponses: {
+                        "Tell me about your frontend projects": `🌟 **Frontend Projects**
 
 I’ve built dynamic, responsive interfaces with a focus on user experience. For example, the **Nexora Tel Website** uses Aceternity UI components and Lottie animations for a sleek, modern look. Another project, **TimetablePro**, features a React.js frontend with smooth transitions and real-time updates via Firebase. Want to dive deeper into one of these?`,
-                    "What UI/UX tools do you use?": `🎨 **UI/UX Toolkit**
+                        "What UI/UX tools do you use?": `🎨 **UI/UX Toolkit**
 
 I primarily use **Figma** for creating wireframes, prototypes, and design systems. It’s great for collaboration and iterating on user flows. I also dabble in Adobe XD for specific animation designs and leverage tools like Coolors for color schemes. Any tool you’re curious about?`,
-                    "How about your backend skills?": `🛠️ **Backend Skills**
+                        "How about your backend skills?": `🛠️ **Backend Skills**
 
 While my strength lies in frontend and UI/UX, I have not gone into backend. If you want to work with me as a backend developer, please contact me via email.`
-                }
-            },
-            projects: {
-                triggers: ["projects", "portfolio", "work", "applications"],
-                response: `🚀 **Notable Projects**
+                    }
+                },
+                projects: {
+                    triggers: ["projects", "portfolio", "work", "applications"],
+                    response: `🚀 **Notable Projects**
 
 **1. Nexora Tel Website**
 - Recruitment & project portal
@@ -2370,53 +1129,53 @@ While my strength lies in frontend and UI/UX, I have not gone into backend. If y
 - Social sharing features
 
 Which project catches your eye?`,
-                followUps: [
-                    "Tell me more about Nexora Tel",
-                    "How does TimetablePro work?",
-                    "What tech stack did you use?"
-                ],
-                followUpResponses: {
-                    "Tell me more about Nexora Tel": `📌 **Nexora Tel Website**
+                    followUps: [
+                        "Tell me more about Nexora Tel",
+                        "How does TimetablePro work?",
+                        "What tech stack did you use?"
+                    ],
+                    followUpResponses: {
+                        "Tell me more about Nexora Tel": `📌 **Nexora Tel Website**
 
 <a target="_blank" href="https://nexoratel.netlify.app/">Nexora Tel</a>
 This portal streamlines recruitment and project management. It features **Lottie animations** for engaging visuals, a **sticky navigation** for easy access, and **responsive design** for all devices. Built with HTML, CSS, JavaScript, and hosted on Netlify, it’s a showcase of modern web design. Want to know about its challenges or see the code?`,
-                    "How does TimetablePro work?": `⏰ **TimetablePro Mechanics**
+                        "How does TimetablePro work?": `⏰ **TimetablePro Mechanics**
 
 TimetablePro generates personalized schedules for students. Users input subjects and preferences, and the app creates an optimized timetable using a custom algorithm. It syncs data via **Firebase Firestore** and sends **push notifications** for study reminders. Curious about the algorithm or user feedback? Project still ongoing, will be released on July 27, 2025.`,
-                    "What tech stack did you use?": `🛠️ **Project Tech Stacks**
+                        "What tech stack did you use?": `🛠️ **Project Tech Stacks**
 
 - **Nexora Tel**: HTML, CSS, JavaScript, Aceternity UI, Netlify
 - **TimetablePro**: HTML, CSS, JavaScript, Netlify
 - **Motivation Clock**: JavaScript, APIs (weather, quotes), not deployed
 
 Each project leverages tools suited to its goals. Want details on a specific stack?`
-                }
-            },
-            education: {
-                triggers: ["education", "school", "university", "covenant", "study"],
-                response: `🎓 **Education Background**
+                    }
+                },
+                education: {
+                    triggers: ["education", "school", "university", "covenant", "study"],
+                    response: `🎓 **Education Background**
 
 **Covenant University**
 - B.Sc in Industrial Mathematics (Computer Science)
 - Expected Graduation: 2027
 
 Want to explore my coursework or achievements?`,
-                followUps: [
-                    "Tell me about your coursework",
-                    "Any academic achievements?"
-                ],
-                followUpResponses: {
-                    "Tell me about your coursework": `📚 **Coursework Details**
+                    followUps: [
+                        "Tell me about your coursework",
+                        "Any academic achievements?"
+                    ],
+                    followUpResponses: {
+                        "Tell me about your coursework": `📚 **Coursework Details**
 
 Details about my coursework are not available at this time.`,
-                    "Any academic achievements?": `🏆 **Academic Achievements**
+                        "Any academic achievements?": `🏆 **Academic Achievements**
 
 No notable academic achievements yet, but I'm working hard toward my degree!`
-                }
-            },
-            hobbies: {
-                triggers: ["hobbies", "interests", "what do you like", "free time"],
-                response: `😊 **Personal Interests**
+                    }
+                },
+                hobbies: {
+                    triggers: ["hobbies", "interests", "what do you like", "free time"],
+                    response: `😊 **Personal Interests**
 
 **Creative**
 - UI/UX design
@@ -2431,26 +1190,26 @@ No notable academic achievements yet, but I'm working hard toward my degree!`
 - Music (Gospel)
 
 What’s a hobby you’d like to explore with me?`,
-                followUps: [
-                    "What anime do you watch?",
-                    "Tell me about your gaming setup",
-                    "Favorite basketball team?"
-                ],
-                followUpResponses: {
-                    "What anime do you watch?": `🎌 **Anime Favorites**
+                    followUps: [
+                        "What anime do you watch?",
+                        "Tell me about your gaming setup",
+                        "Favorite basketball team?"
+                    ],
+                    followUpResponses: {
+                        "What anime do you watch?": `🎌 **Anime Favorites**
 
 I’m hooked on **Attack on Titan** for its epic storytelling, **Solo Leveling** for stunning visuals and peak plotting, and **Arcane** for its action-packed vibe. Got a favorite anime or need a recommendation?`,
-                    "Tell me about your gaming setup": `🎮 **Gaming Setup**
+                        "Tell me about your gaming setup": `🎮 **Gaming Setup**
 
 I game on my **Samsung Galaxy A9**, and **Call of Duty: Mobile** is my go-to for intense, fast-paced action. I use wired earphones for better sound clarity and faster reaction. My setup is all about mobile convenience and skill. Want tips on mobile gaming or my favorite loadouts?`,
-                    "Favorite basketball team?": `🏀 **Basketball Passion**
+                        "Favorite basketball team?": `🏀 **Basketball Passion**
 
 I’m a huge **Golden State Warriors** fan—Steph Curry’s leadership is inspiring! I also play pickup games, focusing on defense and three-pointers. Want to talk NBA or my on-court moves?`
-                }
-            },
-            anime: {
-                triggers: ["anime", "naruto", "attack on titan", "demon slayer", "jujutsu kaisen"],
-                response: `🎌 **Anime Enthusiast**
+                    }
+                },
+                anime: {
+                    triggers: ["anime", "naruto", "attack on titan", "demon slayer", "jujutsu kaisen"],
+                    response: `🎌 **Anime Enthusiast**
 
 **Top Picks**
 - Attack on Titan: Epic plot twists
@@ -2463,26 +1222,26 @@ I’m a huge **Golden State Warriors** fan—Steph Curry’s leadership is inspi
 - Active in fan communities
 
 Want to discuss a show or get a recommendation?`,
-                followUps: [
-                    "Recommend an anime",
-                    "Favorite character?",
-                    "Do you attend conventions?"
-                ],
-                followUpResponses: {
-                    "Recommend an anime": `📺 **Anime Recommendation**
+                    followUps: [
+                        "Recommend an anime",
+                        "Favorite character?",
+                        "Do you attend conventions?"
+                    ],
+                    followUpResponses: {
+                        "Recommend an anime": `📺 **Anime Recommendation**
 
 If you love action and deep stories, try **Hunter x Hunter**—it’s got a perfect mix of strategy, emotion, and epic fights. For something newer, **My Teen Romantic Comedy SNAFU** offers great character development. What genres do you like?`,
-                    "Favorite character?": `🌟 **Favorite Anime Character**
+                        "Favorite character?": `🌟 **Favorite Anime Character**
 
 I’d pick **Levi Ackerman** from Attack on Titan—his calm precision and loyalty are iconic. His fight scenes inspire my UI animation designs! Who’s your favorite character?`,
-                    "Do you attend conventions?": `🎉 **Anime Conventions**
+                        "Do you attend conventions?": `🎉 **Anime Conventions**
 
 I haven’t attended any conventions yet, but I’m active in online anime communities.`
-                }
-            },
-            contact: {
-                triggers: ["contact", "email", "reach", "social media", "connect"],
-                response: `📬 **Contact Information**
+                    }
+                },
+                contact: {
+                    triggers: ["contact", "email", "reach", "social media", "connect"],
+                    response: `📬 **Contact Information**
 
 **Professional**
 - Email: toluwanimibabalola2707@gmail.com
@@ -2490,48 +1249,48 @@ I haven’t attended any conventions yet, but I’m active in online anime commu
 - GitHub: <a href="https://github.com/tolu-15" target="_blank">github.com/tolu-15</a>
 
 What’s the best way to connect with you?`,
-                followUps: [
-                    "What's your GitHub?",
-                    "Can I see your resume?",
-                    "Best way to reach you?"
-                ],
-                followUpResponses: {
-                    "What's your GitHub?": `📂 **GitHub Profile**
+                    followUps: [
+                        "What's your GitHub?",
+                        "Can I see your resume?",
+                        "Best way to reach you?"
+                    ],
+                    followUpResponses: {
+                        "What's your GitHub?": `📂 **GitHub Profile**
 
 Check out my repos at <a href="https://github.com/tolu-15" target="_blank">github.com/tolu-15</a>. You’ll find projects like Nexora Tel and TimetablePro, showcasing my code. Want me to walk you through a specific repository?`,
-                    "Can I see your resume?": `📄 **Resume Request**
+                        "Can I see your resume?": `📄 **Resume Request**
 
 My resume highlights my skills, projects, and education. Please reach out via email (toluwanimibabalola2707@gmail.com) for a copy, and I’ll share it promptly! Anything specific you want to know about my experience?`,
-                    "Best way to reach you?": `📞 **Best Contact Method**
+                        "Best way to reach you?": `📞 **Best Contact Method**
 
 Email (toluwanimibabalola2707@gmail.com) is the fastest way to reach me for professional inquiries. For quick chats, LinkedIn works great too. What’s your preferred method?`
-                }
-            },
-            career: {
-                triggers: ["career", "goals", "future", "ambitions", "plans"],
-                response: `🌟 **Career Goals**
+                    }
+                },
+                career: {
+                    triggers: ["career", "goals", "future", "ambitions", "plans"],
+                    response: `🌟 **Career Goals**
 
 I’m passionate about creating impactful tech solutions. My goal is to lead UI/UX and frontend development for innovative platforms, blending design and code. I aim to work on AI-driven interfaces or smart systems in the next 5 years. Curious about my next steps?`,
-                followUps: [
-                    "What inspires your career?",
-                    "Any dream companies?",
-                    "How do you stay updated?"
-                ],
-                followUpResponses: {
-                    "What inspires your career?": `💡 **Career Inspiration**
+                    followUps: [
+                        "What inspires your career?",
+                        "Any dream companies?",
+                        "How do you stay updated?"
+                    ],
+                    followUpResponses: {
+                        "What inspires your career?": `💡 **Career Inspiration**
 
 I’m driven by the intersection of tech and creativity—think anime-inspired UI designs or intuitive apps like Notion. Solving real-world problems through clean code and beautiful interfaces keeps me motivated. What inspires you?`,
-                    "Any dream companies?": `🏢 **Dream Companies**
+                        "Any dream companies?": `🏢 **Dream Companies**
 
 I’d love to work with innovative teams at places like **Vercel**, **xAI**, or **Figma**, where design and tech converge. Their focus on user-centric solutions aligns with my vision. Got a favorite company?`,
-                    "How do you stay updated?": `📚 **Staying Updated**
+                        "How do you stay updated?": `📚 **Staying Updated**
 
 I follow tech blogs like Smashing Magazine, watch WWDC for UI trends, and experiment with new tools on GitHub. I also take Udemy courses to sharpen my skills. Want tips on staying current in tech?`
-                }
-            },
-            tools: {
-                triggers: ["tools", "software", "favorite tool", "what do you use"],
-                response: `🛠️ **Favorite Tools**
+                    }
+                },
+                tools: {
+                    triggers: ["tools", "software", "favorite tool", "what do you use"],
+                    response: `🛠️ **Favorite Tools**
 
 I rely on a mix of tools to bring ideas to life:
 - **Figma**: For UI/UX prototyping
@@ -2541,26 +1300,26 @@ I rely on a mix of tools to bring ideas to life:
 - **GitHub**: For version control
 
 Each tool helps me streamline my workflow. Want to know more about one?`,
-                followUps: [
-                    "Why do you like Figma?",
-                    "How do you use VS Code?",
-                    "Any other tools?"
-                ],
-                followUpResponses: {
-                    "Why do you like Figma?": `🎨 **Why Figma?**
+                    followUps: [
+                        "Why do you like Figma?",
+                        "How do you use VS Code?",
+                        "Any other tools?"
+                    ],
+                    followUpResponses: {
+                        "Why do you like Figma?": `🎨 **Why Figma?**
 
 Figma’s real-time collaboration and robust design system features make it a game-changer for UI/UX. I use it to craft pixel-perfect prototypes and user flows. Its plugins, like for Lottie animations, are a bonus. Curious about my Figma workflow?`,
-                    "How do you use VS Code?": `💻 **VS Code Usage**
+                        "How do you use VS Code?": `💻 **VS Code Usage**
 
 VS Code is my coding hub, with extensions like Prettier, ESLint, and Tailwind Intellisense for efficiency. I customize themes to keep coding fun and use its Git integration for seamless commits. Want to know my favorite extensions?`,
-                    "Any other tools?": `🧰 **Other Tools**
+                        "Any other tools?": `🧰 **Other Tools**
 
 Beyond Figma and VS Code, I use **Vercel** for deployment, **Postman** for API testing, and **Notion** for project planning. Each adds a layer of polish to my work. Got a tool you’re curious about?`
-                }
-            },
-            default: {
-                triggers: [],
-                response: `🤔 Hmm, I’m not sure I caught that. I can tell you about:
+                    }
+                },
+                default: {
+                    triggers: [],
+                    response: `🤔 Hmm, I’m not sure I caught that. I can tell you about:
 - Technical skills
 - Cool projects
 - Education journey
@@ -2569,880 +1328,223 @@ Beyond Figma and VS Code, I use **Vercel** for deployment, **Postman** for API t
 - Favorite tools
 
 What’s on your mind?`,
-                followUps: [
-                    "Tell me about your skills",
-                    "What projects have you done?",
-                    "What are your hobbies?"
-                ]
-            }
-        };
+                    followUps: [
+                        "Tell me about your skills",
+                        "What projects have you done?",
+                        "What are your hobbies?"
+                    ]
+                }
+            };
 
-        // Conversation state
-        let conversationState = {
-            currentTopic: null,
-            followUpQuestions: []
-        };
+            let conversationState = {
+                currentTopic: null
+            };
 
-        // Utility functions
-        const getCurrentTime = () => {
-            return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        };
+            const getCurrentTime = () => {
+                return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            };
 
-        const scrollToBottom = () => {
-            elements.chatMessages.scrollTop = elements.chatMessages.scrollHeight;
-        };
+            const scrollToBottom = () => {
+                elements.chatMessages.scrollTop = elements.chatMessages.scrollHeight;
+            };
 
-        const showTypingIndicator = () => {
-            elements.typingIndicator.style.display = 'flex';
-            scrollToBottom();
-        };
+            const showTypingIndicator = () => {
+                elements.typingIndicator.style.display = 'flex';
+                scrollToBottom();
+            };
 
-        const hideTypingIndicator = () => {
-            elements.typingIndicator.style.display = 'none';
-        };
+            const hideTypingIndicator = () => {
+                elements.typingIndicator.style.display = 'none';
+            };
 
-        const addMessage = (content, isUser = false) => {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
-            messageDiv.setAttribute('role', 'article');
+            const addMessage = (content, isUser = false) => {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+                messageDiv.setAttribute('role', 'article');
 
-            const messageContent = document.createElement('div');
-            messageContent.className = 'message-content';
-            messageContent.innerHTML = simpleMarkdown(content);
+                const messageContent = document.createElement('div');
+                messageContent.className = 'message-content';
+                messageContent.innerHTML = simpleMarkdown(content);
 
-            const messageTime = document.createElement('div');
-            messageTime.className = 'message-time';
-            messageTime.textContent = getCurrentTime();
+                const messageTime = document.createElement('div');
+                messageTime.className = 'message-time';
+                messageTime.textContent = getCurrentTime();
 
-            messageDiv.appendChild(messageContent);
-            messageDiv.appendChild(messageTime);
+                messageDiv.appendChild(messageContent);
+                messageDiv.appendChild(messageTime);
 
-            elements.chatMessages.appendChild(messageDiv);
-            scrollToBottom();
-        };
+                elements.chatMessages.appendChild(messageDiv);
+                scrollToBottom();
+            };
 
-        const addBotMessage = (content) => addMessage(content, false);
-        const addUserMessage = (content) => addMessage(content, true);
+            const addBotMessage = (content) => addMessage(content, false);
+            const addUserMessage = (content) => addMessage(content, true);
 
-        const showQuickReplies = (replies) => {
-            const existingReplies = document.querySelector('.quick-replies');
-            if (existingReplies) existingReplies.remove();
+            const showQuickReplies = (replies) => {
+                const existingReplies = document.querySelector('.quick-replies');
+                if (existingReplies) existingReplies.remove();
+                if (!replies || replies.length === 0) return;
 
-            if (!replies || replies.length === 0) return;
+                const quickRepliesDiv = document.createElement('div');
+                quickRepliesDiv.className = 'quick-replies';
+                quickRepliesDiv.setAttribute('role', 'list');
 
-            const quickRepliesDiv = document.createElement('div');
-            quickRepliesDiv.className = 'quick-replies';
-            quickRepliesDiv.setAttribute('role', 'list');
+                replies.forEach(reply => {
+                    const button = document.createElement('button');
+                    button.className = 'quick-reply';
+                    button.textContent = reply;
+                    button.setAttribute('data-reply', reply);
+                    button.setAttribute('role', 'listitem');
+                    quickRepliesDiv.appendChild(button);
+                });
 
-            replies.forEach(reply => {
-                const button = document.createElement('button');
-                button.className = 'quick-reply';
-                button.textContent = reply;
-                button.setAttribute('data-reply', reply);
-                button.setAttribute('role', 'listitem');
-                quickRepliesDiv.appendChild(button);
-            });
+                elements.chatMessages.appendChild(quickRepliesDiv);
+                scrollToBottom();
+            };
 
-            elements.chatMessages.appendChild(quickRepliesDiv);
-            scrollToBottom();
-        };
+            const processInput = (input) => {
+                const lowerInput = input.toLowerCase();
+                let responseData = knowledgeBase.default;
 
-        const processInput = (input) => {
-            const lowerInput = input.toLowerCase();
-            let responseData = knowledgeBase.default;
+                if (conversationState.currentTopic && knowledgeBase[conversationState.currentTopic]?.followUpResponses?.[input]) {
+                    responseData = {
+                        response: knowledgeBase[conversationState.currentTopic].followUpResponses[input],
+                        followUps: knowledgeBase[conversationState.currentTopic].followUps
+                    };
+                } else {
+                    for (const [topic, data] of Object.entries(knowledgeBase)) {
+                        if (topic === 'default') continue;
+                        if (data.triggers.some(trigger => lowerInput.includes(trigger))) {
+                            responseData = data;
+                            conversationState.currentTopic = topic;
+                            break;
+                        }
+                    }
 
-            if (conversationState.currentTopic && knowledgeBase[conversationState.currentTopic]?.followUpResponses?.[input]) {
-                responseData = {
-                    response: knowledgeBase[conversationState.currentTopic].followUpResponses[input],
-                    followUps: knowledgeBase[conversationState.currentTopic].followUps
-                };
-            } else {
-                for (const [topic, data] of Object.entries(knowledgeBase)) {
-                    if (topic === 'default') continue;
-                    if (data.triggers.some(trigger => lowerInput.includes(trigger))) {
-                        responseData = data;
-                        conversationState.currentTopic = topic;
-                        break;
+                    if (conversationState.currentTopic === 'projects') {
+                        if (lowerInput.includes('nexora')) {
+                            responseData = knowledgeBase.projects.followUpResponses["Tell me more about Nexora Tel"];
+                        } else if (lowerInput.includes('timetablepro')) {
+                            responseData = knowledgeBase.projects.followUpResponses["How does TimetablePro work?"];
+                        }
                     }
                 }
 
-                if (conversationState.currentTopic === 'projects') {
-                    if (lowerInput.includes('nexora')) {
-                        responseData = knowledgeBase.projects.followUpResponses["Tell me more about Nexora Tel"];
-                    } else if (lowerInput.includes('timetablepro')) {
-                        responseData = knowledgeBase.projects.followUpResponses["How does TimetablePro work?"];
-                    }
+                return responseData;
+            };
+
+            const handleSendMessage = async () => {
+                try {
+                    const message = elements.userInput.value.trim();
+                    if (!message) return;
+
+                    addUserMessage(message);
+                    elements.userInput.value = '';
+                    showTypingIndicator();
+
+                    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 1000));
+
+                    const responseData = processInput(message);
+                    addBotMessage(responseData.response);
+                    showQuickReplies(responseData.followUps);
+
+                    hideTypingIndicator();
+                } catch (error) {
+                    console.error('Error in handleSendMessage:', error);
+                    addBotMessage('Oops, something went wrong. Let’s try that again!');
+                    hideTypingIndicator();
                 }
-            }
+            };
 
-            return responseData;
-        };
+            const initChat = () => {
+                addBotMessage(knowledgeBase.greetings.response);
+                showQuickReplies(knowledgeBase.greetings.followUps);
+            };
 
-        const handleSendMessage = async () => {
-            try {
-                const message = elements.userInput.value.trim();
-                if (!message) return;
-
-                addUserMessage(message);
-                elements.userInput.value = '';
-                showTypingIndicator();
-
-                await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 1000));
-
-                const responseData = processInput(message);
-                addBotMessage(responseData.response);
-                showQuickReplies(responseData.followUps);
-
-                hideTypingIndicator();
-            } catch (error) {
-                console.error('Error in handleSendMessage:', error);
-                addBotMessage('Oops, something went wrong. Let’s try that again!');
-                hideTypingIndicator();
-            }
-        };
-
-        // Initialize chat
-        const initChat = () => {
-            addBotMessage(knowledgeBase.greetings.response);
-            showQuickReplies(knowledgeBase.greetings.followUps);
-        };
-
-        // Event listeners
-        const setupEventListeners = () => {
-            elements.sendButton.addEventListener('click', handleSendMessage);
-            elements.userInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter' && !e.shiftKey) {
-                    e.preventDefault();
-                    handleSendMessage();
-                }
-            });
-            elements.chatMessages.addEventListener('click', (e) => {
-                if (e.target.classList.contains('quick-reply')) {
-                    const reply = e.target.getAttribute('data-reply');
-                    if (reply) {
-                        elements.userInput.value = reply;
+            const setupEventListeners = () => {
+                elements.sendButton.addEventListener('click', handleSendMessage);
+                elements.userInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
                         handleSendMessage();
                     }
+                });
+                elements.chatMessages.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('quick-reply')) {
+                        const reply = e.target.getAttribute('data-reply');
+                        if (reply) {
+                            elements.userInput.value = reply;
+                            handleSendMessage();
+                        }
+                    }
+                });
+            };
+
+            document.addEventListener('DOMContentLoaded', () => {
+                try {
+                    initChat();
+                    setupEventListeners();
+                } catch (error) {
+                    console.error('Initialization failed:', error);
+                    addBotMessage('Failed to initialize chat. Please refresh the page.');
                 }
             });
-        };
-
-        // Initialize on DOM load
-        document.addEventListener('DOMContentLoaded', () => {
-            try {
-                initChat();
-                setupEventListeners();
-            } catch (error) {
-                console.error('Initialization failed:', error);
-                addBotMessage('Failed to initialize chat. Please refresh the page.');
-            }
-        });
-    </script>
-</body>
-</html>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Click Skills to show</p>
-                        <p class="tab-links" onclick="opentab('experience')">click Expirience</p>
-                        <p class="tab-links" onclick="opentab('education')">Click Education</p>
-
-                    </div>
-                    <div class="tab-contents " id="skills">
-                        <ul>
-                            <li><span> UI?UX </span><br>Designing Web interface and Landing Page</li>
-                            <li><span>Web development</span><br>Web development</li>
-
-                        </ul>
-                    </div>
-                    <div class="tab-contents " id="experience">
-                        <ul>
-                            <li><span> 2023-current </span><br>Learning Web design in APTECH Abeokuta</li>
-                            <li><span>March 2025</span><br>IT in micronet technologies lagos, Nigeria</li>
-
-                            <li><a href="https://afthoniafooods.netlify.app/">One of my Work</a></li>
-
-
-
-
-
-
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2023 to 2027 </span><br>Studying Industrial Mathmatics (Compscience) at covenant
-                                University</li>
-                            <li><span>Web development</span> <br>In APTECH Abeokuta</li>
-
-                        </ul>
-                    </div>
-                    <div id=" Service">
-                        <div class="container">
-                            <h1 class="sub-title"></h1>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-            
-
-    <div class="dropdown">
-      
-        </div>
-    </div>
-    </nav>
-    </div>
-  <div class="telegram-bot-card">
-    <div class="bot-header">
-        <div class="bot-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
-                <path
-                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.534.26l.2-3.004 5.56-5.02c.24-.213-.054-.334-.373-.12l-6.87 4.33-2.96-.92c-.64-.203-.658-.64.135-.954l11.57-4.46c.538-.196 1.006.128.832.94z" />
-            </svg>
-        </div>
-        <div class="header-text">
-            <h3>Telegram Integration</h3>
-            <p class="bot-subtitle">AI-Powered Business Assistant</p>
-        </div>
-    </div>
-    <p class="bot-description">Streamline your operations with our seamless Telegram integration. Automate orders,
-        customer support, and business processes through our intelligent bot solution.</p>
-    <div class="button-container">
-        <a href="https://t.me/t_dev25_bot" class="invite-button" target="_blank">
-            Connect Now
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-        </a>
-        <div class="button-hover-effect"></div>
-    </div>
-
-    <!-- Animated background elements -->
-    <div class="card-background">
-        <div class="grid-pattern"></div>
-        <div class="gradient-overlay"></div>
-    </div>
-</div>
-
-<style>
-    @keyframes subtleFloat {
-
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(-5px);
-        }
-    }
-
-    @keyframes gradientShift {
-        0% {
-            background-position: 0% 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
-        }
-
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-
-    @keyframes buttonHover {
-        0% {
-            transform: scaleX(0);
-            opacity: 0;
-        }
-
-        100% {
-            transform: scaleX(1);
-            opacity: 1;
-        }
-    }
-
-    .telegram-bot-card {
-        position: relative;
-        background: #14213d;
-        border-radius: 16px;
-        padding: 32px;
-        max-width: 800px;
-        height: 500px;
-        color: white;
-        box-shadow: 0 12px 30px rgba(20, 33, 61, 0.3);
-        font-family: 'Inter', 'Helvetica Neue', sans-serif;
-        margin-left: 25%;
-
-        z-index: 1;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
-    }
-
-    .telegram-bot-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(20, 33, 61, 0.4);
-    }
-
-    .card-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        overflow: hidden;
-    }
-
-    .grid-pattern {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-image:
-            linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-        background-size: 20px 20px;
-        opacity: 0.5;
-    }
-
-    .gradient-overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, rgba(42, 171, 238, 0.15) 0%, rgba(20, 33, 61, 0) 70%);
-        animation: gradientShift 12s infinite alternate;
-        background-size: 200% 200%;
-    }
-
-    .bot-header {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin-bottom: 24px;
-    }
-
-    .header-text {
-        flex: 1;
-    }
-
-    .bot-icon {
-        background: linear-gradient(135deg, #2AABEE 0%, #0088cc 100%);
-        border-radius: 14px;
-        width: 56px;
-        height: 56px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        box-shadow: 0 4px 12px rgba(42, 171, 238, 0.3);
-        transition: all 0.4s ease;
-        animation: subtleFloat 6s infinite ease-in-out;
-    }
-
-    .telegram-bot-card:hover .bot-icon {
-        transform: rotate(5deg);
-    }
-
-    .bot-icon svg {
-        width: 26px;
-        height: 26px;
-    }
-
-    .bot-header h3 {
-        margin: 0 0 4px 0;
-        font-size: 20px;
-        font-weight: 600;
-        letter-spacing: 0.25px;
-    }
-
-    .bot-subtitle {
-        margin: 0;
-        font-size: 14px;
-        color: rgba(255, 255, 255, 0.7);
-        font-weight: 400;
-        letter-spacing: 0.5px;
-    }
-
-    .bot-description {
-        font-size: 15px;
-        line-height: 1.6;
-        margin: 0 0 28px 0;
-        color: rgba(255, 255, 255, 0.8);
-        font-weight: 400;
-    }
-
-    .button-container {
-        position: relative;
-        display: inline-block;
-    }
-
-    .invite-button {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background: linear-gradient(135deg, #2AABEE 0%, #0088cc 100%);
-        color: white;
-        border-radius: 12px;
-        padding: 14px 24px;
-        font-weight: 500;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        position: relative;
-        z-index: 2;
-        border: none;
-        cursor: pointer;
-        font-size: 15px;
-        letter-spacing: 0.5px;
-        box-shadow: 0 4px 15px rgba(42, 171, 238, 0.3);
-        overflow: hidden;
-    }
-
-    .button-hover-effect {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
-        border-radius: 12px;
-        z-index: 1;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .invite-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(42, 171, 238, 0.4);
-    }
-
-    .invite-button:hover+.button-hover-effect,
-    .invite-button:focus+.button-hover-effect {
-        animation: buttonHover 0.6s forwards;
-    }
-
-    .invite-button svg {
-        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-
-    .invite-button:hover svg {
-        transform: translateX(4px);
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 480px) {
-        .telegram-bot-card {
-            padding: 24px;
-            max-width: 100%;
-        }
-
-        .bot-icon {
-            width: 48px;
-            height: 48px;
-        }
-
-        .bot-header h3 {
-            font-size: 18px;
-        }
-
-        .bot-description {
-            font-size: 14px;
-        }
-    }
-</style>
-
-
-
-    <!-- Service Section -->
-    <div id="service">
-        <h1>My Services</h1>
-        <div class="service-container">
-            <div class="service-box">Front Web Development</div>
-            <div class="service-box">UI/UX Design</div>
-            <div class="service-box">Building Landing Page</div>
-        </div>
-        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-
-<style>
-  .lottie-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  dotlottie-player {
-    width: 300px;
-    height: 300px;
-  }
-
-  @media (min-width: 768px) {
-    dotlottie-player {
-      width: 500px;
-      height: 500px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    dotlottie-player {
-      width: 600px;
-      height: 600px;
-    }
-  }
-</style>
-
-<div class="lottie-container">
-  <dotlottie-player 
-    src="https://lottie.host/539726a5-e260-4bd2-913b-eee0b1ca0a76/c9JOMjwBnD.lottie"
-    background="transparent" 
-    speed="1" 
-    loop 
-    autoplay>
-  </dotlottie-player>
-</div>
-
-    </div>
-
-    <section class="contact-form-section">
-        <div class="container">
-            <h2 style="color: #000; margin-bottom: 50px;" class="section-heading">
-                <span " class=" greeting">Hi, I'm a</span> <br>
-                <span " class=" title typewriter">Front End Developer</span>
-            </h2>
-
-            <form id="nexoraForm" class="animated-form" action="https://formsubmit.co/toluwanimibabalola2707@gmail.com"
-                method="POST" target="_blank">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_autoresponse" value="Hey !
-
-Thank you so much for reaching out. I truly appreciate your interest — whether you're looking to bring a project idea to life or you're hoping to work together on something exciting.
-
-As a passionate Front-End Developer and UI/UX design enthusiast, I love building clean, modern, and user-focused digital experiences that create real value. Your message means a lot, and I’m genuinely looking forward to understanding more about what you have in mind.
-
-I’ll go through the details you shared and get back to you as soon as possible — usually within 24 hours. If it’s urgent or you’d like a faster response, feel free to send me a quick message directly on Telegram using this number:
-
-📱 09078828095
-
-Let’s build something meaningful together.
-
-Warm regards,
-Toluwanimi Babalola
-Front-End Developer | UI/UX Beginner
-✉️ toluwanimibabalola2707@gmail.com
-💼 Let’s create, solve, and grow!
-
-">
-                <input type="hidden" name="_next"
-                    value="https://toluwanimibabalolasportfolio.netlify.app/thank-you.html">
-
-                <input type="hidden" name="_template" value="table">
-
-                <div class="status-message hidden" id="form-status"></div>
-
-                <div class="form-group">
-                    <input type="text" id="name" name="name" required>
-                    <label for="name">Your Name</label>
-                    <div class="underline"></div>
-                </div>
-
-                <div class="form-group">
-                    <input type="email" id="email" name="email" required>
-                    <label for="email">Email Address</label>
-                    <div class="underline"></div>
-                </div>
-
-                <div class="form-group">
-                    <input type="tel" id="phone" name="phone">
-                    <label for="phone">Phone Number (optional)</label>
-                    <div class="underline"></div>
-                </div>
-
-                <div class="radio-group">
-                    <p style="color: #000;"> Do you have a project in mind?</p>
-                    <div class="radio-options">
-                        <label class="radio-button">
-                            <input type="radio" name="hasProject" value="yes" required>
-                            <span class="radio-custom"></span>
-                            <span style="color: black;" class="radio-label">Yes</span>
-                        </label>
-                        <label class="radio-button">
-                            <input type="radio" name="hasProject" value="no">
-                            <span class="radio-custom"></span>
-                            <span style="color: black;" class="radio-label">No</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-group project-details hidden">
-                    <textarea id="projectDetails" name="projectDetails" rows="4"></textarea>
-                    <label for="projectDetails">Describe your project</label>
-                    <div class="underline"></div>
-                </div>
-
-                <div class="radio-group">
-                    <p style="color: #000;"> Would you like to work with me?</p>
-                    <div class="radio-options">
-                        <label class="radio-button">
-                            <input type="radio" name="workTogether" value="yes" required>
-                            <span class="radio-custom"></span>
-                            <span style="color: black;" class="radio-label">Yes</span>
-                        </label>
-                        <label class="radio-button">
-                            <input type="radio" name="workTogether" value="no">
-                            <span class="radio-custom"></span>
-                            <span style="color: black;" class="radio-label">No</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-group role-selection hidden">
-                    <select id="role" name="role">
-                        <option value="" disabled selected>Select a role</option>
-                        <option value="ui-ux">UI/UX Designer</option>
-                        <option value="frontend">Front End Developer</option>
-                        <option value="backend">Back End Developer</option>
-                        <option value="fullstack">Full Stack Developer</option>
-                    </select>
-                    <div class="select-arrow"></div>
-                </div>
-
-                <button type="submit" class="submit-btn">
-                    <span>Send Message</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </form>
-        </div>
-    </section>
-
-
-
-    <!-- <div id="contact">
-        <h2>Contact Information</h2>
-        <p style="font-size: 30px;font-weight: bolder; "><span class="contact-icon">📞</span>Phone: +234 9078828095</p>
-        <p style="font-size: 30px;font-weight: bolder; padding-top: 20px;"><span class="contact-icon">📧</span>Email: <a
-                href="mailto:toluwanimibabalola2707@gmail.com">toluwanimibabalola2707@gmail.com</a></p>
-        <p style="font-size: 30px;font-weight: bolder; padding-top: 20px;"><span
-                class="contact-icon">📸</span>Instagram: <a href="https://www.instagram.com/tolu.nimi17/"
-                target="_blank">instagram profile</a></p>
-        <p style="font-size: 30px;font-weight: bolder; padding-top: 20px;"><span class="contact-icon">🔗</span>LinkedIn:
-            <a href="https://ng.linkedin.com/in/toluwanimi-babalola-41605129b" target="_blank">Linkdin profile</a>
-        </p>
-
-    </div> -->
-
-    <footer class="professional-footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>Toluwanimi Babalola - @t_dev</h3>
-                    <p>Front-end Developer | UI/UX Beginner</p>
-                </div>
-
-                <div class="footer-contact">
-                    <h4>Connect With Me</h4>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/toluwanimi-babalola-41605129b" target="_blank"
-                            aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://www.instagram.com/tolu.nimi17/" target="_blank" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://github.com/tolu-15" target="_blank" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:toluwanimibabalola2707@gmail.com" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="tel:+2349078828095" aria-label="Phone">
-                            <i class="fas fa-phone-alt"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 Toluwanimi Babalola. All rights reserved @t_dev.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#contact">Contact</a>
-                     <li><a href="https://afthoniafooods.netlify.app/">One of my Work</a></li>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!--<p class="disclaimer">To use chat-box use web as desktop-site. DISCLAIMER: The chatbox responds to simple webdevelopment questions might not be acurate and tells you more about toluwanimi e.g Who is Toluwanimi</p>-->
-    <script>
-
-    </script>
-    <script>
-        function opentab(tabname) {
-            var tablinks = document.getElementsByClassName("tab-links");
-            var tabcontents = document.getElementsByClassName("tab-contents");
-
-
-            for (let tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (let tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-
-
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-
-        }
-
-    </script>
-    <script>
-        function message() {
-            const name = document.getElementById("name").value;
-
-            if (name) {
-                alert(name + ", Thanks for reaching me! This feature is not available Sorry for the incoviniency reach me through my email bellow or whatsapp number. Thank you");
-            } else {
-                alert("Please enter your name.");
-            }
-        }
+        })();
     </script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let texts = ["Front-end Developer", "UI/UX Designer", "Building Landing Page"];
-            let index = 0;
-            let typingElement = document.querySelector(".header-text p");
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('nexoraForm');
+            if (!form) return;
 
-            function typeEffect(text, i = 0) {
-                if (i < text.length) {
-                    typingElement.innerHTML = text.substring(0, i + 1) + "|";
-                    setTimeout(() => typeEffect(text, i + 1), 100);
-                } else {
-                    setTimeout(() => deleteEffect(text), 1000);
-                }
-            }
+            const statusMessage = document.getElementById('form-status');
+            const submitBtn = form.querySelector('.submit-btn');
 
-            function deleteEffect(text, i = text.length) {
-                if (i > 0) {
-                    typingElement.innerHTML = text.substring(0, i - 1) + "|";
-                    setTimeout(() => deleteEffect(text, i - 1), 100);
-                } else {
-                    index = (index + 1) % texts.length;
-                    setTimeout(() => typeEffect(texts[index]), 500);
-                }
-            }
-
-            typeEffect(texts[index]);
-        });
-    </script>
-
-    <body>
-        <!-- Chat Button
-        <button class="chat-btn" onclick="toggleChat()">💬</button> -->
-
-        <!-- Chatbox -->
-        <!--<div class="chatbox" id="chatbox">
-        <div class="chat-header">Chat Support</div>
-        <div class="chat-body" id="chat-body">
-            <div class="message">Hello! How can I help you?</div>
-        </div>
-        <div class="chat-footer">
-            <input type="text" id="user-input" placeholder="Type a message...">
-            <button onclick="sendMessage()">Send</button>-->
-        </div>
-        </div>
-        <script>
-
-        </script>
-
-        <script>
-            function toggleChat() {
-                let chatbox = document.getElementById("chatbox");
-                chatbox.style.display = chatbox.style.display === "none" ? "flex" : "none";
-            }
-
-            function sendMessage() {
-                let input = document.getElementById("user-input");
-                let chatBody = document.getElementById("chat-body");
-                let userText = input.value.trim().toLowerCase();
-
-                if (userText !== "") {
-                    // User Message
-                    let userMessage = document.createElement("div");
-                    userMessage.classList.add("message");
-                    userMessage.style.textAlign = "right";
-                    userMessage.style.background = "#007bff";
-                    userMessage.style.color = "white";
-                    userMessage.textContent = input.value;
-                    chatBody.appendChild(userMessage);
-
-                    // Generate bot reply
-                    setTimeout(() => {
-                        let botReply = document.createElement("div");
-                        botReply.classList.add("message");
-                        botReply.textContent = getBotResponse(userText);
-                        chatBody.appendChild(botReply);
-                        chatBody.scrollTop = chatBody.scrollHeight;
-                    }, 1000);
-
-                    // Clear input field
-                    input.value = "";
-                    chatBody.scrollTop = chatBody.scrollHeight;
-                }
-            }
-
-            function getBotResponse(input) {
-                // Convert input to lowercase to handle case-insensitive matching
-                input = input.toLowerCase();
-
-                // Define chatbot responses
-                const responses = [
-                    { keywords: ["hello", "hi"], response: "Hi there! How can I assist you today?" },
-                    { keywords: ["how are you"], response: "I'm just a chatbot, but I'm doing great! How about you?" },
-                    { keywords: ["what is your name"], response: "I'm your friendly chatbot!" },
-                    { keywords: ["who created you"], response: "I was created by Toluwanimi! 😊" },
-                    { keywords: ["bye", "goodbye"], response: "Goodbye! Have a great day! 😊" },
-                    { keywords: ["what is a landing page"], response: "A landing page is a single webpage designed to convert visitors into leads or customers." },
-                    { keywords: ["how do i create a website"], response: "You can create a website using HTML, CSS, and JavaScript. Need help with code?" },
-                    { keywords: ["what is fiverr"], response: "Fiverr is an online marketplace where you can sell services like web design, writing, and more." },
-                    { keywords: ["who are you"], response: "I am your chatbot assistant! Nimi Jr 😀." },
-                    { keywords: ["what do you do", "what is your purpose"], response: "I answer questions related to web development, specifically front-end, and tell you about my creator." },
-                    { keywords: ["services", "offer", "help with"], response: "I can help with web design, front-end development, and cybersecurity basics according to my creator." },
-                    { keywords: ["html", "what is html"], response: "HTML (HyperText Markup Language) is used to structure web pages." },
-                    { keywords: ["css", "what is css"], response: "CSS (Cascading Style Sheets) is used to style web pages." },
-                    { keywords: ["javascript", "js", "what is javascript"], response: "JavaScript is a programming language that adds interactivity to web pages." },
-                    { keywords: ["web development", "how to build websites"], response: "Start with HTML, then move to CSS, and finally JavaScript. Practice by building projects!" },
-                    { keywords: ["cybersecurity", "hacking"], response: "Cybersecurity involves protecting systems and data from cyber threats like hacking and malware." },
-                    { keywords: ["front-end", "what is front-end"], response: "Front-end development focuses on designing the user interface and experience of websites." },
-                    { keywords: ["back-end", "what is back-end"], response: "Back-end development involves managing the server, database, and logic behind a website." },
-                    { keywords: ["how to host a website", "publish website"], response: "You can host your website using GitHub Pages, Netlify, or Vercel for free." },
-                    { keywords: ["github", "how to upload website"], response: "Upload your project to a GitHub repository and enable GitHub Pages in the settings." },
-                    { keywords: ["student portal", "create a student portal"], response: "You need HTML for structure, CSS for styling, JavaScript for interactivity, and a backend for authentication." },
-                    { keywords: ["who is toluwanimi", "tell me about your creator"], response: "Toluwanimi is a passionate web developer skilled in HTML, CSS, JavaScript, and front-end design. He specializes in creating user-friendly and interactive websites while exploring cybersecurity and full-stack development. Beyond coding, he enjoys gaming (COD Mobile 🔥) and gospel music." },
-                    { keywords: ["thank you", "thanks"], response: "You're welcome! Let me know if you need anything else." }
-                ];
-
-
-                for (let item of responses) {
-                    if (item.keywords.some(keyword => input.includes(keyword))) {
-                        return item.response;
+            const projectRadios = document.querySelectorAll('input[name="hasProject"]');
+            const projectDetails = document.querySelector('.project-details');
+            projectRadios.forEach(radio => {
+                radio.addEventListener('change', function () {
+                    if (this.value === 'yes') {
+                        projectDetails.classList.add('show');
+                        projectDetails.classList.remove('hidden');
+                    } else {
+                        projectDetails.classList.add('hidden');
+                        projectDetails.classList.remove('show');
                     }
-                }
+                });
+            });
 
+            const workRadios = document.querySelectorAll('input[name="workTogether"]');
+            const roleSelection = document.querySelector('.role-selection');
+            workRadios.forEach(radio => {
+                radio.addEventListener('change', function () {
+                    if (this.value === 'yes') {
+                        roleSelection.classList.add('show');
+                        roleSelection.classList.remove('hidden');
+                    } else {
+                        roleSelection.classList.add('hidden');
+                        roleSelection.classList.remove('show');
+                    }
+                });
+            });
 
-                return "Sorry, I don't understand that. Can you ask something else?";
+            form.addEventListener('submit', function () {
+                submitBtn.classList.add('loading');
+                showStatusMessage('Sending your message...', 'success');
+            });
+
+            function showStatusMessage(message, type) {
+                if (!statusMessage) return;
+                statusMessage.textContent = message;
+                statusMessage.className = `status-message show-message ${type}`;
+                setTimeout(() => {
+                    statusMessage.classList.remove('show-message');
+                }, 5000);
             }
+        });
+    </script>
 
-        </script>
-        <script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -3453,77 +1555,7 @@ Front-End Developer | UI/UX Beginner
     "https://toluwanimibabalola.netlify.app/"
   ]
 }
-</script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const form = document.getElementById('nexoraForm');
-                const statusMessage = document.getElementById('form-status');
-                const submitBtn = form.querySelector('.submit-btn');
-
-                // Toggle project details field
-                const projectRadios = document.querySelectorAll('input[name="hasProject"]');
-                const projectDetails = document.querySelector('.project-details');
-
-                projectRadios.forEach(radio => {
-                    radio.addEventListener('change', function () {
-                        if (this.value === 'yes') {
-                            projectDetails.classList.add('show');
-                            projectDetails.classList.remove('hidden');
-                        } else {
-                            projectDetails.classList.add('hidden');
-                            projectDetails.classList.remove('show');
-                        }
-                    });
-                });
-
-                // Toggle role selection field
-                const workRadios = document.querySelectorAll('input[name="workTogether"]');
-                const roleSelection = document.querySelector('.role-selection');
-
-                workRadios.forEach(radio => {
-                    radio.addEventListener('change', function () {
-                        if (this.value === 'yes') {
-                            roleSelection.classList.add('show');
-                            roleSelection.classList.remove('hidden');
-                        } else {
-                            roleSelection.classList.add('hidden');
-                            roleSelection.classList.remove('show');
-                        }
-                    });
-                });
-
-                // Form submission
-                form.addEventListener('submit', function (e) {
-                    // Show loading state
-                    submitBtn.classList.add('loading');
-
-                    // Show temporary success message (FormSubmit will handle the actual submission)
-                    showStatusMessage('Sending your message...', 'success');
-
-                    // Let the form submit naturally to FormSubmit
-                    // The target="_blank" will open response in new tab
-                });
-
-                // Helper function to show status messages
-                function showStatusMessage(message, type) {
-                    statusMessage.textContent = message;
-                    statusMessage.className = `status-message show-message ${type}`;
-
-                    // Hide message after 5 seconds
-                    setTimeout(() => {
-                        statusMessage.classList.remove('show-message');
-                    }, 5000);
-                }
-            });
-        </script>
-
-
-    </body>
-
-
-
-
-
+    </script>
 </body>
 
 </html>
