@@ -5,6 +5,11 @@ export const profile = {
     university: 'Covenant University',
     course: 'Industrial Mathematics (Computer Science)',
     location: 'Nigeria',
+    experience: [
+        { when: '2026 - Present', title: 'Engineering Intern (Engineering Team)', org: 'Cavista Technologies' },
+        { when: 'March 2025', title: 'IT (Pre-IT Internship)', org: 'Micronet Technologies, Lagos, Nigeria' },
+        { when: '2023 - Current', title: 'Learning Web Design', org: 'APTECH Abeokuta' }
+    ],
     availability: {
         internships: true,
         freelance: true,

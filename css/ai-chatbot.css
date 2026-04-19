@@ -303,6 +303,44 @@
     backdrop-filter: blur(18px);
 }
 
+.ai-palette {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 86px;
+    z-index: 5;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(2, 6, 23, 0.62);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(16px);
+    overflow: hidden;
+}
+
+.ai-palette-list {
+    display: grid;
+}
+
+.ai-palette-item {
+    width: 100%;
+    text-align: left;
+    padding: 12px 14px;
+    border: none;
+    background: transparent;
+    color: rgba(226, 232, 240, 0.95);
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ai-palette-item:last-child {
+    border-bottom: none;
+}
+
+.ai-palette-item.is-active,
+.ai-palette-item:hover {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.22), rgba(34, 211, 238, 0.08));
+}
+
 .ai-form {
     display: grid;
     grid-template-columns: 1fr auto;

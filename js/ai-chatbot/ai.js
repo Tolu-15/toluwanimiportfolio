@@ -45,6 +45,7 @@ function aboutResponse() {
                     `Course: ${profile.course}\n` +
                     `Role: ${profile.role}\n` +
                     `Location: ${profile.location}\n\n` +
+                    `Current: Engineering Intern (Engineering Team) at Cavista Technologies.\n\n` +
                     `I can also show projects, skills, certifications, goals, services, and contact details.`
             },
             {
@@ -85,6 +86,21 @@ function skillsResponse() {
             }
         ],
         followups: makeFollowups(['Show frontend projects', '/projects', '/contact', '/services'])
+    };
+}
+
+function experienceResponse() {
+    const items = (profile.experience || []).map((e) => ({
+        label: `${e.when}: ${e.title} — ${e.org}`
+    }));
+
+    return {
+        blocks: [
+            { type: 'text', text: `${profile.shortName}’s experience:` },
+            { type: 'list', items },
+            { type: 'ctaRow', actions: [{ label: 'Hire Me', href: '#contact' }] }
+        ],
+        followups: makeFollowups(['/projects', '/skills', '/contact', 'Is he available for internships?'])
     };
 }
 
@@ -214,7 +230,10 @@ export function classifyIntent(userText) {
     }
 
     if (hasAny(t, ['contact', 'email', 'linkedin', 'github', 'phone'])) return { kind: 'contact' };
-    if (hasAny(t, ['intern', 'internship', 'available', 'freelance', 'collab'])) return { kind: 'availability' };
+    if (hasAny(t, ['available', 'availability', 'open to work', 'hire', 'freelance', 'collab', 'collaboration']))
+        return { kind: 'availability' };
+    if (hasAny(t, ['cavista', 'experience', 'worked', 'engineering team', 'internship at', 'intern at']))
+        return { kind: 'experience' };
     if (hasAny(t, ['project', 'projects', 'nexora', 'afthonia', 'work'])) return { kind: 'projects' };
     if (hasAny(t, ['skill', 'skills', 'frontend', 'ui', 'ux', 'cyber', 'security', 'programming'])) return { kind: 'skills' };
     if (hasAny(t, ['university', 'school', 'education', 'course'])) return { kind: 'about' };
@@ -243,8 +262,9 @@ export function generateResponse(userText, memory) {
         switch (intent.cmd) {
             case '/about':
             case '/education':
-            case '/experience':
                 return aboutResponse();
+            case '/experience':
+                return experienceResponse();
             case '/skills':
                 return skillsResponse();
             case '/projects':
@@ -278,6 +298,7 @@ export function generateResponse(userText, memory) {
 
     if (intent.kind === 'availability') return availabilityResponse();
     if (intent.kind === 'skills') return skillsResponse();
+    if (intent.kind === 'experience') return experienceResponse();
 
     if (intent.kind === 'projects') {
         if (t.includes('frontend')) return projectsResponse('frontend');

@@ -1,4 +1,5 @@
 import { generateResponse, makeMessage } from './ai.js';
+import { commands } from './data.js';
 import { loadSession, saveSession, clearSession } from './storage.js';
 import { createMessageElement, renderBlocks, renderBlock, streamText } from './render.js';
 import { initParticles } from './particles.js';
@@ -102,6 +103,90 @@ function attachMessageTooling(logEl, { onSpeak }) {
     });
 }
 
+function createCommandPalette({ root, input, onPick }) {
+    const palette = document.createElement('div');
+    palette.className = 'ai-palette';
+    palette.setAttribute('role', 'listbox');
+    palette.hidden = true;
+
+    const list = document.createElement('div');
+    list.className = 'ai-palette-list';
+    palette.appendChild(list);
+
+    root.appendChild(palette);
+
+    let activeIndex = 0;
+    let items = [];
+
+    const close = () => {
+        palette.hidden = true;
+        list.innerHTML = '';
+        items = [];
+        activeIndex = 0;
+    };
+
+    const openWith = (query) => {
+        const q = String(query || '').toLowerCase();
+        items = commands.filter((c) => c.includes(q)).slice(0, 8);
+        if (!items.length) return close();
+
+        palette.hidden = false;
+        list.innerHTML = items
+            .map((c, idx) => `<button type="button" class="ai-palette-item ${idx === 0 ? 'is-active' : ''}" role="option" aria-selected="${idx === 0}">${c}</button>`)
+            .join('');
+        activeIndex = 0;
+        updateIcons();
+    };
+
+    const setActive = (idx) => {
+        activeIndex = Math.max(0, Math.min(idx, items.length - 1));
+        const buttons = $all('.ai-palette-item', list);
+        buttons.forEach((b, i) => {
+            const isActive = i === activeIndex;
+            b.classList.toggle('is-active', isActive);
+            b.setAttribute('aria-selected', String(isActive));
+        });
+    };
+
+    list.addEventListener('click', (e) => {
+        const btn = e.target.closest('button');
+        if (!btn) return;
+        const value = btn.textContent || '';
+        onPick(value);
+        close();
+        input.focus();
+    });
+
+    input.addEventListener('input', () => {
+        const value = input.value || '';
+        if (!value.startsWith('/')) return close();
+        openWith(value.trim());
+    });
+
+    input.addEventListener('keydown', (e) => {
+        if (palette.hidden) return;
+
+        if (e.key === 'Escape') {
+            e.preventDefault();
+            close();
+        } else if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            setActive(activeIndex + 1);
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            setActive(activeIndex - 1);
+        } else if (e.key === 'Enter') {
+            const picked = items[activeIndex];
+            if (!picked) return;
+            e.preventDefault();
+            onPick(picked);
+            close();
+        }
+    });
+
+    return { close };
+}
+
 function makeMemory(messages) {
     const lastUser = [...messages].reverse().find((m) => m.role === 'user');
     const lastTopic = lastUser?.text ? lastUser.text.slice(0, 42) : null;
@@ -159,6 +244,15 @@ function initEliteAI() {
     renderHistory();
     attachMessageTooling(logEl, { onSpeak: () => { } });
 
+    const inputbar = shell.querySelector('.ai-inputbar') || shell;
+    createCommandPalette({
+        root: inputbar,
+        input,
+        onPick: (value) => {
+            input.value = value;
+        }
+    });
+
     const setFullscreen = (enabled) => {
         shell.classList.toggle('is-fullscreen', enabled);
         document.documentElement.style.overflow = enabled ? 'hidden' : '';
@@ -214,8 +308,7 @@ function initEliteAI() {
                 btn.className = 'ai-cta';
                 btn.innerHTML = `<i data-lucide="sparkles"></i><span>${f.label}</span>`;
                 btn.addEventListener('click', () => {
-                    input.value = f.label;
-                    input.focus();
+                    handleSubmit(f.label);
                 });
                 followRow.appendChild(btn);
             });
