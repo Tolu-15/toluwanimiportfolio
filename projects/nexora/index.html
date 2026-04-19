@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nexora Tel Website project details.">
+    <title>Nexora Tel Website | Projects</title>
+    <link rel="stylesheet" href="../../index.css">
+    <link rel="icon" type="image/jpeg" href="../../assets/images/favicon.jpg">
+    <style>
+        .project-hero {
+            padding: 80px 0 30px;
+            text-align: center;
+        }
+
+        .project-hero h1 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            margin-bottom: 12px;
+        }
+
+        .project-hero p {
+            color: var(--muted);
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .project-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-top: 36px;
+        }
+
+        .project-panel {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .project-panel h3 {
+            margin-bottom: 12px;
+        }
+
+        .project-panel ul {
+            list-style: none;
+            padding: 0;
+            color: var(--muted);
+        }
+
+        .project-panel li {
+            margin-bottom: 10px;
+        }
+
+        .project-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <div class="logo"><a href="../../">T_dev</a></div>
+            <nav class="nav-links">
+                <a href="../../">Home</a>
+                <a href="../../#about">About</a>
+                <a href="../">Projects</a>
+                <a href="../../#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <div class="container">
+                <h1>Nexora Tel Website</h1>
+                <p>Recruitment and project portal with smooth motion, clean UI, and strong mobile responsiveness.</p>
+                <div class="project-actions">
+                    <a class="btn btn-primary" href="https://nexoratel.netlify.app/" target="_blank"
+                        rel="noreferrer">Live Demo</a>
+                    <a class="btn btn-outline" href="../">Back to Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container project-content">
+                <div class="project-panel">
+                    <h3>Overview</h3>
+                    <p class="project-meta">
+                        The Nexora Tel website showcases recruitment details, service highlights, and a streamlined
+                        project portal with engaging Lottie animations.
+                    </p>
+                </div>
+                <div class="project-panel">
+                    <h3>Highlights</h3>
+                    <ul>
+                        <li>Sticky navigation for fast access to sections.</li>
+                        <li>Lottie animations to enhance storytelling.</li>
+                        <li>Responsive layout for mobile and desktop.</li>
+                    </ul>
+                </div>
+                <div class="project-panel">
+                    <h3>Tech Stack</h3>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>Lottie animations</li>
+                        <li>Netlify deployment</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

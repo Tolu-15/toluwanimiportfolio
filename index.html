@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,10 +10,28 @@
         content="Toluwanimi Babalola, Frontend Developer, Web Developer, Portfolio, Covenant University, Afthonia Foods, Grace Mark Academy Quiz App">
     <meta name="author" content="Babalola Toluwanimi">
     <meta name="google-site-verification" content="8dHZ7u7jerwojNw-nlgIvKZ9VIh3-icoKls3aPm8rDg">
+    <meta name="robots" content="index,follow">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#0b0f1a">
+    <link rel="canonical" href="https://toluwanimibabalolasportfolio.netlify.app/">
+
+    <meta property="og:title" content="Toluwanimi Babalola | Frontend Developer">
+    <meta property="og:description"
+        content="Frontend Developer focused on sleek, modern, and user-first interfaces. Explore projects, skills, and contact info.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toluwanimibabalolasportfolio.netlify.app/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Toluwanimi Babalola | Frontend Developer">
+    <meta name="twitter:description"
+        content="Frontend Developer focused on sleek, modern, and user-first interfaces. Explore projects, skills, and contact info.">
 
     <title>Toluwanimi Babalola | Frontend Developer | Crafting Clean & Modern Websites</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/jpeg" href="Screenshot_20250319-204407~2.jpg">
+    <link rel="stylesheet" href="css/critical.css">
+    <link rel="stylesheet" href="css/ai-chatbot.css">
+    <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,139 +40,39 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = {
+            darkMode: ['class'],
+            corePlugins: { preflight: false },
+            theme: {
+                extend: {
+                    colors: {
+                        neon: {
+                            purple: '#7c3aed',
+                            blue: '#22d3ee'
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-    <style>
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            background: rgba(11, 15, 20, 0.85);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 16px 0;
-        }
-
-        .logo {
-            font-weight: 700;
-            font-size: 1.1rem;
-            letter-spacing: 0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 18px;
-            font-size: 0.95rem;
-            color: var(--muted);
-        }
-
-        .nav-links a:hover {
-            color: var(--text);
-        }
-
-        .hero2 {
-            position: relative;
-            min-height: 92vh;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .hero-video {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .hero2::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.7);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .role {
-            font-size: 0.9rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--muted);
-            margin-bottom: 12px;
-        }
-
-        .hero-title {
-            font-size: clamp(2.2rem, 4vw, 3.4rem);
-            margin: 0 0 16px;
-        }
-
-        .hero-text {
-            max-width: 650px;
-            margin: 0 auto 28px;
-            color: #e5e7eb;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-weight: 600;
-            border: 1px solid transparent;
-            transition: transform 0.2s ease, background 0.2s ease;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-dark);
-            transform: translateY(-1px);
-        }
-
-        .btn-outline {
-            border-color: rgba(255, 255, 255, 0.3);
-            color: white;
-        }
-
-
-        .alert {
-            color: aqua;
-        }
-    </style>
 </head>
 
 <body>
-    <header>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="top-nav">
         <div class="container nav">
             <div class="logo">T_dev</div>
-            <nav class="nav-links">
+            <nav class="nav-links" aria-label="Primary navigation">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
+                <a href="projects/">Projects</a>
                 <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -162,7 +80,7 @@
     </header>
 
     <section class="hero2">
-        <video autoplay muted loop playsinline src="Advertisement_Video_Generated_For_T_dev.mp4" class="hero-video">
+        <video autoplay muted loop playsinline preload="metadata" src="assets/video/hero.mp4" class="hero-video">
         </video>
         <div class="container hero-content">
             <p class="role">Front-End Developer</p>
@@ -172,7 +90,7 @@
                 scalable components, and smooth user experiences.
             </p>
             <div class="hero-cta">
-                <a class="btn btn-primary" href="#projects">View Projects</a>
+                <a class="btn btn-primary" href="projects/">View Projects</a>
                 <a class="btn btn-outline" href="#contact">Let's Talk</a>
             </div>
         </div>
@@ -207,7 +125,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section id="skills" class="section">
             <div class="container">
                 <div class="section-header">
@@ -250,11 +168,11 @@
                                     </div>
                                 </div>
                                 <div class="skill-level">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
                                 </div>
                             </div>
 
@@ -272,11 +190,11 @@
                                     </div>
                                 </div>
                                 <div class="skill-level">
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
                                 </div>
                             </div>
 
@@ -294,11 +212,11 @@
                                     </div>
                                 </div>
                                 <div class="skill-level">
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
                                 </div>
                             </div>
 
@@ -316,11 +234,11 @@
                                     </div>
                                 </div>
                                 <div class="skill-level">
-                                    <span class="star">★</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
                                 </div>
                             </div>
 
@@ -334,11 +252,11 @@
                                     </div>
                                 </div>
                                 <div class="skill-level">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
                                 </div>
                             </div>
 
@@ -352,11 +270,11 @@
                                     </div>
                                 </div>
                                 <div class="skill-level">
-                                    <span class="star">★</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
-                                    <span class="empty-star">☆</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
+                                    <span class="empty-star">&#9734;</span>
                                 </div>
                             </div>
                         </div>
@@ -404,13 +322,14 @@
                 <div class="row about-grid">
                     <div class="about-col-1">
                         <div class="tilt-img">
-                            <img src="JJJJJ.png" alt="Portrait of Toluwanimi">
+                            <img src="assets/images/profile.png" alt="Portrait of Toluwanimi" loading="lazy"
+                                decoding="async">
                         </div>
                     </div>
                     <div class="about-col-2">
                         <h2 class="section-title section-title-left">About Me</h2>
                         <p class="about-text">
-                            Babalola Toluwanimi — Industrial Mathematics & Computer Science student at Covenant
+                            Babalola Toluwanimi &mdash; Industrial Mathematics & Computer Science student at Covenant
                             University. I'm a passionate problem-solver with strong analytical skills and a growing
                             frontend toolkit (HTML5, CSS, JavaScript, UI/UX). I gained hands-on experience during my
                             Pre-IT internship at Micronet Technologies, Lagos, and I'm committed to continuous learning
@@ -480,7 +399,7 @@
                         <div class="chat-messages" id="chat-messages" role="log" aria-live="polite">
                             <div class="message bot-message welcome-message">
                                 <div class="message-content">
-                                    <p>👋 Hello! I'm Toluwanimi's AI assistant. I can tell you about his:</p>
+                                    <p>Hello! I'm Toluwanimi's AI assistant. I can tell you about his:</p>
                                     <ul class="options-list">
                                         <li><span class="option-tag">Skills</span> & technologies he works with</li>
                                         <li><span class="option-tag">Projects</span> he's built</li>
@@ -519,42 +438,164 @@
             </div>
         </section>
 
-        <section id="integration" class="section">
+        <section id="elite-ai" class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Telegram Integration <span class="alert"> COMING SOON</span></h2>
-                    <p class="section-subtitle">AI-powered assistant for streamlined business operations.</p>
-                </div>
-                <div class="telegram-bot-card">
-                    <div class="bot-header">
-                        <div class="bot-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
-                                <path
-                                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.534.26l.2-3.004 5.56-5.02c.24-.213-.054-.334-.373-.12l-6.87 4.33-2.96-.92c-.64-.203-.658-.64.135-.954l11.57-4.46c.538-.196 1.006.128.832.94z" />
-                            </svg>
-                        </div>
-                        <div class="header-text">
-                            <h3>Telegram Integration</h3>
-                            <p class="bot-subtitle">AI-Powered Business Assistant</p>
-                        </div>
+                    <p class="chatbot-flow">Problem → Solution → Tech Stack → Features → Result</p>
+                    <h2 class="section-title">Elite AI Chatbot</h2>
+                    <p class="section-subtitle">A futuristic, premium assistant that knows my work, skills, and projects.
+                    </p>
+                    <div class="mt-5 flex flex-wrap justify-center gap-2 text-sm text-slate-200/90">
+                        <span class="rounded-full border border-white/10 bg-slate-950/20 px-3 py-1">HTML</span>
+                        <span class="rounded-full border border-white/10 bg-slate-950/20 px-3 py-1">CSS</span>
+                        <span class="rounded-full border border-white/10 bg-slate-950/20 px-3 py-1">JavaScript</span>
+                        <span
+                            class="rounded-full border border-violet-400/20 bg-violet-500/10 px-3 py-1">Tailwind</span>
+                        <span class="rounded-full border border-cyan-400/20 bg-cyan-500/10 px-3 py-1">Lucide</span>
+                        <span class="rounded-full border border-white/10 bg-slate-950/20 px-3 py-1">Web Speech
+                            API</span>
                     </div>
-                    <p class="bot-description">Streamline your operations with seamless Telegram integration. Automate
-                        orders, customer support, and business processes through an intelligent bot solution.</p>
-                    <div class="button-container">
-                        <a href="https://t.me/t_dev25_bot" class="invite-button" target="_blank" rel="noreferrer">
-                            Connect Now
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18"
-                                height="18">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                        <div class="button-hover-effect"></div>
+                </div>
+
+                <div class="ai-shell" data-ai-shell>
+                    <canvas class="ai-particles" data-ai-particles aria-hidden="true"></canvas>
+
+                    <header class="ai-topbar">
+                        <div class="ai-brand">
+                            <div class="ai-avatar ai-avatar--me" aria-hidden="true">T</div>
+                            <div class="ai-brand-text">
+                                <p class="ai-title">Toluwanimi AI</p>
+                                <p class="ai-status"><span class="ai-dot" aria-hidden="true"></span>AI Assistant Active
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="ai-actions" role="group" aria-label="Chat actions">
+                            <button class="ai-icon-btn" type="button" data-ai-theme-toggle
+                                aria-label="Toggle terminal mode" title="Toggle terminal mode">
+                                <i data-lucide="terminal"></i>
+                            </button>
+                            <button class="ai-icon-btn" type="button" data-ai-voice-toggle aria-label="Voice response"
+                                title="Voice response">
+                                <i data-lucide="volume-2"></i>
+                            </button>
+                            <button class="ai-icon-btn" type="button" data-ai-download aria-label="Download chat"
+                                title="Download chat">
+                                <i data-lucide="download"></i>
+                            </button>
+                            <button class="ai-icon-btn" type="button" data-ai-clear aria-label="Clear chat"
+                                title="Clear chat">
+                                <i data-lucide="trash-2"></i>
+                            </button>
+                            <button class="ai-icon-btn" type="button" data-ai-fullscreen aria-label="Fullscreen chat"
+                                title="Fullscreen chat">
+                                <i data-lucide="expand"></i>
+                            </button>
+                        </div>
+                    </header>
+
+                    <div class="ai-toolbar">
+                        <label class="ai-search" aria-label="Search chat history">
+                            <i data-lucide="search" aria-hidden="true"></i>
+                            <input data-ai-search type="search" placeholder="Search in this chat… (Ctrl/⌘ + K)">
+                        </label>
+                        <div class="ai-hints" aria-label="Command hint">
+                            <span class="ai-kbd">/</span> commands:
+                            <span class="ai-hint">/about</span>
+                            <span class="ai-hint">/skills</span>
+                            <span class="ai-hint">/projects</span>
+                            <span class="ai-hint">/contact</span>
+                            <span class="ai-hint">/resume</span>
+                        </div>
                     </div>
 
-                    <div class="card-background">
-                        <div class="grid-pattern"></div>
-                        <div class="gradient-overlay"></div>
+                    <div class="ai-body">
+                        <section class="ai-log" data-ai-log role="log" aria-live="polite"
+                            aria-label="Chat conversation">
+                            <div class="ai-empty" data-ai-empty>
+                                <div class="ai-empty-card">
+                                    <div class="ai-empty-icon" aria-hidden="true">
+                                        <i data-lucide="sparkles"></i>
+                                    </div>
+                                    <h3>Ask me anything</h3>
+                                    <p>Try a prompt chip below, or type <span class="ai-inline-kbd">/</span> for command
+                                        mode.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="ai-chips" role="list" aria-label="Suggested prompts">
+                            <button class="ai-chip" data-ai-chip="Tell me about Toluwanimi" role="listitem">Tell me about
+                                Toluwanimi</button>
+                            <button class="ai-chip" data-ai-chip="What projects has he built?" role="listitem">What
+                                projects has he built?</button>
+                            <button class="ai-chip" data-ai-chip="What skills does he have?" role="listitem">What skills
+                                does he have?</button>
+                            <button class="ai-chip" data-ai-chip="Show frontend projects" role="listitem">Show frontend
+                                projects</button>
+                            <button class="ai-chip" data-ai-chip="What is Nexora Tel?" role="listitem">What is Nexora
+                                Tel?</button>
+                            <button class="ai-chip" data-ai-chip="How can I contact him?" role="listitem">How can I
+                                contact him?</button>
+                            <button class="ai-chip" data-ai-chip="Is he available for internships?" role="listitem">Is
+                                he available for internships?</button>
+                            <button class="ai-chip" data-ai-chip="/certifications" role="listitem">Show
+                                certifications</button>
+                            <button class="ai-chip" data-ai-chip="/resume" role="listitem">Download resume</button>
+                        </div>
                     </div>
+
+                    <footer class="ai-inputbar">
+                        <button class="ai-icon-btn ai-voice" type="button" data-ai-voice-input
+                            aria-label="Voice input" title="Voice input">
+                            <i data-lucide="mic"></i>
+                        </button>
+
+                        <form class="ai-form" data-ai-form autocomplete="off">
+                            <input class="ai-input" data-ai-input name="prompt" type="text"
+                                placeholder="Message Toluwanimi AI… (try /skills)" aria-label="Message input">
+                            <button class="ai-send" type="submit" aria-label="Send message" title="Send">
+                                <i data-lucide="send"></i>
+                            </button>
+                        </form>
+                    </footer>
+
+                    <button class="ai-fab" type="button" data-ai-fab aria-label="Open fullscreen chat"
+                        title="Open fullscreen">
+                        <i data-lucide="message-square"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="highlights" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Highlights</h2>
+                    <p class="section-subtitle">A quick snapshot of how I build modern, reliable interfaces.</p>
+                </div>
+                <div class="highlights-grid">
+                    <article class="highlight-card">
+                        <div class="highlight-icon" aria-hidden="true">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Performance-first</h3>
+                        <p>Fast loads, clean structure, and reusable UI components that scale.</p>
+                    </article>
+                    <article class="highlight-card">
+                        <div class="highlight-icon" aria-hidden="true">
+                            <i class="fas fa-universal-access"></i>
+                        </div>
+                        <h3>Accessible by default</h3>
+                        <p>Keyboard-friendly, readable contrast, and semantic HTML that works for everyone.</p>
+                    </article>
+                    <article class="highlight-card">
+                        <div class="highlight-icon" aria-hidden="true">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Clear collaboration</h3>
+                        <p>Great communication, clean handoffs, and a focus on delivering what matters.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -588,25 +629,8 @@
                 <form id="nexoraForm" class="animated-form"
                     action="https://formsubmit.co/toluwanimibabalola2707@gmail.com" method="POST" target="_blank">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_autoresponse" value="Hey !
-
-Thank you so much for reaching out. I truly appreciate your interest — whether you're looking to bring a project idea to life or you're hoping to work together on something exciting.
-
-As a passionate Front-End Developer and UI/UX design enthusiast, I love building clean, modern, and user-focused digital experiences that create real value. Your message means a lot, and I’m genuinely looking forward to understanding more about what you have in mind.
-
-I’ll go through the details you shared and get back to you as soon as possible — usually within 24 hours. If it’s urgent or you’d like a faster response, feel free to send me a quick message directly on Telegram using this number:
-
-📱 09078828095
-
-Let’s build something meaningful together.
-
-Warm regards,
-Toluwanimi Babalola
-Front-End Developer | UI/UX Beginner
-✉️ toluwanimibabalola2707@gmail.com
-💼 Let’s create, solve, and grow!
-
-">
+                    <input type="hidden" name="_autoresponse"
+                        value="Hey!&#10;&#10;Thank you so much for reaching out. I truly appreciate your interest, whether you're looking to bring a project idea to life or you're hoping to work together on something exciting.&#10;&#10;As a passionate Front-End Developer and UI/UX design enthusiast, I love building clean, modern, user-focused digital experiences that create real value. Your message means a lot, and I'm genuinely looking forward to understanding more about what you have in mind.&#10;&#10;I'll go through the details you shared and get back to you as soon as possible, usually within 24 hours. If it's urgent, feel free to call or text me on 09078828095.&#10;&#10;Let's build something meaningful together.&#10;&#10;Warm regards,&#10;Toluwanimi Babalola&#10;Front-End Developer | UI/UX Beginner&#10;Email: toluwanimibabalola2707@gmail.com">
                     <input type="hidden" name="_next"
                         value="https://toluwanimibabalolasportfolio.netlify.app/thank-you.html">
                     <input type="hidden" name="_template" value="table">
@@ -703,7 +727,7 @@ Front-End Developer | UI/UX Beginner
                 <div class="footer-contact">
                     <h4>Connect With Me</h4>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/toluwanimi-babalola-41605129b" target="_blank"
+                        <a href="https://www.linkedin.com/in/toluwanimi-babalola-b53076382/" target="_blank"
                             rel="noreferrer" aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
@@ -725,7 +749,7 @@ Front-End Developer | UI/UX Beginner
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Toluwanimi Babalola. All rights reserved @t_dev.</p>
+                <p>&copy; 2025 Toluwanimi Babalola. All rights reserved @t_dev.</p>
                 <div class="footer-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -736,813 +760,11 @@ Front-End Developer | UI/UX Beginner
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const ctx = document.getElementById('skillsPieChart');
-            if (ctx && window.Chart) {
-                new Chart(ctx.getContext('2d'), {
-                    type: 'doughnut',
-                    data: {
-                        labels: ['JavaScript', 'Python', 'Java', 'HTML/CSS', 'UI/UX'],
-                        datasets: [{
-                            data: [30, 15, 5, 47, 3],
-                            backgroundColor: [
-                                'rgba(124, 58, 237, 0.9)',
-                                'rgba(34, 211, 238, 0.9)',
-                                'rgba(248, 150, 30, 0.9)',
-                                'rgba(239, 68, 68, 0.9)',
-                                'rgba(167, 139, 250, 0.9)'
-                            ],
-                            borderWidth: 0,
-                            hoverOffset: 10
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        cutout: '70%',
-                        plugins: {
-                            legend: {
-                                position: 'right',
-                                labels: {
-                                    padding: 20,
-                                    usePointStyle: true,
-                                    pointStyle: 'circle',
-                                    font: {
-                                        size: 12,
-                                        weight: 500
-                                    },
-                                    color: 'rgba(226, 232, 240, 0.85)'
-                                }
-                            },
-                            tooltip: {
-                                callbacks: {
-                                    label: function (context) {
-                                        return ` ${context.label}: ${context.raw}%`;
-                                    }
-                                },
-                                bodyFont: {
-                                    weight: '500'
-                                },
-                                padding: 12,
-                                displayColors: false
-                            }
-                        },
-                        animation: {
-                            animateScale: true,
-                            animateRotate: true
-                        }
-                    }
-                });
-            }
-
-            document.querySelectorAll('.progress-bar').forEach(bar => {
-                const target = bar.dataset.progress || '0';
-                bar.style.width = '0%';
-                setTimeout(() => {
-                    bar.style.width = `${target}%`;
-                }, 120);
-            });
-        });
-    </script>
-
-    <script>
-        (function () {
-            const quotes = [
-                {
-                    text: "Strength isn't about never falling—it's about how many times you rise. Because in the end, the struggle is where courage takes root.",
-                    author: "Toluwanimi"
-                },
-                {
-                    text: "Progress isn't about speed—it's about direction. Because in the end, small steps with purpose outpace aimless sprints.",
-                    author: "Toluwanimi"
-                },
-                {
-                    text: "Surviving is winning, whatever it takes to survive.",
-                    author: "Franklin"
-                },
-                {
-                    text: "The only way to do great work is to love what you do.",
-                    author: "Steve Jobs"
-                },
-                {
-                    text: "Believe you can and you're halfway there.",
-                    author: "Theodore Roosevelt"
-                },
-                {
-                    text: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
-                    author: "Winston Churchill"
-                },
-                {
-                    text: "Don't watch the clock; do what it does. Keep going.",
-                    author: "Sam Levenson"
-                },
-                {
-                    text: "The future belongs to those who believe in the beauty of their dreams.",
-                    author: "Eleanor Roosevelt"
-                },
-                {
-                    text: "You are never too old to set another goal or to dream a new dream.",
-                    author: "C.S. Lewis"
-                },
-                {
-                    text: "Your limitation—it's only your imagination.",
-                    author: "Unknown"
-                },
-                {
-                    text: "Push yourself, because no one else is going to do it for you.",
-                    author: "Unknown"
-                }
-            ];
-
-            const quoteTextElement = document.querySelector('.quote-text');
-            const quoteAuthorElement = document.querySelector('.quote-author');
-            const progressBar = document.querySelector('.quote-progress-bar');
-            const nextButton = document.querySelector('.next');
-            const prevButton = document.querySelector('.prev');
-
-            let currentQuoteIndex = 0;
-            let animationInterval;
-            let isAnimating = false;
-            let isAutoRotating = true;
-            const rotationInterval = 8000;
-
-            document.addEventListener('DOMContentLoaded', () => {
-                showQuote(currentQuoteIndex);
-                startQuoteRotation();
-            });
-
-            function animateProgressBar(duration) {
-                if (!progressBar) return;
-                progressBar.style.animation = 'none';
-                void progressBar.offsetWidth;
-                progressBar.style.animation = `progress ${duration}ms linear forwards`;
-            }
-
-            function showQuote(index) {
-                if (!quoteTextElement || !quoteAuthorElement || isAnimating) return;
-                isAnimating = true;
-                currentQuoteIndex = (index + quotes.length) % quotes.length;
-                animateProgressBar(rotationInterval);
-                quoteTextElement.classList.remove('show');
-                quoteAuthorElement.classList.remove('show');
-
-                setTimeout(() => {
-                    quoteTextElement.textContent = quotes[currentQuoteIndex].text;
-                    quoteAuthorElement.textContent = quotes[currentQuoteIndex].author;
-                    quoteTextElement.classList.add('show');
-                    quoteAuthorElement.classList.add('show');
-                    isAnimating = false;
-                }, 800);
-            }
-
-            function startQuoteRotation() {
-                if (!isAutoRotating) return;
-                clearInterval(animationInterval);
-                animationInterval = setInterval(() => {
-                    showQuote(currentQuoteIndex + 1);
-                }, rotationInterval);
-            }
-
-            function stopQuoteRotation() {
-                clearInterval(animationInterval);
-                if (progressBar) {
-                    progressBar.style.animationPlayState = 'paused';
-                }
-            }
-
-            if (nextButton && prevButton) {
-                nextButton.addEventListener('click', () => {
-                    showQuote(currentQuoteIndex + 1);
-                    startQuoteRotation();
-                });
-
-                prevButton.addEventListener('click', () => {
-                    showQuote(currentQuoteIndex - 1);
-                    startQuoteRotation();
-                });
-            }
-
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowRight') {
-                    showQuote(currentQuoteIndex + 1);
-                    startQuoteRotation();
-                } else if (e.key === 'ArrowLeft') {
-                    showQuote(currentQuoteIndex - 1);
-                    startQuoteRotation();
-                }
-            });
-
-            const theatre = document.querySelector('.quote-theatre');
-            if (theatre) {
-                theatre.addEventListener('mouseenter', () => {
-                    stopQuoteRotation();
-                });
-
-                theatre.addEventListener('mouseleave', () => {
-                    startQuoteRotation();
-                    if (progressBar) {
-                        progressBar.style.animationPlayState = 'running';
-                    }
-                });
-
-                let touchStartX = 0;
-                let touchEndX = 0;
-
-                theatre.addEventListener('touchstart', (e) => {
-                    touchStartX = e.changedTouches[0].screenX;
-                    stopQuoteRotation();
-                }, { passive: true });
-
-                theatre.addEventListener('touchend', (e) => {
-                    touchEndX = e.changedTouches[0].screenX;
-                    handleSwipe();
-                    startQuoteRotation();
-                }, { passive: true });
-
-                function handleSwipe() {
-                    const threshold = 50;
-                    if (touchEndX < touchStartX - threshold) {
-                        showQuote(currentQuoteIndex + 1);
-                    } else if (touchEndX > touchStartX + threshold) {
-                        showQuote(currentQuoteIndex - 1);
-                    }
-                }
-            }
-        })();
-    </script>
-
-    <script>
-        function opentab(tabname, element) {
-            const tablinks = document.getElementsByClassName("tab-links");
-            const tabcontents = document.getElementsByClassName("tab-contents");
-
-            for (const tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (const tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-
-            if (element) {
-                element.classList.add("active-link");
-            }
-            const target = document.getElementById(tabname);
-            if (target) {
-                target.classList.add("active-tab");
-            }
-        }
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const texts = ["Front-end Developer", "UI/UX Designer", "Building Landing Pages"];
-            let index = 0;
-            const typingElement = document.querySelector(".hero-kicker");
-
-            if (!typingElement) return;
-
-            function typeEffect(text, i = 0) {
-                if (i < text.length) {
-                    typingElement.innerHTML = text.substring(0, i + 1) + "|";
-                    setTimeout(() => typeEffect(text, i + 1), 90);
-                } else {
-                    setTimeout(() => deleteEffect(text), 800);
-                }
-            }
-
-            function deleteEffect(text, i = text.length) {
-                if (i > 0) {
-                    typingElement.innerHTML = text.substring(0, i - 1) + "|";
-                    setTimeout(() => deleteEffect(text, i - 1), 60);
-                } else {
-                    index = (index + 1) % texts.length;
-                    setTimeout(() => typeEffect(texts[index]), 400);
-                }
-            }
-
-            typeEffect(texts[index]);
-        });
-    </script>
-
-    <script>
-        (function () {
-            const elements = {
-                chatMessages: document.getElementById('chat-messages'),
-                userInput: document.getElementById('user-input'),
-                sendButton: document.getElementById('send-button'),
-                typingIndicator: document.getElementById('typing-indicator')
-            };
-
-            if (Object.values(elements).some(el => !el)) {
-                return;
-            }
-
-            const sanitizeHTML = (str) => {
-                const div = document.createElement('div');
-                div.textContent = str;
-                return div.innerHTML;
-            };
-
-            const simpleMarkdown = (text) => {
-                try {
-                    return sanitizeHTML(text)
-                        .replace(/^### (.*)$/gm, '<h3 class="text-lg font-semibold">$1</h3>')
-                        .replace(/^## (.*)$/gm, '<h2 class="text-xl font-bold">$1</h2>')
-                        .replace(/^# (.*)$/gm, '<h1 class="text-2xl font-bold">$1</h1>')
-                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                        .replace(/^- (.*)$/gm, '<li>$1</li>')
-                        .replace(/<li>.*<\/li>/g, match => `<ul class="list-disc pl-5">${match}</ul>`)
-                        .replace(/\n/g, '<br>');
-                } catch (error) {
-                    console.error('Markdown parsing error:', error);
-                    return sanitizeHTML(text);
-                }
-            };
-
-            const knowledgeBase = {
-                greetings: {
-                    triggers: ["hi", "hello", "hey", "greetings"],
-                    response: "👋 Hey there! I'm Toluwanimi's AI assistant, here to share insights about his skills, projects, education, and passions. What's sparking your interest today?",
-                    followUps: [
-                        "Tell me about your skills",
-                        "What projects have you worked on?",
-                        "What are your hobbies?"
-                    ]
-                },
-                skills: {
-                    triggers: ["skills", "what can you do", "technologies", "tech stack"],
-                    response: `💻 **Technical Skills**
-
-**Frontend Development**
-- HTML5, CSS3, JavaScript (ES6+)
-- UI libraries: Aceternity UI, Shadcn
-
-**Programming Languages**
-- C++ (Intermediate)
-- C (Intermediate)
-- Python (Basic)
-
-**UI/UX Design**
-- Figma for wireframes & prototypes
-- User flow & design systems
-
-**Other Tools**
-- Firebase
-- Git/GitHub, Netlify, Vercel
-- Basic cybersecurity
-
-Curious about a specific skill?`,
-                    followUps: [
-                        "Tell me about your frontend projects",
-                        "What UI/UX tools do you use?",
-                        "How about your backend skills?"
-                    ],
-                    followUpResponses: {
-                        "Tell me about your frontend projects": `🌟 **Frontend Projects**
-
-I’ve built dynamic, responsive interfaces with a focus on user experience. For example, the **Nexora Tel Website** uses Aceternity UI components and Lottie animations for a sleek, modern look. Another project, **TimetablePro**, features a React.js frontend with smooth transitions and real-time updates via Firebase. Want to dive deeper into one of these?`,
-                        "What UI/UX tools do you use?": `🎨 **UI/UX Toolkit**
-
-I primarily use **Figma** for creating wireframes, prototypes, and design systems. It’s great for collaboration and iterating on user flows. I also dabble in Adobe XD for specific animation designs and leverage tools like Coolors for color schemes. Any tool you’re curious about?`,
-                        "How about your backend skills?": `🛠️ **Backend Skills**
-
-While my strength lies in frontend and UI/UX, I have not gone into backend. If you want to work with me as a backend developer, please contact me via email.`
-                    }
-                },
-                projects: {
-                    triggers: ["projects", "portfolio", "work", "applications"],
-                    response: `🚀 **Notable Projects**
-
-**1. Nexora Tel Website**
-- Recruitment & project portal
-- Features: Lottie animations, Aceternity UI
-- Tech: HTML, CSS, JavaScript, Netlify
-
-**2. TimetablePro**
-- Smart timetable generator
-- Firebase backend, React.js frontend
-- Real-time study notifications
-
-**3. Motivation Clock App**
-- Flip clock with quotes & weather
-- Social sharing features
-
-Which project catches your eye?`,
-                    followUps: [
-                        "Tell me more about Nexora Tel",
-                        "How does TimetablePro work?",
-                        "What tech stack did you use?"
-                    ],
-                    followUpResponses: {
-                        "Tell me more about Nexora Tel": `📌 **Nexora Tel Website**
-
-<a target="_blank" href="https://nexoratel.netlify.app/">Nexora Tel</a>
-This portal streamlines recruitment and project management. It features **Lottie animations** for engaging visuals, a **sticky navigation** for easy access, and **responsive design** for all devices. Built with HTML, CSS, JavaScript, and hosted on Netlify, it’s a showcase of modern web design. Want to know about its challenges or see the code?`,
-                        "How does TimetablePro work?": `⏰ **TimetablePro Mechanics**
-
-TimetablePro generates personalized schedules for students. Users input subjects and preferences, and the app creates an optimized timetable using a custom algorithm. It syncs data via **Firebase Firestore** and sends **push notifications** for study reminders. Curious about the algorithm or user feedback? Project still ongoing, will be released on July 27, 2025.`,
-                        "What tech stack did you use?": `🛠️ **Project Tech Stacks**
-
-- **Nexora Tel**: HTML, CSS, JavaScript, Aceternity UI, Netlify
-- **TimetablePro**: HTML, CSS, JavaScript, Netlify
-- **Motivation Clock**: JavaScript, APIs (weather, quotes), not deployed
-
-Each project leverages tools suited to its goals. Want details on a specific stack?`
-                    }
-                },
-                education: {
-                    triggers: ["education", "school", "university", "covenant", "study"],
-                    response: `🎓 **Education Background**
-
-**Covenant University**
-- B.Sc in Industrial Mathematics (Computer Science)
-- Expected Graduation: 2027
-
-Want to explore my coursework or achievements?`,
-                    followUps: [
-                        "Tell me about your coursework",
-                        "Any academic achievements?"
-                    ],
-                    followUpResponses: {
-                        "Tell me about your coursework": `📚 **Coursework Details**
-
-Details about my coursework are not available at this time.`,
-                        "Any academic achievements?": `🏆 **Academic Achievements**
-
-No notable academic achievements yet, but I'm working hard toward my degree!`
-                    }
-                },
-                hobbies: {
-                    triggers: ["hobbies", "interests", "what do you like", "free time"],
-                    response: `😊 **Personal Interests**
-
-**Creative**
-- UI/UX design
-- Digital art & illustration
-- Anime/manga enthusiast
-
-**Sports & Fitness**
-- Basketball (player & fan)
-
-**Entertainment**
-- Gaming (Call of Duty)
-- Music (Gospel)
-
-What’s a hobby you’d like to explore with me?`,
-                    followUps: [
-                        "What anime do you watch?",
-                        "Tell me about your gaming setup",
-                        "Favorite basketball team?"
-                    ],
-                    followUpResponses: {
-                        "What anime do you watch?": `🎌 **Anime Favorites**
-
-I’m hooked on **Attack on Titan** for its epic storytelling, **Solo Leveling** for stunning visuals and peak plotting, and **Arcane** for its action-packed vibe. Got a favorite anime or need a recommendation?`,
-                        "Tell me about your gaming setup": `🎮 **Gaming Setup**
-
-I game on my **Samsung Galaxy A9**, and **Call of Duty: Mobile** is my go-to for intense, fast-paced action. I use wired earphones for better sound clarity and faster reaction. My setup is all about mobile convenience and skill. Want tips on mobile gaming or my favorite loadouts?`,
-                        "Favorite basketball team?": `🏀 **Basketball Passion**
-
-I’m a huge **Golden State Warriors** fan—Steph Curry’s leadership is inspiring! I also play pickup games, focusing on defense and three-pointers. Want to talk NBA or my on-court moves?`
-                    }
-                },
-                anime: {
-                    triggers: ["anime", "naruto", "attack on titan", "demon slayer", "jujutsu kaisen"],
-                    response: `🎌 **Anime Enthusiast**
-
-**Top Picks**
-- Attack on Titan: Epic plot twists
-- Arcane: Breathtaking animation
-- Solo Leveling: Intense battles
-
-**Why Anime?**
-- Love the storytelling and art
-- Inspired by UI/UX in anime interfaces
-- Active in fan communities
-
-Want to discuss a show or get a recommendation?`,
-                    followUps: [
-                        "Recommend an anime",
-                        "Favorite character?",
-                        "Do you attend conventions?"
-                    ],
-                    followUpResponses: {
-                        "Recommend an anime": `📺 **Anime Recommendation**
-
-If you love action and deep stories, try **Hunter x Hunter**—it’s got a perfect mix of strategy, emotion, and epic fights. For something newer, **My Teen Romantic Comedy SNAFU** offers great character development. What genres do you like?`,
-                        "Favorite character?": `🌟 **Favorite Anime Character**
-
-I’d pick **Levi Ackerman** from Attack on Titan—his calm precision and loyalty are iconic. His fight scenes inspire my UI animation designs! Who’s your favorite character?`,
-                        "Do you attend conventions?": `🎉 **Anime Conventions**
-
-I haven’t attended any conventions yet, but I’m active in online anime communities.`
-                    }
-                },
-                contact: {
-                    triggers: ["contact", "email", "reach", "social media", "connect"],
-                    response: `📬 **Contact Information**
-
-**Professional**
-- Email: toluwanimibabalola2707@gmail.com
-- LinkedIn: <a href="https://www.linkedin.com/in/toluwanimi-babalola-41605129b" target="_blank">LinkedIn Profile</a>
-- GitHub: <a href="https://github.com/tolu-15" target="_blank">github.com/tolu-15</a>
-
-What’s the best way to connect with you?`,
-                    followUps: [
-                        "What's your GitHub?",
-                        "Can I see your resume?",
-                        "Best way to reach you?"
-                    ],
-                    followUpResponses: {
-                        "What's your GitHub?": `📂 **GitHub Profile**
-
-Check out my repos at <a href="https://github.com/tolu-15" target="_blank">github.com/tolu-15</a>. You’ll find projects like Nexora Tel and TimetablePro, showcasing my code. Want me to walk you through a specific repository?`,
-                        "Can I see your resume?": `📄 **Resume Request**
-
-My resume highlights my skills, projects, and education. Please reach out via email (toluwanimibabalola2707@gmail.com) for a copy, and I’ll share it promptly! Anything specific you want to know about my experience?`,
-                        "Best way to reach you?": `📞 **Best Contact Method**
-
-Email (toluwanimibabalola2707@gmail.com) is the fastest way to reach me for professional inquiries. For quick chats, LinkedIn works great too. What’s your preferred method?`
-                    }
-                },
-                career: {
-                    triggers: ["career", "goals", "future", "ambitions", "plans"],
-                    response: `🌟 **Career Goals**
-
-I’m passionate about creating impactful tech solutions. My goal is to lead UI/UX and frontend development for innovative platforms, blending design and code. I aim to work on AI-driven interfaces or smart systems in the next 5 years. Curious about my next steps?`,
-                    followUps: [
-                        "What inspires your career?",
-                        "Any dream companies?",
-                        "How do you stay updated?"
-                    ],
-                    followUpResponses: {
-                        "What inspires your career?": `💡 **Career Inspiration**
-
-I’m driven by the intersection of tech and creativity—think anime-inspired UI designs or intuitive apps like Notion. Solving real-world problems through clean code and beautiful interfaces keeps me motivated. What inspires you?`,
-                        "Any dream companies?": `🏢 **Dream Companies**
-
-I’d love to work with innovative teams at places like **Vercel**, **xAI**, or **Figma**, where design and tech converge. Their focus on user-centric solutions aligns with my vision. Got a favorite company?`,
-                        "How do you stay updated?": `📚 **Staying Updated**
-
-I follow tech blogs like Smashing Magazine, watch WWDC for UI trends, and experiment with new tools on GitHub. I also take Udemy courses to sharpen my skills. Want tips on staying current in tech?`
-                    }
-                },
-                tools: {
-                    triggers: ["tools", "software", "favorite tool", "what do you use"],
-                    response: `🛠️ **Favorite Tools**
-
-I rely on a mix of tools to bring ideas to life:
-- **Figma**: For UI/UX prototyping
-- **VS Code**: My go-to code editor
-- **Tailwind CSS**: For rapid styling
-- **Firebase**: For backend and auth
-- **GitHub**: For version control
-
-Each tool helps me streamline my workflow. Want to know more about one?`,
-                    followUps: [
-                        "Why do you like Figma?",
-                        "How do you use VS Code?",
-                        "Any other tools?"
-                    ],
-                    followUpResponses: {
-                        "Why do you like Figma?": `🎨 **Why Figma?**
-
-Figma’s real-time collaboration and robust design system features make it a game-changer for UI/UX. I use it to craft pixel-perfect prototypes and user flows. Its plugins, like for Lottie animations, are a bonus. Curious about my Figma workflow?`,
-                        "How do you use VS Code?": `💻 **VS Code Usage**
-
-VS Code is my coding hub, with extensions like Prettier, ESLint, and Tailwind Intellisense for efficiency. I customize themes to keep coding fun and use its Git integration for seamless commits. Want to know my favorite extensions?`,
-                        "Any other tools?": `🧰 **Other Tools**
-
-Beyond Figma and VS Code, I use **Vercel** for deployment, **Postman** for API testing, and **Notion** for project planning. Each adds a layer of polish to my work. Got a tool you’re curious about?`
-                    }
-                },
-                default: {
-                    triggers: [],
-                    response: `🤔 Hmm, I’m not sure I caught that. I can tell you about:
-- Technical skills
-- Cool projects
-- Education journey
-- Hobbies & passions
-- Career goals
-- Favorite tools
-
-What’s on your mind?`,
-                    followUps: [
-                        "Tell me about your skills",
-                        "What projects have you done?",
-                        "What are your hobbies?"
-                    ]
-                }
-            };
-
-            let conversationState = {
-                currentTopic: null
-            };
-
-            const getCurrentTime = () => {
-                return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-            };
-
-            const scrollToBottom = () => {
-                elements.chatMessages.scrollTop = elements.chatMessages.scrollHeight;
-            };
-
-            const showTypingIndicator = () => {
-                elements.typingIndicator.style.display = 'flex';
-                scrollToBottom();
-            };
-
-            const hideTypingIndicator = () => {
-                elements.typingIndicator.style.display = 'none';
-            };
-
-            const addMessage = (content, isUser = false) => {
-                const messageDiv = document.createElement('div');
-                messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
-                messageDiv.setAttribute('role', 'article');
-
-                const messageContent = document.createElement('div');
-                messageContent.className = 'message-content';
-                messageContent.innerHTML = simpleMarkdown(content);
-
-                const messageTime = document.createElement('div');
-                messageTime.className = 'message-time';
-                messageTime.textContent = getCurrentTime();
-
-                messageDiv.appendChild(messageContent);
-                messageDiv.appendChild(messageTime);
-
-                elements.chatMessages.appendChild(messageDiv);
-                scrollToBottom();
-            };
-
-            const addBotMessage = (content) => addMessage(content, false);
-            const addUserMessage = (content) => addMessage(content, true);
-
-            const showQuickReplies = (replies) => {
-                const existingReplies = document.querySelector('.quick-replies');
-                if (existingReplies) existingReplies.remove();
-                if (!replies || replies.length === 0) return;
-
-                const quickRepliesDiv = document.createElement('div');
-                quickRepliesDiv.className = 'quick-replies';
-                quickRepliesDiv.setAttribute('role', 'list');
-
-                replies.forEach(reply => {
-                    const button = document.createElement('button');
-                    button.className = 'quick-reply';
-                    button.textContent = reply;
-                    button.setAttribute('data-reply', reply);
-                    button.setAttribute('role', 'listitem');
-                    quickRepliesDiv.appendChild(button);
-                });
-
-                elements.chatMessages.appendChild(quickRepliesDiv);
-                scrollToBottom();
-            };
-
-            const processInput = (input) => {
-                const lowerInput = input.toLowerCase();
-                let responseData = knowledgeBase.default;
-
-                if (conversationState.currentTopic && knowledgeBase[conversationState.currentTopic]?.followUpResponses?.[input]) {
-                    responseData = {
-                        response: knowledgeBase[conversationState.currentTopic].followUpResponses[input],
-                        followUps: knowledgeBase[conversationState.currentTopic].followUps
-                    };
-                } else {
-                    for (const [topic, data] of Object.entries(knowledgeBase)) {
-                        if (topic === 'default') continue;
-                        if (data.triggers.some(trigger => lowerInput.includes(trigger))) {
-                            responseData = data;
-                            conversationState.currentTopic = topic;
-                            break;
-                        }
-                    }
-
-                    if (conversationState.currentTopic === 'projects') {
-                        if (lowerInput.includes('nexora')) {
-                            responseData = knowledgeBase.projects.followUpResponses["Tell me more about Nexora Tel"];
-                        } else if (lowerInput.includes('timetablepro')) {
-                            responseData = knowledgeBase.projects.followUpResponses["How does TimetablePro work?"];
-                        }
-                    }
-                }
-
-                return responseData;
-            };
-
-            const handleSendMessage = async () => {
-                try {
-                    const message = elements.userInput.value.trim();
-                    if (!message) return;
-
-                    addUserMessage(message);
-                    elements.userInput.value = '';
-                    showTypingIndicator();
-
-                    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 1000));
-
-                    const responseData = processInput(message);
-                    addBotMessage(responseData.response);
-                    showQuickReplies(responseData.followUps);
-
-                    hideTypingIndicator();
-                } catch (error) {
-                    console.error('Error in handleSendMessage:', error);
-                    addBotMessage('Oops, something went wrong. Let’s try that again!');
-                    hideTypingIndicator();
-                }
-            };
-
-            const initChat = () => {
-                addBotMessage(knowledgeBase.greetings.response);
-                showQuickReplies(knowledgeBase.greetings.followUps);
-            };
-
-            const setupEventListeners = () => {
-                elements.sendButton.addEventListener('click', handleSendMessage);
-                elements.userInput.addEventListener('keypress', (e) => {
-                    if (e.key === 'Enter' && !e.shiftKey) {
-                        e.preventDefault();
-                        handleSendMessage();
-                    }
-                });
-                elements.chatMessages.addEventListener('click', (e) => {
-                    if (e.target.classList.contains('quick-reply')) {
-                        const reply = e.target.getAttribute('data-reply');
-                        if (reply) {
-                            elements.userInput.value = reply;
-                            handleSendMessage();
-                        }
-                    }
-                });
-            };
-
-            document.addEventListener('DOMContentLoaded', () => {
-                try {
-                    initChat();
-                    setupEventListeners();
-                } catch (error) {
-                    console.error('Initialization failed:', error);
-                    addBotMessage('Failed to initialize chat. Please refresh the page.');
-                }
-            });
-        })();
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('nexoraForm');
-            if (!form) return;
-
-            const statusMessage = document.getElementById('form-status');
-            const submitBtn = form.querySelector('.submit-btn');
-
-            const projectRadios = document.querySelectorAll('input[name="hasProject"]');
-            const projectDetails = document.querySelector('.project-details');
-            projectRadios.forEach(radio => {
-                radio.addEventListener('change', function () {
-                    if (this.value === 'yes') {
-                        projectDetails.classList.add('show');
-                        projectDetails.classList.remove('hidden');
-                    } else {
-                        projectDetails.classList.add('hidden');
-                        projectDetails.classList.remove('show');
-                    }
-                });
-            });
-
-            const workRadios = document.querySelectorAll('input[name="workTogether"]');
-            const roleSelection = document.querySelector('.role-selection');
-            workRadios.forEach(radio => {
-                radio.addEventListener('change', function () {
-                    if (this.value === 'yes') {
-                        roleSelection.classList.add('show');
-                        roleSelection.classList.remove('hidden');
-                    } else {
-                        roleSelection.classList.add('hidden');
-                        roleSelection.classList.remove('show');
-                    }
-                });
-            });
-
-            form.addEventListener('submit', function () {
-                submitBtn.classList.add('loading');
-                showStatusMessage('Sending your message...', 'success');
-            });
-
-            function showStatusMessage(message, type) {
-                if (!statusMessage) return;
-                statusMessage.textContent = message;
-                statusMessage.className = `status-message show-message ${type}`;
-                setTimeout(() => {
-                    statusMessage.classList.remove('show-message');
-                }, 5000);
-            }
-        });
-    </script>
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="js/main.js" defer></script>
+    <script type="module" src="js/ai-chatbot/index.js"></script>
 
     <script type="application/ld+json">
 {
@@ -1550,12 +772,16 @@ What’s on your mind?`,
   "@type": "Person",
   "name": "Babalola Toluwanimi Lanre",
   "jobTitle": "Frontend Developer",
-  "url": "https://toluwanimibabalola.netlify.app/",
+  "url": "https://toluwanimibabalolasportfolio.netlify.app/",
   "sameAs": [
-    "https://toluwanimibabalola.netlify.app/"
+    "https://toluwanimibabalolasportfolio.netlify.app/",
+    "https://www.linkedin.com/in/toluwanimi-babalola-b53076382/",
+    "https://github.com/tolu-15",
+    "https://www.instagram.com/tolu.nimi17/"
   ]
 }
     </script>
 </body>
 
 </html>
+

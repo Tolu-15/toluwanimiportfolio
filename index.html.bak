@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Babalola Toluwanimi Portfolio - Frontend Developer, Industrial Mathematics & Computer Science Student. Showcasing projects and skills.">
+    <meta name="keywords"
+        content="Toluwanimi Babalola, Frontend Developer, Web Developer, Portfolio, Covenant University, Afthonia Foods, Grace Mark Academy Quiz App">
+    <meta name="author" content="Babalola Toluwanimi">
+    <meta name="google-site-verification" content="8dHZ7u7jerwojNw-nlgIvKZ9VIh3-icoKls3aPm8rDg">
+
+    <title>Toluwanimi Babalola | Frontend Developer | Crafting Clean & Modern Websites</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/critical.css">
+    <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <div class="logo">T_dev</div>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="projects/">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero2">
+        <video autoplay muted loop playsinline preload="metadata" src="assets/video/hero.mp4" class="hero-video">
+        </video>
+        <div class="container hero-content">
+            <p class="role">Front-End Developer</p>
+            <h1 class="hero-title">Hi, I'm Toluwanimi Babalola Olanrewaju</h1>
+            <p class="hero-text">
+                I build fast, responsive, and accessible web interfaces. I focus on clean UI systems,
+                scalable components, and smooth user experiences.
+            </p>
+            <div class="hero-cta">
+                <a class="btn btn-primary" href="projects/">View Projects</a>
+                <a class="btn btn-outline" href="#contact">Let's Talk</a>
+            </div>
+        </div>
+    </section>
+    <header class="site-header" id="home">
+        <div class="container">
+            <!-- <nav class="site-nav">
+                <div class="brand">Toluwanimi</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav> -->
+
+            <div class="hero">
+                <div class="hero-content">
+                    <p class="hero-kicker typewriter">I am a front-end Developer</p>
+                    <h1 class="hero-title">Welcome <span>To My</span><br>Website</h1>
+                    <p class="hero-subtitle">Frontend Developer focused on sleek, modern, and user-first interfaces.</p>
+                    <div class="hero-actions">
+                        <a class="cv-button" href="#contact">Let's Work Together</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <dotlottie-player src="https://lottie.host/25ab8ee9-0876-440b-8ea7-ff671c66c781/bhICJMSUxq.lottie"
+                        background="transparent" speed="1" loop autoplay></dotlottie-player>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills Matrix</h2>
+                    <p class="section-subtitle">A visual representation of my technical competencies and proficiency
+                        levels.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <h3 class="card-title">Skills Distribution</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="skillsPieChart"></canvas>
+                        </div>
+                        <div class="skill-meta">
+                            <span class="skill-percent">Percentage based on project experience</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3 class="card-title">Skill Proficiency</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div>
+                                    <span class="skill-name">
+                                        <i class="fab fa-js"></i> JavaScript
+                                    </span>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" data-progress="40"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-level">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div>
+                                    <span class="skill-name">
+                                        <i class="fab fa-react"></i> React
+                                    </span>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" data-progress="10"></div>
+                                    </div>
+                                    <div class="skill-meta">
+                                        <span class="skill-percent">Basic understanding</span>
+                                        <span class="skill-status status-pending">Pending</span>
+                                    </div>
+                                </div>
+                                <div class="skill-level">
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div>
+                                    <span class="skill-name">
+                                        <i class="fab fa-node-js"></i> Node.js
+                                    </span>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" data-progress="10"></div>
+                                    </div>
+                                    <div class="skill-meta">
+                                        <span class="skill-percent">Fundamentals</span>
+                                        <span class="skill-status status-pending">Pending</span>
+                                    </div>
+                                </div>
+                                <div class="skill-level">
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div>
+                                    <span class="skill-name">
+                                        <i class="fas fa-paint-brush"></i> UI/UX Design
+                                    </span>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" data-progress="5"></div>
+                                    </div>
+                                    <div class="skill-meta">
+                                        <span class="skill-percent">Fundamentals</span>
+                                        <span class="skill-status status-pending">Pending</span>
+                                    </div>
+                                </div>
+                                <div class="skill-level">
+                                    <span class="star">★</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div>
+                                    <span class="skill-name">
+                                        <i class="fab fa-python"></i> Python
+                                    </span>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" data-progress="20"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-level">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div>
+                                    <span class="skill-name">
+                                        <i class="fab fa-java"></i> Java
+                                    </span>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" data-progress="10"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-level">
+                                    <span class="star">★</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                    <span class="empty-star">☆</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quotes" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Daily Motivation</h2>
+                    <p class="section-subtitle">A rotating collection of mindset, resilience, and growth reminders.</p>
+                </div>
+                <div class="quote-master-container">
+                    <div class="quote-theatre">
+                        <div class="quote-stage">
+                            <div class="quote-actor">
+                                <div class="quote-text cosmic-in"></div>
+                                <div class="quote-author cosmic-in"></div>
+                            </div>
+                        </div>
+                        <div class="quote-control-panel">
+                            <button class="quote-nav prev" aria-label="Previous quote">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+                                </svg>
+                            </button>
+                            <div class="quote-progress-container">
+                                <div class="quote-progress-bar"></div>
+                            </div>
+                            <button class="quote-nav next" aria-label="Next quote">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="row about-grid">
+                    <div class="about-col-1">
+                        <div class="tilt-img">
+                            <img src="assets/images/profile.png" alt="Portrait of Toluwanimi">
+                        </div>
+                    </div>
+                    <div class="about-col-2">
+                        <h2 class="section-title section-title-left">About Me</h2>
+                        <p class="about-text">
+                            Babalola Toluwanimi — Industrial Mathematics & Computer Science student at Covenant
+                            University. I'm a passionate problem-solver with strong analytical skills and a growing
+                            frontend toolkit (HTML5, CSS, JavaScript, UI/UX). I gained hands-on experience during my
+                            Pre-IT internship at Micronet Technologies, Lagos, and I'm committed to continuous learning
+                            and building clean digital solutions.
+                        </p>
+
+                        <div class="tab-titles">
+                            <button class="tab-links active-link" onclick="opentab('skills', this)">Skills</button>
+                            <button class="tab-links" onclick="opentab('experience', this)">Experience</button>
+                            <button class="tab-links" onclick="opentab('education', this)">Education</button>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing web interfaces and landing pages</li>
+                                <li><span>Web Development</span><br>Responsive, performance-focused web builds</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2023 - Current</span><br>Learning Web Design at APTECH Abeokuta</li>
+                                <li><span>March 2025</span><br>IT at Micronet Technologies, Lagos, Nigeria</li>
+                                <li><a href="https://afthoniafooods.netlify.app/">One of my Work</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2023 - 2027</span><br>Industrial Mathematics (Computer Science), Covenant
+                                    University</li>
+                                <li><span>Web Development</span><br>APTECH Abeokuta</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="assistant" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Toluwanimi AI</h2>
+                    <p class="section-subtitle">Ask about skills, projects, education, or hobbies.</p>
+                </div>
+                <main class="chat-section" role="main">
+                    <div class="ai-lottie-wrapper" aria-hidden="true">
+                        <dotlottie-player
+                            src="https://lottie.host/531b3e9c-8393-4003-a857-6c4e410d07b5/OQFaSMB2si.lottie"
+                            background="transparent" speed="1" loop autoplay></dotlottie-player>
+                    </div>
+                    <section class="chat-container" aria-label="Chat interface">
+                        <header class="chat-header">
+                            <div class="header-contents">
+                                <div class="avatar">
+                                    <img src="https://thefusioneer.com/wp-content/uploads/2023/11/5-AI-Advancements-to-Expect-in-the-Next-10-Years-scaled.jpeg"
+                                        alt="Toluwanimi's AI avatar">
+                                </div>
+                                <div class="header-texts">
+                                    <h3>Toluwanimi AI</h3>
+                                    <p>Ask me about skills, projects, or hobbies</p>
+                                </div>
+                            </div>
+                            <div class="header-actions">
+                                <button class="icon-button" aria-label="More options">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </header>
+                        <div class="chat-messages" id="chat-messages" role="log" aria-live="polite">
+                            <div class="message bot-message welcome-message">
+                                <div class="message-content">
+                                    <p>👋 Hello! I'm Toluwanimi's AI assistant. I can tell you about his:</p>
+                                    <ul class="options-list">
+                                        <li><span class="option-tag">Skills</span> & technologies he works with</li>
+                                        <li><span class="option-tag">Projects</span> he's built</li>
+                                        <li><span class="option-tag">Education</span> background</li>
+                                        <li><span class="option-tag">Hobbies</span> & interests</li>
+                                    </ul>
+                                    <p>What would you like to know?</p>
+                                </div>
+                                <div class="message-time">Just now</div>
+                            </div>
+                            <div class="quick-replies" role="list">
+                                <button class="quick-reply" data-reply="Tell me about your skills"
+                                    role="listitem">Skills</button>
+                                <button class="quick-reply" data-reply="What projects have you worked on?"
+                                    role="listitem">Projects</button>
+                                <button class="quick-reply" data-reply="What are your hobbies?"
+                                    role="listitem">Hobbies</button>
+                            </div>
+                        </div>
+                        <div class="chat-input-container">
+                            <div class="typing-indicator" id="typing-indicator" aria-hidden="true">
+                                <div class="typing-dot"></div>
+                                <div class="typing-dot"></div>
+                                <div class="typing-dot"></div>
+                            </div>
+                            <div class="chat-input">
+                                <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off"
+                                    aria-label="Type your message">
+                                <button id="send-button" aria-label="Send message">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </section>
+
+        <section id="integration" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Telegram Integration <span class="alert"> COMING SOON</span></h2>
+                    <p class="section-subtitle">AI-powered assistant for streamlined business operations.</p>
+                </div>
+                <div class="telegram-bot-card">
+                    <div class="bot-header">
+                        <div class="bot-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                                <path
+                                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.534.26l.2-3.004 5.56-5.02c.24-.213-.054-.334-.373-.12l-6.87 4.33-2.96-.92c-.64-.203-.658-.64.135-.954l11.57-4.46c.538-.196 1.006.128.832.94z" />
+                            </svg>
+                        </div>
+                        <div class="header-text">
+                            <h3>Telegram Integration</h3>
+                            <p class="bot-subtitle">AI-Powered Business Assistant</p>
+                        </div>
+                    </div>
+                    <p class="bot-description">Streamline your operations with seamless Telegram integration. Automate
+                        orders, customer support, and business processes through an intelligent bot solution.</p>
+                    <div class="button-container">
+                        <a href="https://t.me/t_dev25_bot" class="invite-button" target="_blank" rel="noreferrer">
+                            Connect Now
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18"
+                                height="18">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                        <div class="button-hover-effect"></div>
+                    </div>
+
+                    <div class="card-background">
+                        <div class="grid-pattern"></div>
+                        <div class="gradient-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="service" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My Services</h2>
+                    <p class="section-subtitle">Reliable delivery for clean, modern, and scalable interfaces.</p>
+                </div>
+                <div class="service-container">
+                    <div class="service-box">Front-End Development</div>
+                    <div class="service-box">UI/UX Design</div>
+                    <div class="service-box">Landing Page Builds</div>
+                </div>
+                <div class="lottie-container">
+                    <dotlottie-player style="width: 50%;"
+                        src="https://lottie.host/539726a5-e260-4bd2-913b-eee0b1ca0a76/c9JOMjwBnD.lottie"
+                        background="transparent" speed="1" loop autoplay></dotlottie-player>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-form-section">
+            <div class="container">
+                <h2 class="section-heading">
+                    <span class="greeting">Hi, I'm a</span><br>
+                    <span class="title typewriter">Front End Developer</span>
+                </h2>
+
+                <form id="nexoraForm" class="animated-form"
+                    action="https://formsubmit.co/toluwanimibabalola2707@gmail.com" method="POST" target="_blank">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_autoresponse" value="Hey !
+
+Thank you so much for reaching out. I truly appreciate your interest — whether you're looking to bring a project idea to life or you're hoping to work together on something exciting.
+
+As a passionate Front-End Developer and UI/UX design enthusiast, I love building clean, modern, and user-focused digital experiences that create real value. Your message means a lot, and I’m genuinely looking forward to understanding more about what you have in mind.
+
+I’ll go through the details you shared and get back to you as soon as possible — usually within 24 hours. If it’s urgent or you’d like a faster response, feel free to send me a quick message directly on Telegram using this number:
+
+📱 09078828095
+
+Let’s build something meaningful together.
+
+Warm regards,
+Toluwanimi Babalola
+Front-End Developer | UI/UX Beginner
+✉️ toluwanimibabalola2707@gmail.com
+💼 Let’s create, solve, and grow!
+
+">
+                    <input type="hidden" name="_next"
+                        value="https://toluwanimibabalolasportfolio.netlify.app/thank-you.html">
+                    <input type="hidden" name="_template" value="table">
+
+                    <div class="status-message hidden" id="form-status"></div>
+
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                        <div class="underline"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email Address</label>
+                        <div class="underline"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone">
+                        <label for="phone">Phone Number (optional)</label>
+                        <div class="underline"></div>
+                    </div>
+
+                    <div class="radio-group">
+                        <p class="radio-question">Do you have a project in mind?</p>
+                        <div class="radio-options">
+                            <label class="radio-button">
+                                <input type="radio" name="hasProject" value="yes" required>
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">Yes</span>
+                            </label>
+                            <label class="radio-button">
+                                <input type="radio" name="hasProject" value="no">
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">No</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group project-details hidden">
+                        <textarea id="projectDetails" name="projectDetails" rows="4"></textarea>
+                        <label for="projectDetails">Describe your project</label>
+                        <div class="underline"></div>
+                    </div>
+
+                    <div class="radio-group">
+                        <p class="radio-question">Would you like to work with me?</p>
+                        <div class="radio-options">
+                            <label class="radio-button">
+                                <input type="radio" name="workTogether" value="yes" required>
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">Yes</span>
+                            </label>
+                            <label class="radio-button">
+                                <input type="radio" name="workTogether" value="no">
+                                <span class="radio-custom"></span>
+                                <span class="radio-label">No</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group role-selection hidden">
+                        <select id="role" name="role">
+                            <option value="" disabled selected>Select a role</option>
+                            <option value="ui-ux">UI/UX Designer</option>
+                            <option value="frontend">Front End Developer</option>
+                            <option value="backend">Back End Developer</option>
+                            <option value="fullstack">Full Stack Developer</option>
+                        </select>
+                        <div class="select-arrow"></div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="professional-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Toluwanimi Babalola - @t_dev</h3>
+                    <p>Front-end Developer | UI/UX Beginner</p>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Connect With Me</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/toluwanimi-babalola-41605129b" target="_blank"
+                            rel="noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/tolu.nimi17/" target="_blank" rel="noreferrer"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/tolu-15" target="_blank" rel="noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:toluwanimibabalola2707@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+2349078828095" aria-label="Phone">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Toluwanimi Babalola. All rights reserved @t_dev.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#contact">Contact</a>
+                    <a href="https://afthoniafooods.netlify.app/">One of my Work</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('skillsPieChart');
+            if (ctx && window.Chart) {
+                new Chart(ctx.getContext('2d'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['JavaScript', 'Python', 'Java', 'HTML/CSS', 'UI/UX'],
+                        datasets: [{
+                            data: [30, 15, 5, 47, 3],
+                            backgroundColor: [
+                                'rgba(124, 58, 237, 0.9)',
+                                'rgba(34, 211, 238, 0.9)',
+                                'rgba(248, 150, 30, 0.9)',
+                                'rgba(239, 68, 68, 0.9)',
+                                'rgba(167, 139, 250, 0.9)'
+                            ],
+                            borderWidth: 0,
+                            hoverOffset: 10
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '70%',
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                                labels: {
+                                    padding: 20,
+                                    usePointStyle: true,
+                                    pointStyle: 'circle',
+                                    font: {
+                                        size: 12,
+                                        weight: 500
+                                    },
+                                    color: 'rgba(226, 232, 240, 0.85)'
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function (context) {
+                                        return ` ${context.label}: ${context.raw}%`;
+                                    }
+                                },
+                                bodyFont: {
+                                    weight: '500'
+                                },
+                                padding: 12,
+                                displayColors: false
+                            }
+                        },
+                        animation: {
+                            animateScale: true,
+                            animateRotate: true
+                        }
+                    }
+                });
+            }
+
+            document.querySelectorAll('.progress-bar').forEach(bar => {
+                const target = bar.dataset.progress || '0';
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = `${target}%`;
+                }, 120);
+            });
+        });
+    </script>
+
+    <script>
+        (function () {
+            const quotes = [
+                {
+                    text: "Strength isn't about never falling—it's about how many times you rise. Because in the end, the struggle is where courage takes root.",
+                    author: "Toluwanimi"
+                },
+                {
+                    text: "Progress isn't about speed—it's about direction. Because in the end, small steps with purpose outpace aimless sprints.",
+                    author: "Toluwanimi"
+                },
+                {
+                    text: "Surviving is winning, whatever it takes to survive.",
+                    author: "Franklin"
+                },
+                {
+                    text: "The only way to do great work is to love what you do.",
+                    author: "Steve Jobs"
+                },
+                {
+                    text: "Believe you can and you're halfway there.",
+                    author: "Theodore Roosevelt"
+                },
+                {
+                    text: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+                    author: "Winston Churchill"
+                },
+                {
+                    text: "Don't watch the clock; do what it does. Keep going.",
+                    author: "Sam Levenson"
+                },
+                {
+                    text: "The future belongs to those who believe in the beauty of their dreams.",
+                    author: "Eleanor Roosevelt"
+                },
+                {
+                    text: "You are never too old to set another goal or to dream a new dream.",
+                    author: "C.S. Lewis"
+                },
+                {
+                    text: "Your limitation—it's only your imagination.",
+                    author: "Unknown"
+                },
+                {
+                    text: "Push yourself, because no one else is going to do it for you.",
+                    author: "Unknown"
+                }
+            ];
+
+            const quoteTextElement = document.querySelector('.quote-text');
+            const quoteAuthorElement = document.querySelector('.quote-author');
+            const progressBar = document.querySelector('.quote-progress-bar');
+            const nextButton = document.querySelector('.next');
+            const prevButton = document.querySelector('.prev');
+
+            let currentQuoteIndex = 0;
+            let animationInterval;
+            let isAnimating = false;
+            let isAutoRotating = true;
+            const rotationInterval = 8000;
+
+            document.addEventListener('DOMContentLoaded', () => {
+                showQuote(currentQuoteIndex);
+                startQuoteRotation();
+            });
+
+            function animateProgressBar(duration) {
+                if (!progressBar) return;
+                progressBar.style.animation = 'none';
+                void progressBar.offsetWidth;
+                progressBar.style.animation = `progress ${duration}ms linear forwards`;
+            }
+
+            function showQuote(index) {
+                if (!quoteTextElement || !quoteAuthorElement || isAnimating) return;
+                isAnimating = true;
+                currentQuoteIndex = (index + quotes.length) % quotes.length;
+                animateProgressBar(rotationInterval);
+                quoteTextElement.classList.remove('show');
+                quoteAuthorElement.classList.remove('show');
+
+                setTimeout(() => {
+                    quoteTextElement.textContent = quotes[currentQuoteIndex].text;
+                    quoteAuthorElement.textContent = quotes[currentQuoteIndex].author;
+                    quoteTextElement.classList.add('show');
+                    quoteAuthorElement.classList.add('show');
+                    isAnimating = false;
+                }, 800);
+            }
+
+            function startQuoteRotation() {
+                if (!isAutoRotating) return;
+                clearInterval(animationInterval);
+                animationInterval = setInterval(() => {
+                    showQuote(currentQuoteIndex + 1);
+                }, rotationInterval);
+            }
+
+            function stopQuoteRotation() {
+                clearInterval(animationInterval);
+                if (progressBar) {
+                    progressBar.style.animationPlayState = 'paused';
+                }
+            }
+
+            if (nextButton && prevButton) {
+                nextButton.addEventListener('click', () => {
+                    showQuote(currentQuoteIndex + 1);
+                    startQuoteRotation();
+                });
+
+                prevButton.addEventListener('click', () => {
+                    showQuote(currentQuoteIndex - 1);
+                    startQuoteRotation();
+                });
+            }
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    showQuote(currentQuoteIndex + 1);
+                    startQuoteRotation();
+                } else if (e.key === 'ArrowLeft') {
+                    showQuote(currentQuoteIndex - 1);
+                    startQuoteRotation();
+                }
+            });
+
+            const theatre = document.querySelector('.quote-theatre');
+            if (theatre) {
+                theatre.addEventListener('mouseenter', () => {
+                    stopQuoteRotation();
+                });
+
+                theatre.addEventListener('mouseleave', () => {
+                    startQuoteRotation();
+                    if (progressBar) {
+                        progressBar.style.animationPlayState = 'running';
+                    }
+                });
+
+                let touchStartX = 0;
+                let touchEndX = 0;
+
+                theatre.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                    stopQuoteRotation();
+                }, { passive: true });
+
+                theatre.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                    startQuoteRotation();
+                }, { passive: true });
+
+                function handleSwipe() {
+                    const threshold = 50;
+                    if (touchEndX < touchStartX - threshold) {
+                        showQuote(currentQuoteIndex + 1);
+                    } else if (touchEndX > touchStartX + threshold) {
+                        showQuote(currentQuoteIndex - 1);
+                    }
+                }
+            }
+        })();
+    </script>
+
+    <script>
+        function opentab(tabname, element) {
+            const tablinks = document.getElementsByClassName("tab-links");
+            const tabcontents = document.getElementsByClassName("tab-contents");
+
+            for (const tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (const tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            if (element) {
+                element.classList.add("active-link");
+            }
+            const target = document.getElementById(tabname);
+            if (target) {
+                target.classList.add("active-tab");
+            }
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const texts = ["Front-end Developer", "UI/UX Designer", "Building Landing Pages"];
+            let index = 0;
+            const typingElement = document.querySelector(".hero-kicker");
+
+            if (!typingElement) return;
+
+            function typeEffect(text, i = 0) {
+                if (i < text.length) {
+                    typingElement.innerHTML = text.substring(0, i + 1) + "|";
+                    setTimeout(() => typeEffect(text, i + 1), 90);
+                } else {
+                    setTimeout(() => deleteEffect(text), 800);
+                }
+            }
+
+            function deleteEffect(text, i = text.length) {
+                if (i > 0) {
+                    typingElement.innerHTML = text.substring(0, i - 1) + "|";
+                    setTimeout(() => deleteEffect(text, i - 1), 60);
+                } else {
+                    index = (index + 1) % texts.length;
+                    setTimeout(() => typeEffect(texts[index]), 400);
+                }
+            }
+
+            typeEffect(texts[index]);
+        });
+    </script>
+
+    <script>
+        (function () {
+            const elements = {
+                chatMessages: document.getElementById('chat-messages'),
+                userInput: document.getElementById('user-input'),
+                sendButton: document.getElementById('send-button'),
+                typingIndicator: document.getElementById('typing-indicator')
+            };
+
+            if (Object.values(elements).some(el => !el)) {
+                return;
+            }
+
+            const sanitizeHTML = (str) => {
+                const div = document.createElement('div');
+                div.textContent = str;
+                return div.innerHTML;
+            };
+
+            const simpleMarkdown = (text) => {
+                try {
+                    return sanitizeHTML(text)
+                        .replace(/^### (.*)$/gm, '<h3 class="text-lg font-semibold">$1</h3>')
+                        .replace(/^## (.*)$/gm, '<h2 class="text-xl font-bold">$1</h2>')
+                        .replace(/^# (.*)$/gm, '<h1 class="text-2xl font-bold">$1</h1>')
+                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                        .replace(/^- (.*)$/gm, '<li>$1</li>')
+                        .replace(/<li>.*<\/li>/g, match => `<ul class="list-disc pl-5">${match}</ul>`)
+                        .replace(/\n/g, '<br>');
+                } catch (error) {
+                    console.error('Markdown parsing error:', error);
+                    return sanitizeHTML(text);
+                }
+            };
+
+            const knowledgeBase = {
+                greetings: {
+                    triggers: ["hi", "hello", "hey", "greetings"],
+                    response: "👋 Hey there! I'm Toluwanimi's AI assistant, here to share insights about his skills, projects, education, and passions. What's sparking your interest today?",
+                    followUps: [
+                        "Tell me about your skills",
+                        "What projects have you worked on?",
+                        "What are your hobbies?"
+                    ]
+                },
+                skills: {
+                    triggers: ["skills", "what can you do", "technologies", "tech stack"],
+                    response: `💻 **Technical Skills**
+
+**Frontend Development**
+- HTML5, CSS3, JavaScript (ES6+)
+- UI libraries: Aceternity UI, Shadcn
+
+**Programming Languages**
+- C++ (Intermediate)
+- C (Intermediate)
+- Python (Basic)
+
+**UI/UX Design**
+- Figma for wireframes & prototypes
+- User flow & design systems
+
+**Other Tools**
+- Firebase
+- Git/GitHub, Netlify, Vercel
+- Basic cybersecurity
+
+Curious about a specific skill?`,
+                    followUps: [
+                        "Tell me about your frontend projects",
+                        "What UI/UX tools do you use?",
+                        "How about your backend skills?"
+                    ],
+                    followUpResponses: {
+                        "Tell me about your frontend projects": `🌟 **Frontend Projects**
+
+I’ve built dynamic, responsive interfaces with a focus on user experience. For example, the **Nexora Tel Website** uses Aceternity UI components and Lottie animations for a sleek, modern look. Another project, **TimetablePro**, features a React.js frontend with smooth transitions and real-time updates via Firebase. Want to dive deeper into one of these?`,
+                        "What UI/UX tools do you use?": `🎨 **UI/UX Toolkit**
+
+I primarily use **Figma** for creating wireframes, prototypes, and design systems. It’s great for collaboration and iterating on user flows. I also dabble in Adobe XD for specific animation designs and leverage tools like Coolors for color schemes. Any tool you’re curious about?`,
+                        "How about your backend skills?": `🛠️ **Backend Skills**
+
+While my strength lies in frontend and UI/UX, I have not gone into backend. If you want to work with me as a backend developer, please contact me via email.`
+                    }
+                },
+                projects: {
+                    triggers: ["projects", "portfolio", "work", "applications"],
+                    response: `🚀 **Notable Projects**
+
+**1. Nexora Tel Website**
+- Recruitment & project portal
+- Features: Lottie animations, Aceternity UI
+- Tech: HTML, CSS, JavaScript, Netlify
+
+**2. TimetablePro**
+- Smart timetable generator
+- Firebase backend, React.js frontend
+- Real-time study notifications
+
+**3. Motivation Clock App**
+- Flip clock with quotes & weather
+- Social sharing features
+
+Which project catches your eye?`,
+                    followUps: [
+                        "Tell me more about Nexora Tel",
+                        "How does TimetablePro work?",
+                        "What tech stack did you use?"
+                    ],
+                    followUpResponses: {
+                        "Tell me more about Nexora Tel": `📌 **Nexora Tel Website**
+
+<a target="_blank" href="https://nexoratel.netlify.app/">Nexora Tel</a>
+This portal streamlines recruitment and project management. It features **Lottie animations** for engaging visuals, a **sticky navigation** for easy access, and **responsive design** for all devices. Built with HTML, CSS, JavaScript, and hosted on Netlify, it’s a showcase of modern web design. Want to know about its challenges or see the code?`,
+                        "How does TimetablePro work?": `⏰ **TimetablePro Mechanics**
+
+TimetablePro generates personalized schedules for students. Users input subjects and preferences, and the app creates an optimized timetable using a custom algorithm. It syncs data via **Firebase Firestore** and sends **push notifications** for study reminders. Curious about the algorithm or user feedback? Project still ongoing, will be released on July 27, 2025.`,
+                        "What tech stack did you use?": `🛠️ **Project Tech Stacks**
+
+- **Nexora Tel**: HTML, CSS, JavaScript, Aceternity UI, Netlify
+- **TimetablePro**: HTML, CSS, JavaScript, Netlify
+- **Motivation Clock**: JavaScript, APIs (weather, quotes), not deployed
+
+Each project leverages tools suited to its goals. Want details on a specific stack?`
+                    }
+                },
+                education: {
+                    triggers: ["education", "school", "university", "covenant", "study"],
+                    response: `🎓 **Education Background**
+
+**Covenant University**
+- B.Sc in Industrial Mathematics (Computer Science)
+- Expected Graduation: 2027
+
+Want to explore my coursework or achievements?`,
+                    followUps: [
+                        "Tell me about your coursework",
+                        "Any academic achievements?"
+                    ],
+                    followUpResponses: {
+                        "Tell me about your coursework": `📚 **Coursework Details**
+
+Details about my coursework are not available at this time.`,
+                        "Any academic achievements?": `🏆 **Academic Achievements**
+
+No notable academic achievements yet, but I'm working hard toward my degree!`
+                    }
+                },
+                hobbies: {
+                    triggers: ["hobbies", "interests", "what do you like", "free time"],
+                    response: `😊 **Personal Interests**
+
+**Creative**
+- UI/UX design
+- Digital art & illustration
+- Anime/manga enthusiast
+
+**Sports & Fitness**
+- Basketball (player & fan)
+
+**Entertainment**
+- Gaming (Call of Duty)
+- Music (Gospel)
+
+What’s a hobby you’d like to explore with me?`,
+                    followUps: [
+                        "What anime do you watch?",
+                        "Tell me about your gaming setup",
+                        "Favorite basketball team?"
+                    ],
+                    followUpResponses: {
+                        "What anime do you watch?": `🎌 **Anime Favorites**
+
+I’m hooked on **Attack on Titan** for its epic storytelling, **Solo Leveling** for stunning visuals and peak plotting, and **Arcane** for its action-packed vibe. Got a favorite anime or need a recommendation?`,
+                        "Tell me about your gaming setup": `🎮 **Gaming Setup**
+
+I game on my **Samsung Galaxy A9**, and **Call of Duty: Mobile** is my go-to for intense, fast-paced action. I use wired earphones for better sound clarity and faster reaction. My setup is all about mobile convenience and skill. Want tips on mobile gaming or my favorite loadouts?`,
+                        "Favorite basketball team?": `🏀 **Basketball Passion**
+
+I’m a huge **Golden State Warriors** fan—Steph Curry’s leadership is inspiring! I also play pickup games, focusing on defense and three-pointers. Want to talk NBA or my on-court moves?`
+                    }
+                },
+                anime: {
+                    triggers: ["anime", "naruto", "attack on titan", "demon slayer", "jujutsu kaisen"],
+                    response: `🎌 **Anime Enthusiast**
+
+**Top Picks**
+- Attack on Titan: Epic plot twists
+- Arcane: Breathtaking animation
+- Solo Leveling: Intense battles
+
+**Why Anime?**
+- Love the storytelling and art
+- Inspired by UI/UX in anime interfaces
+- Active in fan communities
+
+Want to discuss a show or get a recommendation?`,
+                    followUps: [
+                        "Recommend an anime",
+                        "Favorite character?",
+                        "Do you attend conventions?"
+                    ],
+                    followUpResponses: {
+                        "Recommend an anime": `📺 **Anime Recommendation**
+
+If you love action and deep stories, try **Hunter x Hunter**—it’s got a perfect mix of strategy, emotion, and epic fights. For something newer, **My Teen Romantic Comedy SNAFU** offers great character development. What genres do you like?`,
+                        "Favorite character?": `🌟 **Favorite Anime Character**
+
+I’d pick **Levi Ackerman** from Attack on Titan—his calm precision and loyalty are iconic. His fight scenes inspire my UI animation designs! Who’s your favorite character?`,
+                        "Do you attend conventions?": `🎉 **Anime Conventions**
+
+I haven’t attended any conventions yet, but I’m active in online anime communities.`
+                    }
+                },
+                contact: {
+                    triggers: ["contact", "email", "reach", "social media", "connect"],
+                    response: `📬 **Contact Information**
+
+**Professional**
+- Email: toluwanimibabalola2707@gmail.com
+- LinkedIn: <a href="https://www.linkedin.com/in/toluwanimi-babalola-41605129b" target="_blank">LinkedIn Profile</a>
+- GitHub: <a href="https://github.com/tolu-15" target="_blank">github.com/tolu-15</a>
+
+What’s the best way to connect with you?`,
+                    followUps: [
+                        "What's your GitHub?",
+                        "Can I see your resume?",
+                        "Best way to reach you?"
+                    ],
+                    followUpResponses: {
+                        "What's your GitHub?": `📂 **GitHub Profile**
+
+Check out my repos at <a href="https://github.com/tolu-15" target="_blank">github.com/tolu-15</a>. You’ll find projects like Nexora Tel and TimetablePro, showcasing my code. Want me to walk you through a specific repository?`,
+                        "Can I see your resume?": `📄 **Resume Request**
+
+My resume highlights my skills, projects, and education. Please reach out via email (toluwanimibabalola2707@gmail.com) for a copy, and I’ll share it promptly! Anything specific you want to know about my experience?`,
+                        "Best way to reach you?": `📞 **Best Contact Method**
+
+Email (toluwanimibabalola2707@gmail.com) is the fastest way to reach me for professional inquiries. For quick chats, LinkedIn works great too. What’s your preferred method?`
+                    }
+                },
+                career: {
+                    triggers: ["career", "goals", "future", "ambitions", "plans"],
+                    response: `🌟 **Career Goals**
+
+I’m passionate about creating impactful tech solutions. My goal is to lead UI/UX and frontend development for innovative platforms, blending design and code. I aim to work on AI-driven interfaces or smart systems in the next 5 years. Curious about my next steps?`,
+                    followUps: [
+                        "What inspires your career?",
+                        "Any dream companies?",
+                        "How do you stay updated?"
+                    ],
+                    followUpResponses: {
+                        "What inspires your career?": `💡 **Career Inspiration**
+
+I’m driven by the intersection of tech and creativity—think anime-inspired UI designs or intuitive apps like Notion. Solving real-world problems through clean code and beautiful interfaces keeps me motivated. What inspires you?`,
+                        "Any dream companies?": `🏢 **Dream Companies**
+
+I’d love to work with innovative teams at places like **Vercel**, **xAI**, or **Figma**, where design and tech converge. Their focus on user-centric solutions aligns with my vision. Got a favorite company?`,
+                        "How do you stay updated?": `📚 **Staying Updated**
+
+I follow tech blogs like Smashing Magazine, watch WWDC for UI trends, and experiment with new tools on GitHub. I also take Udemy courses to sharpen my skills. Want tips on staying current in tech?`
+                    }
+                },
+                tools: {
+                    triggers: ["tools", "software", "favorite tool", "what do you use"],
+                    response: `🛠️ **Favorite Tools**
+
+I rely on a mix of tools to bring ideas to life:
+- **Figma**: For UI/UX prototyping
+- **VS Code**: My go-to code editor
+- **Tailwind CSS**: For rapid styling
+- **Firebase**: For backend and auth
+- **GitHub**: For version control
+
+Each tool helps me streamline my workflow. Want to know more about one?`,
+                    followUps: [
+                        "Why do you like Figma?",
+                        "How do you use VS Code?",
+                        "Any other tools?"
+                    ],
+                    followUpResponses: {
+                        "Why do you like Figma?": `🎨 **Why Figma?**
+
+Figma’s real-time collaboration and robust design system features make it a game-changer for UI/UX. I use it to craft pixel-perfect prototypes and user flows. Its plugins, like for Lottie animations, are a bonus. Curious about my Figma workflow?`,
+                        "How do you use VS Code?": `💻 **VS Code Usage**
+
+VS Code is my coding hub, with extensions like Prettier, ESLint, and Tailwind Intellisense for efficiency. I customize themes to keep coding fun and use its Git integration for seamless commits. Want to know my favorite extensions?`,
+                        "Any other tools?": `🧰 **Other Tools**
+
+Beyond Figma and VS Code, I use **Vercel** for deployment, **Postman** for API testing, and **Notion** for project planning. Each adds a layer of polish to my work. Got a tool you’re curious about?`
+                    }
+                },
+                default: {
+                    triggers: [],
+                    response: `🤔 Hmm, I’m not sure I caught that. I can tell you about:
+- Technical skills
+- Cool projects
+- Education journey
+- Hobbies & passions
+- Career goals
+- Favorite tools
+
+What’s on your mind?`,
+                    followUps: [
+                        "Tell me about your skills",
+                        "What projects have you done?",
+                        "What are your hobbies?"
+                    ]
+                }
+            };
+
+            let conversationState = {
+                currentTopic: null
+            };
+
+            const getCurrentTime = () => {
+                return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            };
+
+            const scrollToBottom = () => {
+                elements.chatMessages.scrollTop = elements.chatMessages.scrollHeight;
+            };
+
+            const showTypingIndicator = () => {
+                elements.typingIndicator.style.display = 'flex';
+                scrollToBottom();
+            };
+
+            const hideTypingIndicator = () => {
+                elements.typingIndicator.style.display = 'none';
+            };
+
+            const addMessage = (content, isUser = false) => {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+                messageDiv.setAttribute('role', 'article');
+
+                const messageContent = document.createElement('div');
+                messageContent.className = 'message-content';
+                messageContent.innerHTML = simpleMarkdown(content);
+
+                const messageTime = document.createElement('div');
+                messageTime.className = 'message-time';
+                messageTime.textContent = getCurrentTime();
+
+                messageDiv.appendChild(messageContent);
+                messageDiv.appendChild(messageTime);
+
+                elements.chatMessages.appendChild(messageDiv);
+                scrollToBottom();
+            };
+
+            const addBotMessage = (content) => addMessage(content, false);
+            const addUserMessage = (content) => addMessage(content, true);
+
+            const showQuickReplies = (replies) => {
+                const existingReplies = document.querySelector('.quick-replies');
+                if (existingReplies) existingReplies.remove();
+                if (!replies || replies.length === 0) return;
+
+                const quickRepliesDiv = document.createElement('div');
+                quickRepliesDiv.className = 'quick-replies';
+                quickRepliesDiv.setAttribute('role', 'list');
+
+                replies.forEach(reply => {
+                    const button = document.createElement('button');
+                    button.className = 'quick-reply';
+                    button.textContent = reply;
+                    button.setAttribute('data-reply', reply);
+                    button.setAttribute('role', 'listitem');
+                    quickRepliesDiv.appendChild(button);
+                });
+
+                elements.chatMessages.appendChild(quickRepliesDiv);
+                scrollToBottom();
+            };
+
+            const processInput = (input) => {
+                const lowerInput = input.toLowerCase();
+                let responseData = knowledgeBase.default;
+
+                if (conversationState.currentTopic && knowledgeBase[conversationState.currentTopic]?.followUpResponses?.[input]) {
+                    responseData = {
+                        response: knowledgeBase[conversationState.currentTopic].followUpResponses[input],
+                        followUps: knowledgeBase[conversationState.currentTopic].followUps
+                    };
+                } else {
+                    for (const [topic, data] of Object.entries(knowledgeBase)) {
+                        if (topic === 'default') continue;
+                        if (data.triggers.some(trigger => lowerInput.includes(trigger))) {
+                            responseData = data;
+                            conversationState.currentTopic = topic;
+                            break;
+                        }
+                    }
+
+                    if (conversationState.currentTopic === 'projects') {
+                        if (lowerInput.includes('nexora')) {
+                            responseData = knowledgeBase.projects.followUpResponses["Tell me more about Nexora Tel"];
+                        } else if (lowerInput.includes('timetablepro')) {
+                            responseData = knowledgeBase.projects.followUpResponses["How does TimetablePro work?"];
+                        }
+                    }
+                }
+
+                return responseData;
+            };
+
+            const handleSendMessage = async () => {
+                try {
+                    const message = elements.userInput.value.trim();
+                    if (!message) return;
+
+                    addUserMessage(message);
+                    elements.userInput.value = '';
+                    showTypingIndicator();
+
+                    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 1000));
+
+                    const responseData = processInput(message);
+                    addBotMessage(responseData.response);
+                    showQuickReplies(responseData.followUps);
+
+                    hideTypingIndicator();
+                } catch (error) {
+                    console.error('Error in handleSendMessage:', error);
+                    addBotMessage('Oops, something went wrong. Let’s try that again!');
+                    hideTypingIndicator();
+                }
+            };
+
+            const initChat = () => {
+                addBotMessage(knowledgeBase.greetings.response);
+                showQuickReplies(knowledgeBase.greetings.followUps);
+            };
+
+            const setupEventListeners = () => {
+                elements.sendButton.addEventListener('click', handleSendMessage);
+                elements.userInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        handleSendMessage();
+                    }
+                });
+                elements.chatMessages.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('quick-reply')) {
+                        const reply = e.target.getAttribute('data-reply');
+                        if (reply) {
+                            elements.userInput.value = reply;
+                            handleSendMessage();
+                        }
+                    }
+                });
+            };
+
+            document.addEventListener('DOMContentLoaded', () => {
+                try {
+                    initChat();
+                    setupEventListeners();
+                } catch (error) {
+                    console.error('Initialization failed:', error);
+                    addBotMessage('Failed to initialize chat. Please refresh the page.');
+                }
+            });
+        })();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('nexoraForm');
+            if (!form) return;
+
+            const statusMessage = document.getElementById('form-status');
+            const submitBtn = form.querySelector('.submit-btn');
+
+            const projectRadios = document.querySelectorAll('input[name="hasProject"]');
+            const projectDetails = document.querySelector('.project-details');
+            projectRadios.forEach(radio => {
+                radio.addEventListener('change', function () {
+                    if (this.value === 'yes') {
+                        projectDetails.classList.add('show');
+                        projectDetails.classList.remove('hidden');
+                    } else {
+                        projectDetails.classList.add('hidden');
+                        projectDetails.classList.remove('show');
+                    }
+                });
+            });
+
+            const workRadios = document.querySelectorAll('input[name="workTogether"]');
+            const roleSelection = document.querySelector('.role-selection');
+            workRadios.forEach(radio => {
+                radio.addEventListener('change', function () {
+                    if (this.value === 'yes') {
+                        roleSelection.classList.add('show');
+                        roleSelection.classList.remove('hidden');
+                    } else {
+                        roleSelection.classList.add('hidden');
+                        roleSelection.classList.remove('show');
+                    }
+                });
+            });
+
+            form.addEventListener('submit', function () {
+                submitBtn.classList.add('loading');
+                showStatusMessage('Sending your message...', 'success');
+            });
+
+            function showStatusMessage(message, type) {
+                if (!statusMessage) return;
+                statusMessage.textContent = message;
+                statusMessage.className = `status-message show-message ${type}`;
+                setTimeout(() => {
+                    statusMessage.classList.remove('show-message');
+                }, 5000);
+            }
+        });
+    </script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Babalola Toluwanimi Lanre",
+  "jobTitle": "Frontend Developer",
+  "url": "https://toluwanimibabalola.netlify.app/",
+  "sameAs": [
+    "https://toluwanimibabalola.netlify.app/"
+  ]
+}
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Slider</title>
+    <style>
+        /* --- CSS Styling --- */
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .project-slider-wrapper {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .project-slider-container {
+            overflow: hidden;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+        }
+
+        .project-track {
+            display: flex;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .project-card {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .project-content h3 {
+            margin: 0 0 10px;
+            font-size: 1.8rem;
+            color: #333;
+        }
+
+        .tech-stack {
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .view-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 24px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+
+        .view-btn:hover {
+            background-color: #555;
+        }
+
+        .slider-btn {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #555;
+            padding: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .slider-btn:hover {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="project-slider-wrapper">
+        <button class="slider-btn prev-btn" aria-label="Previous Project">&#10094;</button>
+
+        <div class="project-slider-container">
+            <div class="project-track" id="track">
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Emotion Detection Web App</h3>
+                        <p class="tech-stack">Python | Flask | PyTorch</p>
+                        <p>A web application designed to detect and analyze emotions.</p>
+                        <a href="#" class="view-btn">View Code / Live</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Gracemark Academy Result Hub</h3>
+                        <p class="tech-stack">React | Firebase</p>
+                        <p>A comprehensive result management platform.</p>
+                        <a href="#" class="view-btn">View Code / Live</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Upcoming Machine Learning Model</h3>
+                        <p class="tech-stack">Python | Scikit-Learn</p>
+                        <p>Currently in development. Exploring new data models.</p>
+                        <a href="#" class="view-btn">Coming Soon</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <button class="slider-btn next-btn" aria-label="Next Project">&#10095;</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const track = document.getElementById('track');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const cards = document.querySelectorAll('.project-card');
+
+            let currentIndex = 0;
+
+            function updateSlider() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                if (currentIndex < cards.length - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                updateSlider();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = cards.length - 1;
+                }
+                updateSlider();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
