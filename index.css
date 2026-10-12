@@ -120,10 +120,7 @@ button {
 }
 
 .text-gradient {
-    background: linear-gradient(120deg, var(--accent) 10%, var(--accent-2) 90%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--accent);
 }
 
 /* ---------- Buttons ---------- */
@@ -343,8 +340,7 @@ button {
     inset: 0;
     z-index: -1;
     background:
-        radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, 0.25), transparent 60%),
-        linear-gradient(180deg, rgba(10, 14, 23, 0.72) 0%, rgba(10, 14, 23, 0.82) 70%, var(--bg) 100%);
+rgba(10, 14, 23, 0.8);
 }
 
 .hero-content {
@@ -696,7 +692,7 @@ button {
     height: 100%;
     width: var(--level, 0%);
     border-radius: inherit;
-    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    background: var(--accent);
     transform-origin: left;
     transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s;
 }
