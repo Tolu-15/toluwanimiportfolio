@@ -6,7 +6,7 @@ export const profile = {
     course: 'Industrial Mathematics (Computer Science)',
     location: 'Nigeria',
     experience: [
-        { when: '2026 - Present', title: 'Engineering Intern (Engineering Team)', org: 'Cavista Technologies' },
+        { when: '2026 (completed)', title: 'Engineering Intern, Industrial Training (IT)', org: 'Cavista Technologies' },
         { when: 'March 2025', title: 'IT (Pre-IT Internship)', org: 'Micronet Technologies, Lagos, Nigeria' },
         { when: '2023 - Current', title: 'Learning Web Design', org: 'APTECH Abeokuta' }
     ],
@@ -24,7 +24,8 @@ export const profile = {
         resume: 'assets/docs/cv.pdf'
     },
     skills: {
-        frontend: ['HTML5', 'CSS3', 'JavaScript', 'Responsive UI', 'Accessibility', 'Performance'],
+        frontend: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'JSX', 'Vite', 'Responsive UI', 'Accessibility'],
+        backend: ['Supabase', 'Firebase'],
         uiux: ['UI design basics', 'Landing pages', 'Design systems mindset'],
         cybersecurity: ['Fundamentals', 'Security awareness', 'Best practices'],
         programming: ['JavaScript', 'Python (fundamentals)', 'Java (basics)', 'Node.js (fundamentals)', 'React (basic)']
@@ -36,19 +37,31 @@ export const profile = {
             tagline: 'Recruitment & project portal',
             description: 'A recruitment and project portal with a sleek UI, Lottie motion, and an automated onboarding form.',
             tags: ['Frontend', 'UI', 'Forms'],
-            ctas: [
-                { label: 'View Live', href: 'https://nexoratel.netlify.app/' }
-            ]
+            ctas: [{ label: 'View Live', href: 'https://nexoratel.netlify.app/' }]
         },
         {
-            key: 'scholarsdrip',
-            name: 'ScholarsDrip',
-            tagline: 'Educational platform',
-            description: 'An educational platform that gives students quick, organised access to learning content.',
-            tags: ['Frontend', 'Firebase', 'Education'],
-            ctas: [
-                { label: 'View Live', href: 'https://scholarsdrip.web.app/' }
-            ]
+            key: 'gracemark-portal',
+            name: 'Gracemark Portal',
+            tagline: 'School web portal',
+            description: 'The official web portal for Gracemark Academy, bringing school information and services into one place.',
+            tags: ['Frontend', 'Education', 'Portal'],
+            ctas: [{ label: 'View Live', href: 'https://www.gracemarkportal.com.ng/' }]
+        },
+        {
+            key: 'quiz-hub',
+            name: 'Gracemark Quiz Hub',
+            tagline: 'CBT / online quiz platform',
+            description: 'A computer-based testing platform where students take quizzes and exams online and get instant scores.',
+            tags: ['Frontend', 'Education', 'CBT'],
+            ctas: [{ label: 'View Live', href: 'https://cbt.gracemarkportal.com.ng/' }]
+        },
+        {
+            key: 'exam-forge',
+            name: 'Exam Forge',
+            tagline: 'Exam builder',
+            description: 'A tool for building and running exams, from setting questions to delivering tests and reviewing results.',
+            tags: ['Frontend', 'Education'],
+            ctas: []
         },
         {
             key: 'afthonia',
@@ -56,19 +69,7 @@ export const profile = {
             tagline: 'Food brand website',
             description: 'A responsive site built for a food brand, focused on clean layout and usability.',
             tags: ['Frontend', 'Landing Page', 'Food'],
-            ctas: [
-                { label: 'View Live', href: 'https://afthoniafooods.netlify.app/' }
-            ]
-        },
-        {
-            key: 'gracemark',
-            name: 'Gracemark Result Hub',
-            tagline: 'School results portal',
-            description: 'A school portal that lets students check their results online in seconds.',
-            tags: ['Frontend', 'Firebase', 'Education'],
-            ctas: [
-                { label: 'View Live', href: 'https://gracemarkacademyresulthub.web.app/' }
-            ]
+            ctas: [{ label: 'View Live', href: 'https://afthoniafooods.netlify.app/' }]
         }
     ],
     certifications: ['Web Development training at APTECH Abeokuta (in progress)'],
