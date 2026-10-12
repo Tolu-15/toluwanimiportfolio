@@ -13,7 +13,8 @@ function nowTime() {
 }
 
 function hasAny(text, words) {
-    return words.some((w) => text.includes(w));
+    // Short keywords (e.g. "ui", "hi") must match whole words so "built" doesn't match "ui".
+    return words.some((w) => (w.length <= 3 ? new RegExp(`\\b${w}\\b`).test(text) : text.includes(w)));
 }
 
 function makeFollowups(items) {
@@ -210,13 +211,29 @@ function resumeResponse() {
         blocks: [
             {
                 type: 'text',
-                text:
-                    `I don\u2019t see a resume file linked yet on this site.\n\n` +
-                    `If you want, I can help you add a downloadable resume button (PDF) and wire it into this chatbot.`
+                text: `Here\u2019s ${profile.shortName}\u2019s CV. It covers his education, experience, and skills.`
             },
-            { type: 'ctaRow', actions: [{ label: 'Contact Toluwanimi', href: '#contact' }] }
+            {
+                type: 'ctaRow',
+                actions: [
+                    { label: 'Download CV (PDF)', href: profile.links.resume },
+                    { label: 'Contact Toluwanimi', href: '#contact' }
+                ]
+            }
         ],
-        followups: makeFollowups(['/contact', '/skills', '/projects', 'Show certifications'])
+        followups: makeFollowups(['/contact', '/skills', '/projects', '/experience'])
+    };
+}
+
+function greetingResponse() {
+    return {
+        blocks: [
+            {
+                type: 'text',
+                text: `Hi there! I\u2019m ${profile.shortName}\u2019s assistant. Ask me about his skills, projects, experience, or how to get in touch.`
+            }
+        ],
+        followups: makeFollowups(['Tell me about Toluwanimi', '/projects', '/skills', '/contact'])
     };
 }
 
@@ -229,6 +246,7 @@ export function classifyIntent(userText) {
         return { kind: 'unknownCommand', cmd };
     }
 
+    if (hasAny(t, ['resume', 'cv'])) return { kind: 'resume' };
     if (hasAny(t, ['contact', 'email', 'linkedin', 'github', 'phone'])) return { kind: 'contact' };
     if (hasAny(t, ['available', 'availability', 'open to work', 'hire', 'freelance', 'collab', 'collaboration']))
         return { kind: 'availability' };
@@ -236,11 +254,13 @@ export function classifyIntent(userText) {
         return { kind: 'experience' };
     if (hasAny(t, ['project', 'projects', 'nexora', 'afthonia', 'work'])) return { kind: 'projects' };
     if (hasAny(t, ['skill', 'skills', 'frontend', 'ui', 'ux', 'cyber', 'security', 'programming'])) return { kind: 'skills' };
-    if (hasAny(t, ['university', 'school', 'education', 'course'])) return { kind: 'about' };
+    if (hasAny(t, ['university', 'school', 'education', 'course', 'about', 'who is', 'who are', 'tell me', 'background', 'bio']))
+        return { kind: 'about' };
     if (hasAny(t, ['goal', 'goals', 'future', 'plan'])) return { kind: 'goals' };
     if (hasAny(t, ['service', 'services', 'offer', 'pricing'])) return { kind: 'services' };
     if (hasAny(t, ['cert', 'certification'])) return { kind: 'certifications' };
     if (hasAny(t, ['faq', 'questions'])) return { kind: 'faq' };
+    if (hasAny(t, ['hi', 'hey', 'hello', 'good morning', 'good afternoon', 'good evening'])) return { kind: 'greeting' };
 
     return { kind: 'general' };
 }
@@ -296,6 +316,8 @@ export function generateResponse(userText, memory) {
         };
     }
 
+    if (intent.kind === 'resume') return resumeResponse();
+    if (intent.kind === 'greeting') return greetingResponse();
     if (intent.kind === 'availability') return availabilityResponse();
     if (intent.kind === 'skills') return skillsResponse();
     if (intent.kind === 'experience') return experienceResponse();

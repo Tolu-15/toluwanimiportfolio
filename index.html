@@ -1,465 +1,383 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toluwanimi Babalola | Front-End Developer</title>
     <meta name="description"
-        content="Babalola Toluwanimi Portfolio - Frontend Developer, Industrial Mathematics & Computer Science Student. Showcasing projects and skills.">
-    <meta name="keywords"
-        content="Toluwanimi Babalola, Frontend Developer, Web Developer, Portfolio, Covenant University, Afthonia Foods, Grace Mark Academy Quiz App">
-    <meta name="author" content="Babalola Toluwanimi">
+        content="Portfolio of Toluwanimi Babalola, a front-end developer and Industrial Mathematics (Computer Science) student at Covenant University building fast, responsive, and accessible web interfaces.">
+    <meta name="author" content="Toluwanimi Babalola">
     <meta name="google-site-verification" content="8dHZ7u7jerwojNw-nlgIvKZ9VIh3-icoKls3aPm8rDg">
     <meta name="robots" content="index,follow">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta name="color-scheme" content="dark light">
-    <meta name="theme-color" content="#0b0f1a">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#0a0e17">
     <link rel="canonical" href="https://toluwanimibabalolasportfolio.netlify.app/">
 
-    <meta property="og:title" content="Toluwanimi Babalola | Frontend Developer">
+    <meta property="og:title" content="Toluwanimi Babalola | Front-End Developer">
     <meta property="og:description"
-        content="Frontend Developer focused on sleek, modern, and user-first interfaces. Explore projects, skills, and contact info.">
+        content="Front-end developer building fast, responsive, and accessible web interfaces. Explore projects, skills, and contact details.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://toluwanimibabalolasportfolio.netlify.app/">
+    <meta property="og:image" content="https://toluwanimibabalolasportfolio.netlify.app/assets/images/t_dev2.png">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Toluwanimi Babalola | Frontend Developer">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Toluwanimi Babalola | Front-End Developer">
     <meta name="twitter:description"
-        content="Frontend Developer focused on sleek, modern, and user-first interfaces. Explore projects, skills, and contact info.">
+        content="Front-end developer building fast, responsive, and accessible web interfaces.">
 
-    <title>Toluwanimi Babalola | Frontend Developer | Crafting Clean & Modern Websites</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="css/critical.css">
-    <link rel="stylesheet" href="css/ai-chatbot.css">
     <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <script>
-        window.tailwind = window.tailwind || {};
-        window.tailwind.config = {
-            darkMode: ['class'],
-            corePlugins: { preflight: false },
-            theme: {
-                extend: {
-                    colors: {
-                        neon: {
-                            purple: '#7c3aed',
-                            blue: '#22d3ee'
-                        }
-                    }
-                }
-            }
-        };
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/ai-chatbot.css">
 
-    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js" defer></script>
 </head>
 
 <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <header class="top-nav">
+
+    <header class="top-nav" id="top">
         <div class="container nav">
-            <div class="logo">T_dev</div>
-            <nav class="nav-links" aria-label="Primary navigation">
+            <a class="logo" href="#top" aria-label="Toluwanimi Babalola, back to top">T<span>_dev</span></a>
+            <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false"
+                aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
-                <a href="projects/">Projects</a>
-                <a href="#experience">Experience</a>
-                <a href="#contact">Contact</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="#contact" class="nav-cta">Contact</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero2">
-        <video autoplay muted loop playsinline preload="metadata" src="assets/video/hero.mp4" class="hero-video">
+    <section class="hero" aria-labelledby="hero-title">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata"
+            aria-hidden="true">
+            <source src="assets/video/hero.mp4" type="video/mp4">
         </video>
+        <div class="hero-overlay" aria-hidden="true"></div>
         <div class="container hero-content">
-            <p class="role">Front-End Developer</p>
-            <h1 class="hero-title">Hi, I'm Toluwanimi Babalola Olanrewaju</h1>
+            <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Open to internships &amp; freelance
+                work</p>
+            <h1 id="hero-title" class="hero-title">Hi, I'm <span class="text-gradient">Toluwanimi Babalola</span></h1>
+            <p class="hero-role">Front-End Developer <span aria-hidden="true">&middot;</span> <span
+                    class="typed" data-typed="UI Engineer|Landing Page Builder|Problem Solver">UI Engineer</span></p>
             <p class="hero-text">
-                I build fast, responsive, and accessible web interfaces. I focus on clean UI systems,
-                scalable components, and smooth user experiences.
+                I build fast, responsive, and accessible web interfaces, with a focus on clean UI systems,
+                reusable components, and smooth user experiences.
             </p>
             <div class="hero-cta">
-                <a class="btn btn-primary" href="projects/">View Projects</a>
-                <a class="btn btn-outline" href="#contact">Let's Talk</a>
+                <a class="btn btn-primary" href="#projects">View my work</a>
+                <a class="btn btn-outline" href="assets/docs/cv.pdf" target="_blank" rel="noopener">
+                    <i class="fas fa-file-arrow-down" aria-hidden="true"></i> Download CV
+                </a>
             </div>
+            <ul class="hero-social" aria-label="Social links">
+                <li><a href="https://github.com/tolu-15" target="_blank" rel="noopener" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/toluwanimi-babalola-b53076382/" target="_blank"
+                        rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.instagram.com/tolu.nimi17/" target="_blank" rel="noopener"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="mailto:toluwanimibabalola2707@gmail.com" aria-label="Email"><i
+                            class="fas fa-envelope"></i></a></li>
+            </ul>
         </div>
+        <a class="scroll-cue" href="#about" aria-label="Scroll to About section"><i class="fas fa-chevron-down"></i></a>
     </section>
-    <header class="site-header" id="home">
-        <div class="container">
-            <!-- <nav class="site-nav">
-                <div class="brand">Toluwanimi</div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#service">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav> -->
-
-            <div class="hero">
-                <div class="hero-content">
-                    <p class="hero-kicker typewriter">I am a front-end Developer</p>
-                    <h1 class="hero-title">Welcome <span>To My</span><br>Website</h1>
-                    <p class="hero-subtitle">Frontend Developer focused on sleek, modern, and user-first interfaces.</p>
-                    <div class="hero-actions">
-                        <a class="cv-button" href="#contact">Let's Work Together</a>
-                    </div>
-                </div>
-                <div class="hero-media">
-                    <dotlottie-player src="https://lottie.host/25ab8ee9-0876-440b-8ea7-ff671c66c781/bhICJMSUxq.lottie"
-                        background="transparent" speed="1" loop autoplay></dotlottie-player>
-                </div>
-            </div>
-        </div>
-    </header>
 
     <main id="main-content">
-        <section id="skills" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Skills Matrix</h2>
-                    <p class="section-subtitle">A visual representation of my technical competencies and proficiency
-                        levels.</p>
+        <!-- About -->
+        <section id="about" class="section">
+            <div class="container about-grid">
+                <figure class="about-photo reveal">
+                    <img src="assets/images/t_dev2.png" alt="Portrait of Toluwanimi Babalola" width="520"
+                        height="620" loading="lazy" decoding="async">
+                </figure>
+                <div class="about-body reveal">
+                    <p class="section-kicker">About me</p>
+                    <h2 class="section-title">Turning ideas into clean, usable interfaces</h2>
+                    <p class="lead">
+                        I'm an Industrial Mathematics (Computer Science) student at Covenant University and a front-end
+                        developer who enjoys solving problems with clean, well-structured code. My toolkit includes
+                        HTML5, CSS3, JavaScript, React, and Tailwind CSS.
+                    </p>
+                    <p>
+                        I gained hands-on industry experience during my Pre-IT internship at Micronet Technologies,
+                        Lagos, and I'm currently an engineering intern at Cavista Technologies. I'm committed to
+                        continuous learning and to shipping digital products that are both beautiful and reliable.
+                    </p>
+
+                    <ul class="stats" aria-label="Quick facts">
+                        <li><strong>4+</strong><span>Live projects</span></li>
+                        <li><strong>2</strong><span>Internships</span></li>
+                        <li><strong>2023</strong><span>Coding since</span></li>
+                    </ul>
+
+                    <div class="tabs" id="experience">
+                        <div class="tab-list" role="tablist" aria-label="Background">
+                            <button class="tab" role="tab" id="tab-experience" aria-controls="panel-experience"
+                                aria-selected="true">Experience</button>
+                            <button class="tab" role="tab" id="tab-education" aria-controls="panel-education"
+                                aria-selected="false" tabindex="-1">Education</button>
+                            <button class="tab" role="tab" id="tab-focus" aria-controls="panel-focus"
+                                aria-selected="false" tabindex="-1">Focus</button>
+                        </div>
+
+                        <div class="tab-panel" role="tabpanel" id="panel-experience" aria-labelledby="tab-experience">
+                            <ol class="timeline">
+                                <li>
+                                    <span class="timeline-date">2026 &ndash; Present</span>
+                                    <strong>Engineering Intern</strong>
+                                    <span>Cavista Technologies &middot; Engineering Team</span>
+                                </li>
+                                <li>
+                                    <span class="timeline-date">March 2025</span>
+                                    <strong>Pre-IT Intern</strong>
+                                    <span>Micronet Technologies, Lagos</span>
+                                </li>
+                                <li>
+                                    <span class="timeline-date">2023 &ndash; Present</span>
+                                    <strong>Web Design &amp; Development</strong>
+                                    <span>APTECH, Abeokuta</span>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="tab-panel" role="tabpanel" id="panel-education" aria-labelledby="tab-education"
+                            hidden>
+                            <ol class="timeline">
+                                <li>
+                                    <span class="timeline-date">2023 &ndash; 2027</span>
+                                    <strong>B.Sc. Industrial Mathematics (Computer Science)</strong>
+                                    <span>Covenant University</span>
+                                </li>
+                                <li>
+                                    <span class="timeline-date">2023 &ndash; Present</span>
+                                    <strong>Diploma in Web Development</strong>
+                                    <span>APTECH, Abeokuta</span>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="tab-panel" role="tabpanel" id="panel-focus" aria-labelledby="tab-focus" hidden>
+                            <ol class="timeline">
+                                <li>
+                                    <strong>Front-End Development</strong>
+                                    <span>Responsive, performance-focused builds with semantic HTML.</span>
+                                </li>
+                                <li>
+                                    <strong>UI/UX Design</strong>
+                                    <span>Designing interfaces and landing pages that convert.</span>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <header class="section-header reveal">
+                    <p class="section-kicker">Skills</p>
+                    <h2 class="section-title">Tools I work with</h2>
+                    <p class="section-subtitle">An honest snapshot of where I am today and what I'm actively growing.
+                    </p>
+                </header>
 
                 <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <i class="fas fa-chart-pie"></i>
-                            </div>
-                            <h3 class="card-title">Skills Distribution</h3>
-                        </div>
-                        <div class="chart-container">
-                            <canvas id="skillsPieChart"></canvas>
-                        </div>
-                        <div class="skill-meta">
-                            <span class="skill-percent">Percentage based on project experience</span>
-                        </div>
-                    </div>
+                    <article class="card reveal">
+                        <h3 class="card-title"><i class="fas fa-code" aria-hidden="true"></i> Front-End</h3>
+                        <ul class="skill-bars">
+                            <li>
+                                <div class="skill-row"><span>HTML5 &amp; CSS3</span><span>Advanced</span></div>
+                                <div class="meter" style="--level: 85%"></div>
+                            </li>
+                            <li>
+                                <div class="skill-row"><span>JavaScript</span><span>Intermediate</span></div>
+                                <div class="meter" style="--level: 65%"></div>
+                            </li>
+                            <li>
+                                <div class="skill-row"><span>Tailwind CSS</span><span>Intermediate</span></div>
+                                <div class="meter" style="--level: 60%"></div>
+                            </li>
+                            <li>
+                                <div class="skill-row"><span>React</span><span>Learning</span></div>
+                                <div class="meter" style="--level: 35%"></div>
+                            </li>
+                        </ul>
+                    </article>
 
-                    <div class="skill-card">
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <h3 class="card-title">Skill Proficiency</h3>
-                        </div>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <div>
-                                    <span class="skill-name">
-                                        <i class="fab fa-js"></i> JavaScript
-                                    </span>
-                                    <div class="progress-container">
-                                        <div class="progress-bar" data-progress="40"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-level">
-                                    <span class="star">&#9733;</span>
-                                    <span class="star">&#9733;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                </div>
-                            </div>
+                    <article class="card reveal">
+                        <h3 class="card-title"><i class="fas fa-terminal" aria-hidden="true"></i> Programming</h3>
+                        <ul class="skill-bars">
+                            <li>
+                                <div class="skill-row"><span>Python</span><span>Intermediate</span></div>
+                                <div class="meter" style="--level: 50%"></div>
+                            </li>
+                            <li>
+                                <div class="skill-row"><span>Java</span><span>Fundamentals</span></div>
+                                <div class="meter" style="--level: 30%"></div>
+                            </li>
+                            <li>
+                                <div class="skill-row"><span>Node.js</span><span>Fundamentals</span></div>
+                                <div class="meter" style="--level: 25%"></div>
+                            </li>
+                        </ul>
+                    </article>
 
-                            <div class="skill-item">
-                                <div>
-                                    <span class="skill-name">
-                                        <i class="fab fa-react"></i> React
-                                    </span>
-                                    <div class="progress-container">
-                                        <div class="progress-bar" data-progress="10"></div>
-                                    </div>
-                                    <div class="skill-meta">
-                                        <span class="skill-percent">Basic understanding</span>
-                                        <span class="skill-status status-pending">Pending</span>
-                                    </div>
-                                </div>
-                                <div class="skill-level">
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <div>
-                                    <span class="skill-name">
-                                        <i class="fab fa-node-js"></i> Node.js
-                                    </span>
-                                    <div class="progress-container">
-                                        <div class="progress-bar" data-progress="10"></div>
-                                    </div>
-                                    <div class="skill-meta">
-                                        <span class="skill-percent">Fundamentals</span>
-                                        <span class="skill-status status-pending">Pending</span>
-                                    </div>
-                                </div>
-                                <div class="skill-level">
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <div>
-                                    <span class="skill-name">
-                                        <i class="fas fa-paint-brush"></i> UI/UX Design
-                                    </span>
-                                    <div class="progress-container">
-                                        <div class="progress-bar" data-progress="5"></div>
-                                    </div>
-                                    <div class="skill-meta">
-                                        <span class="skill-percent">Fundamentals</span>
-                                        <span class="skill-status status-pending">Pending</span>
-                                    </div>
-                                </div>
-                                <div class="skill-level">
-                                    <span class="star">&#9733;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <div>
-                                    <span class="skill-name">
-                                        <i class="fab fa-python"></i> Python
-                                    </span>
-                                    <div class="progress-container">
-                                        <div class="progress-bar" data-progress="20"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-level">
-                                    <span class="star">&#9733;</span>
-                                    <span class="star">&#9733;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <div>
-                                    <span class="skill-name">
-                                        <i class="fab fa-java"></i> Java
-                                    </span>
-                                    <div class="progress-container">
-                                        <div class="progress-bar" data-progress="10"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-level">
-                                    <span class="star">&#9733;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                    <span class="empty-star">&#9734;</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <article class="card reveal">
+                        <h3 class="card-title"><i class="fas fa-toolbox" aria-hidden="true"></i> Tools &amp; Practices
+                        </h3>
+                        <ul class="tag-list">
+                            <li>Git &amp; GitHub</li>
+                            <li>Responsive design</li>
+                            <li>Accessibility</li>
+                            <li>Netlify</li>
+                            <li>Firebase</li>
+                            <li>UI/UX basics</li>
+                            <li>VS Code</li>
+                            <li>Cybersecurity basics</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="quotes" class="section">
+        <!-- Projects -->
+        <section id="projects" class="section">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Daily Motivation</h2>
-                    <p class="section-subtitle">A rotating collection of mindset, resilience, and growth reminders.</p>
-                </div>
-                <div class="quote-master-container">
-                    <div class="quote-theatre">
-                        <div class="quote-stage">
-                            <div class="quote-actor">
-                                <div class="quote-text cosmic-in"></div>
-                                <div class="quote-author cosmic-in"></div>
-                            </div>
-                        </div>
-                        <div class="quote-control-panel">
-                            <button class="quote-nav prev" aria-label="Previous quote">
-                                <svg viewBox="0 0 24 24" width="24" height="24">
-                                    <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
-                                </svg>
-                            </button>
-                            <div class="quote-progress-container">
-                                <div class="quote-progress-bar"></div>
-                            </div>
-                            <button class="quote-nav next" aria-label="Next quote">
-                                <svg viewBox="0 0 24 24" width="24" height="24">
-                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <header class="section-header reveal">
+                    <p class="section-kicker">Projects</p>
+                    <h2 class="section-title">Selected work</h2>
+                    <p class="section-subtitle">Real, live projects built for businesses, schools, and students.</p>
+                </header>
 
-        <section id="about" class="section">
-            <div class="container">
-                <div class="row about-grid">
-                    <div class="about-col-1">
-                        <div class="tilt-img">
-                            <img src="assets/images/t_dev2.png" alt="Portrait of Toluwanimi" loading="lazy"
-                                decoding="async">
+                <div class="projects-grid">
+                    <article class="card project-card reveal">
+                        <div class="project-icon" aria-hidden="true"><i class="fas fa-tower-broadcast"></i></div>
+                        <h3>Nexora Tel</h3>
+                        <p>Recruitment and project portal with a sleek UI, Lottie motion, and an automated
+                            onboarding form.</p>
+                        <ul class="tag-list tag-list-sm">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://nexoratel.netlify.app/" target="_blank" rel="noopener">Live site <i
+                                    class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <a href="projects/nexora/">Case study</a>
                         </div>
-                    </div>
-                    <div class="about-col-2">
-                        <h2 class="section-title section-title-left">About Me</h2>
-                        <p class="about-text">
-                            Toluwanimi Babalola &mdash; Industrial Mathematics & Computer Science student at Covenant
-                            University. I'm a passionate problem-solver with strong analytical skills and a growing
-                            frontend toolkit (HTML5, CSS, JavaScript, react, tailwindcss). I gained hands-on experience during my
-                            Pre-IT internship at Micronet Technologies, Lagos. I’m currently joining the engineering
-                            team at Cavista Technologies as an intern, and I’m committed to continuous learning and
-                            building clean digital solutions. Gender (MALE/HE)
+                    </article>
+
+                    <article class="card project-card reveal">
+                        <div class="project-icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>ScholarsDrip</h3>
+                        <p>Educational platform designed to give students quick, organised access to learning
+                            content.</p>
+                        <ul class="tag-list tag-list-sm">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Firebase</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://scholarsdrip.web.app/" target="_blank" rel="noopener">Live site <i
+                                    class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="card project-card reveal">
+                        <div class="project-icon" aria-hidden="true"><i class="fas fa-utensils"></i></div>
+                        <h3>Afthonia Foods</h3>
+                        <p>Food brand website with a clean storefront experience and clear product presentation.
                         </p>
+                        <ul class="tag-list tag-list-sm">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://afthoniafooods.netlify.app/" target="_blank" rel="noopener">Live site
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
 
-                        <div class="tab-titles">
-                            <button class="tab-links active-link" onclick="opentab('skills', this)">Skills</button>
-                            <button class="tab-links" onclick="opentab('experience', this)">Experience</button>
-                            <button class="tab-links" onclick="opentab('education', this)">Education</button>
+                    <article class="card project-card reveal">
+                        <div class="project-icon" aria-hidden="true"><i class="fas fa-school"></i></div>
+                        <h3>Gracemark Result Hub</h3>
+                        <p>School portal that lets students check and download their results online in seconds.
+                        </p>
+                        <ul class="tag-list tag-list-sm">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Firebase</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://gracemarkacademyresulthub.web.app/" target="_blank" rel="noopener">Live
+                                site <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
                         </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                <li><span>UI/UX</span><br>Designing web interfaces and landing pages</li>
-                                <li><span>Web Development</span><br>Responsive, performance-focused web builds</li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li><span>2023 - Current</span><br>Learning Web Design at APTECH Abeokuta</li>
-                                <li><span>March 2025</span><br>IT at Micronet Technologies, Lagos, Nigeria</li>
-                                <li><span>2026 - Present</span><br>Engineering Intern (Engineering Team) at Cavista
-                                    Technologies</li>
-                                <li><a href="https://afthoniafooods.netlify.app/">One of my Work</a></li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span>2023 - 2027</span><br>Industrial Mathematics (Computer Science), Covenant
-                                    University</li>
-                                <li><span>Web Development</span><br>APTECH Abeokuta</li>
-                            </ul>
-                        </div>
-                    </div>
+                    </article>
+                </div>
+
+                <div class="center-cta reveal">
+                    <a class="btn btn-outline" href="projects/">See all projects</a>
                 </div>
             </div>
         </section>
-        <!-- 
+
+        <!-- Services -->
+        <section id="services" class="section section-alt">
+            <div class="container">
+                <header class="section-header reveal">
+                    <p class="section-kicker">Services</p>
+                    <h2 class="section-title">How I can help</h2>
+                </header>
+                <div class="services-grid">
+                    <article class="card service-card reveal">
+                        <div class="project-icon" aria-hidden="true"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Front-End Development</h3>
+                        <p>Responsive, accessible websites and web apps built with clean, maintainable code.</p>
+                    </article>
+                    <article class="card service-card reveal">
+                        <div class="project-icon" aria-hidden="true"><i class="fas fa-pen-ruler"></i></div>
+                        <h3>UI/UX Design</h3>
+                        <p>Simple, intuitive interfaces that put the user first and look great on every screen.</p>
+                    </article>
+                    <article class="card service-card reveal">
+                        <div class="project-icon" aria-hidden="true"><i class="fas fa-rocket"></i></div>
+                        <h3>Landing Pages</h3>
+                        <p>Fast, conversion-focused landing pages for products, events, and small businesses.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI assistant -->
         <section id="assistant" class="section">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Toluwanimi AI</h2>
-                    <p class="section-subtitle">Ask about skills, projects, education, or hobbies.</p>
-                </div>
-                <main class="chat-section" role="main">
-                    <div class="ai-lottie-wrapper" aria-hidden="true">
-                        <dotlottie-player
-                            src="https://lottie.host/531b3e9c-8393-4003-a857-6c4e410d07b5/OQFaSMB2si.lottie"
-                            background="transparent" speed="1" loop autoplay></dotlottie-player>
-                    </div>
-                    <section class="chat-container" aria-label="Chat interface">
-                        <header class="chat-header">
-                            <div class="header-contents">
-                                <div class="avatar">
-                                    <img src="https://thefusioneer.com/wp-content/uploads/2023/11/5-AI-Advancements-to-Expect-in-the-Next-10-Years-scaled.jpeg"
-                                        alt="Toluwanimi's AI avatar">
-                                </div>
-                                <div class="header-texts">
-                                    <h3>Toluwanimi AI</h3>
-                                    <p>Ask me about skills, projects, or hobbies</p>
-                                </div>
-                            </div>
-                            <div class="header-actions">
-                                <button class="icon-button" aria-label="More options">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                            </div>
-                        </header>
-                        <div class="chat-messages" id="chat-messages" role="log" aria-live="polite">
-                            <div class="message bot-message welcome-message">
-                                <div class="message-content">
-                                    <p>Hello! I'm Toluwanimi's AI assistant. I can tell you about his:</p>
-                                    <ul class="options-list">
-                                        <li><span class="option-tag">Skills</span> & technologies he works with</li>
-                                        <li><span class="option-tag">Projects</span> he's built</li>
-                                        <li><span class="option-tag">Education</span> background</li>
-                                        <li><span class="option-tag">Hobbies</span> & interests</li>
-                                    </ul>
-                                    <p>What would you like to know?</p>
-                                </div>
-                                <div class="message-time">Just now</div>
-                            </div>
-                            <div class="quick-replies" role="list">
-                                <button class="quick-reply" data-reply="Tell me about your skills"
-                                    role="listitem">Skills</button>
-                                <button class="quick-reply" data-reply="What projects have you worked on?"
-                                    role="listitem">Projects</button>
-                                <button class="quick-reply" data-reply="What are your hobbies?"
-                                    role="listitem">Hobbies</button>
-                            </div>
-                        </div>
-                        <div class="chat-input-container">
-                            <div class="typing-indicator" id="typing-indicator" aria-hidden="true">
-                                <div class="typing-dot"></div>
-                                <div class="typing-dot"></div>
-                                <div class="typing-dot"></div>
-                            </div>
-                            <div class="chat-input">
-                                <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off"
-                                    aria-label="Type your message">
-                                <button id="send-button" aria-label="Send message">
-                                    <i class="fas fa-paper-plane"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </section>
-                </main>
-            </div>
-        </section> -->
-
-        <section id="elite-ai" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <p class="chatbot-flow">Problem → Solution → Tech Stack → Features → Result</p>
-                    <h2 class="section-title">Elite AI Chatbot</h2>
-                    <p class="section-subtitle">A futuristic, premium assistant that knows my work, skills, and
-                        projects.
-                    </p>
-                    <div class="mt-5 flex flex-wrap justify-center gap-2 text-sm text-slate-200/90">
-                        <span class="rounded-full border border-white/10 bg-slate-950/20 px-3 py-1">HTML</span>
-                        <span class="rounded-full border border-white/10 bg-slate-950/20 px-3 py-1">CSS</span>
-                        <span class="rounded-full border border-white/10 bg-slate-950/20 px-3 py-1">JavaScript</span>
-                        <span
-                            class="rounded-full border border-violet-400/20 bg-violet-500/10 px-3 py-1">Tailwind</span>
-                        <span class="rounded-full border border-cyan-400/20 bg-cyan-500/10 px-3 py-1">Lucide</span>
-                        <span class="rounded-full border border-white/10 bg-slate-950/20 px-3 py-1">Web Speech
-                            API</span>
-                    </div>
-                </div>
+                <header class="section-header reveal">
+                    <p class="section-kicker">AI Assistant</p>
+                    <h2 class="section-title">Ask about my work</h2>
+                    <p class="section-subtitle">A small assistant I built in vanilla JavaScript. Ask about my skills,
+                        projects, experience, or how to reach me.</p>
+                </header>
 
                 <div class="ai-shell" data-ai-shell>
                     <canvas class="ai-particles" data-ai-particles aria-hidden="true"></canvas>
@@ -469,8 +387,7 @@
                             <div class="ai-avatar ai-avatar--me" aria-hidden="true">T</div>
                             <div class="ai-brand-text">
                                 <p class="ai-title">Toluwanimi AI</p>
-                                <p class="ai-status"><span class="ai-dot" aria-hidden="true"></span>AI Assistant Active
-                                </p>
+                                <p class="ai-status"><span class="ai-dot" aria-hidden="true"></span>Online</p>
                             </div>
                         </div>
 
@@ -499,9 +416,10 @@
                     </header>
 
                     <div class="ai-toolbar">
-                        <label class="ai-search" aria-label="Search chat history">
+                        <label class="ai-search">
                             <i data-lucide="search" aria-hidden="true"></i>
-                            <input data-ai-search type="search" placeholder="Search in this chat… (Ctrl/⌘ + K)">
+                            <input data-ai-search type="search" placeholder="Search this chat (Ctrl/⌘ + K)"
+                                aria-label="Search chat history">
                         </label>
                         <div class="ai-hints" aria-label="Command hint">
                             <span class="ai-kbd">/</span> commands:
@@ -522,31 +440,25 @@
                                         <i data-lucide="sparkles"></i>
                                     </div>
                                     <h3>Ask me anything</h3>
-                                    <p>Try a prompt chip below, or type <span class="ai-inline-kbd">/</span> for command
-                                        mode.</p>
+                                    <p>Pick a suggestion below, or type <span class="ai-inline-kbd">/</span> for
+                                        commands.</p>
                                 </div>
                             </div>
                         </section>
 
                         <div class="ai-chips" role="list" aria-label="Suggested prompts">
-                            <button class="ai-chip" data-ai-chip="Tell me about Toluwanimi" role="listitem">Tell me
-                                about
-                                Toluwanimi</button>
-                            <button class="ai-chip" data-ai-chip="What projects has he built?" role="listitem">What
-                                projects has he built?</button>
-                            <button class="ai-chip" data-ai-chip="What skills does he have?" role="listitem">What skills
-                                does he have?</button>
-                            <button class="ai-chip" data-ai-chip="Show frontend projects" role="listitem">Show frontend
-                                projects</button>
-                            <button class="ai-chip" data-ai-chip="What is Nexora Tel?" role="listitem">What is Nexora
-                                Tel?</button>
-                            <button class="ai-chip" data-ai-chip="How can I contact him?" role="listitem">How can I
-                                contact him?</button>
-                            <button class="ai-chip" data-ai-chip="Is he available for internships?" role="listitem">Is
-                                he available for internships?</button>
-                            <button class="ai-chip" data-ai-chip="/certifications" role="listitem">Show
-                                certifications</button>
-                            <button class="ai-chip" data-ai-chip="/resume" role="listitem">Download resume</button>
+                            <button class="ai-chip" type="button" data-ai-chip="Tell me about Toluwanimi"
+                                role="listitem">Tell me about Toluwanimi</button>
+                            <button class="ai-chip" type="button" data-ai-chip="What projects has he built?"
+                                role="listitem">What projects has he built?</button>
+                            <button class="ai-chip" type="button" data-ai-chip="What skills does he have?"
+                                role="listitem">What skills does he have?</button>
+                            <button class="ai-chip" type="button" data-ai-chip="Is he available for internships?"
+                                role="listitem">Is he available for internships?</button>
+                            <button class="ai-chip" type="button" data-ai-chip="How can I contact him?"
+                                role="listitem">How can I contact him?</button>
+                            <button class="ai-chip" type="button" data-ai-chip="/resume" role="listitem">Download
+                                resume</button>
                         </div>
                     </div>
 
@@ -558,7 +470,7 @@
 
                         <form class="ai-form" data-ai-form autocomplete="off">
                             <input class="ai-input" data-ai-input name="prompt" type="text"
-                                placeholder="Message Toluwanimi AI… (try /skills)" aria-label="Message input">
+                                placeholder="Message Toluwanimi AI (try /skills)" aria-label="Message input">
                             <button class="ai-send" type="submit" aria-label="Send message" title="Send">
                                 <i data-lucide="send"></i>
                             </button>
@@ -573,218 +485,130 @@
             </div>
         </section>
 
-        <section id="highlights" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Highlights</h2>
-                    <p class="section-subtitle">A quick snapshot of how I build modern, reliable interfaces.</p>
-                </div>
-                <div class="highlights-grid">
-                    <article class="highlight-card">
-                        <div class="highlight-icon" aria-hidden="true">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <h3>Performance-first</h3>
-                        <p>Fast loads, clean structure, and reusable UI components that scale.</p>
-                    </article>
-                    <article class="highlight-card">
-                        <div class="highlight-icon" aria-hidden="true">
-                            <i class="fas fa-universal-access"></i>
-                        </div>
-                        <h3>Accessible by default</h3>
-                        <p>Keyboard-friendly, readable contrast, and semantic HTML that works for everyone.</p>
-                    </article>
-                    <article class="highlight-card">
-                        <div class="highlight-icon" aria-hidden="true">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h3>Clear collaboration</h3>
-                        <p>Great communication, clean handoffs, and a focus on delivering what matters.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
+        <!-- Contact -->
+        <section id="contact" class="section section-alt">
+            <div class="container contact-grid">
+                <div class="contact-info reveal">
+                    <p class="section-kicker">Contact</p>
+                    <h2 class="section-title">Let's build something together</h2>
+                    <p class="lead">Have a project in mind, an internship opportunity, or just want to say hello? Send
+                        a message and I'll reply within 24 hours.</p>
 
-        <section id="service" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">My Services</h2>
-                    <p class="section-subtitle">Reliable delivery for clean, modern, and scalable interfaces.</p>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:toluwanimibabalola2707@gmail.com">toluwanimibabalola2707@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-icon" aria-hidden="true"><i class="fas fa-phone"></i></span>
+                            <div>
+                                <span class="contact-label">Phone</span>
+                                <a href="tel:+2349078828095">+234 907 882 8095</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-icon" aria-hidden="true"><i class="fas fa-location-dot"></i></span>
+                            <div>
+                                <span class="contact-label">Location</span>
+                                <span>Ogun State, Nigeria</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="service-container">
-                    <div class="service-box">Front-End Development</div>
-                    <div class="service-box">UI/UX Design</div>
-                    <div class="service-box">Landing Page Builds</div>
-                </div>
-                <div class="lottie-container">
-                    <dotlottie-player style="width: 50%;"
-                        src="https://lottie.host/539726a5-e260-4bd2-913b-eee0b1ca0a76/c9JOMjwBnD.lottie"
-                        background="transparent" speed="1" loop autoplay></dotlottie-player>
-                </div>
-            </div>
-        </section>
 
-        <section id="contact" class="section contact-form-section">
-            <div class="container">
-                <h2 class="section-heading">
-                    <span class="greeting">Hi, I'm a</span><br>
-                    <span class="title typewriter">Front End Developer</span>
-                </h2>
-
-                <form id="nexoraForm" class="animated-form"
-                    action="https://formsubmit.co/toluwanimibabalola2707@gmail.com" method="POST" target="_blank">
+                <form id="contactForm" class="card contact-form reveal"
+                    action="https://formsubmit.co/toluwanimibabalola2707@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New message from your portfolio">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_autoresponse"
-                        value="Hey!&#10;&#10;Thank you so much for reaching out. I truly appreciate your interest, whether you're looking to bring a project idea to life or you're hoping to work together on something exciting.&#10;&#10;As a passionate Front-End Developer and UI/UX design enthusiast, I love building clean, modern, user-focused digital experiences that create real value. Your message means a lot, and I'm genuinely looking forward to understanding more about what you have in mind.&#10;&#10;I'll go through the details you shared and get back to you as soon as possible, usually within 24 hours. If it's urgent, feel free to call or text me on 09078828095.&#10;&#10;Let's build something meaningful together.&#10;&#10;Warm regards,&#10;Toluwanimi Babalola&#10;Front-End Developer | UI/UX Beginner&#10;Email: toluwanimibabalola2707@gmail.com">
+                    <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_next"
                         value="https://toluwanimibabalolasportfolio.netlify.app/thank-you.html">
-                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_autoresponse"
+                        value="Hi there,&#10;&#10;Thank you for reaching out! I've received your message and will get back to you within 24 hours. If it's urgent, feel free to call or text me on +234 907 882 8095.&#10;&#10;Best regards,&#10;Toluwanimi Babalola&#10;Front-End Developer">
+                    <!-- Honeypot field to block spam bots -->
+                    <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off"
+                        aria-hidden="true">
 
-                    <div class="status-message hidden" id="form-status"></div>
-
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required>
-                        <label for="name">Your Name</label>
-                        <div class="underline"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required>
-                        <label for="email">Email Address</label>
-                        <div class="underline"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone">
-                        <label for="phone">Phone Number (optional)</label>
-                        <div class="underline"></div>
-                    </div>
-
-                    <div class="radio-group">
-                        <p class="radio-question">Do you have a project in mind?</p>
-                        <div class="radio-options">
-                            <label class="radio-button">
-                                <input type="radio" name="hasProject" value="yes" required>
-                                <span class="radio-custom"></span>
-                                <span class="radio-label">Yes</span>
-                            </label>
-                            <label class="radio-button">
-                                <input type="radio" name="hasProject" value="no">
-                                <span class="radio-custom"></span>
-                                <span class="radio-label">No</span>
-                            </label>
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name"
+                                required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" autocomplete="email"
+                                placeholder="you@example.com" required>
                         </div>
                     </div>
 
-                    <div class="form-group project-details hidden">
-                        <textarea id="projectDetails" name="projectDetails" rows="4"></textarea>
-                        <label for="projectDetails">Describe your project</label>
-                        <div class="underline"></div>
-                    </div>
-
-                    <div class="radio-group">
-                        <p class="radio-question">Would you like to work with me?</p>
-                        <div class="radio-options">
-                            <label class="radio-button">
-                                <input type="radio" name="workTogether" value="yes" required>
-                                <span class="radio-custom"></span>
-                                <span class="radio-label">Yes</span>
-                            </label>
-                            <label class="radio-button">
-                                <input type="radio" name="workTogether" value="no">
-                                <span class="radio-custom"></span>
-                                <span class="radio-label">No</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="form-group role-selection hidden">
-                        <select id="role" name="role">
-                            <option value="" disabled selected>Select a role</option>
-                            <option value="ui-ux">UI/UX Designer</option>
-                            <option value="frontend">Front End Developer</option>
-                            <option value="backend">Back End Developer</option>
-                            <option value="fullstack">Full Stack Developer</option>
+                    <div class="field">
+                        <label for="topic">What's this about?</label>
+                        <select id="topic" name="topic" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option>New project</option>
+                            <option>Internship / job opportunity</option>
+                            <option>Collaboration</option>
+                            <option>Just saying hi</option>
                         </select>
-                        <div class="select-arrow"></div>
                     </div>
 
-                    <button type="submit" class="submit-btn">
-                        <span>Send Message</span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="Tell me a little about what you have in mind" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <span>Send message</span>
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
                     </button>
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer class="professional-footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>Toluwanimi Babalola - @t_dev</h3>
-                    <p>Front-end Developer | UI/UX Beginner</p>
-                </div>
-
-                <div class="footer-contact">
-                    <h4>Connect With Me</h4>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/toluwanimi-babalola-b53076382/" target="_blank"
-                            rel="noreferrer" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://www.instagram.com/tolu.nimi17/" target="_blank" rel="noreferrer"
-                            aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://github.com/tolu-15" target="_blank" rel="noreferrer" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:toluwanimibabalola2707@gmail.com" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="tel:+2349078828095" aria-label="Phone">
-                            <i class="fas fa-phone-alt"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 Toluwanimi Babalola. All rights reserved @t_dev.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#contact">Contact</a>
-                    <a href="https://afthoniafooods.netlify.app/">One of my Work</a>
-                </div>
-            </div>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span data-year>2026</span> Toluwanimi Babalola. All rights reserved.</p>
+            <ul class="footer-social" aria-label="Social links">
+                <li><a href="https://github.com/tolu-15" target="_blank" rel="noopener" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/toluwanimi-babalola-b53076382/" target="_blank"
+                        rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.instagram.com/tolu.nimi17/" target="_blank" rel="noopener"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="mailto:toluwanimibabalola2707@gmail.com" aria-label="Email"><i
+                            class="fas fa-envelope"></i></a></li>
+            </ul>
         </div>
     </footer>
 
     <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" title="Back to top">
-        <i class="fas fa-arrow-up"></i>
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
+
     <script src="js/main.js" defer></script>
     <script type="module" src="js/ai-chatbot/index.js"></script>
 
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Babalola Toluwanimi Lanre",
-  "jobTitle": "Frontend Developer",
-  "url": "https://toluwanimibabalolasportfolio.netlify.app/",
-  "sameAs": [
-    "https://toluwanimibabalolasportfolio.netlify.app/",
-    "https://www.linkedin.com/in/toluwanimi-babalola-b53076382/",
-    "https://github.com/tolu-15",
-    "https://www.instagram.com/tolu.nimi17/"
-  ]
-}
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Toluwanimi Babalola",
+      "jobTitle": "Front-End Developer",
+      "alumniOf": "Covenant University",
+      "url": "https://toluwanimibabalolasportfolio.netlify.app/",
+      "sameAs": [
+        "https://www.linkedin.com/in/toluwanimi-babalola-b53076382/",
+        "https://github.com/tolu-15",
+        "https://www.instagram.com/tolu.nimi17/"
+      ]
+    }
     </script>
 </body>
 

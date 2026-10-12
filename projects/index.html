@@ -1,206 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Projects by Toluwanimi Babalola - frontend work, UI/UX, and web apps.">
     <title>Projects | Toluwanimi Babalola</title>
-    <link rel="stylesheet" href="../index.css">
+    <meta name="description" content="Projects by Toluwanimi Babalola: front-end development, UI/UX, and web apps.">
+    <meta name="theme-color" content="#0a0e17">
     <link rel="icon" type="image/jpeg" href="../assets/images/favicon.jpg">
-    <style>
-        .projects-hero {
-            padding: 80px 0 30px;
-            text-align: center;
-        }
-
-        .projects-hero h1 {
-            font-size: clamp(2.2rem, 4vw, 3.4rem);
-            margin-bottom: 12px;
-        }
-
-        .projects-hero p {
-            color: var(--muted);
-            max-width: 720px;
-            margin: 0 auto;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
-            margin-top: 36px;
-        }
-
-        .project-card {
-            background: var(--surface);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border);
-            padding: 24px;
-            box-shadow: var(--shadow-md);
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            min-height: 280px;
-        }
-
-        .project-card h3 {
-            font-size: 1.3rem;
-        }
-
-        .project-meta {
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .project-tag {
-            padding: 4px 10px;
-            border-radius: 999px;
-            background: rgba(124, 58, 237, 0.18);
-            border: 1px solid rgba(124, 58, 237, 0.4);
-            font-size: 0.75rem;
-        }
-
-        .project-actions {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: auto;
-        }
-
-        .btn-outline {
-            border-color: rgba(255, 255, 255, 0.3);
-            color: white;
-        }
-
-        .btn-outline:hover {
-            background: rgba(124, 58, 237, 0.15);
-        }
-
-        .is-disabled {
-            opacity: 0.6;
-            pointer-events: none;
-        }
-
-        .projects-footer {
-            padding: 60px 0 30px;
-            text-align: center;
-            color: var(--muted);
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="stylesheet" href="../index.css">
 </head>
+
 <body>
-    <header>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="top-nav">
         <div class="container nav">
-            <div class="logo"><a href="../">T_dev</a></div>
-            <nav class="nav-links">
+            <a class="logo" href="../" aria-label="Toluwanimi Babalola, home">T<span>_dev</span></a>
+            <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false"
+                aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
                 <a href="../">Home</a>
                 <a href="../#about">About</a>
-                <a href="./">Projects</a>
-                <a href="../#contact">Contact</a>
+                <a href="./" class="is-active" aria-current="page">Projects</a>
+                <a href="../#contact" class="nav-cta">Contact</a>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="projects-hero">
+    <main id="main-content">
+        <section class="page-hero">
             <div class="container">
+                <p class="section-kicker">Portfolio</p>
                 <h1>Projects</h1>
-                <p>Selected work across frontend development, UI/UX, and interactive web experiences.</p>
+                <p>Selected work across front-end development, UI/UX, and interactive web experiences.</p>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" style="padding-top: 48px;">
             <div class="container">
                 <div class="projects-grid">
-                    <article class="project-card">
-                        <div>
-                            <h3>Nexora Tel Website</h3>
-                            <p class="project-meta">Recruitment & project portal with sleek UI and Lottie motion.</p>
-                        </div>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">Lottie</span>
-                        </div>
-                        <div class="project-actions">
-                            <a class="btn btn-primary" href="nexora/">View Project</a>
-                            <a class="btn btn-outline" href="https://nexoratel.netlify.app/" target="_blank"
-                                rel="noreferrer">Live Demo</a>
+                    <article class="card project-card reveal">
+                        <div class="project-icon" aria-hidden="true"><i class="fas fa-tower-broadcast"></i></div>
+                        <h2 class="h3">Nexora Tel</h2>
+                        <p>Recruitment and project portal with a sleek UI, Lottie motion, and an automated onboarding form.</p>
+                        <ul class="tag-list tag-list-sm">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Lottie</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://nexoratel.netlify.app/" target="_blank" rel="noopener">Live site <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <a href="nexora/">Case study</a>
                         </div>
                     </article>
+                    <article class="card project-card reveal">
+                        <div class="project-icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></div>
+                        <h2 class="h3">ScholarsDrip</h2>
+                        <p>Educational platform designed to give students quick, organised access to learning content.</p>
+                        <ul class="tag-list tag-list-sm">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Firebase</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://scholarsdrip.web.app/" target="_blank" rel="noopener">Live site <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                    <article class="card project-card reveal">
+                        <div class="project-icon" aria-hidden="true"><i class="fas fa-utensils"></i></div>
+                        <h2 class="h3">Afthonia Foods</h2>
+                        <p>Food brand website with a clean storefront experience and clear product presentation.</p>
+                        <ul class="tag-list tag-list-sm">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://afthoniafooods.netlify.app/" target="_blank" rel="noopener">Live site <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                    <article class="card project-card reveal">
+                        <div class="project-icon" aria-hidden="true"><i class="fas fa-school"></i></div>
+                        <h2 class="h3">Gracemark Result Hub</h2>
+                        <p>School portal that lets students check and download their results online in seconds.</p>
+                        <ul class="tag-list tag-list-sm">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Firebase</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://gracemarkacademyresulthub.web.app/" target="_blank" rel="noopener">Live site <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                    <article class="card project-card reveal">
+                        <div class="project-icon" aria-hidden="true"><i class="fas fa-calendar-days"></i></div>
+                        <span class="status-badge">In progress</span>
+                        <h2 class="h3">TimetablePro</h2>
+                        <p>Smart timetable generator that builds study schedules from subjects and preferences.</p>
+                        <ul class="tag-list tag-list-sm">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Firebase</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="timetablepro/">Case study</a>
+                        </div>
+                    </article>
+                    <article class="card project-card reveal">
+                        <div class="project-icon" aria-hidden="true"><i class="fas fa-clock"></i></div>
+                        <span class="status-badge">In progress</span>
+                        <h2 class="h3">Motivation Clock</h2>
+                        <p>Flip-clock app with rotating motivational quotes, live weather, and shareable visuals.</p>
+                        <ul class="tag-list tag-list-sm">
+                            <li>JavaScript</li>
+                            <li>CSS</li>
+                            <li>REST APIs</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="motivation-clock/">Case study</a>
+                        </div>
+                    </article>
+                </div>
 
-                    <article class="project-card">
-                        <div>
-                            <h3>ScholarsDrip</h3>
-                            <p class="project-meta">Educational platform and web experience built for student-focused access and content.</p>
-                        </div>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">Responsive UI</span>
-                        </div>
-                        <div class="project-actions">
-                            <a class="btn btn-primary" href="https://scholarsdrip.web.app/" target="_blank"
-                                rel="noreferrer">Open Project</a>
-                            <a class="btn btn-outline" href="https://scholarsdrip.web.app/" target="_blank"
-                                rel="noreferrer">Live Demo</a>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div>
-                            <h3>Afthonia Foods</h3>
-                            <p class="project-meta">Food brand website with a clean storefront experience and product presentation.</p>
-                        </div>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">Brand UI</span>
-                        </div>
-                        <div class="project-actions">
-                            <a class="btn btn-primary" href="https://afthoniafooods.netlify.app/" target="_blank"
-                                rel="noreferrer">Open Project</a>
-                            <a class="btn btn-outline" href="https://afthoniafooods.netlify.app/" target="_blank"
-                                rel="noreferrer">Live Demo</a>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div>
-                            <h3>Gracemark Hub</h3>
-                            <p class="project-meta">School portal that allows students to view results easily online.</p>
-                        </div>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">School Portal</span>
-                        </div>
-                        <div class="project-actions">
-                            <a class="btn btn-primary" href="https://gracemarkacademyresulthub.web.app/" target="_blank"
-                                rel="noreferrer">Open Project</a>
-                            <a class="btn btn-outline" href="https://gracemarkacademyresulthub.web.app/" target="_blank"
-                                rel="noreferrer">Live Demo</a>
-                        </div>
-                    </article>
+                <div class="center-cta reveal">
+                    <p class="lead">Have a project in mind?</p>
+                    <a class="btn btn-primary" href="../#contact">Let's talk</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="projects-footer">
-        <div class="container">
-            <p>Want to collaborate? <a href="../#contact">Send a message</a>.</p>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span data-year>2026</span> Toluwanimi Babalola. All rights reserved.</p>
+            <ul class="footer-social" aria-label="Social links">
+                <li><a href="https://github.com/tolu-15" target="_blank" rel="noopener" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/toluwanimi-babalola-b53076382/" target="_blank"
+                        rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="mailto:toluwanimibabalola2707@gmail.com" aria-label="Email"><i
+                            class="fas fa-envelope"></i></a></li>
+            </ul>
         </div>
     </footer>
+
+    <script src="../js/main.js" defer></script>
 </body>
+
 </html>

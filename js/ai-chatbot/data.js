@@ -20,7 +20,8 @@ export const profile = {
         linkedin: 'https://www.linkedin.com/in/toluwanimi-babalola-b53076382/',
         email: 'toluwanimibabalola2707@gmail.com',
         phone: '+2349078828095',
-        portfolio: 'https://toluwanimibabalolasportfolio.netlify.app/'
+        portfolio: 'https://toluwanimibabalolasportfolio.netlify.app/',
+        resume: 'assets/docs/cv.pdf'
     },
     skills: {
         frontend: ['HTML5', 'CSS3', 'JavaScript', 'Responsive UI', 'Accessibility', 'Performance'],
@@ -32,25 +33,45 @@ export const profile = {
         {
             key: 'nexora',
             name: 'Nexora Tel',
-            tagline: 'Contact & business onboarding experience',
-            description: 'A modern contact/work-with-me funnel with strong UI polish and form automation.',
+            tagline: 'Recruitment & project portal',
+            description: 'A recruitment and project portal with a sleek UI, Lottie motion, and an automated onboarding form.',
             tags: ['Frontend', 'UI', 'Forms'],
             ctas: [
-                { label: 'Contact', href: '#contact' }
+                { label: 'View Live', href: 'https://nexoratel.netlify.app/' }
+            ]
+        },
+        {
+            key: 'scholarsdrip',
+            name: 'ScholarsDrip',
+            tagline: 'Educational platform',
+            description: 'An educational platform that gives students quick, organised access to learning content.',
+            tags: ['Frontend', 'Firebase', 'Education'],
+            ctas: [
+                { label: 'View Live', href: 'https://scholarsdrip.web.app/' }
             ]
         },
         {
             key: 'afthonia',
             name: 'Afthonia Foods',
-            tagline: 'Restaurant/food business web experience',
+            tagline: 'Food brand website',
             description: 'A responsive site built for a food brand, focused on clean layout and usability.',
             tags: ['Frontend', 'Landing Page', 'Food'],
             ctas: [
                 { label: 'View Live', href: 'https://afthoniafooods.netlify.app/' }
             ]
+        },
+        {
+            key: 'gracemark',
+            name: 'Gracemark Result Hub',
+            tagline: 'School results portal',
+            description: 'A school portal that lets students check their results online in seconds.',
+            tags: ['Frontend', 'Firebase', 'Education'],
+            ctas: [
+                { label: 'View Live', href: 'https://gracemarkacademyresulthub.web.app/' }
+            ]
         }
     ],
-    certifications: ['In progress — building a strong portfolio and continuous learning'],
+    certifications: ['Web Development training at APTECH Abeokuta (in progress)'],
     goals: [
         'Secure internship opportunities and grow industry experience',
         'Build premium UI systems and scalable frontend components',
