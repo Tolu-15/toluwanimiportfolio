@@ -1,11 +1,11 @@
 :root {
-    --ai-bg: rgba(15, 23, 42, 0.62);
-    --ai-bg-strong: rgba(15, 23, 42, 0.85);
-    --ai-border: rgba(148, 163, 184, 0.22);
-    --ai-text: #e2e8f0;
-    --ai-muted: #94a3b8;
-    --ai-purple: #7c3aed;
-    --ai-blue: #22d3ee;
+    --ai-bg: rgba(10, 10, 10, 0.62);
+    --ai-bg-strong: rgba(10, 10, 10, 0.85);
+    --ai-border: rgba(255, 255, 255, 0.22);
+    --ai-text: #f5f5f5;
+    --ai-muted: #a3a3a3;
+    --ai-purple: #16a34a;
+    --ai-blue: #22c55e;
     --ai-glow: none;
 }
 
@@ -16,7 +16,7 @@
     padding: 8px 14px;
     border-radius: 999px;
     border: 1px solid var(--ai-border);
-    background: rgba(15, 23, 42, 0.45);
+    background: rgba(10, 10, 10, 0.45);
     color: var(--ai-muted);
     font-size: 0.92rem;
     box-shadow: var(--ai-glow);
@@ -26,7 +26,7 @@
     position: relative;
     border-radius: 26px;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    background: #121a2b;
+    background: #0a0a0a;
     box-shadow: 0 35px 90px rgba(0, 0, 0, 0.6);
     overflow: hidden;
     backdrop-filter: blur(18px);
@@ -59,7 +59,7 @@
     justify-content: space-between;
     padding: 18px 18px 14px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(2, 6, 23, 0.25);
+    background: rgba(0, 0, 0, 0.25);
 }
 
 .ai-brand {
@@ -76,14 +76,14 @@
     display: grid;
     place-items: center;
     font-weight: 800;
-    color: white;
-    background: #8b5cf6;
+    color: #000;
+    background: #22c55e;
     border: 1px solid rgba(255, 255, 255, 0.14);
     box-shadow: var(--ai-glow);
 }
 
 .ai-avatar--me {
-    background: #8b5cf6;
+    background: #22c55e;
 }
 
 .ai-brand-text {
@@ -128,7 +128,7 @@
     height: 40px;
     border-radius: 14px;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(15, 23, 42, 0.45);
+    background: rgba(10, 10, 10, 0.45);
     color: var(--ai-text);
     cursor: pointer;
     transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
@@ -136,8 +136,8 @@
 
 .ai-icon-btn:hover {
     transform: translateY(-1px);
-    border-color: rgba(34, 211, 238, 0.35);
-    background: rgba(15, 23, 42, 0.62);
+    border-color: rgba(34, 197, 94, 0.35);
+    background: rgba(10, 10, 10, 0.62);
 }
 
 .ai-icon-btn svg {
@@ -146,7 +146,7 @@
 }
 
 .ai-icon-btn.is-active {
-    border-color: rgba(34, 211, 238, 0.55);
+    border-color: rgba(34, 197, 94, 0.55);
     box-shadow: var(--ai-glow);
 }
 
@@ -167,7 +167,7 @@
     padding: 10px 12px;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(2, 6, 23, 0.22);
+    background: rgba(0, 0, 0, 0.22);
     color: var(--ai-muted);
 }
 
@@ -200,16 +200,16 @@
     padding: 2px 8px;
     border-radius: 999px;
     border: 1px solid rgba(255, 255, 255, 0.14);
-    background: rgba(15, 23, 42, 0.5);
+    background: rgba(10, 10, 10, 0.5);
     color: var(--ai-text);
 }
 
 .ai-hint {
     padding: 2px 10px;
     border-radius: 999px;
-    border: 1px solid rgba(124, 58, 237, 0.25);
-    background: rgba(124, 58, 237, 0.12);
-    color: rgba(226, 232, 240, 0.92);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+    background: rgba(34, 197, 94, 0.12);
+    color: rgba(245, 245, 245, 0.92);
 }
 
 .ai-body {
@@ -237,7 +237,7 @@
     width: min(520px, 100%);
     border-radius: 22px;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(2, 6, 23, 0.25);
+    background: rgba(0, 0, 0, 0.25);
     padding: 22px 18px;
     box-shadow: var(--ai-glow);
     text-align: center;
@@ -251,8 +251,8 @@
     display: grid;
     place-items: center;
     color: var(--ai-text);
-    border: 1px solid rgba(34, 211, 238, 0.22);
-    background: rgba(139, 92, 246, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.22);
+    background: rgba(34, 197, 94, 0.12);
 }
 
 .ai-empty h3 {
@@ -274,8 +274,8 @@
 .ai-chip {
     border-radius: 999px;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(15, 23, 42, 0.45);
-    color: rgba(226, 232, 240, 0.92);
+    background: rgba(10, 10, 10, 0.45);
+    color: rgba(245, 245, 245, 0.92);
     padding: 10px 14px;
     cursor: pointer;
     transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
@@ -284,8 +284,8 @@
 
 .ai-chip:hover {
     transform: translateY(-2px);
-    border-color: rgba(34, 211, 238, 0.35);
-    background: rgba(15, 23, 42, 0.6);
+    border-color: rgba(34, 197, 94, 0.35);
+    background: rgba(10, 10, 10, 0.6);
 }
 
 .ai-inputbar {
@@ -298,7 +298,7 @@
     align-items: center;
     padding: 14px 18px 18px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-    background: #0e1422;
+    background: #000000;
     backdrop-filter: blur(18px);
 }
 
@@ -310,7 +310,7 @@
     z-index: 5;
     border-radius: 18px;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(2, 6, 23, 0.62);
+    background: rgba(0, 0, 0, 0.62);
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(16px);
     overflow: hidden;
@@ -326,7 +326,7 @@
     padding: 12px 14px;
     border: none;
     background: transparent;
-    color: rgba(226, 232, 240, 0.95);
+    color: rgba(245, 245, 245, 0.95);
     cursor: pointer;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
@@ -337,7 +337,7 @@
 
 .ai-palette-item.is-active,
 .ai-palette-item:hover {
-    background: rgba(139, 92, 246, 0.15);
+    background: rgba(34, 197, 94, 0.15);
 }
 
 .ai-form {
@@ -348,7 +348,7 @@
     padding: 10px;
     border-radius: 18px;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(2, 6, 23, 0.22);
+    background: rgba(0, 0, 0, 0.22);
 }
 
 .ai-input {
@@ -365,8 +365,8 @@
     height: 44px;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.14);
-    background: #8b5cf6;
-    color: white;
+    background: #22c55e;
+    color: #000;
     cursor: pointer;
     box-shadow: var(--ai-glow);
     transition: transform 0.2s ease, filter 0.2s ease;
@@ -405,19 +405,19 @@
     border-radius: 20px;
     padding: 12px 14px;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(15, 23, 42, 0.55);
-    color: rgba(226, 232, 240, 0.95);
+    background: rgba(10, 10, 10, 0.55);
+    color: rgba(245, 245, 245, 0.95);
     box-shadow: 0 16px 50px rgba(0, 0, 0, 0.38);
 }
 
 .ai-bubble.is-search-hit {
-    border-color: rgba(34, 211, 238, 0.5);
+    border-color: rgba(34, 197, 94, 0.5);
     box-shadow: var(--ai-glow);
 }
 
 .ai-msg.is-user .ai-bubble {
-    background: rgba(139, 92, 246, 0.22);
-    border-color: rgba(124, 58, 237, 0.25);
+    background: rgba(34, 197, 94, 0.22);
+    border-color: rgba(34, 197, 94, 0.25);
 }
 
 .ai-meta {
@@ -441,7 +441,7 @@
     height: 34px;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(15, 23, 42, 0.4);
+    background: rgba(10, 10, 10, 0.4);
     color: var(--ai-text);
     cursor: pointer;
     transition: transform 0.2s ease, border-color 0.2s ease;
@@ -449,7 +449,7 @@
 
 .ai-tool:hover {
     transform: translateY(-1px);
-    border-color: rgba(34, 211, 238, 0.35);
+    border-color: rgba(34, 197, 94, 0.35);
 }
 
 .ai-tool svg {
@@ -467,7 +467,7 @@
     width: 6px;
     height: 6px;
     border-radius: 999px;
-    background: rgba(226, 232, 240, 0.75);
+    background: rgba(245, 245, 245, 0.75);
     animation: aiTyping 1.2s infinite ease-in-out;
 }
 
@@ -483,9 +483,7 @@
     width: min(520px, 90%);
     height: 14px;
     border-radius: 999px;
-    background: linear-gradient(90deg, rgba(148, 163, 184, 0.18), rgba(148, 163, 184, 0.06), rgba(148, 163, 184, 0.18));
-    background-size: 200% 100%;
-    animation: aiShimmer 1.4s infinite linear;
+    background: rgba(255, 255, 255, 0.08);
     margin-top: 10px;
 }
 
@@ -499,9 +497,9 @@
 .ai-badge {
     padding: 6px 10px;
     border-radius: 999px;
-    border: 1px solid rgba(34, 211, 238, 0.22);
-    background: rgba(34, 211, 238, 0.08);
-    color: rgba(226, 232, 240, 0.94);
+    border: 1px solid rgba(34, 197, 94, 0.22);
+    background: rgba(34, 197, 94, 0.08);
+    color: rgba(245, 245, 245, 0.94);
     font-size: 0.9rem;
 }
 
@@ -515,14 +513,14 @@
 .ai-card {
     border-radius: 18px;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(2, 6, 23, 0.2);
+    background: rgba(0, 0, 0, 0.2);
     padding: 14px 14px 12px;
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .ai-card:hover {
     transform: translateY(-2px);
-    border-color: rgba(124, 58, 237, 0.28);
+    border-color: rgba(34, 197, 94, 0.28);
 }
 
 .ai-card h4 {
@@ -550,15 +548,15 @@
     padding: 10px 12px;
     border-radius: 14px;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(15, 23, 42, 0.5);
-    color: rgba(226, 232, 240, 0.95);
+    background: rgba(10, 10, 10, 0.5);
+    color: rgba(245, 245, 245, 0.95);
     cursor: pointer;
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .ai-cta:hover {
     transform: translateY(-1px);
-    border-color: rgba(34, 211, 238, 0.35);
+    border-color: rgba(34, 197, 94, 0.35);
 }
 
 .ai-cta svg {
@@ -574,8 +572,8 @@
     height: 52px;
     border-radius: 18px;
     border: 1px solid rgba(255, 255, 255, 0.14);
-    background: #8b5cf6;
-    color: white;
+    background: #22c55e;
+    color: #000;
     cursor: pointer;
     box-shadow: var(--ai-glow);
     z-index: 3;
@@ -593,7 +591,7 @@
 
 .ai-shell.is-terminal .ai-bubble {
     background: rgba(0, 0, 0, 0.42);
-    border-color: rgba(34, 211, 238, 0.18);
+    border-color: rgba(34, 197, 94, 0.18);
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 

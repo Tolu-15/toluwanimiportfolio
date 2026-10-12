@@ -46,7 +46,7 @@ function aboutResponse() {
                     `Course: ${profile.course}\n` +
                     `Role: ${profile.role}\n` +
                     `Location: ${profile.location}\n\n` +
-                    `Current: Engineering Intern (Engineering Team) at Cavista Technologies.\n\n` +
+                    `Recently completed industrial training (IT) as an Engineering Intern at Cavista Technologies.\n\n` +
                     `I can also show projects, skills, certifications, goals, services, and contact details.`
             },
             {
@@ -64,6 +64,7 @@ function aboutResponse() {
 function skillsResponse() {
     const badges = [
         ...profile.skills.frontend.map((s) => ({ label: s })),
+        ...(profile.skills.backend || []).map((s) => ({ label: s })),
         ...profile.skills.uiux.map((s) => ({ label: s })),
         ...profile.skills.cybersecurity.map((s) => ({ label: s }))
     ];
@@ -77,7 +78,7 @@ function skillsResponse() {
             },
             {
                 type: 'badges',
-                title: 'Frontend / UI / Security',
+                title: 'Frontend / Backend / UI / Security',
                 items: badges
             },
             {
@@ -252,8 +253,8 @@ export function classifyIntent(userText) {
         return { kind: 'availability' };
     if (hasAny(t, ['cavista', 'experience', 'worked', 'engineering team', 'internship at', 'intern at']))
         return { kind: 'experience' };
-    if (hasAny(t, ['project', 'projects', 'nexora', 'afthonia', 'work'])) return { kind: 'projects' };
-    if (hasAny(t, ['skill', 'skills', 'frontend', 'ui', 'ux', 'cyber', 'security', 'programming'])) return { kind: 'skills' };
+    if (hasAny(t, ['project', 'projects', 'nexora', 'afthonia', 'gracemark', 'quiz', 'cbt', 'exam forge', 'portal', 'work'])) return { kind: 'projects' };
+    if (hasAny(t, ['skill', 'skills', 'stack', 'typescript', 'vite', 'supabase', 'firebase', 'frontend', 'ui', 'ux', 'cyber', 'security', 'programming'])) return { kind: 'skills' };
     if (hasAny(t, ['university', 'school', 'education', 'course', 'about', 'who is', 'who are', 'tell me', 'background', 'bio']))
         return { kind: 'about' };
     if (hasAny(t, ['goal', 'goals', 'future', 'plan'])) return { kind: 'goals' };
